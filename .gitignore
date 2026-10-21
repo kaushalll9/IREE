@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Downloaded datasets
+data/*.jsonl
+
+# Generated search index
+index/*.gz
+
+# Environment secrets
+.env
+.DS_Store
