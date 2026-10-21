@@ -1,0 +1,532 @@
+{
+  "test_queries_count": 10,
+  "benchmark_queries": [
+    {
+      "query_id": "Q1",
+      "query": "physics wallah vs unacademy",
+      "intent": "Comparison between Physics Wallah and Unacademy platforms for JEE/NEET preparation",
+      "qrels": {
+        "u13nyh": 2,
+        "vcqn3x": 2,
+        "qttdqp": 2,
+        "u57f49": 1,
+        "tye64g": 1,
+        "q2311f": 1
+      }
+    },
+    {
+      "query_id": "Q2",
+      "query": "best book for organic chemistry",
+      "intent": "Recommendations for JEE/NEET organic chemistry theory and problem-solving books",
+      "qrels": {
+        "v37tm3": 2,
+        "u7y6za": 2,
+        "ufb2w3": 2,
+        "u40a8x": 1,
+        "t9p11z": 1,
+        "q02a9b": 1
+      }
+    },
+    {
+      "query_id": "Q3",
+      "query": "marks vs percentile 2022",
+      "intent": "Analysis or questions regarding marks to percentile conversion for JEE Main 2022",
+      "qrels": {
+        "wbr1xm": 2,
+        "vl6p8q": 2,
+        "vpm9c3": 2,
+        "vew17q": 1,
+        "w6x01a": 1,
+        "uyy88v": 1
+      }
+    },
+    {
+      "query_id": "Q4",
+      "query": "allen test series review",
+      "intent": "Reviews, feedback, or difficulty comparison of Allen leader/major test series",
+      "qrels": {
+        "twr9n9": 2,
+        "sx1yuh": 2,
+        "v8boga": 1,
+        "uh721w": 1,
+        "t018aa": 1
+      }
+    },
+    {
+      "query_id": "Q5",
+      "query": "dc pandey vs hc verma",
+      "intent": "Comparison between DC Pandey and HC Verma physics books for JEE physics concepts and problems",
+      "qrels": {
+        "uvyblk": 2,
+        "ur0zb7": 2,
+        "pf71kf": 1,
+        "s111zb": 1,
+        "rw02cc": 1
+      }
+    },
+    {
+      "query_id": "Q6",
+      "query": "maths dropper strategy",
+      "intent": "Advice and study schedules for droppers struggling with or targeting JEE Mathematics",
+      "qrels": {
+        "ttksmg": 2,
+        "w4fu3t": 2,
+        "vv012n": 2,
+        "u119ab": 1,
+        "rk001x": 1
+      }
+    },
+    {
+      "query_id": "Q7",
+      "query": "neet 600 marks government medical college",
+      "intent": "Possibility and cutoffs for securing a government MBBS seat with 600 marks in NEET",
+      "qrels": {
+        "ts2sbg": 2,
+        "u7vh7a": 2,
+        "tyw36d": 2,
+        "vn100z": 1,
+        "sq90aa": 1
+      }
+    },
+    {
+      "query_id": "Q8",
+      "query": "mock test score stuck",
+      "intent": "Advice for students whose mock scores plateaued or are not improving",
+      "qrels": {
+        "sq2b10": 2,
+        "uum5bu": 2,
+        "rrrfmi": 1,
+        "t25ams": 1,
+        "w991ab": 1
+      }
+    },
+    {
+      "query_id": "Q9",
+      "query": "hostel food kota life",
+      "intent": "Discussions, reality checks, and experiences with hostel food and life in Kota",
+      "qrels": {
+        "ifib7f": 2,
+        "ifi9fm": 2,
+        "rciayu": 2,
+        "uk109x": 1,
+        "sm011z": 1
+      }
+    },
+    {
+      "query_id": "Q10",
+      "query": "iit bombay cse cutoff rank",
+      "intent": "Cutoff ranks, closing ranks, and percentiles required for Computer Science at IIT Bombay",
+      "qrels": {
+        "vv4mil": 2,
+        "n6u296": 1,
+        "qq1t2y": 1,
+        "tl001a": 1,
+        "rk999c": 1
+      }
+    }
+  ],
+  "models_evaluated": [
+    {
+      "config_name": "Standard BM25 (Unfielded)",
+      "mean_p@1": 0.8,
+      "mean_p@3": 0.7,
+      "mean_p@5": 0.44,
+      "mean_p@10": 0.26,
+      "mrr": 0.9,
+      "map": 0.3856,
+      "ndcg@5": 0.639,
+      "ndcg@10": 0.6855,
+      "avg_latency_ms": 4.73,
+      "per_query": [
+        {
+          "query_id": "Q1",
+          "query": "physics wallah vs unacademy",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.4028,
+          "ndcg@5": 0.8033,
+          "ndcg@10": 0.7655,
+          "latency_ms": 7.66
+        },
+        {
+          "query_id": "Q2",
+          "query": "best book for organic chemistry",
+          "p@1": 1,
+          "p@5": 0.4,
+          "p@10": 0.2,
+          "rr": 1.0,
+          "ap": 0.2778,
+          "ndcg@5": 0.6241,
+          "ndcg@10": 0.5947,
+          "latency_ms": 6.6
+        },
+        {
+          "query_id": "Q3",
+          "query": "marks vs percentile 2022",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.5,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8449,
+          "latency_ms": 5.55
+        },
+        {
+          "query_id": "Q4",
+          "query": "allen test series review",
+          "p@1": 1,
+          "p@5": 0.4,
+          "p@10": 0.2,
+          "rr": 1.0,
+          "ap": 0.4,
+          "ndcg@5": 0.5847,
+          "ndcg@10": 0.5847,
+          "latency_ms": 4.31
+        },
+        {
+          "query_id": "Q5",
+          "query": "dc pandey vs hc verma",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.6,
+          "ndcg@5": 0.8262,
+          "ndcg@10": 0.8262,
+          "latency_ms": 0.77
+        },
+        {
+          "query_id": "Q6",
+          "query": "maths dropper strategy",
+          "p@1": 1,
+          "p@5": 0.4,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.4333,
+          "ndcg@5": 0.6241,
+          "ndcg@10": 0.7723,
+          "latency_ms": 3.78
+        },
+        {
+          "query_id": "Q7",
+          "query": "neet 600 marks government medical college",
+          "p@1": 0,
+          "p@5": 0.4,
+          "p@10": 0.3,
+          "rr": 0.5,
+          "ap": 0.3333,
+          "ndcg@5": 0.4705,
+          "ndcg@10": 0.6188,
+          "latency_ms": 7.87
+        },
+        {
+          "query_id": "Q8",
+          "query": "mock test score stuck",
+          "p@1": 1,
+          "p@5": 0.4,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.4083,
+          "ndcg@5": 0.5636,
+          "ndcg@10": 0.716,
+          "latency_ms": 4.52
+        },
+        {
+          "query_id": "Q9",
+          "query": "hostel food kota life",
+          "p@1": 1,
+          "p@5": 0.4,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.4,
+          "ndcg@5": 0.6241,
+          "ndcg@10": 0.7494,
+          "latency_ms": 1.97
+        },
+        {
+          "query_id": "Q10",
+          "query": "iit bombay cse cutoff rank",
+          "p@1": 0,
+          "p@5": 0.2,
+          "p@10": 0.1,
+          "rr": 0.5,
+          "ap": 0.1,
+          "ndcg@5": 0.3825,
+          "ndcg@10": 0.3825,
+          "latency_ms": 4.23
+        }
+      ]
+    },
+    {
+      "config_name": "BM25F (Field-Weighted: Title 2.5x)",
+      "mean_p@1": 1.0,
+      "mean_p@3": 0.8333,
+      "mean_p@5": 0.54,
+      "mean_p@10": 0.29,
+      "mrr": 1.0,
+      "map": 0.515,
+      "ndcg@5": 0.7932,
+      "ndcg@10": 0.8027,
+      "avg_latency_ms": 4.22,
+      "per_query": [
+        {
+          "query_id": "Q1",
+          "query": "physics wallah vs unacademy",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.5,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8449,
+          "latency_ms": 4.21
+        },
+        {
+          "query_id": "Q2",
+          "query": "best book for organic chemistry",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.5,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8449,
+          "latency_ms": 5.85
+        },
+        {
+          "query_id": "Q3",
+          "query": "marks vs percentile 2022",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.5,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8449,
+          "latency_ms": 4.87
+        },
+        {
+          "query_id": "Q4",
+          "query": "allen test series review",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.55,
+          "ndcg@5": 0.6738,
+          "ndcg@10": 0.6738,
+          "latency_ms": 4.12
+        },
+        {
+          "query_id": "Q5",
+          "query": "dc pandey vs hc verma",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.6,
+          "ndcg@5": 0.8684,
+          "ndcg@10": 0.8684,
+          "latency_ms": 0.93
+        },
+        {
+          "query_id": "Q6",
+          "query": "maths dropper strategy",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.6,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8866,
+          "latency_ms": 4.06
+        },
+        {
+          "query_id": "Q7",
+          "query": "neet 600 marks government medical college",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.6,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8866,
+          "latency_ms": 7.71
+        },
+        {
+          "query_id": "Q8",
+          "query": "mock test score stuck",
+          "p@1": 1,
+          "p@5": 0.4,
+          "p@10": 0.2,
+          "rr": 1.0,
+          "ap": 0.4,
+          "ndcg@5": 0.5847,
+          "ndcg@10": 0.5847,
+          "latency_ms": 4.52
+        },
+        {
+          "query_id": "Q9",
+          "query": "hostel food kota life",
+          "p@1": 1,
+          "p@5": 0.4,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.5,
+          "ndcg@5": 0.6786,
+          "ndcg@10": 0.8268,
+          "latency_ms": 1.91
+        },
+        {
+          "query_id": "Q10",
+          "query": "iit bombay cse cutoff rank",
+          "p@1": 1,
+          "p@5": 0.4,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.4,
+          "ndcg@5": 0.6933,
+          "ndcg@10": 0.7653,
+          "latency_ms": 4.07
+        }
+      ]
+    },
+    {
+      "config_name": "BM25F + Engagement Boosting (Proposed Model)",
+      "mean_p@1": 1.0,
+      "mean_p@3": 0.9,
+      "mean_p@5": 0.58,
+      "mean_p@10": 0.3,
+      "mrr": 1.0,
+      "map": 0.5387,
+      "ndcg@5": 0.8252,
+      "ndcg@10": 0.8272,
+      "avg_latency_ms": 4.81,
+      "per_query": [
+        {
+          "query_id": "Q1",
+          "query": "physics wallah vs unacademy",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.5,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8449,
+          "latency_ms": 4.83
+        },
+        {
+          "query_id": "Q2",
+          "query": "best book for organic chemistry",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.5,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8449,
+          "latency_ms": 6.71
+        },
+        {
+          "query_id": "Q3",
+          "query": "marks vs percentile 2022",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.5,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8449,
+          "latency_ms": 6.24
+        },
+        {
+          "query_id": "Q4",
+          "query": "allen test series review",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.6,
+          "ndcg@5": 0.7073,
+          "ndcg@10": 0.7073,
+          "latency_ms": 4.67
+        },
+        {
+          "query_id": "Q5",
+          "query": "dc pandey vs hc verma",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.6,
+          "ndcg@5": 0.8684,
+          "ndcg@10": 0.8684,
+          "latency_ms": 0.83
+        },
+        {
+          "query_id": "Q6",
+          "query": "maths dropper strategy",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.6,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8866,
+          "latency_ms": 4.37
+        },
+        {
+          "query_id": "Q7",
+          "query": "neet 600 marks government medical college",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.6,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8866,
+          "latency_ms": 8.69
+        },
+        {
+          "query_id": "Q8",
+          "query": "mock test score stuck",
+          "p@1": 1,
+          "p@5": 0.4,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.4667,
+          "ndcg@5": 0.5847,
+          "ndcg@10": 0.7301,
+          "latency_ms": 4.99
+        },
+        {
+          "query_id": "Q9",
+          "query": "hostel food kota life",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.6,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8866,
+          "latency_ms": 2.21
+        },
+        {
+          "query_id": "Q10",
+          "query": "iit bombay cse cutoff rank",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.42,
+          "ndcg@5": 0.7715,
+          "ndcg@10": 0.7715,
+          "latency_ms": 4.57
+        }
+      ]
+    }
+  ]
+}

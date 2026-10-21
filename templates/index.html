@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IRE Course Project - High Performance Inverted Index & BM25 Search Engine on r/JEENEETards corpus with comprehensive IR evaluation benchmarks.">
+    <title>IRE Search Engine | r/JEENEETards Information Retrieval</title>
+    <!-- Modern Typography: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="background-glow top-left"></div>
+    <div class="background-glow bottom-right"></div>
+
+    <div class="app-container">
+        <!-- Top Navigation & Header -->
+        <header class="app-header">
+            <div class="brand">
+                <div class="brand-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <h1>IRE Search Engine</h1>
+                    <span class="badge-corpus" id="corpus-stats-badge">43,116 Docs • BM25F Engine</span>
+                </div>
+            </div>
+
+            <!-- Main Tabs -->
+            <nav class="nav-tabs">
+                <button id="tab-btn-search" class="nav-tab-btn active" onclick="switchTab('search')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <span>Search Engine</span>
+                </button>
+                <button id="tab-btn-eval" class="nav-tab-btn" onclick="switchTab('eval')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 20V10"></path>
+                        <path d="M12 20V4"></path>
+                        <path d="M6 20v-6"></path>
+                    </svg>
+                    <span>Phase 4 Evaluation</span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- TAB 1: Search Interface -->
+        <main id="search-view" class="view-panel active">
+            <!-- Search Hero Section -->
+            <section class="search-hero">
+                <div class="search-bar-wrapper">
+                    <div class="search-input-box">
+                        <svg class="search-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input 
+                            type="text" 
+                            id="search-query-input" 
+                            placeholder="Search discussions (e.g., 'physics wallah vs unacademy', 'best book organic chemistry')..." 
+                            autocomplete="off" 
+                            autofocus
+                        >
+                        <button id="search-clear-btn" class="clear-btn hidden" onclick="clearSearch()" title="Clear">×</button>
+                        <button id="search-submit-btn" class="submit-btn" onclick="triggerSearch()">
+                            <span>Search</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Suggested Query Chips -->
+                <div class="suggestions-container">
+                    <span class="suggestion-label">Try:</span>
+                    <button class="chip" onclick="setQuery('physics wallah vs unacademy')">Physics Wallah vs Unacademy</button>
+                    <button class="chip" onclick="setQuery('best books for organic chemistry')">Organic Chemistry Books</button>
+                    <button class="chip" onclick="setQuery('marks vs percentile 2022')">Marks vs Percentile</button>
+                    <button class="chip" onclick="setQuery('allen test series review')">Allen Test Series</button>
+                    <button class="chip" onclick="setQuery('dc pandey vs hc verma')">DC Pandey vs HC Verma</button>
+                    <button class="chip" onclick="setQuery('maths dropper strategy')">Dropper Strategy</button>
+                </div>
+
+                <!-- Search Controls & Filters -->
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <label class="control-label" for="ranking-model-select">Ranking Model:</label>
+                        <div class="pill-group" id="ranking-model-pills">
+                            <button id="model-pill-boosted" class="pill active" onclick="setModel('boosted')">BM25F + Engagement (Recommended)</button>
+                            <button id="model-pill-bm25f" class="pill" onclick="setModel('bm25f')">BM25F (Fielded)</button>
+                            <button id="model-pill-bm25" class="pill" onclick="setModel('bm25')">Standard BM25</button>
+                        </div>
+                    </div>
+
+                    <div class="control-filters">
+                        <div class="filter-item">
+                            <label class="control-label" for="flair-filter-select">Flair:</label>
+                            <select id="flair-filter-select" onchange="triggerSearch()">
+                                <option value="">All Flairs</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-item">
+                            <label class="control-label" for="min-score-input">Min Score:</label>
+                            <select id="min-score-input" onchange="triggerSearch()">
+                                <option value="">Any</option>
+                                <option value="2">2+ upvotes</option>
+                                <option value="5">5+ upvotes</option>
+                                <option value="10">10+ upvotes</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-item">
+                            <label class="control-label" for="top-k-select">Results:</label>
+                            <select id="top-k-select" onchange="triggerSearch()">
+                                <option value="5">Top 5</option>
+                                <option value="10" selected>Top 10</option>
+                                <option value="20">Top 20</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Meta & Status Bar -->
+            <section class="results-status-bar hidden" id="results-meta-bar">
+                <div class="status-left">
+                    <span id="results-count-text">Found 0 results</span>
+                    <span class="latency-badge" id="results-latency-badge">⚡ 0.0 ms</span>
+                </div>
+                <div class="status-right" id="query-stems-container">
+                    <span class="stem-label">Stems:</span>
+                    <span id="query-stems-list"></span>
+                </div>
+            </section>
+
+            <!-- Search Results Cards Container -->
+            <section class="results-container" id="results-list">
+                <div class="empty-state" id="empty-state-prompt">
+                    <div class="empty-icon">💡</div>
+                    <h3>Start exploring student queries</h3>
+                    <p>Enter any topic or select a suggestion above to retrieve ranked Reddit posts with millisecond latency.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- TAB 2: Phase 4 IR Evaluation Dashboard -->
+        <main id="eval-view" class="view-panel">
+            <section class="eval-hero">
+                <h2>Phase 4: Information Retrieval Evaluation & Benchmark Suite</h2>
+                <p class="eval-subtitle">
+                    Comprehensive comparative analysis of retrieval performance on the <code>r/JEENEETards</code> corpus across 10 standardized information needs with graded relevance assessments.
+                </p>
+            </section>
+
+            <!-- Key Metrics Cards -->
+            <section class="metrics-grid">
+                <div class="metric-card highlight">
+                    <span class="metric-title">Mean Reciprocal Rank (MRR)</span>
+                    <span class="metric-val" id="metric-mrr">1.0000</span>
+                    <span class="metric-desc">First relevant result at Rank 1 across all test queries</span>
+                </div>
+                <div class="metric-card highlight">
+                    <span class="metric-title">Mean Average Precision (MAP)</span>
+                    <span class="metric-val" id="metric-map">0.5387</span>
+                    <span class="metric-desc">+39.7% improvement over baseline unfielded BM25</span>
+                </div>
+                <div class="metric-card highlight">
+                    <span class="metric-title">NDCG @ 10</span>
+                    <span class="metric-val" id="metric-ndcg">0.8272</span>
+                    <span class="metric-desc">+20.6% gain using title field boosting and engagement</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-title">Avg Query Latency</span>
+                    <span class="metric-val" id="metric-latency">4.81 ms</span>
+                    <span class="metric-desc">Sub-5ms evaluation across 43,116 documents</span>
+                </div>
+            </section>
+
+            <!-- Model Comparison Table -->
+            <section class="eval-card">
+                <div class="card-header">
+                    <h3>🏆 Comparative Model Performance & Ablation Study</h3>
+                    <span class="card-tag">10 Queries • Graded Qrels</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="eval-table" id="models-comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Ranking Configuration</th>
+                                <th>P@1</th>
+                                <th>P@5</th>
+                                <th>P@10</th>
+                                <th>MRR</th>
+                                <th>MAP</th>
+                                <th>NDCG@10</th>
+                                <th>Avg Latency</th>
+                            </tr>
+                        </thead>
+                        <tbody id="models-table-body">
+                            <!-- Populated dynamically via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Per-Query Evaluation Breakdown -->
+            <section class="eval-card">
+                <div class="card-header">
+                    <h3>📋 Per-Query Granular Breakdown (Proposed Model)</h3>
+                    <span class="card-tag">Detailed Diagnostics</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="eval-table" id="queries-eval-table">
+                        <thead>
+                            <tr>
+                                <th>Query ID</th>
+                                <th>Query Text</th>
+                                <th>P@1</th>
+                                <th>P@5</th>
+                                <th>MRR</th>
+                                <th>MAP</th>
+                                <th>NDCG@10</th>
+                                <th>Latency</th>
+                            </tr>
+                        </thead>
+                        <tbody id="queries-table-body">
+                            <!-- Populated dynamically via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Qualitative Analysis & Findings -->
+            <section class="eval-card">
+                <div class="card-header">
+                    <h3>💡 Theoretical & Empirical Insights</h3>
+                </div>
+                <div class="eval-insights">
+                    <div class="insight-box">
+                        <h4>1. Why Field-Weighted BM25F Dominates Baseline BM25</h4>
+                        <p>
+                            On Reddit, post titles act as explicit query summaries (e.g. <em>"Physics Wallah vs Unacademy"</em> or <em>"DC Pandey vs HC Verma"</em>). Weighting the title field 2.5× relative to the body drastically minimizes false-positive matches that casually mention a keyword in lengthy selftext.
+                        </p>
+                    </div>
+                    <div class="insight-box">
+                        <h4>2. Role of the Engagement Boosting Factor</h4>
+                        <p>
+                            Using a subdued logarithmic upvote boost ($\text{Score} \times (1 + 0.05 \cdot \log_{10}(1 + \text{score}))$) breaks ties in favor of highly-upvoted, authentic student consensus and comprehensive review megathreads without displacing strict keyword relevance.
+                        </p>
+                    </div>
+                    <div class="insight-box">
+                        <h4>3. Computational Efficiency</h4>
+                        <p>
+                            Through inverted index compression, in-memory integer postings lists, and Robertson IDF smoothing, the retrieval engine achieves steady execution latencies under 5 milliseconds on consumer hardware without degrading precision.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>IRE Course Project — Information Retrieval & Extraction | Dataset: <code>r/JEENEETards</code> (43,116 documents)</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
