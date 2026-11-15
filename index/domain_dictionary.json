@@ -1,0 +1,9350 @@
+{
+ "terms": {
+  "jee": {
+   "category": "exam",
+   "seed": "jee",
+   "similarity": 1.0
+  },
+  "jee_mains": {
+   "category": "exam",
+   "seed": "mains",
+   "similarity": 0.737
+  },
+  "jee2022": {
+   "category": "exam",
+   "seed": "jee",
+   "similarity": 0.586
+  },
+  "jee_2024": {
+   "category": "exam",
+   "seed": "jee",
+   "similarity": 0.561
+  },
+  "mains": {
+   "category": "exam",
+   "seed": "mains",
+   "similarity": 1.0
+  },
+  "adv": {
+   "category": "exam",
+   "seed": "advanced",
+   "similarity": 0.763
+  },
+  "jee_main": {
+   "category": "exam",
+   "seed": "mains",
+   "similarity": 0.612
+  },
+  "220": {
+   "category": "exam",
+   "seed": "mains",
+   "similarity": 0.604
+  },
+  "advanced": {
+   "category": "exam",
+   "seed": "mains",
+   "similarity": 0.604
+  },
+  "bitsat": {
+   "category": "exam",
+   "seed": "mains",
+   "similarity": 0.573
+  },
+  "jeemains": {
+   "category": "exam",
+   "seed": "wbjee",
+   "similarity": 0.697
+  },
+  "targetting": {
+   "category": "exam",
+   "seed": "advanced",
+   "similarity": 0.565
+  },
+  "first_attempt": {
+   "category": "exam",
+   "seed": "mains",
+   "similarity": 0.559
+  },
+  "jee_adv": {
+   "category": "exam",
+   "seed": "advanced",
+   "similarity": 0.639
+  },
+  "100_120": {
+   "category": "exam",
+   "seed": "mains",
+   "similarity": 0.556
+  },
+  "advance": {
+   "category": "exam",
+   "seed": "advanced",
+   "similarity": 0.661
+  },
+  "jee_advanced": {
+   "category": "exam",
+   "seed": "advanced",
+   "similarity": 0.64
+  },
+  "elementary": {
+   "category": "exam",
+   "seed": "advanced",
+   "similarity": 0.568
+  },
+  "archives": {
+   "category": "resource",
+   "seed": "pyqs",
+   "similarity": 0.723
+  },
+  "neet": {
+   "category": "exam",
+   "seed": "neet",
+   "similarity": 1.0
+  },
+  "neet_2022": {
+   "category": "exam",
+   "seed": "neet",
+   "similarity": 0.607
+  },
+  "mhtcet": {
+   "category": "exam",
+   "seed": "wbjee",
+   "similarity": 0.683
+  },
+  "viteee": {
+   "category": "exam",
+   "seed": "comedk",
+   "similarity": 0.789
+  },
+  "mht_cet": {
+   "category": "exam",
+   "seed": "mhtcet",
+   "similarity": 0.767
+  },
+  "jeem": {
+   "category": "exam",
+   "seed": "bitsat",
+   "similarity": 0.589
+  },
+  "embibe": {
+   "category": "resource",
+   "seed": "mock",
+   "similarity": 0.584
+  },
+  "kitee": {
+   "category": "exam",
+   "seed": "wbjee",
+   "similarity": 0.677
+  },
+  "vitee": {
+   "category": "exam",
+   "seed": "viteee",
+   "similarity": 0.76
+  },
+  "comedk": {
+   "category": "exam",
+   "seed": "viteee",
+   "similarity": 0.789
+  },
+  "july_attempt": {
+   "category": "exam",
+   "seed": "bitsat",
+   "similarity": 0.575
+  },
+  "390": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 0.593
+  },
+  "230": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 0.596
+  },
+  "96_ile": {
+   "category": "exam",
+   "seed": "bitsat",
+   "similarity": 0.569
+  },
+  "ugee": {
+   "category": "exam",
+   "seed": "mhtcet",
+   "similarity": 0.696
+  },
+  "boards": {
+   "category": "exam",
+   "seed": "boards",
+   "similarity": 1.0
+  },
+  "cbse": {
+   "category": "exam",
+   "seed": "boards",
+   "similarity": 0.673
+  },
+  "term_1": {
+   "category": "exam",
+   "seed": "boards",
+   "similarity": 0.672
+  },
+  "board_exams": {
+   "category": "exam",
+   "seed": "boards",
+   "similarity": 0.662
+  },
+  "term_2": {
+   "category": "exam",
+   "seed": "boards",
+   "similarity": 0.649
+  },
+  "board": {
+   "category": "exam",
+   "seed": "boards",
+   "similarity": 0.645
+  },
+  "board_exam": {
+   "category": "exam",
+   "seed": "boards",
+   "similarity": 0.613
+  },
+  "10th_boards": {
+   "category": "exam",
+   "seed": "boards",
+   "similarity": 0.601
+  },
+  "school_exams": {
+   "category": "exam",
+   "seed": "boards",
+   "similarity": 0.6
+  },
+  "state_board": {
+   "category": "exam",
+   "seed": "boards",
+   "similarity": 0.599
+  },
+  "hsc": {
+   "category": "subject",
+   "seed": "pcb",
+   "similarity": 0.618
+  },
+  "isc": {
+   "category": "subject",
+   "seed": "pcm",
+   "similarity": 0.657
+  },
+  "preperation": {
+   "category": "exam",
+   "seed": "boards",
+   "similarity": 0.593
+  },
+  "pre_boards": {
+   "category": "exam",
+   "seed": "boards",
+   "similarity": 0.583
+  },
+  "practicals": {
+   "category": "exam",
+   "seed": "boards",
+   "similarity": 0.576
+  },
+  "internals": {
+   "category": "exam",
+   "seed": "boards",
+   "similarity": 0.574
+  },
+  "cuet": {
+   "category": "exam",
+   "seed": "cuet",
+   "similarity": 1.0
+  },
+  "ggsipu": {
+   "category": "admission",
+   "seed": "josaa",
+   "similarity": 0.772
+  },
+  "compartment": {
+   "category": "exam",
+   "seed": "cuet",
+   "similarity": 0.626
+  },
+  "snusat": {
+   "category": "exam",
+   "seed": "mhtcet",
+   "similarity": 0.695
+  },
+  "last_date": {
+   "category": "exam",
+   "seed": "mhtcet",
+   "similarity": 0.661
+  },
+  "improvement_exam": {
+   "category": "subject",
+   "seed": "pcb",
+   "similarity": 0.644
+  },
+  "kiitee": {
+   "category": "exam",
+   "seed": "mhtcet",
+   "similarity": 0.706
+  },
+  "phase_2": {
+   "category": "exam",
+   "seed": "comedk",
+   "similarity": 0.713
+  },
+  "cucet": {
+   "category": "exam",
+   "seed": "cuet",
+   "similarity": 0.594
+  },
+  "btech": {
+   "category": "exam",
+   "seed": "cuet",
+   "similarity": 0.594
+  },
+  "shiv_nadar": {
+   "category": "exam",
+   "seed": "cuet",
+   "similarity": 0.592
+  },
+  "refund_policy": {
+   "category": "admission",
+   "seed": "counselling",
+   "similarity": 0.664
+  },
+  "pcb_student": {
+   "category": "subject",
+   "seed": "pcb",
+   "similarity": 0.666
+  },
+  "kab_aayega": {
+   "category": "exam",
+   "seed": "cuet",
+   "similarity": 0.583
+  },
+  "kvpy": {
+   "category": "exam",
+   "seed": "kvpy",
+   "similarity": 1.0
+  },
+  "aptitude_test": {
+   "category": "exam",
+   "seed": "kvpy",
+   "similarity": 0.671
+  },
+  "hbcse": {
+   "category": "exam",
+   "seed": "olympiad",
+   "similarity": 0.646
+  },
+  "iiser": {
+   "category": "institute",
+   "seed": "iisc",
+   "similarity": 0.708
+  },
+  "scholar": {
+   "category": "exam",
+   "seed": "kvpy",
+   "similarity": 0.583
+  },
+  "iat": {
+   "category": "institute",
+   "seed": "iiser",
+   "similarity": 0.684
+  },
+  "iisc": {
+   "category": "institute",
+   "seed": "iiser",
+   "similarity": 0.708
+  },
+  "merit_list": {
+   "category": "exam",
+   "seed": "kvpy",
+   "similarity": 0.565
+  },
+  "nsep": {
+   "category": "exam",
+   "seed": "kvpy",
+   "similarity": 0.565
+  },
+  "isi": {
+   "category": "exam",
+   "seed": "kvpy",
+   "similarity": 0.564
+  },
+  "cmi": {
+   "category": "institute",
+   "seed": "iisc",
+   "similarity": 0.709
+  },
+  "kvpy_sa": {
+   "category": "exam",
+   "seed": "kvpy",
+   "similarity": 0.563
+  },
+  "uceed": {
+   "category": "exam",
+   "seed": "kvpy",
+   "similarity": 0.563
+  },
+  "ioq": {
+   "category": "exam",
+   "seed": "kvpy",
+   "similarity": 0.555
+  },
+  "abolished": {
+   "category": "exam",
+   "seed": "kvpy",
+   "similarity": 0.552
+  },
+  "olympiad": {
+   "category": "exam",
+   "seed": "olympiad",
+   "similarity": 1.0
+  },
+  "regional": {
+   "category": "exam",
+   "seed": "olympiad",
+   "similarity": 0.674
+  },
+  "olympiads": {
+   "category": "exam",
+   "seed": "olympiad",
+   "similarity": 0.667
+  },
+  "astronomy": {
+   "category": "exam",
+   "seed": "olympiad",
+   "similarity": 0.659
+  },
+  "bhabha": {
+   "category": "exam",
+   "seed": "olympiad",
+   "similarity": 0.641
+  },
+  "russian": {
+   "category": "exam",
+   "seed": "olympiad",
+   "similarity": 0.64
+  },
+  "authors": {
+   "category": "exam",
+   "seed": "olympiad",
+   "similarity": 0.621
+  },
+  "2015": {
+   "category": "exam",
+   "seed": "olympiad",
+   "similarity": 0.613
+  },
+  "ioqc": {
+   "category": "exam",
+   "seed": "olympiad",
+   "similarity": 0.613
+  },
+  "rmo": {
+   "category": "exam",
+   "seed": "olympiad",
+   "similarity": 0.611
+  },
+  "handouts": {
+   "category": "resource",
+   "seed": "pyq",
+   "similarity": 0.649
+  },
+  "statistical": {
+   "category": "exam",
+   "seed": "olympiad",
+   "similarity": 0.591
+  },
+  "ioqa": {
+   "category": "exam",
+   "seed": "olympiad",
+   "similarity": 0.59
+  },
+  "nda": {
+   "category": "exam",
+   "seed": "olympiad",
+   "similarity": 0.587
+  },
+  "cet": {
+   "category": "exam",
+   "seed": "mhtcet",
+   "similarity": 0.703
+  },
+  "wbjee": {
+   "category": "exam",
+   "seed": "comedk",
+   "similarity": 0.748
+  },
+  "4th_attempt": {
+   "category": "exam",
+   "seed": "mhtcet",
+   "similarity": 0.68
+  },
+  "mh": {
+   "category": "exam",
+   "seed": "mhtcet",
+   "similarity": 0.679
+  },
+  "eligibility_criteria": {
+   "category": "exam",
+   "seed": "mhtcet",
+   "similarity": 0.669
+  },
+  "ipu": {
+   "category": "exam",
+   "seed": "comedk",
+   "similarity": 0.695
+  },
+  "jossa": {
+   "category": "admission",
+   "seed": "csab",
+   "similarity": 0.756
+  },
+  "kcet": {
+   "category": "exam",
+   "seed": "wbjee",
+   "similarity": 0.742
+  },
+  "srmjeee": {
+   "category": "exam",
+   "seed": "comedk",
+   "similarity": 0.758
+  },
+  "nest": {
+   "category": "institute",
+   "seed": "iiser",
+   "similarity": 0.714
+  },
+  "comdek": {
+   "category": "exam",
+   "seed": "comedk",
+   "similarity": 0.724
+  },
+  "13k": {
+   "category": "exam",
+   "seed": "comedk",
+   "similarity": 0.702
+  },
+  "1k": {
+   "category": "exam",
+   "seed": "wbjee",
+   "similarity": 0.68
+  },
+  "27k": {
+   "category": "exam",
+   "seed": "wbjee",
+   "similarity": 0.673
+  },
+  "22k": {
+   "category": "exam",
+   "seed": "comedk",
+   "similarity": 0.703
+  },
+  "21k": {
+   "category": "exam",
+   "seed": "wbjee",
+   "similarity": 0.668
+  },
+  "srmjee": {
+   "category": "exam",
+   "seed": "comedk",
+   "similarity": 0.737
+  },
+  "35k": {
+   "category": "exam",
+   "seed": "comedk",
+   "similarity": 0.724
+  },
+  "41k": {
+   "category": "exam",
+   "seed": "comedk",
+   "similarity": 0.713
+  },
+  "manipal": {
+   "category": "exam",
+   "seed": "comedk",
+   "similarity": 0.704
+  },
+  "snu": {
+   "category": "exam",
+   "seed": "comedk",
+   "similarity": 0.695
+  },
+  "vit": {
+   "category": "exam",
+   "seed": "viteee",
+   "similarity": 0.675
+  },
+  "aeee": {
+   "category": "exam",
+   "seed": "viteee",
+   "similarity": 0.673
+  },
+  "srm": {
+   "category": "exam",
+   "seed": "viteee",
+   "similarity": 0.67
+  },
+  "physics": {
+   "category": "subject",
+   "seed": "physics",
+   "similarity": 1.0
+  },
+  "math": {
+   "category": "subject",
+   "seed": "maths",
+   "similarity": 0.752
+  },
+  "phy": {
+   "category": "subject",
+   "seed": "physics",
+   "similarity": 0.685
+  },
+  "chemistry": {
+   "category": "subject",
+   "seed": "physics",
+   "similarity": 0.663
+  },
+  "maths": {
+   "category": "subject",
+   "seed": "physics",
+   "similarity": 0.65
+  },
+  "physical_chemistry": {
+   "category": "subject",
+   "seed": "inorganic",
+   "similarity": 0.688
+  },
+  "phys": {
+   "category": "subject",
+   "seed": "zoology",
+   "similarity": 0.734
+  },
+  "chem": {
+   "category": "subject",
+   "seed": "chemistry",
+   "similarity": 0.705
+  },
+  "biology": {
+   "category": "subject",
+   "seed": "physics",
+   "similarity": 0.597
+  },
+  "inorganic_and_physical": {
+   "category": "subject",
+   "seed": "botany",
+   "similarity": 0.642
+  },
+  "abc": {
+   "category": "subject",
+   "seed": "biology",
+   "similarity": 0.584
+  },
+  "errorless": {
+   "category": "subject",
+   "seed": "chemistry",
+   "similarity": 0.619
+  },
+  "botany": {
+   "category": "subject",
+   "seed": "zoology",
+   "similarity": 0.813
+  },
+  "zoology": {
+   "category": "subject",
+   "seed": "botany",
+   "similarity": 0.813
+  },
+  "current_electricity": {
+   "category": "topic",
+   "seed": "electrostatics",
+   "similarity": 0.816
+  },
+  "straightforward": {
+   "category": "subject",
+   "seed": "zoology",
+   "similarity": 0.668
+  },
+  "everyday_life": {
+   "category": "subject",
+   "seed": "inorganic",
+   "similarity": 0.646
+  },
+  "inorganic": {
+   "category": "subject",
+   "seed": "organic",
+   "similarity": 0.786
+  },
+  "organic_chemistry": {
+   "category": "subject",
+   "seed": "organic",
+   "similarity": 0.69
+  },
+  "basic_mathematics": {
+   "category": "subject",
+   "seed": "chemistry",
+   "similarity": 0.59
+  },
+  "weakest": {
+   "category": "subject",
+   "seed": "chemistry",
+   "similarity": 0.588
+  },
+  "mathematics": {
+   "category": "subject",
+   "seed": "maths",
+   "similarity": 0.579
+  },
+  "physic": {
+   "category": "subject",
+   "seed": "botany",
+   "similarity": 0.622
+  },
+  "rd": {
+   "category": "subject",
+   "seed": "maths",
+   "similarity": 0.56
+  },
+  "phy_chem": {
+   "category": "subject",
+   "seed": "biology",
+   "similarity": 0.606
+  },
+  "bio": {
+   "category": "subject",
+   "seed": "biology",
+   "similarity": 0.67
+  },
+  "flashcards": {
+   "category": "subject",
+   "seed": "biology",
+   "similarity": 0.607
+  },
+  "comprehensive": {
+   "category": "subject",
+   "seed": "biology",
+   "similarity": 0.583
+  },
+  "mtg": {
+   "category": "resource",
+   "seed": "hcv",
+   "similarity": 0.71
+  },
+  "pcb": {
+   "category": "subject",
+   "seed": "pcm",
+   "similarity": 0.677
+  },
+  "reference_book": {
+   "category": "resource",
+   "seed": "ncert",
+   "similarity": 0.576
+  },
+  "pearson": {
+   "category": "subject",
+   "seed": "biology",
+   "similarity": 0.564
+  },
+  "thorough": {
+   "category": "subject",
+   "seed": "biology",
+   "similarity": 0.558
+  },
+  "book_recommendations": {
+   "category": "subject",
+   "seed": "biology",
+   "similarity": 0.556
+  },
+  "physical_education": {
+   "category": "subject",
+   "seed": "pcm",
+   "similarity": 0.56
+  },
+  "electromagnetism": {
+   "category": "topic",
+   "seed": "equilibrium",
+   "similarity": 0.805
+  },
+  "animal_kingdom": {
+   "category": "topic",
+   "seed": "genetics",
+   "similarity": 0.813
+  },
+  "physical_and_inorganic": {
+   "category": "subject",
+   "seed": "botany",
+   "similarity": 0.646
+  },
+  "conic": {
+   "category": "subject",
+   "seed": "zoology",
+   "similarity": 0.678
+  },
+  "mud": {
+   "category": "subject",
+   "seed": "zoology",
+   "similarity": 0.682
+  },
+  "atomic_structure": {
+   "category": "topic",
+   "seed": "thermodynamics",
+   "similarity": 0.793
+  },
+  "nitin": {
+   "category": "subject",
+   "seed": "botany",
+   "similarity": 0.623
+  },
+  "radioactivity": {
+   "category": "subject",
+   "seed": "botany",
+   "similarity": 0.622
+  },
+  "calorimetry": {
+   "category": "subject",
+   "seed": "zoology",
+   "similarity": 0.701
+  },
+  "dinesh": {
+   "category": "subject",
+   "seed": "botany",
+   "similarity": 0.62
+  },
+  "inorg": {
+   "category": "subject",
+   "seed": "inorganic",
+   "similarity": 0.657
+  },
+  "esp": {
+   "category": "subject",
+   "seed": "zoology",
+   "similarity": 0.702
+  },
+  "measurements": {
+   "category": "subject",
+   "seed": "zoology",
+   "similarity": 0.695
+  },
+  "logarithms": {
+   "category": "subject",
+   "seed": "zoology",
+   "similarity": 0.678
+  },
+  "very_weak": {
+   "category": "subject",
+   "seed": "zoology",
+   "similarity": 0.675
+  },
+  "garbage": {
+   "category": "subject",
+   "seed": "zoology",
+   "similarity": 0.673
+  },
+  "ib": {
+   "category": "subject",
+   "seed": "zoology",
+   "similarity": 0.669
+  },
+  "formal": {
+   "category": "subject",
+   "seed": "zoology",
+   "similarity": 0.669
+  },
+  "manageable": {
+   "category": "subject",
+   "seed": "zoology",
+   "similarity": 0.669
+  },
+  "organic": {
+   "category": "subject",
+   "seed": "organic",
+   "similarity": 1.0
+  },
+  "physical_chem": {
+   "category": "subject",
+   "seed": "organic",
+   "similarity": 0.713
+  },
+  "organic_chem": {
+   "category": "subject",
+   "seed": "organic",
+   "similarity": 0.696
+  },
+  "reaction_mechanism": {
+   "category": "subject",
+   "seed": "organic",
+   "similarity": 0.667
+  },
+  "inorganic_chemistry": {
+   "category": "subject",
+   "seed": "inorganic",
+   "similarity": 0.683
+  },
+  "redox": {
+   "category": "topic",
+   "seed": "optics",
+   "similarity": 0.834
+  },
+  "hydrocarbons": {
+   "category": "subject",
+   "seed": "organic",
+   "similarity": 0.662
+  },
+  "goc": {
+   "category": "subject",
+   "seed": "organic",
+   "similarity": 0.661
+  },
+  "thermochemistry": {
+   "category": "topic",
+   "seed": "modern_physics",
+   "similarity": 0.821
+  },
+  "ioc": {
+   "category": "subject",
+   "seed": "organic",
+   "similarity": 0.655
+  },
+  "op_tandon": {
+   "category": "subject",
+   "seed": "inorganic",
+   "similarity": 0.659
+  },
+  "modern_physics": {
+   "category": "subject",
+   "seed": "inorganic",
+   "similarity": 0.659
+  },
+  "states_of_matter": {
+   "category": "topic",
+   "seed": "optics",
+   "similarity": 0.876
+  },
+  "bonding": {
+   "category": "topic",
+   "seed": "equilibrium",
+   "similarity": 0.815
+  },
+  "biomolecules": {
+   "category": "subject",
+   "seed": "inorganic",
+   "similarity": 0.647
+  },
+  "polymers": {
+   "category": "topic",
+   "seed": "electrochemistry",
+   "similarity": 0.778
+  },
+  "pcm": {
+   "category": "subject",
+   "seed": "pcm",
+   "similarity": 1.0
+  },
+  "aggregate": {
+   "category": "subject",
+   "seed": "pcm",
+   "similarity": 0.631
+  },
+  "pcmb": {
+   "category": "subject",
+   "seed": "pcb",
+   "similarity": 0.754
+  },
+  "subjects": {
+   "category": "subject",
+   "seed": "pcm",
+   "similarity": 0.619
+  },
+  "maharashtra_board": {
+   "category": "subject",
+   "seed": "pcb",
+   "similarity": 0.615
+  },
+  "science": {
+   "category": "subject",
+   "seed": "pcm",
+   "similarity": 0.585
+  },
+  "all_three": {
+   "category": "subject",
+   "seed": "pcm",
+   "similarity": 0.577
+  },
+  "sci": {
+   "category": "subject",
+   "seed": "pcm",
+   "similarity": 0.565
+  },
+  "sst": {
+   "category": "subject",
+   "seed": "pcm",
+   "similarity": 0.555
+  },
+  "psychology": {
+   "category": "subject",
+   "seed": "pcb",
+   "similarity": 0.619
+  },
+  "prepped": {
+   "category": "subject",
+   "seed": "pcm",
+   "similarity": 0.552
+  },
+  "hsc_board": {
+   "category": "subject",
+   "seed": "pcb",
+   "similarity": 0.656
+  },
+  "optional_subject": {
+   "category": "subject",
+   "seed": "pcb",
+   "similarity": 0.647
+  },
+  "5th_subject": {
+   "category": "subject",
+   "seed": "pcb",
+   "similarity": 0.62
+  },
+  "opting": {
+   "category": "subject",
+   "seed": "pcb",
+   "similarity": 0.617
+  },
+  "improvement_exams": {
+   "category": "subject",
+   "seed": "pcb",
+   "similarity": 0.615
+  },
+  "commerce": {
+   "category": "subject",
+   "seed": "pcb",
+   "similarity": 0.611
+  },
+  "icse": {
+   "category": "subject",
+   "seed": "pcb",
+   "similarity": 0.604
+  },
+  "rotational": {
+   "category": "topic",
+   "seed": "rotational",
+   "similarity": 1.0
+  },
+  "kinematics_nlm": {
+   "category": "topic",
+   "seed": "rotational",
+   "similarity": 0.831
+  },
+  "heat_transfer": {
+   "category": "topic",
+   "seed": "rotational",
+   "similarity": 0.828
+  },
+  "dynamics": {
+   "category": "topic",
+   "seed": "rotational",
+   "similarity": 0.826
+  },
+  "periodicity": {
+   "category": "topic",
+   "seed": "mole",
+   "similarity": 0.872
+  },
+  "shm_waves": {
+   "category": "topic",
+   "seed": "optics",
+   "similarity": 0.875
+  },
+  "elasticity": {
+   "category": "topic",
+   "seed": "optics",
+   "similarity": 0.835
+  },
+  "gaseous": {
+   "category": "topic",
+   "seed": "matrices",
+   "similarity": 0.825
+  },
+  "capacitors": {
+   "category": "topic",
+   "seed": "optics",
+   "similarity": 0.847
+  },
+  "chemical_equilibrium": {
+   "category": "topic",
+   "seed": "optics",
+   "similarity": 0.867
+  },
+  "stoichiometry": {
+   "category": "topic",
+   "seed": "optics",
+   "similarity": 0.835
+  },
+  "conductors": {
+   "category": "topic",
+   "seed": "rotational",
+   "similarity": 0.814
+  },
+  "classification": {
+   "category": "topic",
+   "seed": "rotational",
+   "similarity": 0.813
+  },
+  "oscillations": {
+   "category": "topic",
+   "seed": "rotational",
+   "similarity": 0.811
+  },
+  "lcd": {
+   "category": "topic",
+   "seed": "matrices",
+   "similarity": 0.818
+  },
+  "electrostatics": {
+   "category": "topic",
+   "seed": "electrostatics",
+   "similarity": 1.0
+  },
+  "rbd": {
+   "category": "topic",
+   "seed": "electrostatics",
+   "similarity": 0.823
+  },
+  "electrostats": {
+   "category": "topic",
+   "seed": "optics",
+   "similarity": 0.841
+  },
+  "electricity": {
+   "category": "topic",
+   "seed": "magnetism",
+   "similarity": 0.823
+  },
+  "gravitation": {
+   "category": "topic",
+   "seed": "electrostatics",
+   "similarity": 0.803
+  },
+  "optics": {
+   "category": "topic",
+   "seed": "kinematics",
+   "similarity": 0.808
+  },
+  "capacitance": {
+   "category": "topic",
+   "seed": "electrostatics",
+   "similarity": 0.801
+  },
+  "hydrocarbon": {
+   "category": "topic",
+   "seed": "electrostatics",
+   "similarity": 0.8
+  },
+  "conic_sections": {
+   "category": "topic",
+   "seed": "vectors",
+   "similarity": 0.822
+  },
+  "properties_of_matter": {
+   "category": "topic",
+   "seed": "optics",
+   "similarity": 0.849
+  },
+  "nlm": {
+   "category": "topic",
+   "seed": "electrostatics",
+   "similarity": 0.794
+  },
+  "emi": {
+   "category": "topic",
+   "seed": "magnetism",
+   "similarity": 0.796
+  },
+  "thermodynamics": {
+   "category": "topic",
+   "seed": "thermodynamics",
+   "similarity": 1.0
+  },
+  "ktg": {
+   "category": "topic",
+   "seed": "thermodynamics",
+   "similarity": 0.801
+  },
+  "coordination": {
+   "category": "topic",
+   "seed": "electrochemistry",
+   "similarity": 0.833
+  },
+  "chemical_kinetics": {
+   "category": "topic",
+   "seed": "electrochemistry",
+   "similarity": 0.817
+  },
+  "kinematics": {
+   "category": "topic",
+   "seed": "kinematics",
+   "similarity": 1.0
+  },
+  "fluids": {
+   "category": "topic",
+   "seed": "optics",
+   "similarity": 0.868
+  },
+  "trigonometric_functions": {
+   "category": "topic",
+   "seed": "kinematics",
+   "similarity": 0.796
+  },
+  "geometrical": {
+   "category": "topic",
+   "seed": "optics",
+   "similarity": 0.84
+  },
+  "electrostatic": {
+   "category": "topic",
+   "seed": "kinematics",
+   "similarity": 0.784
+  },
+  "trig": {
+   "category": "topic",
+   "seed": "optics",
+   "similarity": 0.843
+  },
+  "mechanical_properties": {
+   "category": "topic",
+   "seed": "optics",
+   "similarity": 0.838
+  },
+  "solids": {
+   "category": "topic",
+   "seed": "optics",
+   "similarity": 0.832
+  },
+  "calculus": {
+   "category": "topic",
+   "seed": "calculus",
+   "similarity": 1.0
+  },
+  "algebra": {
+   "category": "topic",
+   "seed": "calculus",
+   "similarity": 0.736
+  },
+  "conics": {
+   "category": "topic",
+   "seed": "vectors",
+   "similarity": 0.82
+  },
+  "coordinate_geometry": {
+   "category": "topic",
+   "seed": "vectors",
+   "similarity": 0.773
+  },
+  "3d_geometry": {
+   "category": "topic",
+   "seed": "vectors",
+   "similarity": 0.795
+  },
+  "circles": {
+   "category": "topic",
+   "seed": "vectors",
+   "similarity": 0.834
+  },
+  "mechanics": {
+   "category": "topic",
+   "seed": "calculus",
+   "similarity": 0.683
+  },
+  "iupac_nomenclature": {
+   "category": "topic",
+   "seed": "calculus",
+   "similarity": 0.671
+  },
+  "coordinate": {
+   "category": "topic",
+   "seed": "calculus",
+   "similarity": 0.671
+  },
+  "before_starting": {
+   "category": "topic",
+   "seed": "calculus",
+   "similarity": 0.664
+  },
+  "trigonometry": {
+   "category": "topic",
+   "seed": "calculus",
+   "similarity": 0.662
+  },
+  "integration": {
+   "category": "topic",
+   "seed": "integration",
+   "similarity": 1.0
+  },
+  "differentiation": {
+   "category": "topic",
+   "seed": "vectors",
+   "similarity": 0.783
+  },
+  "matrices_and_determinants": {
+   "category": "topic",
+   "seed": "matrices",
+   "similarity": 0.835
+  },
+  "curve": {
+   "category": "topic",
+   "seed": "integration",
+   "similarity": 0.713
+  },
+  "aod": {
+   "category": "topic",
+   "seed": "coordinate",
+   "similarity": 0.807
+  },
+  "vectors": {
+   "category": "topic",
+   "seed": "integration",
+   "similarity": 0.702
+  },
+  "straight_lines": {
+   "category": "topic",
+   "seed": "vectors",
+   "similarity": 0.783
+  },
+  "matrices": {
+   "category": "topic",
+   "seed": "integration",
+   "similarity": 0.696
+  },
+  "trigo": {
+   "category": "topic",
+   "seed": "vectors",
+   "similarity": 0.783
+  },
+  "integrals": {
+   "category": "topic",
+   "seed": "integration",
+   "similarity": 0.689
+  },
+  "indefinite_integration": {
+   "category": "topic",
+   "seed": "integration",
+   "similarity": 0.689
+  },
+  "probability": {
+   "category": "topic",
+   "seed": "probability",
+   "similarity": 1.0
+  },
+  "continuity_and_differentiability": {
+   "category": "topic",
+   "seed": "probability",
+   "similarity": 0.737
+  },
+  "sequence_and_series": {
+   "category": "topic",
+   "seed": "vectors",
+   "similarity": 0.776
+  },
+  "triangles": {
+   "category": "topic",
+   "seed": "probability",
+   "similarity": 0.717
+  },
+  "mathematical_reasoning": {
+   "category": "topic",
+   "seed": "coordinate",
+   "similarity": 0.795
+  },
+  "differentiability": {
+   "category": "topic",
+   "seed": "mole",
+   "similarity": 0.885
+  },
+  "quadratic_equations": {
+   "category": "topic",
+   "seed": "mole",
+   "similarity": 0.864
+  },
+  "limits": {
+   "category": "topic",
+   "seed": "vectors",
+   "similarity": 0.783
+  },
+  "induction": {
+   "category": "topic",
+   "seed": "magnetism",
+   "similarity": 0.771
+  },
+  "reasoning": {
+   "category": "topic",
+   "seed": "probability",
+   "similarity": 0.691
+  },
+  "equations": {
+   "category": "topic",
+   "seed": "probability",
+   "similarity": 0.689
+  },
+  "area_under": {
+   "category": "topic",
+   "seed": "mole",
+   "similarity": 0.868
+  },
+  "determinant": {
+   "category": "topic",
+   "seed": "matrices",
+   "similarity": 0.859
+  },
+  "kinetics": {
+   "category": "topic",
+   "seed": "matrices",
+   "similarity": 0.831
+  },
+  "conic_section": {
+   "category": "topic",
+   "seed": "matrices",
+   "similarity": 0.827
+  },
+  "determinants": {
+   "category": "topic",
+   "seed": "matrices",
+   "similarity": 0.826
+  },
+  "ellipse": {
+   "category": "topic",
+   "seed": "matrices",
+   "similarity": 0.825
+  },
+  "geo": {
+   "category": "topic",
+   "seed": "coordinate",
+   "similarity": 0.822
+  },
+  "solid_state": {
+   "category": "topic",
+   "seed": "matrices",
+   "similarity": 0.817
+  },
+  "oscillation": {
+   "category": "topic",
+   "seed": "matrices",
+   "similarity": 0.817
+  },
+  "wpe": {
+   "category": "topic",
+   "seed": "matrices",
+   "similarity": 0.815
+  },
+  "genetics": {
+   "category": "topic",
+   "seed": "genetics",
+   "similarity": 1.0
+  },
+  "physiology": {
+   "category": "topic",
+   "seed": "genetics",
+   "similarity": 0.789
+  },
+  "naming": {
+   "category": "topic",
+   "seed": "genetics",
+   "similarity": 0.785
+  },
+  "f_block": {
+   "category": "topic",
+   "seed": "genetics",
+   "similarity": 0.772
+  },
+  "electro": {
+   "category": "topic",
+   "seed": "genetics",
+   "similarity": 0.771
+  },
+  "rxn": {
+   "category": "topic",
+   "seed": "genetics",
+   "similarity": 0.767
+  },
+  "ether": {
+   "category": "topic",
+   "seed": "genetics",
+   "similarity": 0.766
+  },
+  "derivation": {
+   "category": "topic",
+   "seed": "genetics",
+   "similarity": 0.763
+  },
+  "kingdom": {
+   "category": "topic",
+   "seed": "genetics",
+   "similarity": 0.761
+  },
+  "electrochemistry": {
+   "category": "topic",
+   "seed": "electrochemistry",
+   "similarity": 1.0
+  },
+  "surface_chemistry": {
+   "category": "topic",
+   "seed": "electrochemistry",
+   "similarity": 0.796
+  },
+  "fluid_mechanics": {
+   "category": "topic",
+   "seed": "modern_physics",
+   "similarity": 0.819
+  },
+  "qualitative_analysis": {
+   "category": "topic",
+   "seed": "electrochemistry",
+   "similarity": 0.776
+  },
+  "haloarenes": {
+   "category": "topic",
+   "seed": "electrochemistry",
+   "similarity": 0.771
+  },
+  "environmental_chemistry": {
+   "category": "topic",
+   "seed": "electrochemistry",
+   "similarity": 0.757
+  },
+  "equilibrium": {
+   "category": "topic",
+   "seed": "equilibrium",
+   "similarity": 1.0
+  },
+  "gaseous_state": {
+   "category": "topic",
+   "seed": "mole",
+   "similarity": 0.875
+  },
+  "surface": {
+   "category": "topic",
+   "seed": "equilibrium",
+   "similarity": 0.806
+  },
+  "mole": {
+   "category": "topic",
+   "seed": "equilibrium",
+   "similarity": 0.796
+  },
+  "em_waves": {
+   "category": "topic",
+   "seed": "equilibrium",
+   "similarity": 0.788
+  },
+  "thermo": {
+   "category": "topic",
+   "seed": "equilibrium",
+   "similarity": 0.786
+  },
+  "1d": {
+   "category": "topic",
+   "seed": "mole",
+   "similarity": 0.881
+  },
+  "low_practice": {
+   "category": "topic",
+   "seed": "mole",
+   "similarity": 0.878
+  },
+  "capacitor": {
+   "category": "topic",
+   "seed": "mole",
+   "similarity": 0.873
+  },
+  "kinematic": {
+   "category": "topic",
+   "seed": "mole",
+   "similarity": 0.872
+  },
+  "logarithm": {
+   "category": "topic",
+   "seed": "mole",
+   "similarity": 0.868
+  },
+  "molecular": {
+   "category": "topic",
+   "seed": "mole",
+   "similarity": 0.864
+  },
+  "conservation": {
+   "category": "topic",
+   "seed": "mole",
+   "similarity": 0.862
+  },
+  "wep": {
+   "category": "topic",
+   "seed": "mole",
+   "similarity": 0.861
+  },
+  "measurement": {
+   "category": "topic",
+   "seed": "mole",
+   "similarity": 0.859
+  },
+  "identities": {
+   "category": "topic",
+   "seed": "mole",
+   "similarity": 0.856
+  },
+  "pre_requisites": {
+   "category": "topic",
+   "seed": "modern_physics",
+   "similarity": 0.805
+  },
+  "prerequisite": {
+   "category": "topic",
+   "seed": "modern_physics",
+   "similarity": 0.803
+  },
+  "semiconductors": {
+   "category": "topic",
+   "seed": "modern_physics",
+   "similarity": 0.779
+  },
+  "vector_3d": {
+   "category": "topic",
+   "seed": "coordinate",
+   "similarity": 0.799
+  },
+  "inverse": {
+   "category": "topic",
+   "seed": "coordinate",
+   "similarity": 0.795
+  },
+  "electrochem": {
+   "category": "topic",
+   "seed": "coordinate",
+   "similarity": 0.793
+  },
+  "geometry": {
+   "category": "topic",
+   "seed": "vectors",
+   "similarity": 0.792
+  },
+  "magnetism": {
+   "category": "topic",
+   "seed": "magnetism",
+   "similarity": 1.0
+  },
+  "fluid": {
+   "category": "topic",
+   "seed": "magnetism",
+   "similarity": 0.78
+  },
+  "electromagnetic": {
+   "category": "topic",
+   "seed": "magnetism",
+   "similarity": 0.771
+  },
+  "redox_reactions": {
+   "category": "topic",
+   "seed": "magnetism",
+   "similarity": 0.768
+  },
+  "iit": {
+   "category": "institute",
+   "seed": "iit",
+   "similarity": 1.0
+  },
+  "iit_delhi": {
+   "category": "institute",
+   "seed": "iit",
+   "similarity": 0.617
+  },
+  "aiims": {
+   "category": "institute",
+   "seed": "iit",
+   "similarity": 0.599
+  },
+  "roorkee": {
+   "category": "institute",
+   "seed": "iisc",
+   "similarity": 0.73
+  },
+  "iitb_cse": {
+   "category": "institute",
+   "seed": "aiims",
+   "similarity": 0.628
+  },
+  "dholakpur": {
+   "category": "institute",
+   "seed": "iit",
+   "similarity": 0.573
+  },
+  "iit_b": {
+   "category": "institute",
+   "seed": "iit",
+   "similarity": 0.564
+  },
+  "iitb": {
+   "category": "institute",
+   "seed": "iit",
+   "similarity": 0.564
+  },
+  "iits": {
+   "category": "institute",
+   "seed": "iit",
+   "similarity": 0.557
+  },
+  "iit_bombay": {
+   "category": "institute",
+   "seed": "iit",
+   "similarity": 0.555
+  },
+  "nit": {
+   "category": "institute",
+   "seed": "nit",
+   "similarity": 1.0
+  },
+  "warangal": {
+   "category": "institute",
+   "seed": "nit",
+   "similarity": 0.743
+  },
+  "govt_college": {
+   "category": "institute",
+   "seed": "nit",
+   "similarity": 0.735
+  },
+  "cs_branch": {
+   "category": "institute",
+   "seed": "nit",
+   "similarity": 0.73
+  },
+  "dtu": {
+   "category": "institute",
+   "seed": "nit",
+   "similarity": 0.727
+  },
+  "mnnit": {
+   "category": "institute",
+   "seed": "nit",
+   "similarity": 0.719
+  },
+  "surathkal": {
+   "category": "institute",
+   "seed": "nit",
+   "similarity": 0.718
+  },
+  "ece": {
+   "category": "institute",
+   "seed": "cse",
+   "similarity": 0.819
+  },
+  "top_nit": {
+   "category": "institute",
+   "seed": "nit",
+   "similarity": 0.713
+  },
+  "bits_goa": {
+   "category": "institute",
+   "seed": "nit",
+   "similarity": 0.713
+  },
+  "kurukshetra": {
+   "category": "institute",
+   "seed": "nit",
+   "similarity": 0.71
+  },
+  "top_nits": {
+   "category": "institute",
+   "seed": "nit",
+   "similarity": 0.705
+  },
+  "gfti": {
+   "category": "institute",
+   "seed": "nit",
+   "similarity": 0.704
+  },
+  "government_college": {
+   "category": "institute",
+   "seed": "nit",
+   "similarity": 0.701
+  },
+  "civil": {
+   "category": "institute",
+   "seed": "nit",
+   "similarity": 0.696
+  },
+  "bits_hyderabad": {
+   "category": "institute",
+   "seed": "ece",
+   "similarity": 0.796
+  },
+  "iiit": {
+   "category": "institute",
+   "seed": "iiit",
+   "similarity": 1.0
+  },
+  "allahabad": {
+   "category": "institute",
+   "seed": "iiit",
+   "similarity": 0.74
+  },
+  "nsit": {
+   "category": "institute",
+   "seed": "iiit",
+   "similarity": 0.719
+  },
+  "bhopal": {
+   "category": "institute",
+   "seed": "iiit",
+   "similarity": 0.717
+  },
+  "kottayam": {
+   "category": "institute",
+   "seed": "iiit",
+   "similarity": 0.71
+  },
+  "iiit_hyderabad": {
+   "category": "institute",
+   "seed": "iiit",
+   "similarity": 0.71
+  },
+  "jaypee": {
+   "category": "institute",
+   "seed": "iiit",
+   "similarity": 0.707
+  },
+  "iiit_bangalore": {
+   "category": "institute",
+   "seed": "iiit",
+   "similarity": 0.7
+  },
+  "jodhpur": {
+   "category": "institute",
+   "seed": "iiit",
+   "similarity": 0.698
+  },
+  "mohali": {
+   "category": "institute",
+   "seed": "iiser",
+   "similarity": 0.73
+  },
+  "upes": {
+   "category": "institute",
+   "seed": "iiit",
+   "similarity": 0.694
+  },
+  "eni": {
+   "category": "institute",
+   "seed": "ece",
+   "similarity": 0.783
+  },
+  "lnmiit": {
+   "category": "institute",
+   "seed": "iiit",
+   "similarity": 0.692
+  },
+  "ranchi": {
+   "category": "institute",
+   "seed": "iiit",
+   "similarity": 0.691
+  },
+  "cu": {
+   "category": "institute",
+   "seed": "iiit",
+   "similarity": 0.691
+  },
+  "mnc": {
+   "category": "institute",
+   "seed": "iisc",
+   "similarity": 0.742
+  },
+  "vmmc": {
+   "category": "institute",
+   "seed": "aiims",
+   "similarity": 0.631
+  },
+  "medical_college": {
+   "category": "institute",
+   "seed": "mbbs",
+   "similarity": 0.639
+  },
+  "navy": {
+   "category": "institute",
+   "seed": "iisc",
+   "similarity": 0.708
+  },
+  "dream_college": {
+   "category": "institute",
+   "seed": "aiims",
+   "similarity": 0.612
+  },
+  "tirupati": {
+   "category": "institute",
+   "seed": "aiims",
+   "similarity": 0.608
+  },
+  "kalej": {
+   "category": "institute",
+   "seed": "aiims",
+   "similarity": 0.604
+  },
+  "iim": {
+   "category": "institute",
+   "seed": "iisc",
+   "similarity": 0.716
+  },
+  "grads": {
+   "category": "institute",
+   "seed": "aiims",
+   "similarity": 0.601
+  },
+  "startup": {
+   "category": "institute",
+   "seed": "aiims",
+   "similarity": 0.6
+  },
+  "bits": {
+   "category": "institute",
+   "seed": "bits",
+   "similarity": 1.0
+  },
+  "nits": {
+   "category": "institute",
+   "seed": "bits",
+   "similarity": 0.647
+  },
+  "dtu_nsut": {
+   "category": "institute",
+   "seed": "bits",
+   "similarity": 0.646
+  },
+  "dubai": {
+   "category": "institute",
+   "seed": "bits",
+   "similarity": 0.642
+  },
+  "waitlisted": {
+   "category": "admission",
+   "seed": "csab",
+   "similarity": 0.747
+  },
+  "iits_nits": {
+   "category": "institute",
+   "seed": "bits",
+   "similarity": 0.64
+  },
+  "lower_branches": {
+   "category": "institute",
+   "seed": "iisc",
+   "similarity": 0.7
+  },
+  "iiits": {
+   "category": "institute",
+   "seed": "bits",
+   "similarity": 0.632
+  },
+  "bit_mesra": {
+   "category": "institute",
+   "seed": "bits",
+   "similarity": 0.631
+  },
+  "thapar": {
+   "category": "institute",
+   "seed": "bits",
+   "similarity": 0.631
+  },
+  "vjti": {
+   "category": "institute",
+   "seed": "bits",
+   "similarity": 0.623
+  },
+  "lower_branch": {
+   "category": "institute",
+   "seed": "bits",
+   "similarity": 0.619
+  },
+  "private_universities": {
+   "category": "institute",
+   "seed": "bits",
+   "similarity": 0.612
+  },
+  "mbbs": {
+   "category": "institute",
+   "seed": "mbbs",
+   "similarity": 1.0
+  },
+  "bds": {
+   "category": "institute",
+   "seed": "mbbs",
+   "similarity": 0.776
+  },
+  "mba": {
+   "category": "institute",
+   "seed": "mbbs",
+   "similarity": 0.684
+  },
+  "masters": {
+   "category": "institute",
+   "seed": "mbbs",
+   "similarity": 0.674
+  },
+  "abroad": {
+   "category": "institute",
+   "seed": "mbbs",
+   "similarity": 0.665
+  },
+  "settle": {
+   "category": "institute",
+   "seed": "mbbs",
+   "similarity": 0.66
+  },
+  "canada": {
+   "category": "institute",
+   "seed": "mbbs",
+   "similarity": 0.651
+  },
+  "nursing": {
+   "category": "institute",
+   "seed": "mbbs",
+   "similarity": 0.65
+  },
+  "bams": {
+   "category": "institute",
+   "seed": "mbbs",
+   "similarity": 0.647
+  },
+  "bachelor's": {
+   "category": "institute",
+   "seed": "btech",
+   "similarity": 0.645
+  },
+  "degree": {
+   "category": "institute",
+   "seed": "mbbs",
+   "similarity": 0.636
+  },
+  "biotech": {
+   "category": "institute",
+   "seed": "mbbs",
+   "similarity": 0.636
+  },
+  "bba": {
+   "category": "institute",
+   "seed": "btech",
+   "similarity": 0.66
+  },
+  "aerospace_engineering": {
+   "category": "institute",
+   "seed": "iisc",
+   "similarity": 0.699
+  },
+  "bvsc": {
+   "category": "institute",
+   "seed": "btech",
+   "similarity": 0.641
+  },
+  "b_tech": {
+   "category": "institute",
+   "seed": "btech",
+   "similarity": 0.725
+  },
+  "bsc": {
+   "category": "institute",
+   "seed": "btech",
+   "similarity": 0.683
+  },
+  "btech_cse": {
+   "category": "institute",
+   "seed": "btech",
+   "similarity": 0.654
+  },
+  "mca": {
+   "category": "institute",
+   "seed": "btech",
+   "similarity": 0.652
+  },
+  "b_sc": {
+   "category": "institute",
+   "seed": "btech",
+   "similarity": 0.65
+  },
+  "ba": {
+   "category": "institute",
+   "seed": "btech",
+   "similarity": 0.645
+  },
+  "ug": {
+   "category": "institute",
+   "seed": "btech",
+   "similarity": 0.643
+  },
+  "undergrad": {
+   "category": "institute",
+   "seed": "iiser",
+   "similarity": 0.679
+  },
+  "engg": {
+   "category": "institute",
+   "seed": "btech",
+   "similarity": 0.64
+  },
+  "training": {
+   "category": "institute",
+   "seed": "btech",
+   "similarity": 0.639
+  },
+  "cse": {
+   "category": "institute",
+   "seed": "cse",
+   "similarity": 1.0
+  },
+  "eee": {
+   "category": "institute",
+   "seed": "ece",
+   "similarity": 0.849
+  },
+  "cse_with_specialization": {
+   "category": "institute",
+   "seed": "ece",
+   "similarity": 0.782
+  },
+  "main_campus": {
+   "category": "institute",
+   "seed": "ece",
+   "similarity": 0.791
+  },
+  "cat_1": {
+   "category": "institute",
+   "seed": "ece",
+   "similarity": 0.821
+  },
+  "vit_chennai": {
+   "category": "institute",
+   "seed": "ece",
+   "similarity": 0.793
+  },
+  "cat_2": {
+   "category": "institute",
+   "seed": "ece",
+   "similarity": 0.789
+  },
+  "ktr": {
+   "category": "institute",
+   "seed": "ece",
+   "similarity": 0.782
+  },
+  "manipal_jaipur": {
+   "category": "institute",
+   "seed": "cse",
+   "similarity": 0.756
+  },
+  "cse_core": {
+   "category": "institute",
+   "seed": "ece",
+   "similarity": 0.795
+  },
+  "specialisation": {
+   "category": "institute",
+   "seed": "cse",
+   "similarity": 0.749
+  },
+  "coe": {
+   "category": "institute",
+   "seed": "ece",
+   "similarity": 0.801
+  },
+  "vellore": {
+   "category": "institute",
+   "seed": "ece",
+   "similarity": 0.8
+  },
+  "vit_vellore": {
+   "category": "institute",
+   "seed": "ece",
+   "similarity": 0.784
+  },
+  "spec": {
+   "category": "institute",
+   "seed": "cse",
+   "similarity": 0.739
+  },
+  "iisers": {
+   "category": "institute",
+   "seed": "iisc",
+   "similarity": 0.765
+  },
+  "mtech": {
+   "category": "institute",
+   "seed": "iisc",
+   "similarity": 0.717
+  },
+  "icar": {
+   "category": "institute",
+   "seed": "iiser",
+   "similarity": 0.733
+  },
+  "iiitd": {
+   "category": "institute",
+   "seed": "iisc",
+   "similarity": 0.694
+  },
+  "medical_colleges": {
+   "category": "institute",
+   "seed": "iisc",
+   "similarity": 0.692
+  },
+  "entrance_test": {
+   "category": "institute",
+   "seed": "iiser",
+   "similarity": 0.723
+  },
+  "iist": {
+   "category": "institute",
+   "seed": "iiser",
+   "similarity": 0.704
+  },
+  "niser": {
+   "category": "institute",
+   "seed": "iiser",
+   "similarity": 0.694
+  },
+  "afmc": {
+   "category": "institute",
+   "seed": "iiser",
+   "similarity": 0.672
+  },
+  "csai": {
+   "category": "institute",
+   "seed": "ece",
+   "similarity": 0.783
+  },
+  "allen": {
+   "category": "coaching",
+   "seed": "allen",
+   "similarity": 1.0
+  },
+  "aakash": {
+   "category": "coaching",
+   "seed": "allen",
+   "similarity": 0.695
+  },
+  "fiitjee": {
+   "category": "coaching",
+   "seed": "allen",
+   "similarity": 0.669
+  },
+  "janakpuri": {
+   "category": "coaching",
+   "seed": "narayana",
+   "similarity": 0.809
+  },
+  "sankalp": {
+   "category": "coaching",
+   "seed": "aakash",
+   "similarity": 0.639
+  },
+  "allen_kota": {
+   "category": "coaching",
+   "seed": "allen",
+   "similarity": 0.632
+  },
+  "resonance": {
+   "category": "coaching",
+   "seed": "allen",
+   "similarity": 0.612
+  },
+  "achiever": {
+   "category": "coaching",
+   "seed": "resonance",
+   "similarity": 0.641
+  },
+  "fitjee": {
+   "category": "coaching",
+   "seed": "fiitjee",
+   "similarity": 0.657
+  },
+  "nurture": {
+   "category": "coaching",
+   "seed": "allen",
+   "similarity": 0.592
+  },
+  "dwarka": {
+   "category": "coaching",
+   "seed": "narayana",
+   "similarity": 0.754
+  },
+  "akash": {
+   "category": "coaching",
+   "seed": "byjus",
+   "similarity": 0.7
+  },
+  "leader": {
+   "category": "student",
+   "seed": "repeater",
+   "similarity": 0.731
+  },
+  "coachings": {
+   "category": "coaching",
+   "seed": "allen",
+   "similarity": 0.576
+  },
+  "sri_chaitanya": {
+   "category": "coaching",
+   "seed": "narayana",
+   "similarity": 0.802
+  },
+  "pitampura": {
+   "category": "coaching",
+   "seed": "narayana",
+   "similarity": 0.805
+  },
+  "bagh": {
+   "category": "coaching",
+   "seed": "narayana",
+   "similarity": 0.791
+  },
+  "sikar": {
+   "category": "coaching",
+   "seed": "aakash",
+   "similarity": 0.638
+  },
+  "punjabi": {
+   "category": "coaching",
+   "seed": "narayana",
+   "similarity": 0.788
+  },
+  "pw_arjuna": {
+   "category": "student",
+   "seed": "repeater",
+   "similarity": 0.738
+  },
+  "akaash": {
+   "category": "coaching",
+   "seed": "narayana",
+   "similarity": 0.727
+  },
+  "vmc": {
+   "category": "coaching",
+   "seed": "fiitjee",
+   "similarity": 0.655
+  },
+  "narayana": {
+   "category": "coaching",
+   "seed": "fiitjee",
+   "similarity": 0.615
+  },
+  "vidyamandir": {
+   "category": "coaching",
+   "seed": "narayana",
+   "similarity": 0.79
+  },
+  "itutor": {
+   "category": "coaching",
+   "seed": "byjus",
+   "similarity": 0.686
+  },
+  "pw": {
+   "category": "coaching",
+   "seed": "pw",
+   "similarity": 1.0
+  },
+  "physics_wallah": {
+   "category": "coaching",
+   "seed": "pw",
+   "similarity": 0.728
+  },
+  "unacademy": {
+   "category": "coaching",
+   "seed": "pw",
+   "similarity": 0.67
+  },
+  "physicswallah": {
+   "category": "coaching",
+   "seed": "pw",
+   "similarity": 0.66
+  },
+  "yakeen_batch": {
+   "category": "coaching",
+   "seed": "pw",
+   "similarity": 0.621
+  },
+  "arjuna_batch": {
+   "category": "coaching",
+   "seed": "unacademy",
+   "similarity": 0.67
+  },
+  "lakshya": {
+   "category": "coaching",
+   "seed": "vedantu",
+   "similarity": 0.718
+  },
+  "2_0": {
+   "category": "coaching",
+   "seed": "unacademy",
+   "similarity": 0.625
+  },
+  "lakshya_batch": {
+   "category": "coaching",
+   "seed": "pw",
+   "similarity": 0.607
+  },
+  "arjuna": {
+   "category": "coaching",
+   "seed": "unacademy",
+   "similarity": 0.625
+  },
+  "prayas": {
+   "category": "coaching",
+   "seed": "unacademy",
+   "similarity": 0.643
+  },
+  "vedantu": {
+   "category": "coaching",
+   "seed": "byjus",
+   "similarity": 0.677
+  },
+  "apni_kaksha": {
+   "category": "coaching",
+   "seed": "unacademy",
+   "similarity": 0.629
+  },
+  "c3": {
+   "category": "coaching",
+   "seed": "unacademy",
+   "similarity": 0.626
+  },
+  "aman_dhattarwal": {
+   "category": "coaching",
+   "seed": "vedantu",
+   "similarity": 0.67
+  },
+  "prayas_batch": {
+   "category": "coaching",
+   "seed": "pw",
+   "similarity": 0.579
+  },
+  "unacdemy": {
+   "category": "coaching",
+   "seed": "unacademy",
+   "similarity": 0.697
+  },
+  "unacademy_plus": {
+   "category": "coaching",
+   "seed": "unacademy",
+   "similarity": 0.66
+  },
+  "atp_star": {
+   "category": "coaching",
+   "seed": "unacademy",
+   "similarity": 0.654
+  },
+  "byjus": {
+   "category": "coaching",
+   "seed": "vedantu",
+   "similarity": 0.677
+  },
+  "lakshay": {
+   "category": "coaching",
+   "seed": "unacademy",
+   "similarity": 0.627
+  },
+  "roasting": {
+   "category": "coaching",
+   "seed": "vedantu",
+   "similarity": 0.708
+  },
+  "manzil": {
+   "category": "coaching",
+   "seed": "vedantu",
+   "similarity": 0.7
+  },
+  "aarambh": {
+   "category": "coaching",
+   "seed": "vedantu",
+   "similarity": 0.699
+  },
+  "dhattarwal": {
+   "category": "coaching",
+   "seed": "vedantu",
+   "similarity": 0.694
+  },
+  "stan": {
+   "category": "coaching",
+   "seed": "vedantu",
+   "similarity": 0.681
+  },
+  "esaral": {
+   "category": "coaching",
+   "seed": "byjus",
+   "similarity": 0.692
+  },
+  "manzil_batch": {
+   "category": "coaching",
+   "seed": "vedantu",
+   "similarity": 0.678
+  },
+  "sameer": {
+   "category": "coaching",
+   "seed": "vedantu",
+   "similarity": 0.677
+  },
+  "stans": {
+   "category": "coaching",
+   "seed": "vedantu",
+   "similarity": 0.675
+  },
+  "sachin": {
+   "category": "coaching",
+   "seed": "vedantu",
+   "similarity": 0.666
+  },
+  "rankers": {
+   "category": "coaching",
+   "seed": "vedantu",
+   "similarity": 0.666
+  },
+  "maths_unplugged": {
+   "category": "coaching",
+   "seed": "vedantu",
+   "similarity": 0.666
+  },
+  "reso": {
+   "category": "coaching",
+   "seed": "resonance",
+   "similarity": 0.76
+  },
+  "resonance_material": {
+   "category": "coaching",
+   "seed": "resonance",
+   "similarity": 0.68
+  },
+  "rank_booster": {
+   "category": "coaching",
+   "seed": "resonance",
+   "similarity": 0.678
+  },
+  "dlp": {
+   "category": "resource",
+   "seed": "dpp",
+   "similarity": 0.658
+  },
+  "hlp": {
+   "category": "coaching",
+   "seed": "resonance",
+   "similarity": 0.644
+  },
+  "nucleus": {
+   "category": "coaching",
+   "seed": "resonance",
+   "similarity": 0.644
+  },
+  "boosters": {
+   "category": "coaching",
+   "seed": "resonance",
+   "similarity": 0.635
+  },
+  "handbooks": {
+   "category": "resource",
+   "seed": "module",
+   "similarity": 0.699
+  },
+  "modules": {
+   "category": "resource",
+   "seed": "module",
+   "similarity": 0.718
+  },
+  "pratham_batch": {
+   "category": "coaching",
+   "seed": "resonance",
+   "similarity": 0.61
+  },
+  "kalu_sarai": {
+   "category": "coaching",
+   "seed": "narayana",
+   "similarity": 0.815
+  },
+  "allen_chandigarh": {
+   "category": "coaching",
+   "seed": "narayana",
+   "similarity": 0.776
+  },
+  "fiitjee_south": {
+   "category": "coaching",
+   "seed": "narayana",
+   "similarity": 0.762
+  },
+  "indore": {
+   "category": "coaching",
+   "seed": "narayana",
+   "similarity": 0.755
+  },
+  "dps": {
+   "category": "coaching",
+   "seed": "narayana",
+   "similarity": 0.748
+  },
+  "chaitanya": {
+   "category": "coaching",
+   "seed": "narayana",
+   "similarity": 0.744
+  },
+  "lucknow": {
+   "category": "coaching",
+   "seed": "narayana",
+   "similarity": 0.734
+  },
+  "pratham": {
+   "category": "coaching",
+   "seed": "byjus",
+   "similarity": 0.719
+  },
+  "byju's": {
+   "category": "coaching",
+   "seed": "byjus",
+   "similarity": 0.684
+  },
+  "purchased": {
+   "category": "coaching",
+   "seed": "byjus",
+   "similarity": 0.668
+  },
+  "compitishun": {
+   "category": "coaching",
+   "seed": "byjus",
+   "similarity": 0.668
+  },
+  "plus_subscription": {
+   "category": "coaching",
+   "seed": "byjus",
+   "similarity": 0.667
+  },
+  "mani": {
+   "category": "coaching",
+   "seed": "byjus",
+   "similarity": 0.666
+  },
+  "vibrant": {
+   "category": "coaching",
+   "seed": "byjus",
+   "similarity": 0.664
+  },
+  "ncert": {
+   "category": "resource",
+   "seed": "ncert",
+   "similarity": 1.0
+  },
+  "aakash_modules": {
+   "category": "resource",
+   "seed": "hcv",
+   "similarity": 0.738
+  },
+  "hcv": {
+   "category": "resource",
+   "seed": "cengage",
+   "similarity": 0.756
+  },
+  "hc_verma": {
+   "category": "resource",
+   "seed": "hcv",
+   "similarity": 0.764
+  },
+  "rd_sharma": {
+   "category": "resource",
+   "seed": "hcv",
+   "similarity": 0.74
+  },
+  "exemplar": {
+   "category": "resource",
+   "seed": "module",
+   "similarity": 0.726
+  },
+  "dc_pandey": {
+   "category": "resource",
+   "seed": "hcv",
+   "similarity": 0.789
+  },
+  "fingertips": {
+   "category": "resource",
+   "seed": "ncert",
+   "similarity": 0.612
+  },
+  "module": {
+   "category": "resource",
+   "seed": "dpp",
+   "similarity": 0.672
+  },
+  "ncerts": {
+   "category": "resource",
+   "seed": "hcv",
+   "similarity": 0.741
+  },
+  "n_awasthi": {
+   "category": "resource",
+   "seed": "hcv",
+   "similarity": 0.728
+  },
+  "solved_examples": {
+   "category": "resource",
+   "seed": "hcv",
+   "similarity": 0.739
+  },
+  "coaching_module": {
+   "category": "resource",
+   "seed": "module",
+   "similarity": 0.737
+  },
+  "cengage": {
+   "category": "resource",
+   "seed": "hcv",
+   "similarity": 0.756
+  },
+  "dcp": {
+   "category": "resource",
+   "seed": "hcv",
+   "similarity": 0.724
+  },
+  "black_book": {
+   "category": "resource",
+   "seed": "cengage",
+   "similarity": 0.73
+  },
+  "pyq's": {
+   "category": "resource",
+   "seed": "hcv",
+   "similarity": 0.714
+  },
+  "ms_chauhan": {
+   "category": "resource",
+   "seed": "hcv",
+   "similarity": 0.714
+  },
+  "irodov": {
+   "category": "resource",
+   "seed": "irodov",
+   "similarity": 1.0
+  },
+  "pathfinder": {
+   "category": "resource",
+   "seed": "irodov",
+   "similarity": 0.705
+  },
+  "krotov": {
+   "category": "resource",
+   "seed": "irodov",
+   "similarity": 0.667
+  },
+  "verma": {
+   "category": "resource",
+   "seed": "irodov",
+   "similarity": 0.64
+  },
+  "vikas_gupta": {
+   "category": "resource",
+   "seed": "irodov",
+   "similarity": 0.635
+  },
+  "illustration": {
+   "category": "resource",
+   "seed": "cengage",
+   "similarity": 0.676
+  },
+  "arihant": {
+   "category": "resource",
+   "seed": "cengage",
+   "similarity": 0.752
+  },
+  "tewani": {
+   "category": "resource",
+   "seed": "cengage",
+   "similarity": 0.705
+  },
+  "disha": {
+   "category": "resource",
+   "seed": "pyq",
+   "similarity": 0.721
+  },
+  "ms_chouhan": {
+   "category": "resource",
+   "seed": "cengage",
+   "similarity": 0.687
+  },
+  "resnick_halliday": {
+   "category": "resource",
+   "seed": "cengage",
+   "similarity": 0.679
+  },
+  "publication": {
+   "category": "resource",
+   "seed": "cengage",
+   "similarity": 0.678
+  },
+  "pyq": {
+   "category": "resource",
+   "seed": "pyq",
+   "similarity": 1.0
+  },
+  "pyqs": {
+   "category": "resource",
+   "seed": "pyq",
+   "similarity": 0.802
+  },
+  "chapter_wise": {
+   "category": "resource",
+   "seed": "dpp",
+   "similarity": 0.712
+  },
+  "topicwise": {
+   "category": "resource",
+   "seed": "dpp",
+   "similarity": 0.728
+  },
+  "archive": {
+   "category": "resource",
+   "seed": "pyqs",
+   "similarity": 0.705
+  },
+  "topic_wise": {
+   "category": "resource",
+   "seed": "pyq",
+   "similarity": 0.659
+  },
+  "chapterwise": {
+   "category": "resource",
+   "seed": "pyq",
+   "similarity": 0.655
+  },
+  "exercises": {
+   "category": "resource",
+   "seed": "module",
+   "similarity": 0.722
+  },
+  "revisions": {
+   "category": "resource",
+   "seed": "pyqs",
+   "similarity": 0.674
+  },
+  "qns": {
+   "category": "resource",
+   "seed": "pyqs",
+   "similarity": 0.657
+  },
+  "illustrations": {
+   "category": "resource",
+   "seed": "pyqs",
+   "similarity": 0.653
+  },
+  "past_papers": {
+   "category": "resource",
+   "seed": "pyqs",
+   "similarity": 0.651
+  },
+  "mock": {
+   "category": "resource",
+   "seed": "mock",
+   "similarity": 1.0
+  },
+  "mock_test": {
+   "category": "resource",
+   "seed": "mock",
+   "similarity": 0.755
+  },
+  "mocks": {
+   "category": "resource",
+   "seed": "mock",
+   "similarity": 0.698
+  },
+  "mock_tests": {
+   "category": "resource",
+   "seed": "mock",
+   "similarity": 0.667
+  },
+  "fiitjee_aits": {
+   "category": "resource",
+   "seed": "mock",
+   "similarity": 0.652
+  },
+  "full_syllabus": {
+   "category": "resource",
+   "seed": "mock",
+   "similarity": 0.648
+  },
+  "june_session": {
+   "category": "resource",
+   "seed": "mock",
+   "similarity": 0.61
+  },
+  "pyps": {
+   "category": "resource",
+   "seed": "mock",
+   "similarity": 0.598
+  },
+  "abhyaas": {
+   "category": "resource",
+   "seed": "mock",
+   "similarity": 0.596
+  },
+  "124": {
+   "category": "resource",
+   "seed": "mock",
+   "similarity": 0.593
+  },
+  "aiats": {
+   "category": "resource",
+   "seed": "mock",
+   "similarity": 0.588
+  },
+  "115": {
+   "category": "resource",
+   "seed": "mock",
+   "similarity": 0.588
+  },
+  "previous_year": {
+   "category": "resource",
+   "seed": "mock",
+   "similarity": 0.586
+  },
+  "dpp": {
+   "category": "resource",
+   "seed": "dpp",
+   "similarity": 1.0
+  },
+  "dpps": {
+   "category": "resource",
+   "seed": "dpp",
+   "similarity": 0.821
+  },
+  "dump": {
+   "category": "resource",
+   "seed": "dpp",
+   "similarity": 0.674
+  },
+  "religiously": {
+   "category": "resource",
+   "seed": "dpp",
+   "similarity": 0.671
+  },
+  "cpp": {
+   "category": "resource",
+   "seed": "dpp",
+   "similarity": 0.651
+  },
+  "lec": {
+   "category": "resource",
+   "seed": "dpp",
+   "similarity": 0.649
+  },
+  "sheets": {
+   "category": "resource",
+   "seed": "dpp",
+   "similarity": 0.641
+  },
+  "aakash_module": {
+   "category": "resource",
+   "seed": "module",
+   "similarity": 0.719
+  },
+  "coaching_material": {
+   "category": "resource",
+   "seed": "module",
+   "similarity": 0.68
+  },
+  "lectures": {
+   "category": "resource",
+   "seed": "lectures",
+   "similarity": 1.0
+  },
+  "video_lectures": {
+   "category": "resource",
+   "seed": "lectures",
+   "similarity": 0.709
+  },
+  "yt_lectures": {
+   "category": "resource",
+   "seed": "lectures",
+   "similarity": 0.707
+  },
+  "lecture": {
+   "category": "resource",
+   "seed": "lectures",
+   "similarity": 0.687
+  },
+  "lecs": {
+   "category": "resource",
+   "seed": "lectures",
+   "similarity": 0.68
+  },
+  "one_shots": {
+   "category": "resource",
+   "seed": "lectures",
+   "similarity": 0.649
+  },
+  "videos": {
+   "category": "resource",
+   "seed": "lectures",
+   "similarity": 0.644
+  },
+  "oneshots": {
+   "category": "resource",
+   "seed": "lectures",
+   "similarity": 0.642
+  },
+  "fast_lane": {
+   "category": "resource",
+   "seed": "lectures",
+   "similarity": 0.636
+  },
+  "bounceback": {
+   "category": "resource",
+   "seed": "lectures",
+   "similarity": 0.635
+  },
+  "vids": {
+   "category": "resource",
+   "seed": "lectures",
+   "similarity": 0.633
+  },
+  "sir's_lectures": {
+   "category": "resource",
+   "seed": "lectures",
+   "similarity": 0.63
+  },
+  "alk": {
+   "category": "resource",
+   "seed": "lectures",
+   "similarity": 0.625
+  },
+  "ns_sir": {
+   "category": "resource",
+   "seed": "lectures",
+   "similarity": 0.625
+  },
+  "playlists": {
+   "category": "resource",
+   "seed": "lectures",
+   "similarity": 0.623
+  },
+  "counselling": {
+   "category": "admission",
+   "seed": "counselling",
+   "similarity": 1.0
+  },
+  "counseling": {
+   "category": "admission",
+   "seed": "counselling",
+   "similarity": 0.795
+  },
+  "josaa": {
+   "category": "admission",
+   "seed": "counselling",
+   "similarity": 0.729
+  },
+  "councelling": {
+   "category": "admission",
+   "seed": "csab",
+   "similarity": 0.799
+  },
+  "choice_filling": {
+   "category": "admission",
+   "seed": "counselling",
+   "similarity": 0.699
+  },
+  "jac_delhi": {
+   "category": "admission",
+   "seed": "josaa",
+   "similarity": 0.73
+  },
+  "registration": {
+   "category": "admission",
+   "seed": "counselling",
+   "similarity": 0.677
+  },
+  "2nd_round": {
+   "category": "admission",
+   "seed": "josaa",
+   "similarity": 0.701
+  },
+  "josaa_counselling": {
+   "category": "admission",
+   "seed": "counselling",
+   "similarity": 0.66
+  },
+  "mcc": {
+   "category": "admission",
+   "seed": "josaa",
+   "similarity": 0.759
+  },
+  "rounds": {
+   "category": "admission",
+   "seed": "csab",
+   "similarity": 0.785
+  },
+  "csab": {
+   "category": "admission",
+   "seed": "josaa",
+   "similarity": 0.74
+  },
+  "documents": {
+   "category": "admission",
+   "seed": "josaa",
+   "similarity": 0.72
+  },
+  "round": {
+   "category": "admission",
+   "seed": "josaa",
+   "similarity": 0.715
+  },
+  "jac": {
+   "category": "admission",
+   "seed": "josaa",
+   "similarity": 0.71
+  },
+  "ews_certificate": {
+   "category": "admission",
+   "seed": "josaa",
+   "similarity": 0.703
+  },
+  "withdrawal": {
+   "category": "admission",
+   "seed": "josaa",
+   "similarity": 0.699
+  },
+  "general_candidate": {
+   "category": "admission",
+   "seed": "csab",
+   "similarity": 0.779
+  },
+  "thapar_university": {
+   "category": "admission",
+   "seed": "csab",
+   "similarity": 0.777
+  },
+  "jiit_noida": {
+   "category": "admission",
+   "seed": "csab",
+   "similarity": 0.761
+  },
+  "iiit_delhi": {
+   "category": "admission",
+   "seed": "csab",
+   "similarity": 0.76
+  },
+  "cce": {
+   "category": "admission",
+   "seed": "csab",
+   "similarity": 0.758
+  },
+  "24k": {
+   "category": "admission",
+   "seed": "csab",
+   "similarity": 0.755
+  },
+  "37k": {
+   "category": "admission",
+   "seed": "csab",
+   "similarity": 0.746
+  },
+  "general_male": {
+   "category": "admission",
+   "seed": "csab",
+   "similarity": 0.744
+  },
+  "cutoff": {
+   "category": "admission",
+   "seed": "cutoff",
+   "similarity": 1.0
+  },
+  "cut_off": {
+   "category": "admission",
+   "seed": "cutoff",
+   "similarity": 0.705
+  },
+  "cutoffs": {
+   "category": "admission",
+   "seed": "cutoff",
+   "similarity": 0.677
+  },
+  "expected_cutoff": {
+   "category": "admission",
+   "seed": "cutoff",
+   "similarity": 0.632
+  },
+  "sx": {
+   "category": "admission",
+   "seed": "cutoff",
+   "similarity": 0.616
+  },
+  "gen_ews": {
+   "category": "admission",
+   "seed": "category",
+   "similarity": 0.703
+  },
+  "inflation": {
+   "category": "admission",
+   "seed": "cutoff",
+   "similarity": 0.61
+  },
+  "10k_rank": {
+   "category": "admission",
+   "seed": "rank",
+   "similarity": 0.612
+  },
+  "ews": {
+   "category": "admission",
+   "seed": "category",
+   "similarity": 0.726
+  },
+  "99_percentile": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 0.624
+  },
+  "certificates": {
+   "category": "admission",
+   "seed": "reservation",
+   "similarity": 0.597
+  },
+  "criteria": {
+   "category": "admission",
+   "seed": "cutoff",
+   "similarity": 0.581
+  },
+  "20k": {
+   "category": "admission",
+   "seed": "rank",
+   "similarity": 0.658
+  },
+  "15k": {
+   "category": "admission",
+   "seed": "rank",
+   "similarity": 0.643
+  },
+  "rank": {
+   "category": "admission",
+   "seed": "rank",
+   "similarity": 1.0
+  },
+  "2k": {
+   "category": "admission",
+   "seed": "rank",
+   "similarity": 0.66
+  },
+  "crl": {
+   "category": "admission",
+   "seed": "category",
+   "similarity": 0.713
+  },
+  "8k": {
+   "category": "admission",
+   "seed": "category",
+   "similarity": 0.646
+  },
+  "3k": {
+   "category": "admission",
+   "seed": "rank",
+   "similarity": 0.627
+  },
+  "7k": {
+   "category": "admission",
+   "seed": "rank",
+   "similarity": 0.619
+  },
+  "5k": {
+   "category": "admission",
+   "seed": "rank",
+   "similarity": 0.618
+  },
+  "ranks": {
+   "category": "admission",
+   "seed": "rank",
+   "similarity": 0.611
+  },
+  "2000": {
+   "category": "admission",
+   "seed": "rank",
+   "similarity": 0.604
+  },
+  "36k": {
+   "category": "admission",
+   "seed": "rank",
+   "similarity": 0.602
+  },
+  "percentile": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 1.0
+  },
+  "ile": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 0.765
+  },
+  "tile": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 0.682
+  },
+  "96": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 0.668
+  },
+  "99": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 0.664
+  },
+  "97": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 0.654
+  },
+  "87": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 0.654
+  },
+  "97_ile": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 0.652
+  },
+  "90_percentile": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 0.652
+  },
+  "94": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 0.649
+  },
+  "97_percentile": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 0.64
+  },
+  "98": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 0.634
+  },
+  "94_percentile": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 0.631
+  },
+  "98_percentile": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 0.627
+  },
+  "88": {
+   "category": "admission",
+   "seed": "percentile",
+   "similarity": 0.623
+  },
+  "admit_card": {
+   "category": "admission",
+   "seed": "admit_card",
+   "similarity": 1.0
+  },
+  "hall_ticket": {
+   "category": "admission",
+   "seed": "admit_card",
+   "similarity": 0.714
+  },
+  "admit_cards": {
+   "category": "admission",
+   "seed": "admit_card",
+   "similarity": 0.665
+  },
+  "correction_window": {
+   "category": "admission",
+   "seed": "registration",
+   "similarity": 0.67
+  },
+  "intimation": {
+   "category": "admission",
+   "seed": "admit_card",
+   "similarity": 0.648
+  },
+  "correction": {
+   "category": "admission",
+   "seed": "registration",
+   "similarity": 0.649
+  },
+  "confirmation": {
+   "category": "admission",
+   "seed": "admit_card",
+   "similarity": 0.643
+  },
+  "postcard_size": {
+   "category": "admission",
+   "seed": "admit_card",
+   "similarity": 0.641
+  },
+  "date": {
+   "category": "admission",
+   "seed": "admit_card",
+   "similarity": 0.638
+  },
+  "final_answer": {
+   "category": "admission",
+   "seed": "answer_key",
+   "similarity": 0.696
+  },
+  "window": {
+   "category": "admission",
+   "seed": "registration",
+   "similarity": 0.637
+  },
+  "application_number": {
+   "category": "admission",
+   "seed": "registration",
+   "similarity": 0.644
+  },
+  "notification": {
+   "category": "admission",
+   "seed": "admit_card",
+   "similarity": 0.623
+  },
+  "undertaking": {
+   "category": "admission",
+   "seed": "admit_card",
+   "similarity": 0.622
+  },
+  "aadhar_card": {
+   "category": "admission",
+   "seed": "admit_card",
+   "similarity": 0.621
+  },
+  "application_form": {
+   "category": "admission",
+   "seed": "registration",
+   "similarity": 0.699
+  },
+  "payment": {
+   "category": "admission",
+   "seed": "registration",
+   "similarity": 0.67
+  },
+  "register": {
+   "category": "admission",
+   "seed": "registration",
+   "similarity": 0.668
+  },
+  "application": {
+   "category": "admission",
+   "seed": "registration",
+   "similarity": 0.664
+  },
+  "registrations": {
+   "category": "admission",
+   "seed": "registration",
+   "similarity": 0.639
+  },
+  "syllabus": {
+   "category": "admission",
+   "seed": "syllabus",
+   "similarity": 1.0
+  },
+  "portion": {
+   "category": "admission",
+   "seed": "syllabus",
+   "similarity": 0.737
+  },
+  "portions": {
+   "category": "admission",
+   "seed": "syllabus",
+   "similarity": 0.655
+  },
+  "whole_syllabus": {
+   "category": "admission",
+   "seed": "syllabus",
+   "similarity": 0.596
+  },
+  "march_end": {
+   "category": "admission",
+   "seed": "syllabus",
+   "similarity": 0.584
+  },
+  "ncert_level": {
+   "category": "admission",
+   "seed": "syllabus",
+   "similarity": 0.568
+  },
+  "marks": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 1.0
+  },
+  "score": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 0.637
+  },
+  "320": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 0.628
+  },
+  "190": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 0.625
+  },
+  "160": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 0.623
+  },
+  "85": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 0.619
+  },
+  "40_marks": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 0.614
+  },
+  "186": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 0.613
+  },
+  "160_170": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 0.611
+  },
+  "130": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 0.602
+  },
+  "210": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 0.6
+  },
+  "360": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 0.596
+  },
+  "scores": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 0.594
+  },
+  "180": {
+   "category": "admission",
+   "seed": "marks",
+   "similarity": 0.591
+  },
+  "result": {
+   "category": "admission",
+   "seed": "result",
+   "similarity": 1.0
+  },
+  "results": {
+   "category": "admission",
+   "seed": "result",
+   "similarity": 0.691
+  },
+  "answer_key": {
+   "category": "admission",
+   "seed": "answer_key",
+   "similarity": 1.0
+  },
+  "response_sheet": {
+   "category": "admission",
+   "seed": "answer_key",
+   "similarity": 0.781
+  },
+  "key": {
+   "category": "admission",
+   "seed": "answer_key",
+   "similarity": 0.758
+  },
+  "ans_key": {
+   "category": "admission",
+   "seed": "answer_key",
+   "similarity": 0.676
+  },
+  "official_answer": {
+   "category": "admission",
+   "seed": "answer_key",
+   "similarity": 0.676
+  },
+  "answer_keys": {
+   "category": "admission",
+   "seed": "answer_key",
+   "similarity": 0.662
+  },
+  "29th_june": {
+   "category": "admission",
+   "seed": "answer_key",
+   "similarity": 0.662
+  },
+  "shift_1": {
+   "category": "admission",
+   "seed": "answer_key",
+   "similarity": 0.634
+  },
+  "25th_june": {
+   "category": "admission",
+   "seed": "answer_key",
+   "similarity": 0.627
+  },
+  "ayjr": {
+   "category": "admission",
+   "seed": "answer_key",
+   "similarity": 0.61
+  },
+  "25_june": {
+   "category": "admission",
+   "seed": "answer_key",
+   "similarity": 0.608
+  },
+  "session_1": {
+   "category": "admission",
+   "seed": "answer_key",
+   "similarity": 0.6
+  },
+  "s1": {
+   "category": "admission",
+   "seed": "answer_key",
+   "similarity": 0.599
+  },
+  "morning_shift": {
+   "category": "admission",
+   "seed": "answer_key",
+   "similarity": 0.598
+  },
+  "nta": {
+   "category": "admission",
+   "seed": "nta",
+   "similarity": 1.0
+  },
+  "reservation": {
+   "category": "admission",
+   "seed": "reservation",
+   "similarity": 1.0
+  },
+  "quota": {
+   "category": "admission",
+   "seed": "category",
+   "similarity": 0.666
+  },
+  "obc": {
+   "category": "admission",
+   "seed": "category",
+   "similarity": 0.683
+  },
+  "reservations": {
+   "category": "admission",
+   "seed": "reservation",
+   "similarity": 0.599
+  },
+  "pwd": {
+   "category": "admission",
+   "seed": "reservation",
+   "similarity": 0.595
+  },
+  "sc_st": {
+   "category": "admission",
+   "seed": "reservation",
+   "similarity": 0.591
+  },
+  "caste": {
+   "category": "admission",
+   "seed": "reservation",
+   "similarity": 0.584
+  },
+  "creamy": {
+   "category": "admission",
+   "seed": "reservation",
+   "similarity": 0.567
+  },
+  "domicile": {
+   "category": "admission",
+   "seed": "reservation",
+   "similarity": 0.564
+  },
+  "women": {
+   "category": "admission",
+   "seed": "reservation",
+   "similarity": 0.561
+  },
+  "sc": {
+   "category": "admission",
+   "seed": "reservation",
+   "similarity": 0.559
+  },
+  "category": {
+   "category": "admission",
+   "seed": "category",
+   "similarity": 1.0
+  },
+  "obc_ncl": {
+   "category": "admission",
+   "seed": "category",
+   "similarity": 0.706
+  },
+  "gen": {
+   "category": "admission",
+   "seed": "category",
+   "similarity": 0.693
+  },
+  "home_state": {
+   "category": "admission",
+   "seed": "category",
+   "similarity": 0.657
+  },
+  "general_category": {
+   "category": "admission",
+   "seed": "category",
+   "similarity": 0.644
+  },
+  "1600": {
+   "category": "admission",
+   "seed": "category",
+   "similarity": 0.641
+  },
+  "dropper": {
+   "category": "student",
+   "seed": "dropper",
+   "similarity": 1.0
+  },
+  "partial_dropper": {
+   "category": "student",
+   "seed": "dropper",
+   "similarity": 0.671
+  },
+  "repeater": {
+   "category": "student",
+   "seed": "dropper",
+   "similarity": 0.665
+  },
+  "24tard": {
+   "category": "student",
+   "seed": "dropper",
+   "similarity": 0.634
+  },
+  "2022tard": {
+   "category": "student",
+   "seed": "dropper",
+   "similarity": 0.633
+  },
+  "23_tard": {
+   "category": "student",
+   "seed": "repeater",
+   "similarity": 0.737
+  },
+  "early_drop": {
+   "category": "student",
+   "seed": "repeater",
+   "similarity": 0.753
+  },
+  "22tard": {
+   "category": "student",
+   "seed": "dropper",
+   "similarity": 0.61
+  },
+  "early_dropper": {
+   "category": "student",
+   "seed": "dropper",
+   "similarity": 0.607
+  },
+  "2022_aspirant": {
+   "category": "student",
+   "seed": "aspirant",
+   "similarity": 0.658
+  },
+  "2024_aspirant": {
+   "category": "student",
+   "seed": "aspirant",
+   "similarity": 0.638
+  },
+  "2023tard": {
+   "category": "student",
+   "seed": "dropper",
+   "similarity": 0.592
+  },
+  "23_aspirant": {
+   "category": "student",
+   "seed": "dropper",
+   "similarity": 0.592
+  },
+  "2024tard": {
+   "category": "student",
+   "seed": "dropper",
+   "similarity": 0.592
+  },
+  "neetard_here": {
+   "category": "student",
+   "seed": "dropper",
+   "similarity": 0.589
+  },
+  "asp": {
+   "category": "student",
+   "seed": "dropper",
+   "similarity": 0.588
+  },
+  "drop": {
+   "category": "student",
+   "seed": "drop",
+   "similarity": 1.0
+  },
+  "partial_drop": {
+   "category": "student",
+   "seed": "drop",
+   "similarity": 0.667
+  },
+  "dropping": {
+   "category": "student",
+   "seed": "drop",
+   "similarity": 0.631
+  },
+  "take_a_drop": {
+   "category": "student",
+   "seed": "drop",
+   "similarity": 0.622
+  },
+  "taking_a_drop": {
+   "category": "student",
+   "seed": "drop",
+   "similarity": 0.596
+  },
+  "drop_year": {
+   "category": "student",
+   "seed": "drop",
+   "similarity": 0.572
+  },
+  "varanasi": {
+   "category": "student",
+   "seed": "repeater",
+   "similarity": 0.81
+  },
+  "leader_batch": {
+   "category": "student",
+   "seed": "repeater",
+   "similarity": 0.803
+  },
+  "dora": {
+   "category": "student",
+   "seed": "repeater",
+   "similarity": 0.789
+  },
+  "south_delhi": {
+   "category": "student",
+   "seed": "repeater",
+   "similarity": 0.754
+  },
+  "kaksha": {
+   "category": "student",
+   "seed": "repeater",
+   "similarity": 0.752
+  },
+  "namaste": {
+   "category": "student",
+   "seed": "repeater",
+   "similarity": 0.747
+  },
+  "lelu": {
+   "category": "student",
+   "seed": "repeater",
+   "similarity": 0.741
+  },
+  "thinking_of_joining": {
+   "category": "student",
+   "seed": "repeater",
+   "similarity": 0.74
+  },
+  "vidyapeeth": {
+   "category": "student",
+   "seed": "repeater",
+   "similarity": 0.739
+  },
+  "planning_to_take": {
+   "category": "student",
+   "seed": "repeater",
+   "similarity": 0.737
+  },
+  "aspirant": {
+   "category": "student",
+   "seed": "aspirant",
+   "similarity": 1.0
+  },
+  "asspirant": {
+   "category": "student",
+   "seed": "aspirant",
+   "similarity": 0.669
+  },
+  "aspirant_here": {
+   "category": "student",
+   "seed": "aspirant",
+   "similarity": 0.651
+  },
+  "retard": {
+   "category": "student",
+   "seed": "aspirant",
+   "similarity": 0.645
+  },
+  "grader": {
+   "category": "student",
+   "seed": "aspirant",
+   "similarity": 0.642
+  },
+  "10th_grader": {
+   "category": "student",
+   "seed": "aspirant",
+   "similarity": 0.632
+  },
+  "tard": {
+   "category": "student",
+   "seed": "aspirant",
+   "similarity": 0.619
+  },
+  "neet_aspirant": {
+   "category": "student",
+   "seed": "aspirant",
+   "similarity": 0.615
+  },
+  "tard_here": {
+   "category": "student",
+   "seed": "aspirant",
+   "similarity": 0.613
+  },
+  "little_background": {
+   "category": "student",
+   "seed": "aspirant",
+   "similarity": 0.61
+  },
+  "11th_grader": {
+   "category": "student",
+   "seed": "aspirant",
+   "similarity": 0.607
+  },
+  "jeetard": {
+   "category": "student",
+   "seed": "aspirant",
+   "similarity": 0.603
+  },
+  "11th": {
+   "category": "student",
+   "seed": "11th",
+   "similarity": 1.0
+  },
+  "11_th": {
+   "category": "student",
+   "seed": "11th",
+   "similarity": 0.717
+  },
+  "12th": {
+   "category": "student",
+   "seed": "11th",
+   "similarity": 0.714
+  },
+  "12_th": {
+   "category": "student",
+   "seed": "12th",
+   "similarity": 0.686
+  },
+  "11th_and_12th": {
+   "category": "student",
+   "seed": "11th",
+   "similarity": 0.653
+  },
+  "9th": {
+   "category": "student",
+   "seed": "11th",
+   "similarity": 0.634
+  },
+  "11th_grade": {
+   "category": "student",
+   "seed": "11th",
+   "similarity": 0.63
+  },
+  "class_11": {
+   "category": "student",
+   "seed": "11th",
+   "similarity": 0.611
+  },
+  "9th_10th": {
+   "category": "student",
+   "seed": "11th",
+   "similarity": 0.598
+  },
+  "10_th": {
+   "category": "student",
+   "seed": "11th",
+   "similarity": 0.591
+  },
+  "side_by_side": {
+   "category": "student",
+   "seed": "11th",
+   "similarity": 0.585
+  },
+  "class_12th": {
+   "category": "student",
+   "seed": "12th",
+   "similarity": 0.641
+  },
+  "prelims": {
+   "category": "student",
+   "seed": "11th",
+   "similarity": 0.572
+  },
+  "xith": {
+   "category": "student",
+   "seed": "11th",
+   "similarity": 0.565
+  },
+  "nuked": {
+   "category": "student",
+   "seed": "11th",
+   "similarity": 0.558
+  },
+  "term2": {
+   "category": "student",
+   "seed": "12th",
+   "similarity": 0.592
+  },
+  "finals": {
+   "category": "student",
+   "seed": "12th",
+   "similarity": 0.589
+  },
+  "final_exams": {
+   "category": "student",
+   "seed": "12th",
+   "similarity": 0.587
+  },
+  "10th": {
+   "category": "student",
+   "seed": "12th",
+   "similarity": 0.577
+  },
+  "class_12": {
+   "category": "student",
+   "seed": "12th",
+   "similarity": 0.562
+  },
+  "1month": {
+   "category": "student",
+   "seed": "12th",
+   "similarity": 0.554
+  },
+  "11_12": {
+   "category": "student",
+   "seed": "12th",
+   "similarity": 0.552
+  },
+  "backlog": {
+   "category": "student",
+   "seed": "backlog",
+   "similarity": 1.0
+  },
+  "backlogs": {
+   "category": "student",
+   "seed": "backlog",
+   "similarity": 0.698
+  },
+  "pending": {
+   "category": "student",
+   "seed": "backlog",
+   "similarity": 0.6
+  },
+  "chp": {
+   "category": "student",
+   "seed": "backlog",
+   "similarity": 0.59
+  },
+  "chs": {
+   "category": "student",
+   "seed": "backlog",
+   "similarity": 0.571
+  }
+ },
+ "related": {
+  "jee": [
+   [
+    "jee_mains",
+    0.587
+   ],
+   [
+    "jee2022",
+    0.586
+   ],
+   [
+    "jee_2024",
+    0.561
+   ]
+  ],
+  "mains": [
+   [
+    "jee_mains",
+    0.737
+   ],
+   [
+    "adv",
+    0.648
+   ],
+   [
+    "jee_main",
+    0.612
+   ],
+   [
+    "220",
+    0.604
+   ],
+   [
+    "advanced",
+    0.604
+   ],
+   [
+    "bitsat",
+    0.573
+   ],
+   [
+    "jeemains",
+    0.566
+   ],
+   [
+    "targetting",
+    0.56
+   ],
+   [
+    "first_attempt",
+    0.559
+   ],
+   [
+    "jee_adv",
+    0.557
+   ],
+   [
+    "100_120",
+    0.556
+   ]
+  ],
+  "advanced": [
+   [
+    "adv",
+    0.763
+   ],
+   [
+    "advance",
+    0.661
+   ],
+   [
+    "jee_advanced",
+    0.64
+   ],
+   [
+    "jee_adv",
+    0.639
+   ],
+   [
+    "mains",
+    0.604
+   ],
+   [
+    "elementary",
+    0.568
+   ],
+   [
+    "archives",
+    0.565
+   ],
+   [
+    "targetting",
+    0.565
+   ],
+   [
+    "jee_mains",
+    0.553
+   ]
+  ],
+  "neet": [
+   [
+    "neet_2022",
+    0.607
+   ]
+  ],
+  "bitsat": [
+   [
+    "mhtcet",
+    0.606
+   ],
+   [
+    "viteee",
+    0.601
+   ],
+   [
+    "mht_cet",
+    0.596
+   ],
+   [
+    "jeemains",
+    0.589
+   ],
+   [
+    "jeem",
+    0.589
+   ],
+   [
+    "embibe",
+    0.581
+   ],
+   [
+    "kitee",
+    0.581
+   ],
+   [
+    "vitee",
+    0.577
+   ],
+   [
+    "comedk",
+    0.577
+   ],
+   [
+    "july_attempt",
+    0.575
+   ],
+   [
+    "mains",
+    0.573
+   ],
+   [
+    "390",
+    0.573
+   ],
+   [
+    "230",
+    0.569
+   ],
+   [
+    "96_ile",
+    0.569
+   ],
+   [
+    "ugee",
+    0.569
+   ]
+  ],
+  "boards": [
+   [
+    "cbse",
+    0.673
+   ],
+   [
+    "term_1",
+    0.672
+   ],
+   [
+    "board_exams",
+    0.662
+   ],
+   [
+    "term_2",
+    0.649
+   ],
+   [
+    "board",
+    0.645
+   ],
+   [
+    "board_exam",
+    0.613
+   ],
+   [
+    "10th_boards",
+    0.601
+   ],
+   [
+    "school_exams",
+    0.6
+   ],
+   [
+    "state_board",
+    0.599
+   ],
+   [
+    "hsc",
+    0.598
+   ],
+   [
+    "isc",
+    0.593
+   ],
+   [
+    "preperation",
+    0.593
+   ],
+   [
+    "pre_boards",
+    0.583
+   ],
+   [
+    "practicals",
+    0.576
+   ],
+   [
+    "internals",
+    0.574
+   ]
+  ],
+  "cuet": [
+   [
+    "ggsipu",
+    0.65
+   ],
+   [
+    "mhtcet",
+    0.646
+   ],
+   [
+    "compartment",
+    0.626
+   ],
+   [
+    "snusat",
+    0.621
+   ],
+   [
+    "last_date",
+    0.619
+   ],
+   [
+    "improvement_exam",
+    0.61
+   ],
+   [
+    "kiitee",
+    0.609
+   ],
+   [
+    "mht_cet",
+    0.604
+   ],
+   [
+    "phase_2",
+    0.596
+   ],
+   [
+    "cucet",
+    0.594
+   ],
+   [
+    "btech",
+    0.594
+   ],
+   [
+    "shiv_nadar",
+    0.592
+   ],
+   [
+    "refund_policy",
+    0.585
+   ],
+   [
+    "pcb_student",
+    0.585
+   ],
+   [
+    "kab_aayega",
+    0.583
+   ]
+  ],
+  "kvpy": [
+   [
+    "aptitude_test",
+    0.671
+   ],
+   [
+    "hbcse",
+    0.635
+   ],
+   [
+    "iiser",
+    0.585
+   ],
+   [
+    "scholar",
+    0.583
+   ],
+   [
+    "iat",
+    0.573
+   ],
+   [
+    "iisc",
+    0.569
+   ],
+   [
+    "merit_list",
+    0.565
+   ],
+   [
+    "nsep",
+    0.565
+   ],
+   [
+    "isi",
+    0.564
+   ],
+   [
+    "cmi",
+    0.563
+   ],
+   [
+    "kvpy_sa",
+    0.563
+   ],
+   [
+    "uceed",
+    0.563
+   ],
+   [
+    "ioq",
+    0.555
+   ],
+   [
+    "abolished",
+    0.552
+   ]
+  ],
+  "olympiad": [
+   [
+    "regional",
+    0.674
+   ],
+   [
+    "olympiads",
+    0.667
+   ],
+   [
+    "astronomy",
+    0.659
+   ],
+   [
+    "hbcse",
+    0.646
+   ],
+   [
+    "bhabha",
+    0.641
+   ],
+   [
+    "russian",
+    0.64
+   ],
+   [
+    "cmi",
+    0.624
+   ],
+   [
+    "authors",
+    0.621
+   ],
+   [
+    "2015",
+    0.613
+   ],
+   [
+    "ioqc",
+    0.613
+   ],
+   [
+    "rmo",
+    0.611
+   ],
+   [
+    "handouts",
+    0.6
+   ],
+   [
+    "statistical",
+    0.591
+   ],
+   [
+    "ioqa",
+    0.59
+   ],
+   [
+    "nda",
+    0.587
+   ]
+  ],
+  "mhtcet": [
+   [
+    "mht_cet",
+    0.767
+   ],
+   [
+    "ggsipu",
+    0.708
+   ],
+   [
+    "kiitee",
+    0.706
+   ],
+   [
+    "cet",
+    0.703
+   ],
+   [
+    "ugee",
+    0.696
+   ],
+   [
+    "snusat",
+    0.695
+   ],
+   [
+    "wbjee",
+    0.683
+   ],
+   [
+    "4th_attempt",
+    0.68
+   ],
+   [
+    "mh",
+    0.679
+   ],
+   [
+    "vitee",
+    0.678
+   ],
+   [
+    "viteee",
+    0.671
+   ],
+   [
+    "eligibility_criteria",
+    0.669
+   ],
+   [
+    "ipu",
+    0.665
+   ],
+   [
+    "last_date",
+    0.661
+   ],
+   [
+    "jossa",
+    0.66
+   ]
+  ],
+  "wbjee": [
+   [
+    "comedk",
+    0.748
+   ],
+   [
+    "kcet",
+    0.742
+   ],
+   [
+    "viteee",
+    0.733
+   ],
+   [
+    "srmjeee",
+    0.71
+   ],
+   [
+    "nest",
+    0.708
+   ],
+   [
+    "comdek",
+    0.699
+   ],
+   [
+    "jeemains",
+    0.697
+   ],
+   [
+    "13k",
+    0.696
+   ],
+   [
+    "mhtcet",
+    0.683
+   ],
+   [
+    "1k",
+    0.68
+   ],
+   [
+    "vitee",
+    0.677
+   ],
+   [
+    "kitee",
+    0.677
+   ],
+   [
+    "27k",
+    0.673
+   ],
+   [
+    "22k",
+    0.673
+   ],
+   [
+    "21k",
+    0.668
+   ]
+  ],
+  "comedk": [
+   [
+    "viteee",
+    0.789
+   ],
+   [
+    "vitee",
+    0.758
+   ],
+   [
+    "srmjeee",
+    0.758
+   ],
+   [
+    "wbjee",
+    0.748
+   ],
+   [
+    "srmjee",
+    0.737
+   ],
+   [
+    "35k",
+    0.724
+   ],
+   [
+    "comdek",
+    0.724
+   ],
+   [
+    "41k",
+    0.713
+   ],
+   [
+    "phase_2",
+    0.713
+   ],
+   [
+    "manipal",
+    0.704
+   ],
+   [
+    "22k",
+    0.703
+   ],
+   [
+    "kcet",
+    0.702
+   ],
+   [
+    "13k",
+    0.702
+   ],
+   [
+    "snu",
+    0.695
+   ],
+   [
+    "ipu",
+    0.695
+   ]
+  ],
+  "viteee": [
+   [
+    "comedk",
+    0.789
+   ],
+   [
+    "vitee",
+    0.76
+   ],
+   [
+    "wbjee",
+    0.733
+   ],
+   [
+    "srmjee",
+    0.731
+   ],
+   [
+    "phase_2",
+    0.708
+   ],
+   [
+    "srmjeee",
+    0.705
+   ],
+   [
+    "comdek",
+    0.697
+   ],
+   [
+    "kcet",
+    0.691
+   ],
+   [
+    "ugee",
+    0.683
+   ],
+   [
+    "vit",
+    0.675
+   ],
+   [
+    "aeee",
+    0.673
+   ],
+   [
+    "manipal",
+    0.672
+   ],
+   [
+    "mhtcet",
+    0.671
+   ],
+   [
+    "22k",
+    0.67
+   ],
+   [
+    "srm",
+    0.67
+   ]
+  ],
+  "physics": [
+   [
+    "math",
+    0.695
+   ],
+   [
+    "phy",
+    0.685
+   ],
+   [
+    "chemistry",
+    0.663
+   ],
+   [
+    "maths",
+    0.65
+   ],
+   [
+    "physical_chemistry",
+    0.606
+   ],
+   [
+    "phys",
+    0.604
+   ],
+   [
+    "chem",
+    0.597
+   ],
+   [
+    "biology",
+    0.597
+   ],
+   [
+    "inorganic_and_physical",
+    0.583
+   ],
+   [
+    "abc",
+    0.569
+   ],
+   [
+    "errorless",
+    0.568
+   ],
+   [
+    "botany",
+    0.567
+   ],
+   [
+    "zoology",
+    0.565
+   ],
+   [
+    "current_electricity",
+    0.563
+   ],
+   [
+    "straightforward",
+    0.562
+   ]
+  ],
+  "chemistry": [
+   [
+    "chem",
+    0.705
+   ],
+   [
+    "physics",
+    0.663
+   ],
+   [
+    "physical_chemistry",
+    0.659
+   ],
+   [
+    "math",
+    0.659
+   ],
+   [
+    "phys",
+    0.645
+   ],
+   [
+    "maths",
+    0.641
+   ],
+   [
+    "errorless",
+    0.619
+   ],
+   [
+    "everyday_life",
+    0.619
+   ],
+   [
+    "inorganic",
+    0.61
+   ],
+   [
+    "organic_chemistry",
+    0.6
+   ],
+   [
+    "inorganic_and_physical",
+    0.599
+   ],
+   [
+    "biology",
+    0.596
+   ],
+   [
+    "basic_mathematics",
+    0.59
+   ],
+   [
+    "weakest",
+    0.588
+   ],
+   [
+    "phy",
+    0.587
+   ]
+  ],
+  "maths": [
+   [
+    "math",
+    0.752
+   ],
+   [
+    "physics",
+    0.65
+   ],
+   [
+    "chemistry",
+    0.641
+   ],
+   [
+    "chem",
+    0.611
+   ],
+   [
+    "phy",
+    0.607
+   ],
+   [
+    "phys",
+    0.59
+   ],
+   [
+    "mathematics",
+    0.579
+   ],
+   [
+    "physical_chemistry",
+    0.577
+   ],
+   [
+    "inorganic_and_physical",
+    0.573
+   ],
+   [
+    "physic",
+    0.571
+   ],
+   [
+    "straightforward",
+    0.569
+   ],
+   [
+    "abc",
+    0.569
+   ],
+   [
+    "rd",
+    0.56
+   ],
+   [
+    "botany",
+    0.558
+   ],
+   [
+    "phy_chem",
+    0.553
+   ]
+  ],
+  "biology": [
+   [
+    "bio",
+    0.67
+   ],
+   [
+    "flashcards",
+    0.607
+   ],
+   [
+    "phy_chem",
+    0.606
+   ],
+   [
+    "physics",
+    0.597
+   ],
+   [
+    "errorless",
+    0.597
+   ],
+   [
+    "chemistry",
+    0.596
+   ],
+   [
+    "abc",
+    0.584
+   ],
+   [
+    "comprehensive",
+    0.583
+   ],
+   [
+    "mtg",
+    0.578
+   ],
+   [
+    "pcb",
+    0.566
+   ],
+   [
+    "reference_book",
+    0.566
+   ],
+   [
+    "pearson",
+    0.564
+   ],
+   [
+    "thorough",
+    0.558
+   ],
+   [
+    "book_recommendations",
+    0.556
+   ],
+   [
+    "physical_education",
+    0.556
+   ]
+  ],
+  "botany": [
+   [
+    "zoology",
+    0.813
+   ],
+   [
+    "electromagnetism",
+    0.684
+   ],
+   [
+    "phys",
+    0.679
+   ],
+   [
+    "animal_kingdom",
+    0.659
+   ],
+   [
+    "physical_and_inorganic",
+    0.646
+   ],
+   [
+    "inorganic_and_physical",
+    0.642
+   ],
+   [
+    "conic",
+    0.641
+   ],
+   [
+    "mud",
+    0.631
+   ],
+   [
+    "atomic_structure",
+    0.631
+   ],
+   [
+    "nitin",
+    0.623
+   ],
+   [
+    "physic",
+    0.622
+   ],
+   [
+    "radioactivity",
+    0.622
+   ],
+   [
+    "calorimetry",
+    0.621
+   ],
+   [
+    "dinesh",
+    0.62
+   ],
+   [
+    "inorg",
+    0.618
+   ]
+  ],
+  "zoology": [
+   [
+    "botany",
+    0.813
+   ],
+   [
+    "electromagnetism",
+    0.739
+   ],
+   [
+    "phys",
+    0.734
+   ],
+   [
+    "esp",
+    0.702
+   ],
+   [
+    "calorimetry",
+    0.701
+   ],
+   [
+    "measurements",
+    0.695
+   ],
+   [
+    "mud",
+    0.682
+   ],
+   [
+    "logarithms",
+    0.678
+   ],
+   [
+    "conic",
+    0.678
+   ],
+   [
+    "very_weak",
+    0.675
+   ],
+   [
+    "garbage",
+    0.673
+   ],
+   [
+    "ib",
+    0.669
+   ],
+   [
+    "formal",
+    0.669
+   ],
+   [
+    "manageable",
+    0.669
+   ],
+   [
+    "straightforward",
+    0.668
+   ]
+  ],
+  "organic": [
+   [
+    "inorganic",
+    0.786
+   ],
+   [
+    "physical_chem",
+    0.713
+   ],
+   [
+    "organic_chem",
+    0.696
+   ],
+   [
+    "organic_chemistry",
+    0.69
+   ],
+   [
+    "physical_chemistry",
+    0.67
+   ],
+   [
+    "reaction_mechanism",
+    0.667
+   ],
+   [
+    "inorganic_chemistry",
+    0.664
+   ],
+   [
+    "redox",
+    0.663
+   ],
+   [
+    "hydrocarbons",
+    0.662
+   ],
+   [
+    "goc",
+    0.661
+   ],
+   [
+    "atomic_structure",
+    0.66
+   ],
+   [
+    "thermochemistry",
+    0.659
+   ],
+   [
+    "ioc",
+    0.655
+   ],
+   [
+    "inorg",
+    0.652
+   ],
+   [
+    "op_tandon",
+    0.649
+   ]
+  ],
+  "inorganic": [
+   [
+    "organic",
+    0.786
+   ],
+   [
+    "physical_chem",
+    0.705
+   ],
+   [
+    "physical_chemistry",
+    0.688
+   ],
+   [
+    "inorganic_chemistry",
+    0.683
+   ],
+   [
+    "atomic_structure",
+    0.66
+   ],
+   [
+    "modern_physics",
+    0.659
+   ],
+   [
+    "op_tandon",
+    0.659
+   ],
+   [
+    "inorg",
+    0.657
+   ],
+   [
+    "states_of_matter",
+    0.656
+   ],
+   [
+    "redox",
+    0.651
+   ],
+   [
+    "bonding",
+    0.648
+   ],
+   [
+    "biomolecules",
+    0.647
+   ],
+   [
+    "everyday_life",
+    0.646
+   ],
+   [
+    "reaction_mechanism",
+    0.642
+   ],
+   [
+    "polymers",
+    0.641
+   ]
+  ],
+  "pcm": [
+   [
+    "pcb",
+    0.677
+   ],
+   [
+    "isc",
+    0.657
+   ],
+   [
+    "aggregate",
+    0.631
+   ],
+   [
+    "pcmb",
+    0.624
+   ],
+   [
+    "subjects",
+    0.619
+   ],
+   [
+    "maharashtra_board",
+    0.593
+   ],
+   [
+    "science",
+    0.585
+   ],
+   [
+    "all_three",
+    0.577
+   ],
+   [
+    "sci",
+    0.565
+   ],
+   [
+    "improvement_exam",
+    0.56
+   ],
+   [
+    "physical_education",
+    0.56
+   ],
+   [
+    "term_2",
+    0.556
+   ],
+   [
+    "sst",
+    0.555
+   ],
+   [
+    "psychology",
+    0.552
+   ],
+   [
+    "prepped",
+    0.552
+   ]
+  ],
+  "pcb": [
+   [
+    "pcmb",
+    0.754
+   ],
+   [
+    "pcm",
+    0.677
+   ],
+   [
+    "pcb_student",
+    0.666
+   ],
+   [
+    "hsc_board",
+    0.656
+   ],
+   [
+    "optional_subject",
+    0.647
+   ],
+   [
+    "improvement_exam",
+    0.644
+   ],
+   [
+    "5th_subject",
+    0.62
+   ],
+   [
+    "psychology",
+    0.619
+   ],
+   [
+    "hsc",
+    0.618
+   ],
+   [
+    "isc",
+    0.617
+   ],
+   [
+    "opting",
+    0.617
+   ],
+   [
+    "improvement_exams",
+    0.615
+   ],
+   [
+    "maharashtra_board",
+    0.615
+   ],
+   [
+    "commerce",
+    0.611
+   ],
+   [
+    "icse",
+    0.604
+   ]
+  ],
+  "rotational": [
+   [
+    "kinematics_nlm",
+    0.831
+   ],
+   [
+    "heat_transfer",
+    0.828
+   ],
+   [
+    "dynamics",
+    0.826
+   ],
+   [
+    "states_of_matter",
+    0.823
+   ],
+   [
+    "periodicity",
+    0.821
+   ],
+   [
+    "shm_waves",
+    0.82
+   ],
+   [
+    "elasticity",
+    0.82
+   ],
+   [
+    "gaseous",
+    0.82
+   ],
+   [
+    "capacitors",
+    0.819
+   ],
+   [
+    "chemical_equilibrium",
+    0.819
+   ],
+   [
+    "stoichiometry",
+    0.816
+   ],
+   [
+    "conductors",
+    0.814
+   ],
+   [
+    "classification",
+    0.813
+   ],
+   [
+    "oscillations",
+    0.811
+   ],
+   [
+    "lcd",
+    0.809
+   ]
+  ],
+  "electrostatics": [
+   [
+    "rbd",
+    0.823
+   ],
+   [
+    "current_electricity",
+    0.816
+   ],
+   [
+    "electrostats",
+    0.805
+   ],
+   [
+    "electricity",
+    0.804
+   ],
+   [
+    "elasticity",
+    0.803
+   ],
+   [
+    "gravitation",
+    0.803
+   ],
+   [
+    "optics",
+    0.802
+   ],
+   [
+    "capacitance",
+    0.801
+   ],
+   [
+    "hydrocarbon",
+    0.8
+   ],
+   [
+    "conic_sections",
+    0.798
+   ],
+   [
+    "properties_of_matter",
+    0.796
+   ],
+   [
+    "nlm",
+    0.794
+   ],
+   [
+    "capacitors",
+    0.793
+   ],
+   [
+    "emi",
+    0.787
+   ],
+   [
+    "states_of_matter",
+    0.786
+   ]
+  ],
+  "thermodynamics": [
+   [
+    "thermochemistry",
+    0.813
+   ],
+   [
+    "chemical_equilibrium",
+    0.809
+   ],
+   [
+    "states_of_matter",
+    0.807
+   ],
+   [
+    "stoichiometry",
+    0.802
+   ],
+   [
+    "conic_sections",
+    0.801
+   ],
+   [
+    "ktg",
+    0.801
+   ],
+   [
+    "optics",
+    0.8
+   ],
+   [
+    "properties_of_matter",
+    0.797
+   ],
+   [
+    "atomic_structure",
+    0.793
+   ],
+   [
+    "coordination",
+    0.792
+   ],
+   [
+    "shm_waves",
+    0.785
+   ],
+   [
+    "bonding",
+    0.784
+   ],
+   [
+    "redox",
+    0.78
+   ],
+   [
+    "electromagnetism",
+    0.778
+   ],
+   [
+    "chemical_kinetics",
+    0.777
+   ]
+  ],
+  "kinematics": [
+   [
+    "chemical_equilibrium",
+    0.829
+   ],
+   [
+    "elasticity",
+    0.819
+   ],
+   [
+    "states_of_matter",
+    0.818
+   ],
+   [
+    "shm_waves",
+    0.816
+   ],
+   [
+    "capacitors",
+    0.811
+   ],
+   [
+    "optics",
+    0.808
+   ],
+   [
+    "fluids",
+    0.797
+   ],
+   [
+    "trigonometric_functions",
+    0.796
+   ],
+   [
+    "nlm",
+    0.792
+   ],
+   [
+    "geometrical",
+    0.791
+   ],
+   [
+    "gaseous",
+    0.79
+   ],
+   [
+    "periodicity",
+    0.788
+   ],
+   [
+    "gravitation",
+    0.787
+   ],
+   [
+    "electrostats",
+    0.785
+   ],
+   [
+    "electrostatic",
+    0.784
+   ]
+  ],
+  "optics": [
+   [
+    "states_of_matter",
+    0.876
+   ],
+   [
+    "shm_waves",
+    0.875
+   ],
+   [
+    "fluids",
+    0.868
+   ],
+   [
+    "chemical_equilibrium",
+    0.867
+   ],
+   [
+    "properties_of_matter",
+    0.849
+   ],
+   [
+    "capacitors",
+    0.847
+   ],
+   [
+    "trig",
+    0.843
+   ],
+   [
+    "electrostats",
+    0.841
+   ],
+   [
+    "geometrical",
+    0.84
+   ],
+   [
+    "mechanical_properties",
+    0.838
+   ],
+   [
+    "periodicity",
+    0.837
+   ],
+   [
+    "stoichiometry",
+    0.835
+   ],
+   [
+    "elasticity",
+    0.835
+   ],
+   [
+    "redox",
+    0.834
+   ],
+   [
+    "solids",
+    0.832
+   ]
+  ],
+  "calculus": [
+   [
+    "algebra",
+    0.736
+   ],
+   [
+    "conic_sections",
+    0.707
+   ],
+   [
+    "conics",
+    0.69
+   ],
+   [
+    "coordinate_geometry",
+    0.689
+   ],
+   [
+    "3d_geometry",
+    0.687
+   ],
+   [
+    "circles",
+    0.686
+   ],
+   [
+    "mechanics",
+    0.683
+   ],
+   [
+    "iupac_nomenclature",
+    0.671
+   ],
+   [
+    "coordinate",
+    0.671
+   ],
+   [
+    "electromagnetism",
+    0.67
+   ],
+   [
+    "rbd",
+    0.669
+   ],
+   [
+    "before_starting",
+    0.664
+   ],
+   [
+    "trigonometry",
+    0.662
+   ],
+   [
+    "states_of_matter",
+    0.661
+   ],
+   [
+    "trigonometric_functions",
+    0.656
+   ]
+  ],
+  "integration": [
+   [
+    "differentiation",
+    0.76
+   ],
+   [
+    "lcd",
+    0.723
+   ],
+   [
+    "matrices_and_determinants",
+    0.715
+   ],
+   [
+    "curve",
+    0.713
+   ],
+   [
+    "aod",
+    0.708
+   ],
+   [
+    "vectors",
+    0.702
+   ],
+   [
+    "straight_lines",
+    0.701
+   ],
+   [
+    "3d_geometry",
+    0.7
+   ],
+   [
+    "matrices",
+    0.696
+   ],
+   [
+    "trigo",
+    0.693
+   ],
+   [
+    "states_of_matter",
+    0.69
+   ],
+   [
+    "integrals",
+    0.689
+   ],
+   [
+    "indefinite_integration",
+    0.689
+   ],
+   [
+    "chemical_equilibrium",
+    0.688
+   ],
+   [
+    "algebra",
+    0.687
+   ]
+  ],
+  "probability": [
+   [
+    "continuity_and_differentiability",
+    0.737
+   ],
+   [
+    "aod",
+    0.733
+   ],
+   [
+    "sequence_and_series",
+    0.718
+   ],
+   [
+    "triangles",
+    0.717
+   ],
+   [
+    "mathematical_reasoning",
+    0.713
+   ],
+   [
+    "differentiability",
+    0.711
+   ],
+   [
+    "quadratic_equations",
+    0.706
+   ],
+   [
+    "limits",
+    0.697
+   ],
+   [
+    "induction",
+    0.697
+   ],
+   [
+    "matrices_and_determinants",
+    0.695
+   ],
+   [
+    "reasoning",
+    0.691
+   ],
+   [
+    "capacitors",
+    0.689
+   ],
+   [
+    "equations",
+    0.689
+   ],
+   [
+    "area_under",
+    0.688
+   ],
+   [
+    "mechanical_properties",
+    0.688
+   ]
+  ],
+  "matrices": [
+   [
+    "determinant",
+    0.859
+   ],
+   [
+    "matrices_and_determinants",
+    0.835
+   ],
+   [
+    "kinetics",
+    0.831
+   ],
+   [
+    "conic_section",
+    0.827
+   ],
+   [
+    "determinants",
+    0.826
+   ],
+   [
+    "gaseous",
+    0.825
+   ],
+   [
+    "ellipse",
+    0.825
+   ],
+   [
+    "geo",
+    0.82
+   ],
+   [
+    "conics",
+    0.819
+   ],
+   [
+    "lcd",
+    0.818
+   ],
+   [
+    "chemical_equilibrium",
+    0.818
+   ],
+   [
+    "solid_state",
+    0.817
+   ],
+   [
+    "oscillation",
+    0.817
+   ],
+   [
+    "kinematics_nlm",
+    0.816
+   ],
+   [
+    "wpe",
+    0.815
+   ]
+  ],
+  "genetics": [
+   [
+    "animal_kingdom",
+    0.813
+   ],
+   [
+    "electromagnetism",
+    0.793
+   ],
+   [
+    "physiology",
+    0.789
+   ],
+   [
+    "naming",
+    0.785
+   ],
+   [
+    "periodicity",
+    0.777
+   ],
+   [
+    "f_block",
+    0.772
+   ],
+   [
+    "electro",
+    0.771
+   ],
+   [
+    "stoichiometry",
+    0.77
+   ],
+   [
+    "rxn",
+    0.767
+   ],
+   [
+    "ether",
+    0.766
+   ],
+   [
+    "shm_waves",
+    0.765
+   ],
+   [
+    "derivation",
+    0.763
+   ],
+   [
+    "gaseous",
+    0.763
+   ],
+   [
+    "kingdom",
+    0.761
+   ],
+   [
+    "states_of_matter",
+    0.761
+   ]
+  ],
+  "electrochemistry": [
+   [
+    "coordination",
+    0.833
+   ],
+   [
+    "chemical_kinetics",
+    0.817
+   ],
+   [
+    "surface_chemistry",
+    0.796
+   ],
+   [
+    "3d_geometry",
+    0.783
+   ],
+   [
+    "fluid_mechanics",
+    0.78
+   ],
+   [
+    "polymers",
+    0.778
+   ],
+   [
+    "qualitative_analysis",
+    0.776
+   ],
+   [
+    "states_of_matter",
+    0.772
+   ],
+   [
+    "haloarenes",
+    0.771
+   ],
+   [
+    "redox",
+    0.767
+   ],
+   [
+    "solid_state",
+    0.764
+   ],
+   [
+    "naming",
+    0.764
+   ],
+   [
+    "chemical_equilibrium",
+    0.762
+   ],
+   [
+    "stoichiometry",
+    0.759
+   ],
+   [
+    "environmental_chemistry",
+    0.757
+   ]
+  ],
+  "equilibrium": [
+   [
+    "gaseous_state",
+    0.822
+   ],
+   [
+    "chemical_equilibrium",
+    0.817
+   ],
+   [
+    "bonding",
+    0.815
+   ],
+   [
+    "kinetics",
+    0.813
+   ],
+   [
+    "stoichiometry",
+    0.809
+   ],
+   [
+    "surface",
+    0.806
+   ],
+   [
+    "shm_waves",
+    0.805
+   ],
+   [
+    "electromagnetism",
+    0.805
+   ],
+   [
+    "periodicity",
+    0.802
+   ],
+   [
+    "mole",
+    0.796
+   ],
+   [
+    "states_of_matter",
+    0.793
+   ],
+   [
+    "dynamics",
+    0.791
+   ],
+   [
+    "em_waves",
+    0.788
+   ],
+   [
+    "redox",
+    0.786
+   ],
+   [
+    "thermo",
+    0.786
+   ]
+  ],
+  "mole": [
+   [
+    "differentiability",
+    0.885
+   ],
+   [
+    "1d",
+    0.881
+   ],
+   [
+    "low_practice",
+    0.878
+   ],
+   [
+    "gaseous_state",
+    0.875
+   ],
+   [
+    "capacitor",
+    0.873
+   ],
+   [
+    "kinematic",
+    0.872
+   ],
+   [
+    "periodicity",
+    0.872
+   ],
+   [
+    "logarithm",
+    0.868
+   ],
+   [
+    "area_under",
+    0.868
+   ],
+   [
+    "molecular",
+    0.864
+   ],
+   [
+    "quadratic_equations",
+    0.864
+   ],
+   [
+    "conservation",
+    0.862
+   ],
+   [
+    "wep",
+    0.861
+   ],
+   [
+    "measurement",
+    0.859
+   ],
+   [
+    "identities",
+    0.856
+   ]
+  ],
+  "modern_physics": [
+   [
+    "thermochemistry",
+    0.821
+   ],
+   [
+    "fluid_mechanics",
+    0.819
+   ],
+   [
+    "states_of_matter",
+    0.815
+   ],
+   [
+    "pre_requisites",
+    0.805
+   ],
+   [
+    "prerequisite",
+    0.803
+   ],
+   [
+    "redox",
+    0.796
+   ],
+   [
+    "chemical_equilibrium",
+    0.791
+   ],
+   [
+    "optics",
+    0.79
+   ],
+   [
+    "electromagnetism",
+    0.788
+   ],
+   [
+    "animal_kingdom",
+    0.786
+   ],
+   [
+    "capacitors",
+    0.786
+   ],
+   [
+    "atomic_structure",
+    0.785
+   ],
+   [
+    "mechanical_properties",
+    0.781
+   ],
+   [
+    "semiconductors",
+    0.779
+   ],
+   [
+    "chemical_kinetics",
+    0.772
+   ]
+  ],
+  "coordinate": [
+   [
+    "geo",
+    0.822
+   ],
+   [
+    "matrices_and_determinants",
+    0.819
+   ],
+   [
+    "aod",
+    0.807
+   ],
+   [
+    "lcd",
+    0.801
+   ],
+   [
+    "kinetics",
+    0.8
+   ],
+   [
+    "vector_3d",
+    0.799
+   ],
+   [
+    "periodicity",
+    0.799
+   ],
+   [
+    "states_of_matter",
+    0.799
+   ],
+   [
+    "gaseous_state",
+    0.798
+   ],
+   [
+    "shm_waves",
+    0.797
+   ],
+   [
+    "conics",
+    0.796
+   ],
+   [
+    "mathematical_reasoning",
+    0.795
+   ],
+   [
+    "inverse",
+    0.795
+   ],
+   [
+    "electrochem",
+    0.793
+   ],
+   [
+    "conic_sections",
+    0.791
+   ]
+  ],
+  "vectors": [
+   [
+    "circles",
+    0.834
+   ],
+   [
+    "conic_sections",
+    0.822
+   ],
+   [
+    "conics",
+    0.82
+   ],
+   [
+    "3d_geometry",
+    0.795
+   ],
+   [
+    "geometry",
+    0.792
+   ],
+   [
+    "limits",
+    0.783
+   ],
+   [
+    "trigo",
+    0.783
+   ],
+   [
+    "differentiation",
+    0.783
+   ],
+   [
+    "straight_lines",
+    0.783
+   ],
+   [
+    "sequence_and_series",
+    0.776
+   ],
+   [
+    "lcd",
+    0.774
+   ],
+   [
+    "matrices_and_determinants",
+    0.774
+   ],
+   [
+    "coordinate_geometry",
+    0.773
+   ],
+   [
+    "states_of_matter",
+    0.771
+   ],
+   [
+    "rbd",
+    0.769
+   ]
+  ],
+  "magnetism": [
+   [
+    "electricity",
+    0.823
+   ],
+   [
+    "capacitors",
+    0.815
+   ],
+   [
+    "emi",
+    0.796
+   ],
+   [
+    "electrostats",
+    0.79
+   ],
+   [
+    "heat_transfer",
+    0.785
+   ],
+   [
+    "properties_of_matter",
+    0.785
+   ],
+   [
+    "electromagnetism",
+    0.783
+   ],
+   [
+    "capacitance",
+    0.782
+   ],
+   [
+    "fluid",
+    0.78
+   ],
+   [
+    "fluids",
+    0.775
+   ],
+   [
+    "induction",
+    0.771
+   ],
+   [
+    "electromagnetic",
+    0.771
+   ],
+   [
+    "mechanical_properties",
+    0.771
+   ],
+   [
+    "semiconductors",
+    0.771
+   ],
+   [
+    "redox_reactions",
+    0.768
+   ]
+  ],
+  "iit": [
+   [
+    "iit_delhi",
+    0.617
+   ],
+   [
+    "aiims",
+    0.599
+   ],
+   [
+    "roorkee",
+    0.578
+   ],
+   [
+    "iitb_cse",
+    0.575
+   ],
+   [
+    "dholakpur",
+    0.573
+   ],
+   [
+    "iit_b",
+    0.564
+   ],
+   [
+    "iitb",
+    0.564
+   ],
+   [
+    "iits",
+    0.557
+   ],
+   [
+    "iit_bombay",
+    0.555
+   ]
+  ],
+  "nit": [
+   [
+    "warangal",
+    0.743
+   ],
+   [
+    "govt_college",
+    0.735
+   ],
+   [
+    "cs_branch",
+    0.73
+   ],
+   [
+    "dtu",
+    0.727
+   ],
+   [
+    "mnnit",
+    0.719
+   ],
+   [
+    "surathkal",
+    0.718
+   ],
+   [
+    "ece",
+    0.718
+   ],
+   [
+    "top_nit",
+    0.713
+   ],
+   [
+    "bits_goa",
+    0.713
+   ],
+   [
+    "kurukshetra",
+    0.71
+   ],
+   [
+    "top_nits",
+    0.705
+   ],
+   [
+    "gfti",
+    0.704
+   ],
+   [
+    "government_college",
+    0.701
+   ],
+   [
+    "civil",
+    0.696
+   ],
+   [
+    "bits_hyderabad",
+    0.694
+   ]
+  ],
+  "iiit": [
+   [
+    "allahabad",
+    0.74
+   ],
+   [
+    "nsit",
+    0.719
+   ],
+   [
+    "bhopal",
+    0.717
+   ],
+   [
+    "kottayam",
+    0.71
+   ],
+   [
+    "iiit_hyderabad",
+    0.71
+   ],
+   [
+    "jaypee",
+    0.707
+   ],
+   [
+    "iiit_bangalore",
+    0.7
+   ],
+   [
+    "kurukshetra",
+    0.698
+   ],
+   [
+    "jodhpur",
+    0.698
+   ],
+   [
+    "mohali",
+    0.696
+   ],
+   [
+    "upes",
+    0.694
+   ],
+   [
+    "eni",
+    0.693
+   ],
+   [
+    "lnmiit",
+    0.692
+   ],
+   [
+    "ranchi",
+    0.691
+   ],
+   [
+    "cu",
+    0.691
+   ]
+  ],
+  "aiims": [
+   [
+    "mnc",
+    0.65
+   ],
+   [
+    "roorkee",
+    0.643
+   ],
+   [
+    "vmmc",
+    0.631
+   ],
+   [
+    "iitb_cse",
+    0.628
+   ],
+   [
+    "medical_college",
+    0.627
+   ],
+   [
+    "jodhpur",
+    0.624
+   ],
+   [
+    "navy",
+    0.621
+   ],
+   [
+    "mnnit",
+    0.621
+   ],
+   [
+    "dream_college",
+    0.612
+   ],
+   [
+    "iisc",
+    0.611
+   ],
+   [
+    "tirupati",
+    0.608
+   ],
+   [
+    "kalej",
+    0.604
+   ],
+   [
+    "iim",
+    0.603
+   ],
+   [
+    "grads",
+    0.601
+   ],
+   [
+    "startup",
+    0.6
+   ]
+  ],
+  "bits": [
+   [
+    "nits",
+    0.647
+   ],
+   [
+    "dtu_nsut",
+    0.646
+   ],
+   [
+    "dubai",
+    0.642
+   ],
+   [
+    "waitlisted",
+    0.642
+   ],
+   [
+    "iits_nits",
+    0.64
+   ],
+   [
+    "lower_branches",
+    0.634
+   ],
+   [
+    "iiits",
+    0.632
+   ],
+   [
+    "bit_mesra",
+    0.631
+   ],
+   [
+    "thapar",
+    0.631
+   ],
+   [
+    "vjti",
+    0.623
+   ],
+   [
+    "snu",
+    0.622
+   ],
+   [
+    "top_nits",
+    0.622
+   ],
+   [
+    "lower_branch",
+    0.619
+   ],
+   [
+    "vitee",
+    0.615
+   ],
+   [
+    "private_universities",
+    0.612
+   ]
+  ],
+  "mbbs": [
+   [
+    "bds",
+    0.776
+   ],
+   [
+    "mba",
+    0.684
+   ],
+   [
+    "masters",
+    0.674
+   ],
+   [
+    "abroad",
+    0.665
+   ],
+   [
+    "settle",
+    0.66
+   ],
+   [
+    "canada",
+    0.651
+   ],
+   [
+    "nursing",
+    0.65
+   ],
+   [
+    "bams",
+    0.647
+   ],
+   [
+    "medical_college",
+    0.639
+   ],
+   [
+    "bachelor's",
+    0.638
+   ],
+   [
+    "degree",
+    0.636
+   ],
+   [
+    "biotech",
+    0.636
+   ],
+   [
+    "bba",
+    0.635
+   ],
+   [
+    "aerospace_engineering",
+    0.631
+   ],
+   [
+    "bvsc",
+    0.63
+   ]
+  ],
+  "btech": [
+   [
+    "b_tech",
+    0.725
+   ],
+   [
+    "bsc",
+    0.683
+   ],
+   [
+    "bds",
+    0.664
+   ],
+   [
+    "bba",
+    0.66
+   ],
+   [
+    "btech_cse",
+    0.654
+   ],
+   [
+    "mca",
+    0.652
+   ],
+   [
+    "b_sc",
+    0.65
+   ],
+   [
+    "nursing",
+    0.647
+   ],
+   [
+    "bachelor's",
+    0.645
+   ],
+   [
+    "ba",
+    0.645
+   ],
+   [
+    "ug",
+    0.643
+   ],
+   [
+    "undergrad",
+    0.642
+   ],
+   [
+    "bvsc",
+    0.641
+   ],
+   [
+    "engg",
+    0.64
+   ],
+   [
+    "training",
+    0.639
+   ]
+  ],
+  "cse": [
+   [
+    "ece",
+    0.819
+   ],
+   [
+    "eee",
+    0.816
+   ],
+   [
+    "cse_with_specialization",
+    0.777
+   ],
+   [
+    "main_campus",
+    0.777
+   ],
+   [
+    "cat_1",
+    0.777
+   ],
+   [
+    "vit_chennai",
+    0.776
+   ],
+   [
+    "cat_2",
+    0.763
+   ],
+   [
+    "ktr",
+    0.756
+   ],
+   [
+    "manipal_jaipur",
+    0.756
+   ],
+   [
+    "cse_core",
+    0.755
+   ],
+   [
+    "specialisation",
+    0.749
+   ],
+   [
+    "coe",
+    0.743
+   ],
+   [
+    "vellore",
+    0.742
+   ],
+   [
+    "vit_vellore",
+    0.74
+   ],
+   [
+    "spec",
+    0.739
+   ]
+  ],
+  "iisc": [
+   [
+    "iisers",
+    0.765
+   ],
+   [
+    "mnc",
+    0.742
+   ],
+   [
+    "roorkee",
+    0.73
+   ],
+   [
+    "mtech",
+    0.717
+   ],
+   [
+    "iim",
+    0.716
+   ],
+   [
+    "cmi",
+    0.709
+   ],
+   [
+    "iiser",
+    0.708
+   ],
+   [
+    "navy",
+    0.708
+   ],
+   [
+    "icar",
+    0.704
+   ],
+   [
+    "bhopal",
+    0.701
+   ],
+   [
+    "lower_branches",
+    0.7
+   ],
+   [
+    "aerospace_engineering",
+    0.699
+   ],
+   [
+    "mohali",
+    0.697
+   ],
+   [
+    "iiitd",
+    0.694
+   ],
+   [
+    "medical_colleges",
+    0.692
+   ]
+  ],
+  "iiser": [
+   [
+    "icar",
+    0.733
+   ],
+   [
+    "iisers",
+    0.731
+   ],
+   [
+    "mohali",
+    0.73
+   ],
+   [
+    "entrance_test",
+    0.723
+   ],
+   [
+    "nest",
+    0.714
+   ],
+   [
+    "iisc",
+    0.708
+   ],
+   [
+    "iist",
+    0.704
+   ],
+   [
+    "niser",
+    0.694
+   ],
+   [
+    "iiitd",
+    0.691
+   ],
+   [
+    "iiit_hyderabad",
+    0.69
+   ],
+   [
+    "cmi",
+    0.688
+   ],
+   [
+    "iat",
+    0.684
+   ],
+   [
+    "undergrad",
+    0.679
+   ],
+   [
+    "mh",
+    0.672
+   ],
+   [
+    "afmc",
+    0.672
+   ]
+  ],
+  "ece": [
+   [
+    "eee",
+    0.849
+   ],
+   [
+    "cat_1",
+    0.821
+   ],
+   [
+    "cse",
+    0.819
+   ],
+   [
+    "coe",
+    0.801
+   ],
+   [
+    "vellore",
+    0.8
+   ],
+   [
+    "bits_hyderabad",
+    0.796
+   ],
+   [
+    "cse_core",
+    0.795
+   ],
+   [
+    "vit_chennai",
+    0.793
+   ],
+   [
+    "main_campus",
+    0.791
+   ],
+   [
+    "cat_2",
+    0.789
+   ],
+   [
+    "vit_vellore",
+    0.784
+   ],
+   [
+    "eni",
+    0.783
+   ],
+   [
+    "csai",
+    0.783
+   ],
+   [
+    "ktr",
+    0.782
+   ],
+   [
+    "cse_with_specialization",
+    0.782
+   ]
+  ],
+  "allen": [
+   [
+    "aakash",
+    0.695
+   ],
+   [
+    "fiitjee",
+    0.669
+   ],
+   [
+    "janakpuri",
+    0.646
+   ],
+   [
+    "sankalp",
+    0.638
+   ],
+   [
+    "allen_kota",
+    0.632
+   ],
+   [
+    "resonance",
+    0.612
+   ],
+   [
+    "achiever",
+    0.611
+   ],
+   [
+    "fitjee",
+    0.609
+   ],
+   [
+    "nurture",
+    0.592
+   ],
+   [
+    "dwarka",
+    0.588
+   ],
+   [
+    "akash",
+    0.585
+   ],
+   [
+    "leader",
+    0.578
+   ],
+   [
+    "coachings",
+    0.576
+   ],
+   [
+    "sri_chaitanya",
+    0.573
+   ],
+   [
+    "pitampura",
+    0.57
+   ]
+  ],
+  "aakash": [
+   [
+    "allen",
+    0.695
+   ],
+   [
+    "janakpuri",
+    0.695
+   ],
+   [
+    "akash",
+    0.673
+   ],
+   [
+    "bagh",
+    0.662
+   ],
+   [
+    "fiitjee",
+    0.66
+   ],
+   [
+    "pitampura",
+    0.653
+   ],
+   [
+    "sankalp",
+    0.639
+   ],
+   [
+    "sikar",
+    0.638
+   ],
+   [
+    "punjabi",
+    0.634
+   ],
+   [
+    "dwarka",
+    0.631
+   ],
+   [
+    "allen_kota",
+    0.629
+   ],
+   [
+    "sri_chaitanya",
+    0.625
+   ],
+   [
+    "pw_arjuna",
+    0.625
+   ],
+   [
+    "akaash",
+    0.622
+   ],
+   [
+    "achiever",
+    0.621
+   ]
+  ],
+  "fiitjee": [
+   [
+    "janakpuri",
+    0.67
+   ],
+   [
+    "allen",
+    0.669
+   ],
+   [
+    "aakash",
+    0.66
+   ],
+   [
+    "fitjee",
+    0.657
+   ],
+   [
+    "vmc",
+    0.655
+   ],
+   [
+    "bagh",
+    0.616
+   ],
+   [
+    "narayana",
+    0.615
+   ],
+   [
+    "punjabi",
+    0.614
+   ],
+   [
+    "sri_chaitanya",
+    0.609
+   ],
+   [
+    "vidyamandir",
+    0.609
+   ],
+   [
+    "dwarka",
+    0.607
+   ],
+   [
+    "itutor",
+    0.604
+   ],
+   [
+    "sankalp",
+    0.603
+   ],
+   [
+    "akash",
+    0.602
+   ],
+   [
+    "pitampura",
+    0.602
+   ]
+  ],
+  "pw": [
+   [
+    "physics_wallah",
+    0.728
+   ],
+   [
+    "unacademy",
+    0.67
+   ],
+   [
+    "physicswallah",
+    0.66
+   ],
+   [
+    "yakeen_batch",
+    0.621
+   ],
+   [
+    "arjuna_batch",
+    0.62
+   ],
+   [
+    "lakshya",
+    0.619
+   ],
+   [
+    "2_0",
+    0.615
+   ],
+   [
+    "lakshya_batch",
+    0.607
+   ],
+   [
+    "arjuna",
+    0.603
+   ],
+   [
+    "prayas",
+    0.587
+   ],
+   [
+    "vedantu",
+    0.585
+   ],
+   [
+    "apni_kaksha",
+    0.583
+   ],
+   [
+    "c3",
+    0.582
+   ],
+   [
+    "aman_dhattarwal",
+    0.582
+   ],
+   [
+    "prayas_batch",
+    0.579
+   ]
+  ],
+  "unacademy": [
+   [
+    "unacdemy",
+    0.697
+   ],
+   [
+    "pw",
+    0.67
+   ],
+   [
+    "arjuna_batch",
+    0.67
+   ],
+   [
+    "unacademy_plus",
+    0.66
+   ],
+   [
+    "atp_star",
+    0.654
+   ],
+   [
+    "physicswallah",
+    0.653
+   ],
+   [
+    "prayas",
+    0.643
+   ],
+   [
+    "apni_kaksha",
+    0.629
+   ],
+   [
+    "byjus",
+    0.628
+   ],
+   [
+    "lakshya",
+    0.628
+   ],
+   [
+    "lakshay",
+    0.627
+   ],
+   [
+    "physics_wallah",
+    0.627
+   ],
+   [
+    "c3",
+    0.626
+   ],
+   [
+    "2_0",
+    0.625
+   ],
+   [
+    "arjuna",
+    0.625
+   ]
+  ],
+  "vedantu": [
+   [
+    "lakshya",
+    0.718
+   ],
+   [
+    "roasting",
+    0.708
+   ],
+   [
+    "manzil",
+    0.7
+   ],
+   [
+    "aarambh",
+    0.699
+   ],
+   [
+    "dhattarwal",
+    0.694
+   ],
+   [
+    "stan",
+    0.681
+   ],
+   [
+    "esaral",
+    0.68
+   ],
+   [
+    "manzil_batch",
+    0.678
+   ],
+   [
+    "byjus",
+    0.677
+   ],
+   [
+    "sameer",
+    0.677
+   ],
+   [
+    "stans",
+    0.675
+   ],
+   [
+    "aman_dhattarwal",
+    0.67
+   ],
+   [
+    "sachin",
+    0.666
+   ],
+   [
+    "rankers",
+    0.666
+   ],
+   [
+    "maths_unplugged",
+    0.666
+   ]
+  ],
+  "resonance": [
+   [
+    "reso",
+    0.76
+   ],
+   [
+    "resonance_material",
+    0.68
+   ],
+   [
+    "rank_booster",
+    0.678
+   ],
+   [
+    "dlp",
+    0.648
+   ],
+   [
+    "hlp",
+    0.644
+   ],
+   [
+    "nucleus",
+    0.644
+   ],
+   [
+    "achiever",
+    0.641
+   ],
+   [
+    "boosters",
+    0.635
+   ],
+   [
+    "handbooks",
+    0.614
+   ],
+   [
+    "modules",
+    0.613
+   ],
+   [
+    "allen",
+    0.612
+   ],
+   [
+    "janakpuri",
+    0.612
+   ],
+   [
+    "dwarka",
+    0.61
+   ],
+   [
+    "pratham_batch",
+    0.61
+   ],
+   [
+    "kalu_sarai",
+    0.609
+   ]
+  ],
+  "narayana": [
+   [
+    "kalu_sarai",
+    0.815
+   ],
+   [
+    "janakpuri",
+    0.809
+   ],
+   [
+    "pitampura",
+    0.805
+   ],
+   [
+    "sri_chaitanya",
+    0.802
+   ],
+   [
+    "bagh",
+    0.791
+   ],
+   [
+    "vidyamandir",
+    0.79
+   ],
+   [
+    "punjabi",
+    0.788
+   ],
+   [
+    "allen_chandigarh",
+    0.776
+   ],
+   [
+    "fiitjee_south",
+    0.762
+   ],
+   [
+    "indore",
+    0.755
+   ],
+   [
+    "dwarka",
+    0.754
+   ],
+   [
+    "dps",
+    0.748
+   ],
+   [
+    "chaitanya",
+    0.744
+   ],
+   [
+    "lucknow",
+    0.734
+   ],
+   [
+    "akaash",
+    0.727
+   ]
+  ],
+  "byjus": [
+   [
+    "janakpuri",
+    0.728
+   ],
+   [
+    "pratham",
+    0.719
+   ],
+   [
+    "akash",
+    0.7
+   ],
+   [
+    "esaral",
+    0.692
+   ],
+   [
+    "itutor",
+    0.686
+   ],
+   [
+    "byju's",
+    0.684
+   ],
+   [
+    "bagh",
+    0.684
+   ],
+   [
+    "pw_arjuna",
+    0.683
+   ],
+   [
+    "sri_chaitanya",
+    0.68
+   ],
+   [
+    "vedantu",
+    0.677
+   ],
+   [
+    "purchased",
+    0.668
+   ],
+   [
+    "compitishun",
+    0.668
+   ],
+   [
+    "plus_subscription",
+    0.667
+   ],
+   [
+    "mani",
+    0.666
+   ],
+   [
+    "vibrant",
+    0.664
+   ]
+  ],
+  "ncert": [
+   [
+    "mtg",
+    0.657
+   ],
+   [
+    "aakash_modules",
+    0.65
+   ],
+   [
+    "hcv",
+    0.644
+   ],
+   [
+    "hc_verma",
+    0.64
+   ],
+   [
+    "rd_sharma",
+    0.629
+   ],
+   [
+    "exemplar",
+    0.619
+   ],
+   [
+    "dc_pandey",
+    0.616
+   ],
+   [
+    "fingertips",
+    0.612
+   ],
+   [
+    "op_tandon",
+    0.591
+   ],
+   [
+    "module",
+    0.588
+   ],
+   [
+    "ncerts",
+    0.582
+   ],
+   [
+    "n_awasthi",
+    0.581
+   ],
+   [
+    "solved_examples",
+    0.581
+   ],
+   [
+    "coaching_module",
+    0.58
+   ],
+   [
+    "reference_book",
+    0.576
+   ]
+  ],
+  "hcv": [
+   [
+    "dc_pandey",
+    0.789
+   ],
+   [
+    "hc_verma",
+    0.764
+   ],
+   [
+    "cengage",
+    0.756
+   ],
+   [
+    "ncerts",
+    0.741
+   ],
+   [
+    "rd_sharma",
+    0.74
+   ],
+   [
+    "solved_examples",
+    0.739
+   ],
+   [
+    "aakash_modules",
+    0.738
+   ],
+   [
+    "n_awasthi",
+    0.728
+   ],
+   [
+    "dcp",
+    0.724
+   ],
+   [
+    "exemplar",
+    0.721
+   ],
+   [
+    "black_book",
+    0.721
+   ],
+   [
+    "pyq's",
+    0.714
+   ],
+   [
+    "ms_chauhan",
+    0.714
+   ],
+   [
+    "coaching_module",
+    0.714
+   ],
+   [
+    "mtg",
+    0.71
+   ]
+  ],
+  "irodov": [
+   [
+    "pathfinder",
+    0.705
+   ],
+   [
+    "black_book",
+    0.704
+   ],
+   [
+    "dc_pandey",
+    0.675
+   ],
+   [
+    "krotov",
+    0.667
+   ],
+   [
+    "dcp",
+    0.656
+   ],
+   [
+    "rd_sharma",
+    0.649
+   ],
+   [
+    "hc_verma",
+    0.648
+   ],
+   [
+    "ms_chauhan",
+    0.647
+   ],
+   [
+    "cengage",
+    0.642
+   ],
+   [
+    "verma",
+    0.64
+   ],
+   [
+    "vikas_gupta",
+    0.635
+   ],
+   [
+    "exemplar",
+    0.629
+   ],
+   [
+    "solved_examples",
+    0.627
+   ],
+   [
+    "hcv",
+    0.627
+   ],
+   [
+    "illustration",
+    0.626
+   ]
+  ],
+  "cengage": [
+   [
+    "hcv",
+    0.756
+   ],
+   [
+    "arihant",
+    0.752
+   ],
+   [
+    "black_book",
+    0.73
+   ],
+   [
+    "hc_verma",
+    0.715
+   ],
+   [
+    "n_awasthi",
+    0.714
+   ],
+   [
+    "dc_pandey",
+    0.712
+   ],
+   [
+    "rd_sharma",
+    0.712
+   ],
+   [
+    "tewani",
+    0.705
+   ],
+   [
+    "disha",
+    0.702
+   ],
+   [
+    "solved_examples",
+    0.696
+   ],
+   [
+    "ms_chouhan",
+    0.687
+   ],
+   [
+    "ms_chauhan",
+    0.685
+   ],
+   [
+    "resnick_halliday",
+    0.679
+   ],
+   [
+    "publication",
+    0.678
+   ],
+   [
+    "illustration",
+    0.676
+   ]
+  ],
+  "pyq": [
+   [
+    "pyqs",
+    0.802
+   ],
+   [
+    "disha",
+    0.721
+   ],
+   [
+    "chapter_wise",
+    0.708
+   ],
+   [
+    "exemplar",
+    0.705
+   ],
+   [
+    "topicwise",
+    0.698
+   ],
+   [
+    "archive",
+    0.696
+   ],
+   [
+    "archives",
+    0.664
+   ],
+   [
+    "pyq's",
+    0.664
+   ],
+   [
+    "topic_wise",
+    0.659
+   ],
+   [
+    "publication",
+    0.657
+   ],
+   [
+    "chapterwise",
+    0.655
+   ],
+   [
+    "arihant",
+    0.654
+   ],
+   [
+    "illustration",
+    0.654
+   ],
+   [
+    "mtg",
+    0.65
+   ],
+   [
+    "handouts",
+    0.649
+   ]
+  ],
+  "pyqs": [
+   [
+    "pyq",
+    0.802
+   ],
+   [
+    "archives",
+    0.723
+   ],
+   [
+    "archive",
+    0.705
+   ],
+   [
+    "exemplar",
+    0.696
+   ],
+   [
+    "topicwise",
+    0.691
+   ],
+   [
+    "exercises",
+    0.691
+   ],
+   [
+    "pyq's",
+    0.69
+   ],
+   [
+    "chapter_wise",
+    0.689
+   ],
+   [
+    "revisions",
+    0.674
+   ],
+   [
+    "disha",
+    0.672
+   ],
+   [
+    "module",
+    0.665
+   ],
+   [
+    "qns",
+    0.657
+   ],
+   [
+    "illustrations",
+    0.653
+   ],
+   [
+    "chapterwise",
+    0.653
+   ],
+   [
+    "past_papers",
+    0.651
+   ]
+  ],
+  "mock": [
+   [
+    "mock_test",
+    0.755
+   ],
+   [
+    "mocks",
+    0.698
+   ],
+   [
+    "mock_tests",
+    0.667
+   ],
+   [
+    "fiitjee_aits",
+    0.652
+   ],
+   [
+    "full_syllabus",
+    0.648
+   ],
+   [
+    "june_session",
+    0.61
+   ],
+   [
+    "chapterwise",
+    0.602
+   ],
+   [
+    "pyps",
+    0.598
+   ],
+   [
+    "abhyaas",
+    0.596
+   ],
+   [
+    "124",
+    0.593
+   ],
+   [
+    "aiats",
+    0.588
+   ],
+   [
+    "115",
+    0.588
+   ],
+   [
+    "previous_year",
+    0.586
+   ],
+   [
+    "embibe",
+    0.584
+   ],
+   [
+    "230",
+    0.584
+   ]
+  ],
+  "dpp": [
+   [
+    "dpps",
+    0.821
+   ],
+   [
+    "topicwise",
+    0.728
+   ],
+   [
+    "chapter_wise",
+    0.712
+   ],
+   [
+    "dump",
+    0.674
+   ],
+   [
+    "module",
+    0.672
+   ],
+   [
+    "religiously",
+    0.671
+   ],
+   [
+    "dlp",
+    0.658
+   ],
+   [
+    "reso",
+    0.656
+   ],
+   [
+    "cpp",
+    0.651
+   ],
+   [
+    "lec",
+    0.649
+   ],
+   [
+    "sheets",
+    0.641
+   ],
+   [
+    "archives",
+    0.641
+   ],
+   [
+    "aakash_module",
+    0.64
+   ],
+   [
+    "pyqs",
+    0.638
+   ],
+   [
+    "resonance_material",
+    0.637
+   ]
+  ],
+  "module": [
+   [
+    "coaching_module",
+    0.737
+   ],
+   [
+    "exemplar",
+    0.726
+   ],
+   [
+    "exercises",
+    0.722
+   ],
+   [
+    "aakash_module",
+    0.719
+   ],
+   [
+    "modules",
+    0.718
+   ],
+   [
+    "aakash_modules",
+    0.713
+   ],
+   [
+    "hcv",
+    0.707
+   ],
+   [
+    "topicwise",
+    0.7
+   ],
+   [
+    "handbooks",
+    0.699
+   ],
+   [
+    "solved_examples",
+    0.696
+   ],
+   [
+    "dc_pandey",
+    0.692
+   ],
+   [
+    "reso",
+    0.692
+   ],
+   [
+    "ncerts",
+    0.691
+   ],
+   [
+    "black_book",
+    0.682
+   ],
+   [
+    "coaching_material",
+    0.68
+   ]
+  ],
+  "lectures": [
+   [
+    "video_lectures",
+    0.709
+   ],
+   [
+    "yt_lectures",
+    0.707
+   ],
+   [
+    "lecture",
+    0.687
+   ],
+   [
+    "lecs",
+    0.68
+   ],
+   [
+    "one_shots",
+    0.649
+   ],
+   [
+    "videos",
+    0.644
+   ],
+   [
+    "oneshots",
+    0.642
+   ],
+   [
+    "fast_lane",
+    0.636
+   ],
+   [
+    "bounceback",
+    0.635
+   ],
+   [
+    "vids",
+    0.633
+   ],
+   [
+    "sir's_lectures",
+    0.63
+   ],
+   [
+    "lec",
+    0.629
+   ],
+   [
+    "alk",
+    0.625
+   ],
+   [
+    "ns_sir",
+    0.625
+   ],
+   [
+    "playlists",
+    0.623
+   ]
+  ],
+  "counselling": [
+   [
+    "counseling",
+    0.795
+   ],
+   [
+    "josaa",
+    0.729
+   ],
+   [
+    "councelling",
+    0.707
+   ],
+   [
+    "choice_filling",
+    0.699
+   ],
+   [
+    "jossa",
+    0.696
+   ],
+   [
+    "ggsipu",
+    0.695
+   ],
+   [
+    "jac_delhi",
+    0.689
+   ],
+   [
+    "registration",
+    0.677
+   ],
+   [
+    "2nd_round",
+    0.666
+   ],
+   [
+    "refund_policy",
+    0.664
+   ],
+   [
+    "josaa_counselling",
+    0.66
+   ],
+   [
+    "mcc",
+    0.659
+   ],
+   [
+    "phase_2",
+    0.658
+   ],
+   [
+    "manipal",
+    0.646
+   ],
+   [
+    "ipu",
+    0.645
+   ]
+  ],
+  "josaa": [
+   [
+    "ggsipu",
+    0.772
+   ],
+   [
+    "mcc",
+    0.759
+   ],
+   [
+    "rounds",
+    0.752
+   ],
+   [
+    "jossa",
+    0.748
+   ],
+   [
+    "counseling",
+    0.741
+   ],
+   [
+    "csab",
+    0.74
+   ],
+   [
+    "jac_delhi",
+    0.73
+   ],
+   [
+    "counselling",
+    0.729
+   ],
+   [
+    "documents",
+    0.72
+   ],
+   [
+    "round",
+    0.715
+   ],
+   [
+    "jac",
+    0.71
+   ],
+   [
+    "ews_certificate",
+    0.703
+   ],
+   [
+    "councelling",
+    0.701
+   ],
+   [
+    "2nd_round",
+    0.701
+   ],
+   [
+    "withdrawal",
+    0.699
+   ]
+  ],
+  "csab": [
+   [
+    "councelling",
+    0.799
+   ],
+   [
+    "rounds",
+    0.785
+   ],
+   [
+    "general_candidate",
+    0.779
+   ],
+   [
+    "thapar_university",
+    0.777
+   ],
+   [
+    "jiit_noida",
+    0.761
+   ],
+   [
+    "ggsipu",
+    0.761
+   ],
+   [
+    "iiit_delhi",
+    0.76
+   ],
+   [
+    "cse_core",
+    0.758
+   ],
+   [
+    "cce",
+    0.758
+   ],
+   [
+    "jossa",
+    0.756
+   ],
+   [
+    "24k",
+    0.755
+   ],
+   [
+    "cse_with_specialization",
+    0.747
+   ],
+   [
+    "waitlisted",
+    0.747
+   ],
+   [
+    "37k",
+    0.746
+   ],
+   [
+    "general_male",
+    0.744
+   ]
+  ],
+  "cutoff": [
+   [
+    "cut_off",
+    0.705
+   ],
+   [
+    "cutoffs",
+    0.677
+   ],
+   [
+    "expected_cutoff",
+    0.632
+   ],
+   [
+    "sx",
+    0.616
+   ],
+   [
+    "gen_ews",
+    0.614
+   ],
+   [
+    "inflation",
+    0.61
+   ],
+   [
+    "10k_rank",
+    0.608
+   ],
+   [
+    "ews",
+    0.599
+   ],
+   [
+    "99_percentile",
+    0.593
+   ],
+   [
+    "certificates",
+    0.584
+   ],
+   [
+    "criteria",
+    0.581
+   ],
+   [
+    "iiitd",
+    0.574
+   ],
+   [
+    "eligibility_criteria",
+    0.574
+   ],
+   [
+    "20k",
+    0.571
+   ],
+   [
+    "15k",
+    0.57
+   ]
+  ],
+  "rank": [
+   [
+    "2k",
+    0.66
+   ],
+   [
+    "20k",
+    0.658
+   ],
+   [
+    "crl",
+    0.646
+   ],
+   [
+    "15k",
+    0.643
+   ],
+   [
+    "8k",
+    0.642
+   ],
+   [
+    "3k",
+    0.627
+   ],
+   [
+    "7k",
+    0.619
+   ],
+   [
+    "5k",
+    0.618
+   ],
+   [
+    "10k_rank",
+    0.612
+   ],
+   [
+    "ranks",
+    0.611
+   ],
+   [
+    "27k",
+    0.608
+   ],
+   [
+    "2000",
+    0.604
+   ],
+   [
+    "35k",
+    0.602
+   ],
+   [
+    "36k",
+    0.602
+   ],
+   [
+    "1k",
+    0.6
+   ]
+  ],
+  "percentile": [
+   [
+    "ile",
+    0.765
+   ],
+   [
+    "tile",
+    0.682
+   ],
+   [
+    "96",
+    0.668
+   ],
+   [
+    "99",
+    0.664
+   ],
+   [
+    "97",
+    0.654
+   ],
+   [
+    "87",
+    0.654
+   ],
+   [
+    "97_ile",
+    0.652
+   ],
+   [
+    "90_percentile",
+    0.652
+   ],
+   [
+    "94",
+    0.649
+   ],
+   [
+    "97_percentile",
+    0.64
+   ],
+   [
+    "98",
+    0.634
+   ],
+   [
+    "94_percentile",
+    0.631
+   ],
+   [
+    "98_percentile",
+    0.627
+   ],
+   [
+    "99_percentile",
+    0.624
+   ],
+   [
+    "88",
+    0.623
+   ]
+  ],
+  "admit_card": [
+   [
+    "hall_ticket",
+    0.714
+   ],
+   [
+    "admit_cards",
+    0.665
+   ],
+   [
+    "correction_window",
+    0.653
+   ],
+   [
+    "intimation",
+    0.648
+   ],
+   [
+    "correction",
+    0.646
+   ],
+   [
+    "confirmation",
+    0.643
+   ],
+   [
+    "postcard_size",
+    0.641
+   ],
+   [
+    "date",
+    0.638
+   ],
+   [
+    "registration",
+    0.638
+   ],
+   [
+    "final_answer",
+    0.631
+   ],
+   [
+    "window",
+    0.627
+   ],
+   [
+    "application_number",
+    0.624
+   ],
+   [
+    "notification",
+    0.623
+   ],
+   [
+    "undertaking",
+    0.622
+   ],
+   [
+    "aadhar_card",
+    0.621
+   ]
+  ],
+  "registration": [
+   [
+    "application_form",
+    0.699
+   ],
+   [
+    "counselling",
+    0.677
+   ],
+   [
+    "counseling",
+    0.671
+   ],
+   [
+    "payment",
+    0.67
+   ],
+   [
+    "correction_window",
+    0.67
+   ],
+   [
+    "register",
+    0.668
+   ],
+   [
+    "application",
+    0.664
+   ],
+   [
+    "last_date",
+    0.654
+   ],
+   [
+    "correction",
+    0.649
+   ],
+   [
+    "application_number",
+    0.644
+   ],
+   [
+    "registrations",
+    0.639
+   ],
+   [
+    "admit_card",
+    0.638
+   ],
+   [
+    "ews_certificate",
+    0.637
+   ],
+   [
+    "window",
+    0.637
+   ],
+   [
+    "ggsipu",
+    0.636
+   ]
+  ],
+  "syllabus": [
+   [
+    "portion",
+    0.737
+   ],
+   [
+    "portions",
+    0.655
+   ],
+   [
+    "whole_syllabus",
+    0.596
+   ],
+   [
+    "march_end",
+    0.584
+   ],
+   [
+    "ncert_level",
+    0.568
+   ]
+  ],
+  "marks": [
+   [
+    "score",
+    0.637
+   ],
+   [
+    "320",
+    0.628
+   ],
+   [
+    "190",
+    0.625
+   ],
+   [
+    "160",
+    0.623
+   ],
+   [
+    "85",
+    0.619
+   ],
+   [
+    "40_marks",
+    0.614
+   ],
+   [
+    "186",
+    0.613
+   ],
+   [
+    "160_170",
+    0.611
+   ],
+   [
+    "130",
+    0.602
+   ],
+   [
+    "210",
+    0.6
+   ],
+   [
+    "360",
+    0.596
+   ],
+   [
+    "230",
+    0.596
+   ],
+   [
+    "scores",
+    0.594
+   ],
+   [
+    "390",
+    0.593
+   ],
+   [
+    "180",
+    0.591
+   ]
+  ],
+  "result": [
+   [
+    "results",
+    0.691
+   ]
+  ],
+  "answer_key": [
+   [
+    "response_sheet",
+    0.781
+   ],
+   [
+    "key",
+    0.758
+   ],
+   [
+    "final_answer",
+    0.696
+   ],
+   [
+    "ans_key",
+    0.676
+   ],
+   [
+    "official_answer",
+    0.676
+   ],
+   [
+    "answer_keys",
+    0.662
+   ],
+   [
+    "29th_june",
+    0.662
+   ],
+   [
+    "shift_1",
+    0.634
+   ],
+   [
+    "25th_june",
+    0.627
+   ],
+   [
+    "ayjr",
+    0.61
+   ],
+   [
+    "25_june",
+    0.608
+   ],
+   [
+    "admit_cards",
+    0.604
+   ],
+   [
+    "session_1",
+    0.6
+   ],
+   [
+    "s1",
+    0.599
+   ],
+   [
+    "morning_shift",
+    0.598
+   ]
+  ],
+  "nta": [],
+  "reservation": [
+   [
+    "quota",
+    0.648
+   ],
+   [
+    "obc",
+    0.617
+   ],
+   [
+    "reservations",
+    0.599
+   ],
+   [
+    "certificates",
+    0.597
+   ],
+   [
+    "pwd",
+    0.595
+   ],
+   [
+    "sc_st",
+    0.591
+   ],
+   [
+    "caste",
+    0.584
+   ],
+   [
+    "creamy",
+    0.567
+   ],
+   [
+    "domicile",
+    0.564
+   ],
+   [
+    "women",
+    0.561
+   ],
+   [
+    "sc",
+    0.559
+   ]
+  ],
+  "category": [
+   [
+    "ews",
+    0.726
+   ],
+   [
+    "crl",
+    0.713
+   ],
+   [
+    "obc_ncl",
+    0.706
+   ],
+   [
+    "gen_ews",
+    0.703
+   ],
+   [
+    "gen",
+    0.693
+   ],
+   [
+    "obc",
+    0.683
+   ],
+   [
+    "quota",
+    0.666
+   ],
+   [
+    "cat_2",
+    0.665
+   ],
+   [
+    "csab",
+    0.664
+   ],
+   [
+    "home_state",
+    0.657
+   ],
+   [
+    "general_male",
+    0.646
+   ],
+   [
+    "8k",
+    0.646
+   ],
+   [
+    "general_category",
+    0.644
+   ],
+   [
+    "1600",
+    0.641
+   ],
+   [
+    "vellore",
+    0.64
+   ]
+  ],
+  "dropper": [
+   [
+    "partial_dropper",
+    0.671
+   ],
+   [
+    "repeater",
+    0.665
+   ],
+   [
+    "24tard",
+    0.634
+   ],
+   [
+    "2022tard",
+    0.633
+   ],
+   [
+    "23_tard",
+    0.617
+   ],
+   [
+    "early_drop",
+    0.616
+   ],
+   [
+    "22tard",
+    0.61
+   ],
+   [
+    "early_dropper",
+    0.607
+   ],
+   [
+    "2022_aspirant",
+    0.602
+   ],
+   [
+    "2024_aspirant",
+    0.598
+   ],
+   [
+    "2023tard",
+    0.592
+   ],
+   [
+    "23_aspirant",
+    0.592
+   ],
+   [
+    "2024tard",
+    0.592
+   ],
+   [
+    "neetard_here",
+    0.589
+   ],
+   [
+    "asp",
+    0.588
+   ]
+  ],
+  "drop": [
+   [
+    "partial_drop",
+    0.667
+   ],
+   [
+    "dropping",
+    0.631
+   ],
+   [
+    "take_a_drop",
+    0.622
+   ],
+   [
+    "taking_a_drop",
+    0.596
+   ],
+   [
+    "early_drop",
+    0.587
+   ],
+   [
+    "drop_year",
+    0.572
+   ]
+  ],
+  "repeater": [
+   [
+    "varanasi",
+    0.81
+   ],
+   [
+    "leader_batch",
+    0.803
+   ],
+   [
+    "dora",
+    0.789
+   ],
+   [
+    "south_delhi",
+    0.754
+   ],
+   [
+    "early_drop",
+    0.753
+   ],
+   [
+    "kaksha",
+    0.752
+   ],
+   [
+    "namaste",
+    0.747
+   ],
+   [
+    "lelu",
+    0.741
+   ],
+   [
+    "thinking_of_joining",
+    0.74
+   ],
+   [
+    "vidyapeeth",
+    0.739
+   ],
+   [
+    "pw_arjuna",
+    0.738
+   ],
+   [
+    "23_tard",
+    0.737
+   ],
+   [
+    "planning_to_take",
+    0.737
+   ],
+   [
+    "allen_chandigarh",
+    0.733
+   ],
+   [
+    "leader",
+    0.731
+   ]
+  ],
+  "aspirant": [
+   [
+    "asspirant",
+    0.669
+   ],
+   [
+    "2022_aspirant",
+    0.658
+   ],
+   [
+    "aspirant_here",
+    0.651
+   ],
+   [
+    "retard",
+    0.645
+   ],
+   [
+    "grader",
+    0.642
+   ],
+   [
+    "2024_aspirant",
+    0.638
+   ],
+   [
+    "10th_grader",
+    0.632
+   ],
+   [
+    "tard",
+    0.619
+   ],
+   [
+    "neet_aspirant",
+    0.615
+   ],
+   [
+    "pcb_student",
+    0.613
+   ],
+   [
+    "tard_here",
+    0.613
+   ],
+   [
+    "little_background",
+    0.61
+   ],
+   [
+    "11th_grader",
+    0.607
+   ],
+   [
+    "repeater",
+    0.604
+   ],
+   [
+    "jeetard",
+    0.603
+   ]
+  ],
+  "11th": [
+   [
+    "11_th",
+    0.717
+   ],
+   [
+    "12th",
+    0.714
+   ],
+   [
+    "12_th",
+    0.665
+   ],
+   [
+    "11th_and_12th",
+    0.653
+   ],
+   [
+    "9th",
+    0.634
+   ],
+   [
+    "11th_grade",
+    0.63
+   ],
+   [
+    "class_11",
+    0.611
+   ],
+   [
+    "9th_10th",
+    0.598
+   ],
+   [
+    "10_th",
+    0.591
+   ],
+   [
+    "side_by_side",
+    0.585
+   ],
+   [
+    "class_12th",
+    0.573
+   ],
+   [
+    "prelims",
+    0.572
+   ],
+   [
+    "xith",
+    0.565
+   ],
+   [
+    "nuked",
+    0.558
+   ]
+  ],
+  "12th": [
+   [
+    "11th",
+    0.714
+   ],
+   [
+    "12_th",
+    0.686
+   ],
+   [
+    "class_12th",
+    0.641
+   ],
+   [
+    "11_th",
+    0.632
+   ],
+   [
+    "11th_and_12th",
+    0.617
+   ],
+   [
+    "term2",
+    0.592
+   ],
+   [
+    "finals",
+    0.589
+   ],
+   [
+    "final_exams",
+    0.587
+   ],
+   [
+    "10th",
+    0.577
+   ],
+   [
+    "9th_10th",
+    0.569
+   ],
+   [
+    "class_12",
+    0.562
+   ],
+   [
+    "xith",
+    0.561
+   ],
+   [
+    "isc",
+    0.56
+   ],
+   [
+    "1month",
+    0.554
+   ],
+   [
+    "11_12",
+    0.552
+   ]
+  ],
+  "backlog": [
+   [
+    "backlogs",
+    0.698
+   ],
+   [
+    "pending",
+    0.6
+   ],
+   [
+    "chp",
+    0.59
+   ],
+   [
+    "fluid",
+    0.577
+   ],
+   [
+    "chs",
+    0.571
+   ]
+  ]
+ }
+}

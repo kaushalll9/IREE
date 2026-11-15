@@ -22,3 +22,10 @@ the dataset preparation, indexing, and application scripts.
 
 The dataset and generated index files are not included in Git.
 Run the relevant preparation scripts to generate them locally.
+
+## Domain Dictionary
+`python domain_dictionary.py` trains Word2Vec (with bigram phrases) on the
+cleaned corpus and expands seed terms per category (exam, subject, topic,
+institute, coaching, resource, admission, student) into their nearest
+embedding neighbours, writing `index/domain_dictionary.json`.
+`python domain_dictionary.py --query "pcm cutoff for nit"` shows query expansion.
