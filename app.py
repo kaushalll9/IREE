@@ -7,12 +7,14 @@ import os
 import json
 from flask import Flask, render_template, request, jsonify
 from ranker import BM25SearchEngine
+from chatbot import Chatbot
 
 app = Flask(__name__)
 
 # Initialize search engine in memory
 engine = BM25SearchEngine(index_dir="index")
 engine.load_index()
+bot = Chatbot(engine=engine)
 
 # Pre-extract available flairs for the filter dropdown
 FLAIR_COUNTS = {}
@@ -88,6 +90,15 @@ def api_search():
 
     res["active_model"] = model
     return jsonify(res)
+
+@app.route("/api/chat", methods=["POST"])
+def api_chat():
+    question = ((request.get_json(silent=True) or {}).get("question") or "").strip()
+    if not question:
+        return jsonify({"error": "question is required"}), 400
+    if len(question) > 500:
+        return jsonify({"error": "question too long (max 500 characters)"}), 400
+    return jsonify(bot.ask(question))
 
 @app.route("/api/evaluation")
 def api_evaluation():
