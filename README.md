@@ -17,7 +17,7 @@ JEENEETards posts using an inverted index and BM25 ranking.
 - HTML, CSS, JavaScript
 
 ## Setup
-Install the dependencies required by the project, then run
+Install the dependencies with `pip install -r requirements.txt`, then run
 the dataset preparation, indexing, and application scripts.
 
 The dataset and generated index files are not included in Git.
