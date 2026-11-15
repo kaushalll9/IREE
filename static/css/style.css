@@ -1074,3 +1074,8 @@ a.cite {
     .chat-shell { margin-top: 12px; }
 }
 
+@media (max-width: 600px) {
+    .nav-tabs { width: 100%; }
+    .nav-tab-btn { flex: 1 1 0; min-width: 0; padding: 8px 6px; justify-content: center; }
+    .nav-tab-btn svg { display: none; }
+}
