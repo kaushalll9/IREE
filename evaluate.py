@@ -251,6 +251,73 @@ def evaluate_configuration(engine: BM25SearchEngine, config_name: str, config_kw
     }
     return summary
 
+# Define 4 configurations for ablation study:
+CONFIGURATIONS = [
+    {
+        "name": "Standard BM25 (Unfielded)",
+        "kwargs": {
+            "k1": 1.2,
+            "w_title": 1.0,
+            "w_body": 1.0,
+            "use_engagement_boost": False
+        }
+    },
+    {
+        "name": "BM25F (Field-Weighted: Title 2.5x)",
+        "kwargs": {
+            "k1": 1.2,
+            "w_title": 2.5,
+            "w_body": 1.0,
+            "use_engagement_boost": False
+        }
+    },
+    {
+        "name": "BM25F + Engagement Boosting",
+        "kwargs": {
+            "k1": 1.2,
+            "w_title": 2.5,
+            "w_body": 1.0,
+            "use_engagement_boost": True
+        }
+    },
+    {
+        "name": "BM25F + Engagement + Domain Expansion (Proposed Model)",
+        "kwargs": {
+            "k1": 1.2,
+            "w_title": 2.5,
+            "w_body": 1.0,
+            "use_engagement_boost": True,
+            "expand": True
+        }
+    }
+]
+
+
+
+def validate_qrels(engine: BM25SearchEngine):
+    """Every judged doc must exist in the index, or the metrics are silently wrong."""
+    known = {m["doc_id"] for m in engine.metadata}
+    missing = [(q["query_id"], d) for q in BENCHMARK_QUERIES for d in q["qrels"] if d not in known]
+    if missing:
+        raise ValueError(f"Qrels reference {len(missing)} doc_ids not in the corpus: {missing}")
+
+
+def print_pool(engine: BM25SearchEngine, depth: int = 10):
+    """
+    Pooling (TREC-style): union of the top-`depth` results of every configuration.
+    Prints each pooled doc with its current judgment ('?' = unjudged) so the
+    pool can be assessed and added to BENCHMARK_QUERIES.
+    """
+    for item in BENCHMARK_QUERIES:
+        pool = {}
+        for cfg in CONFIGURATIONS:
+            for doc in engine.search(query=item["query"], top_k=depth, **cfg["kwargs"])["results"]:
+                pool.setdefault(doc["doc_id"], doc)
+        print(f"\n## {item['query_id']} {item['query']!r} - {item['intent']}")
+        for did, doc in pool.items():
+            grade = item["qrels"].get(did, "?")
+            print(f"  {grade} {did} | {doc['title'][:90]} | {doc['snippet'][:120]}")
+
 def run_evaluation_suite(index_dir: str = "index", output_dir: str = "evaluation"):
     """Runs comparative evaluation across 4 ranking configurations and writes benchmark reports."""
     os.makedirs(output_dir, exist_ok=True)
@@ -262,49 +329,10 @@ def run_evaluation_suite(index_dir: str = "index", output_dir: str = "evaluation
     engine = BM25SearchEngine(index_dir=index_dir)
     engine.load_index()
     
-    # Define 4 configurations for ablation study:
-    configurations = [
-        {
-            "name": "Standard BM25 (Unfielded)",
-            "kwargs": {
-                "k1": 1.2,
-                "w_title": 1.0,
-                "w_body": 1.0,
-                "use_engagement_boost": False
-            }
-        },
-        {
-            "name": "BM25F (Field-Weighted: Title 2.5x)",
-            "kwargs": {
-                "k1": 1.2,
-                "w_title": 2.5,
-                "w_body": 1.0,
-                "use_engagement_boost": False
-            }
-        },
-        {
-            "name": "BM25F + Engagement Boosting",
-            "kwargs": {
-                "k1": 1.2,
-                "w_title": 2.5,
-                "w_body": 1.0,
-                "use_engagement_boost": True
-            }
-        },
-        {
-            "name": "BM25F + Engagement + Domain Expansion (Proposed Model)",
-            "kwargs": {
-                "k1": 1.2,
-                "w_title": 2.5,
-                "w_body": 1.0,
-                "use_engagement_boost": True,
-                "expand": True
-            }
-        }
-    ]
-    
+    validate_qrels(engine)
+
     results = []
-    for cfg in configurations:
+    for cfg in CONFIGURATIONS:
         print(f"\n[+] Evaluating Model: {cfg['name']}...")
         summary = evaluate_configuration(engine, cfg["name"], cfg["kwargs"])
         results.append(summary)
@@ -375,4 +403,13 @@ def generate_markdown_report(results: List[Dict[str, Any]], filepath: str):
         f.write("\n".join(lines))
 
 if __name__ == "__main__":
-    run_evaluation_suite()
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--pool", action="store_true", help="print the judgment pool instead of evaluating")
+    args = ap.parse_args()
+    if args.pool:
+        e = BM25SearchEngine()
+        e.load_index()
+        print_pool(e)
+    else:
+        run_evaluation_suite()
