@@ -136,7 +136,7 @@
       "map": 0.3856,
       "ndcg@5": 0.639,
       "ndcg@10": 0.6855,
-      "avg_latency_ms": 4.73,
+      "avg_latency_ms": 2.67,
       "per_query": [
         {
           "query_id": "Q1",
@@ -148,7 +148,7 @@
           "ap": 0.4028,
           "ndcg@5": 0.8033,
           "ndcg@10": 0.7655,
-          "latency_ms": 7.66
+          "latency_ms": 3.06
         },
         {
           "query_id": "Q2",
@@ -160,7 +160,7 @@
           "ap": 0.2778,
           "ndcg@5": 0.6241,
           "ndcg@10": 0.5947,
-          "latency_ms": 6.6
+          "latency_ms": 4.75
         },
         {
           "query_id": "Q3",
@@ -172,7 +172,7 @@
           "ap": 0.5,
           "ndcg@5": 0.8866,
           "ndcg@10": 0.8449,
-          "latency_ms": 5.55
+          "latency_ms": 3.13
         },
         {
           "query_id": "Q4",
@@ -184,7 +184,7 @@
           "ap": 0.4,
           "ndcg@5": 0.5847,
           "ndcg@10": 0.5847,
-          "latency_ms": 4.31
+          "latency_ms": 2.3
         },
         {
           "query_id": "Q5",
@@ -196,7 +196,7 @@
           "ap": 0.6,
           "ndcg@5": 0.8262,
           "ndcg@10": 0.8262,
-          "latency_ms": 0.77
+          "latency_ms": 0.46
         },
         {
           "query_id": "Q6",
@@ -208,7 +208,7 @@
           "ap": 0.4333,
           "ndcg@5": 0.6241,
           "ndcg@10": 0.7723,
-          "latency_ms": 3.78
+          "latency_ms": 2.18
         },
         {
           "query_id": "Q7",
@@ -220,7 +220,7 @@
           "ap": 0.3333,
           "ndcg@5": 0.4705,
           "ndcg@10": 0.6188,
-          "latency_ms": 7.87
+          "latency_ms": 4.5
         },
         {
           "query_id": "Q8",
@@ -232,7 +232,7 @@
           "ap": 0.4083,
           "ndcg@5": 0.5636,
           "ndcg@10": 0.716,
-          "latency_ms": 4.52
+          "latency_ms": 2.7
         },
         {
           "query_id": "Q9",
@@ -244,7 +244,7 @@
           "ap": 0.4,
           "ndcg@5": 0.6241,
           "ndcg@10": 0.7494,
-          "latency_ms": 1.97
+          "latency_ms": 1.19
         },
         {
           "query_id": "Q10",
@@ -256,7 +256,7 @@
           "ap": 0.1,
           "ndcg@5": 0.3825,
           "ndcg@10": 0.3825,
-          "latency_ms": 4.23
+          "latency_ms": 2.4
         }
       ]
     },
@@ -270,7 +270,7 @@
       "map": 0.515,
       "ndcg@5": 0.7932,
       "ndcg@10": 0.8027,
-      "avg_latency_ms": 4.22,
+      "avg_latency_ms": 2.55,
       "per_query": [
         {
           "query_id": "Q1",
@@ -282,7 +282,7 @@
           "ap": 0.5,
           "ndcg@5": 0.8866,
           "ndcg@10": 0.8449,
-          "latency_ms": 4.21
+          "latency_ms": 2.68
         },
         {
           "query_id": "Q2",
@@ -294,7 +294,7 @@
           "ap": 0.5,
           "ndcg@5": 0.8866,
           "ndcg@10": 0.8449,
-          "latency_ms": 5.85
+          "latency_ms": 3.58
         },
         {
           "query_id": "Q3",
@@ -306,7 +306,7 @@
           "ap": 0.5,
           "ndcg@5": 0.8866,
           "ndcg@10": 0.8449,
-          "latency_ms": 4.87
+          "latency_ms": 2.95
         },
         {
           "query_id": "Q4",
@@ -318,7 +318,7 @@
           "ap": 0.55,
           "ndcg@5": 0.6738,
           "ndcg@10": 0.6738,
-          "latency_ms": 4.12
+          "latency_ms": 2.51
         },
         {
           "query_id": "Q5",
@@ -330,7 +330,7 @@
           "ap": 0.6,
           "ndcg@5": 0.8684,
           "ndcg@10": 0.8684,
-          "latency_ms": 0.93
+          "latency_ms": 0.47
         },
         {
           "query_id": "Q6",
@@ -342,7 +342,7 @@
           "ap": 0.6,
           "ndcg@5": 0.8866,
           "ndcg@10": 0.8866,
-          "latency_ms": 4.06
+          "latency_ms": 2.32
         },
         {
           "query_id": "Q7",
@@ -354,7 +354,7 @@
           "ap": 0.6,
           "ndcg@5": 0.8866,
           "ndcg@10": 0.8866,
-          "latency_ms": 7.71
+          "latency_ms": 4.75
         },
         {
           "query_id": "Q8",
@@ -366,7 +366,7 @@
           "ap": 0.4,
           "ndcg@5": 0.5847,
           "ndcg@10": 0.5847,
-          "latency_ms": 4.52
+          "latency_ms": 2.59
         },
         {
           "query_id": "Q9",
@@ -378,7 +378,7 @@
           "ap": 0.5,
           "ndcg@5": 0.6786,
           "ndcg@10": 0.8268,
-          "latency_ms": 1.91
+          "latency_ms": 1.18
         },
         {
           "query_id": "Q10",
@@ -390,12 +390,12 @@
           "ap": 0.4,
           "ndcg@5": 0.6933,
           "ndcg@10": 0.7653,
-          "latency_ms": 4.07
+          "latency_ms": 2.49
         }
       ]
     },
     {
-      "config_name": "BM25F + Engagement Boosting (Proposed Model)",
+      "config_name": "BM25F + Engagement Boosting",
       "mean_p@1": 1.0,
       "mean_p@3": 0.9,
       "mean_p@5": 0.58,
@@ -404,7 +404,7 @@
       "map": 0.5387,
       "ndcg@5": 0.8252,
       "ndcg@10": 0.8272,
-      "avg_latency_ms": 4.81,
+      "avg_latency_ms": 2.91,
       "per_query": [
         {
           "query_id": "Q1",
@@ -416,7 +416,7 @@
           "ap": 0.5,
           "ndcg@5": 0.8866,
           "ndcg@10": 0.8449,
-          "latency_ms": 4.83
+          "latency_ms": 3.02
         },
         {
           "query_id": "Q2",
@@ -428,7 +428,7 @@
           "ap": 0.5,
           "ndcg@5": 0.8866,
           "ndcg@10": 0.8449,
-          "latency_ms": 6.71
+          "latency_ms": 4.07
         },
         {
           "query_id": "Q3",
@@ -440,7 +440,7 @@
           "ap": 0.5,
           "ndcg@5": 0.8866,
           "ndcg@10": 0.8449,
-          "latency_ms": 6.24
+          "latency_ms": 3.5
         },
         {
           "query_id": "Q4",
@@ -452,7 +452,7 @@
           "ap": 0.6,
           "ndcg@5": 0.7073,
           "ndcg@10": 0.7073,
-          "latency_ms": 4.67
+          "latency_ms": 2.65
         },
         {
           "query_id": "Q5",
@@ -464,7 +464,7 @@
           "ap": 0.6,
           "ndcg@5": 0.8684,
           "ndcg@10": 0.8684,
-          "latency_ms": 0.83
+          "latency_ms": 0.46
         },
         {
           "query_id": "Q6",
@@ -476,7 +476,7 @@
           "ap": 0.6,
           "ndcg@5": 0.8866,
           "ndcg@10": 0.8866,
-          "latency_ms": 4.37
+          "latency_ms": 2.49
         },
         {
           "query_id": "Q7",
@@ -488,7 +488,7 @@
           "ap": 0.6,
           "ndcg@5": 0.8866,
           "ndcg@10": 0.8866,
-          "latency_ms": 8.69
+          "latency_ms": 5.63
         },
         {
           "query_id": "Q8",
@@ -500,7 +500,7 @@
           "ap": 0.4667,
           "ndcg@5": 0.5847,
           "ndcg@10": 0.7301,
-          "latency_ms": 4.99
+          "latency_ms": 3.18
         },
         {
           "query_id": "Q9",
@@ -512,7 +512,7 @@
           "ap": 0.6,
           "ndcg@5": 0.8866,
           "ndcg@10": 0.8866,
-          "latency_ms": 2.21
+          "latency_ms": 1.38
         },
         {
           "query_id": "Q10",
@@ -524,7 +524,141 @@
           "ap": 0.42,
           "ndcg@5": 0.7715,
           "ndcg@10": 0.7715,
-          "latency_ms": 4.57
+          "latency_ms": 2.72
+        }
+      ]
+    },
+    {
+      "config_name": "BM25F + Engagement + Domain Expansion (Proposed Model)",
+      "mean_p@1": 1.0,
+      "mean_p@3": 0.9,
+      "mean_p@5": 0.58,
+      "mean_p@10": 0.3,
+      "mrr": 1.0,
+      "map": 0.538,
+      "ndcg@5": 0.8252,
+      "ndcg@10": 0.8266,
+      "avg_latency_ms": 6.43,
+      "per_query": [
+        {
+          "query_id": "Q1",
+          "query": "physics wallah vs unacademy",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.5,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8449,
+          "latency_ms": 4.27
+        },
+        {
+          "query_id": "Q2",
+          "query": "best book for organic chemistry",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.5,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8449,
+          "latency_ms": 32.47
+        },
+        {
+          "query_id": "Q3",
+          "query": "marks vs percentile 2022",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.5,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8449,
+          "latency_ms": 5.6
+        },
+        {
+          "query_id": "Q4",
+          "query": "allen test series review",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.6,
+          "ndcg@5": 0.7073,
+          "ndcg@10": 0.7073,
+          "latency_ms": 2.8
+        },
+        {
+          "query_id": "Q5",
+          "query": "dc pandey vs hc verma",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.6,
+          "ndcg@5": 0.8684,
+          "ndcg@10": 0.8684,
+          "latency_ms": 0.62
+        },
+        {
+          "query_id": "Q6",
+          "query": "maths dropper strategy",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.6,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8866,
+          "latency_ms": 2.67
+        },
+        {
+          "query_id": "Q7",
+          "query": "neet 600 marks government medical college",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.6,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8866,
+          "latency_ms": 6.73
+        },
+        {
+          "query_id": "Q8",
+          "query": "mock test score stuck",
+          "p@1": 1,
+          "p@5": 0.4,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.46,
+          "ndcg@5": 0.5847,
+          "ndcg@10": 0.7243,
+          "latency_ms": 4.14
+        },
+        {
+          "query_id": "Q9",
+          "query": "hostel food kota life",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.6,
+          "ndcg@5": 0.8866,
+          "ndcg@10": 0.8866,
+          "latency_ms": 1.46
+        },
+        {
+          "query_id": "Q10",
+          "query": "iit bombay cse cutoff rank",
+          "p@1": 1,
+          "p@5": 0.6,
+          "p@10": 0.3,
+          "rr": 1.0,
+          "ap": 0.42,
+          "ndcg@5": 0.7715,
+          "ndcg@10": 0.7715,
+          "latency_ms": 3.54
         }
       ]
     }

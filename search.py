@@ -16,7 +16,7 @@ def format_result(res: dict) -> str:
     out.append(f"   URL:      {res['url']}")
     return "\n".join(out)
 
-def run_query(engine: BM25SearchEngine, query: str, top_k: int = 5, flair: str = None, min_score: int = None):
+def run_query(engine: BM25SearchEngine, query: str, top_k: int = 5, flair: str = None, min_score: int = None, expand: bool = True):
     print("\n" + "=" * 70)
     print(f"🔍 Query: '{query}'")
     if flair:
@@ -28,11 +28,14 @@ def run_query(engine: BM25SearchEngine, query: str, top_k: int = 5, flair: str =
         query=query, 
         top_k=top_k, 
         filter_flair=flair, 
-        min_score=min_score
+        min_score=min_score,
+        expand=expand
     )
     
     print(f"⚡ Latency: {response['latency_ms']} ms | Total Matching Posts: {response['total_matches']:,}")
     print(f"🏷️  Stems:   {response['stems']}")
+    if response.get("expanded_terms"):
+        print(f"➕ Expanded: {response['expanded_terms']}")
     print("-" * 70)
     
     if not response['results']:
@@ -81,6 +84,7 @@ def main():
     parser.add_argument("--demo", action="store_true", help="Run benchmark demo queries")
     parser.add_argument("--flair", type=str, default=None, help="Filter by flair substring (e.g., 'discussion')")
     parser.add_argument("--min_score", type=int, default=None, help="Filter by minimum upvote score")
+    parser.add_argument("--no-expand", action="store_true", help="Disable domain-dictionary query expansion")
     
     args = parser.parse_args()
     
@@ -91,7 +95,8 @@ def main():
         run_demo(engine)
     elif args.query:
         query_str = " ".join(args.query)
-        run_query(engine, query_str, top_k=args.top_k, flair=args.flair, min_score=args.min_score)
+        run_query(engine, query_str, top_k=args.top_k, flair=args.flair, min_score=args.min_score,
+                  expand=not args.no_expand)
     else:
         interactive_mode(engine)
 

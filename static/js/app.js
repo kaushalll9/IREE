@@ -137,7 +137,8 @@ async function triggerSearch() {
         const params = new URLSearchParams({
             q: query,
             model: currentModel,
-            top_k: topK
+            top_k: topK,
+            expand: document.getElementById('expand-toggle').checked ? '1' : '0'
         });
         if (flair) params.append('flair', flair);
         if (minScore) params.append('min_score', minScore);
@@ -171,6 +172,9 @@ function renderResults(data) {
 
     // Render query stems
     stemsList.innerHTML = (data.stems || []).map(s => `<span class="stem-tag">${escapeHtml(s)}</span>`).join('');
+    const expanded = Object.entries(data.expanded_terms || {});
+    document.getElementById('query-expanded-list').innerHTML = expanded.map(([t, w]) =>
+        `<span class="stem-tag expanded" title="similarity ${w}">+${escapeHtml(t)}</span>`).join('');
 
     if (!data.results || data.results.length === 0) {
         resultsContainer.innerHTML = `
@@ -183,7 +187,8 @@ function renderResults(data) {
         return;
     }
 
-    const stems = data.stems || [];
+    // Highlight expansion words too, so it's visible why a post matched.
+    const stems = (data.stems || []).concat(expanded.flatMap(([t]) => t.split(' ')));
     resultsContainer.innerHTML = data.results.map(item => {
         const titleHighlighted = highlightQueryTerms(item.title, stems);
         const snippetHighlighted = item.snippet ? highlightQueryTerms(item.snippet, stems) : '';
@@ -245,8 +250,9 @@ async function loadEvaluationData() {
         
         // 1. Models comparison table
         const modelsTbody = document.getElementById('models-table-body');
+        const bestIdx = data.models_evaluated.reduce((best, m, i, all) => m.map > all[best].map ? i : best, 0);
         modelsTbody.innerHTML = data.models_evaluated.map((m, idx) => {
-            const isBest = idx === data.models_evaluated.length - 1;
+            const isBest = idx === bestIdx;
             return `
                 <tr class="${isBest ? 'highlight-row' : ''}">
                     <td><strong>${escapeHtml(m.config_name)}</strong> ${isBest ? '🏆' : ''}</td>

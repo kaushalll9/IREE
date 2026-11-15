@@ -33,11 +33,13 @@ def api_search():
     flair = request.args.get("flair", "").strip() or None
     min_score_str = request.args.get("min_score", "").strip()
     min_score = int(min_score_str) if min_score_str and min_score_str.isdigit() else None
+    expand = request.args.get("expand", "1") != "0"   # domain-dictionary query expansion
 
     if not query:
         return jsonify({
             "query": "",
             "stems": [],
+            "expanded_terms": {},
             "total_matches": 0,
             "latency_ms": 0.0,
             "results": []
@@ -54,7 +56,8 @@ def api_search():
             w_body=1.0,
             use_engagement_boost=False,
             filter_flair=flair,
-            min_score=min_score
+            min_score=min_score,
+            expand=expand
         )
     elif model == "bm25f":
         # Field-weighted BM25F
@@ -66,7 +69,8 @@ def api_search():
             w_body=1.0,
             use_engagement_boost=False,
             filter_flair=flair,
-            min_score=min_score
+            min_score=min_score,
+            expand=expand
         )
     else:
         # Default: Proposed BM25F + Engagement Boost
@@ -78,7 +82,8 @@ def api_search():
             w_body=1.0,
             use_engagement_boost=True,
             filter_flair=flair,
-            min_score=min_score
+            min_score=min_score,
+            expand=expand
         )
 
     res["active_model"] = model

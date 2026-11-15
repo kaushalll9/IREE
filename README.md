@@ -28,4 +28,13 @@ Run the relevant preparation scripts to generate them locally.
 cleaned corpus and expands seed terms per category (exam, subject, topic,
 institute, coaching, resource, admission, student) into their nearest
 embedding neighbours, writing `index/domain_dictionary.json`.
-`python domain_dictionary.py --query "pcm cutoff for nit"` shows query expansion.
+`python domain_dictionary.py --query "hcv or irodov"` shows query expansion.
+
+Search uses the dictionary for query expansion (on by default): each query
+term found in an expandable category (exam, coaching, resource, admission,
+student) adds its canonical seed and nearest neighbours as extra BM25 terms,
+weighted `0.5 x cosine similarity`, so `hcv or irodov` also matches
+"dc pandey" / "hc verma" and `hall ticket` matches "admit card". Subject,
+topic and institute neighbours are siblings (chemistry -> physics), so they
+are not expanded. Toggle it with the "Domain expansion" checkbox in the web
+app, `expand=0` on `/api/search`, or `--no-expand` in `search.py`.
