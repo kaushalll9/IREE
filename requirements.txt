@@ -4,3 +4,4 @@ gensim>=4.4
 requests>=2.32
 beautifulsoup4>=4.13
 pypdf>=5.0
+anthropic>=2.0  # optional: Claude-written chatbot answers when ANTHROPIC_API_KEY is set

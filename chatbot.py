@@ -7,6 +7,10 @@ Routes each question to one of two answer sources:
   - community: everything else (books, coaching, strategy, colleges...)
                -> BM25F search (with domain-dictionary expansion) over r/JEENEETards
 
+Answers are extractive by default (no API key needed). If ANTHROPIC_API_KEY is
+set, Claude writes the final answer from the same retrieved sources (RAG), with
+the extractive answer as the fallback on any API error.
+
 Usage:
     python chatbot.py "when is jee mains 2027 registration last date"
     python chatbot.py            # interactive
@@ -89,6 +93,58 @@ def best_replies(comments, n=2, max_chars=400, min_score=2, min_chars=30):
     return out
 
 
+CLAUDE_MODEL = "claude-opus-5-5"
+SYSTEM_PROMPT = """You help Indian students preparing for JEE and NEET.
+Answer the student's question using only the numbered sources you are given, and cite them inline like [1] or [2][3].
+NTA sources are official notices; treat their dates as authoritative and quote them exactly.
+Reddit sources are other students' opinions; present them as such ("students on r/JEENEETards suggest..."), and mention real disagreement between them.
+Many Reddit replies are in Hinglish; convey their meaning in clear English.
+If the sources don't answer the question, say so briefly and say what they do cover. Never invent dates, cutoffs, or facts that aren't in the sources.
+Keep the answer under 150 words; use short bullets when listing options."""
+
+
+def format_sources(sources):
+    """Numbered source block for the model, matching the [n] citations shown in the UI."""
+    blocks = []
+    for i, s in enumerate(sources, start=1):
+        if s["type"] == "nta":
+            head = f"[{i}] NTA official notice ({s['exam']}, published {s['date']}): {s['title']}"
+        else:
+            head = f"[{i}] r/JEENEETards thread ({s['date']}, {s['upvotes']} upvotes): {s['title']}"
+        body = [s["snippet"]] if s.get("snippet") else []
+        body += [f"Reply ({r['score']} upvotes): {r['text']}" for r in s.get("replies", [])]
+        blocks.append("\n".join([head] + body))
+    return "\n\n".join(blocks)
+
+
+def claude_answer(question, sources):
+    """Claude-written answer grounded in `sources`, or None (no key, API error, refusal)."""
+    if not os.environ.get("ANTHROPIC_API_KEY") or not sources:
+        return None
+    try:
+        import anthropic
+    except ImportError:
+        return None
+    try:
+        resp = anthropic.Anthropic().beta.messages.create(
+            model=CLAUDE_MODEL,
+            max_tokens=16000,
+            betas=["server-side-fallback-2026-07-01"],
+            fallbacks="default",              # retry declined requests on a fallback model
+            output_config={"effort": "low"},  # short grounded answers; keeps chat latency down
+            system=SYSTEM_PROMPT,
+            messages=[{"role": "user", "content":
+                       f"<sources>\n{format_sources(sources)}\n</sources>\n\nQuestion: {question}"}],
+        )
+    except anthropic.APIError as e:
+        print(f"[!] Claude unavailable, using extractive answer: {e}")
+        return None
+    if resp.stop_reason == "refusal":
+        return None
+    text = "".join(b.text for b in resp.content if b.type == "text").strip()
+    return text or None
+
+
 def route(question):
     """'official' or 'community'."""
     if OFFICIAL_TOPIC_RE.search(question) and OFFICIAL_EXAM_RE.search(question):
@@ -112,11 +168,11 @@ class Chatbot:
         question = question.strip()
         if not question:
             return {"mode": "none", "answer": "Ask me anything about JEE or NEET.", "sources": []}
-        if route(question) == "official":
-            res = self.official(question)
-            if res:
-                return res
-        return self.community(question)
+        res = (self.official(question) if route(question) == "official" else None) or self.community(question)
+        text = claude_answer(question, res["sources"])
+        if text:
+            res["answer"], res["generator"] = text, "claude"
+        return res
 
     # ---------------------------------------------------------------- official
     def official(self, question):
@@ -217,6 +273,9 @@ def _selfcheck():
     assert route("iit bombay cse cutoff rank") == "community"
     assert route("when should I start revision") == "community"   # no exam named
     assert BOILERPLATE_RE.search("Generated from eOffice by X on 22/12/2025")
+    src = [{"type": "reddit", "date": "2022-06-01", "upvotes": 3, "title": "HCV or DC?", "snippet": "",
+            "replies": [{"score": 5, "text": "DC Pandey"}]}]
+    assert format_sources(src) == "[1] r/JEENEETards thread (2022-06-01, 3 upvotes): HCV or DC?\nReply (5 upvotes): DC Pandey"
     assert classify("jee hall ticket", CATEGORIES + CATEGORY_SYNONYMS) == "admit_card"
 
 
