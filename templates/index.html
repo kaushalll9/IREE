@@ -198,23 +198,23 @@
             <section class="metrics-grid">
                 <div class="metric-card highlight">
                     <span class="metric-title">Mean Reciprocal Rank (MRR)</span>
-                    <span class="metric-val" id="metric-mrr">1.0000</span>
-                    <span class="metric-desc">First relevant result at Rank 1 across all test queries</span>
+                    <span class="metric-val" id="metric-mrr">–</span>
+                    <span class="metric-desc" id="metric-mrr-desc">Proposed model</span>
                 </div>
                 <div class="metric-card highlight">
                     <span class="metric-title">Mean Average Precision (MAP)</span>
-                    <span class="metric-val" id="metric-map">0.5387</span>
-                    <span class="metric-desc">+39.7% improvement over baseline unfielded BM25</span>
+                    <span class="metric-val" id="metric-map">–</span>
+                    <span class="metric-desc" id="metric-map-desc">Proposed model</span>
                 </div>
                 <div class="metric-card highlight">
                     <span class="metric-title">NDCG @ 10</span>
-                    <span class="metric-val" id="metric-ndcg">0.8272</span>
-                    <span class="metric-desc">+20.6% gain using title field boosting and engagement</span>
+                    <span class="metric-val" id="metric-ndcg">–</span>
+                    <span class="metric-desc" id="metric-ndcg-desc">Proposed model</span>
                 </div>
                 <div class="metric-card">
                     <span class="metric-title">Avg Query Latency</span>
-                    <span class="metric-val" id="metric-latency">4.81 ms</span>
-                    <span class="metric-desc">Sub-5ms evaluation across 43,116 documents</span>
+                    <span class="metric-val" id="metric-latency">–</span>
+                    <span class="metric-desc">Per query, proposed model</span>
                 </div>
             </section>
 
@@ -279,21 +279,21 @@
                 </div>
                 <div class="eval-insights">
                     <div class="insight-box">
-                        <h4>1. Why Field-Weighted BM25F Dominates Baseline BM25</h4>
+                        <h4>1. Title Weighting (BM25F) Cuts Both Ways</h4>
                         <p>
-                            On Reddit, post titles act as explicit query summaries (e.g. <em>"Physics Wallah vs Unacademy"</em> or <em>"DC Pandey vs HC Verma"</em>). Weighting the title field 2.5× relative to the body drastically minimizes false-positive matches that casually mention a keyword in lengthy selftext.
+                            Reddit titles often state the question (<em>"DC Pandey vs HC Verma"</em>), so weighting the title 2.5× improves the graded ordering of results (NDCG@10). But it also promotes bodiless meme posts whose title happens to match (<em>"IIT BOMBAY CSE pakka ab 🗿"</em>), which costs precision at rank 1 against plain BM25.
                         </p>
                     </div>
                     <div class="insight-box">
                         <h4>2. Role of the Engagement Boosting Factor</h4>
                         <p>
-                            Using a subdued logarithmic upvote boost ($\text{Score} \times (1 + 0.05 \cdot \log_{10}(1 + \text{score}))$) breaks ties in favor of highly-upvoted, authentic student consensus and comprehensive review megathreads without displacing strict keyword relevance.
+                            A subdued logarithmic upvote boost (score × (1 + 0.05·log₁₀(1 + upvotes))) breaks ties toward community-endorsed threads and recovers most of BM25F's MAP loss. Boosting by comment count instead was tested and lowered MAP, so it is not used.
                         </p>
                     </div>
                     <div class="insight-box">
-                        <h4>3. Computational Efficiency</h4>
+                        <h4>3. Domain Expansion and Honest Judgments</h4>
                         <p>
-                            Through inverted index compression, in-memory integer postings lists, and Robertson IDF smoothing, the retrieval engine achieves steady execution latencies under 5 milliseconds on consumer hardware without degrading precision.
+                            Embedding-based query expansion adds synonyms and slang (<em>hall ticket → admit card</em>, <em>hcv → hc verma</em>). It is neutral on this benchmark, whose queries already match their posts word for word, and helps on vocabulary-mismatch queries. Relevance judgments come from pooling every configuration's top 10; with 10 queries, small differences are within noise.
                         </p>
                     </div>
                 </div>
