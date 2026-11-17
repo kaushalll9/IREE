@@ -5,5 +5,5 @@ numpy>=1.26
 sentence-transformers>=3.0  # semantic + hybrid search (pulls in torch; uses Apple MPS on M-series Macs)
 requests>=2.32
 beautifulsoup4>=4.13
-pypdf>=5.0
+pdfplumber>=0.11
 anthropic>=2.0  # optional: Claude-written chatbot answers when ANTHROPIC_API_KEY is set

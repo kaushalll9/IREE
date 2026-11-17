@@ -13,7 +13,7 @@ polite delay), collects every notice link (mostly PDFs), and extracts:
 Output: data/nta_updates.json (newest notices first)
 
 Usage:
-    pip install requests beautifulsoup4 pypdf
+    pip install requests beautifulsoup4 pdfplumber
     python nta_crawler.py                          # crawl
     python nta_crawler.py --latest neet            # show latest NEET notices
     python nta_crawler.py --latest jee --category dates
@@ -172,10 +172,12 @@ class Crawler:
         return list(notices.values())
 
     def pdf_text(self, url):
-        from pypdf import PdfReader
-        logging.getLogger("pypdf").setLevel(logging.ERROR)
-        reader = PdfReader(io.BytesIO(self.get(url).content))
-        return "\n".join(p.extract_text() or "" for p in reader.pages)
+        # pdfplumber keeps each table row on one line ("Date of Examination 20,21 ... January 2027");
+        # pypdf split NTA's borderless date tables into one word per line.
+        import pdfplumber
+        logging.getLogger("pdfminer").setLevel(logging.ERROR)
+        with pdfplumber.open(io.BytesIO(self.get(url).content)) as pdf:
+            return "\n".join(p.extract_text() or "" for p in pdf.pages)
 
 
 def crawl(ua=UA):
@@ -186,10 +188,10 @@ def crawl(ua=UA):
             notices.setdefault(n["url"], n)   # exam-site copy wins over NTA duplicate
     notices = sorted(notices.values(), key=lambda n: n["published"] or "", reverse=True)
 
-    # Full text for the newest bulletins / syllabus / schedule notices.
+    # Full text for the newest bulletins / syllabus / schedule / application notices
+    # (newest first, so this year's notices aren't crowded out by old bulletins).
     fetched = 0
-    priority = {"bulletin": 0, "syllabus": 0, "dates": 1, "application": 1}
-    for n in sorted(notices, key=lambda n: priority.get(n["category"], 9)):
+    for n in notices:
         if fetched >= MAX_PDFS:
             break
         if n["category"] in FULLTEXT_CATS and n["url"].lower().endswith(".pdf"):
