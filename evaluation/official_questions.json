@@ -1,0 +1,182 @@
+{
+ "_meta": {
+  "author": "claude",
+  "note": "written before running the evaluation; expected exam/year/category of the lead notice"
+ },
+ "questions": [
+  {
+   "question": "when is jee main 2027?",
+   "route": "official",
+   "exam": "JEE",
+   "year": "2027",
+   "category": "exam_date"
+  },
+  {
+   "question": "jee main 2027 application last date",
+   "route": "official",
+   "exam": "JEE",
+   "year": "2027",
+   "category": "application"
+  },
+  {
+   "question": "neet 2026 result",
+   "route": "official",
+   "exam": "NEET",
+   "year": "2026",
+   "category": "result"
+  },
+  {
+   "question": "jee mains 2026 answer key",
+   "route": "official",
+   "exam": "JEE",
+   "year": "2026",
+   "category": "answer_key"
+  },
+  {
+   "question": "neet ug 2026 admit card",
+   "route": "official",
+   "exam": "NEET",
+   "year": "2026",
+   "category": "admit_card"
+  },
+  {
+   "question": "neet syllabus 2026",
+   "route": "official",
+   "exam": "NEET",
+   "year": "2026",
+   "category": "syllabus"
+  },
+  {
+   "question": "jee main admit card",
+   "route": "official",
+   "exam": "JEE",
+   "category": "admit_card"
+  },
+  {
+   "question": "neet exam city slip",
+   "route": "official",
+   "exam": "NEET",
+   "category": "admit_card"
+  },
+  {
+   "question": "when is neet 2027",
+   "route": "official",
+   "exam": "NEET",
+   "missing_year": "2027"
+  },
+  {
+   "question": "jee main 2025 session 2 schedule",
+   "route": "official",
+   "exam": "JEE",
+   "year": "2025",
+   "category": "dates"
+  },
+  {
+   "question": "neet 2024 final answer key",
+   "route": "official",
+   "exam": "NEET",
+   "year": "2024",
+   "category": "answer_key"
+  },
+  {
+   "question": "jee mains 2024 result",
+   "route": "official",
+   "exam": "JEE",
+   "year": "2024",
+   "category": "result"
+  },
+  {
+   "question": "neet registration 2026 last date",
+   "route": "official",
+   "exam": "NEET",
+   "year": "2026",
+   "category": "application"
+  },
+  {
+   "question": "jee hall ticket kab aayega",
+   "route": "official",
+   "exam": "JEE",
+   "category": "admit_card"
+  },
+  {
+   "question": "neet ug answer key challenge",
+   "route": "official",
+   "exam": "NEET",
+   "category": "answer_key"
+  },
+  {
+   "question": "neet 2025 result",
+   "route": "official",
+   "exam": "NEET",
+   "year": "2025",
+   "category": "result"
+  },
+  {
+   "question": "jee main 2026 session 1 admit card",
+   "route": "official",
+   "exam": "JEE",
+   "year": "2026",
+   "category": "admit_card"
+  },
+  {
+   "question": "neet 2023 application form",
+   "route": "official",
+   "exam": "NEET",
+   "year": "2023",
+   "category": "application"
+  },
+  {
+   "question": "when is jee mains exam",
+   "route": "official",
+   "exam": "JEE",
+   "category": "exam_date"
+  },
+  {
+   "question": "nta jee main 2026 result declared?",
+   "route": "official",
+   "exam": "JEE",
+   "year": "2026",
+   "category": "result"
+  },
+  {
+   "question": "best book for organic chemistry",
+   "route": "community"
+  },
+  {
+   "question": "hc verma or dc pandey",
+   "route": "community"
+  },
+  {
+   "question": "should i take a drop",
+   "route": "community"
+  },
+  {
+   "question": "physics wallah vs unacademy",
+   "route": "community"
+  },
+  {
+   "question": "how many hours to study daily",
+   "route": "community"
+  },
+  {
+   "question": "kota hostel life",
+   "route": "community"
+  },
+  {
+   "question": "maths weak hai kya karu",
+   "route": "community"
+  },
+  {
+   "question": "is ncert enough for neet biology",
+   "route": "community"
+  },
+  {
+   "question": "iit bombay cse cutoff rank",
+   "route": "community"
+  },
+  {
+   "question": "my jee result was bad, what now?",
+   "route": "community"
+  }
+ ]
+}

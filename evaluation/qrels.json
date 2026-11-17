@@ -107,6 +107,10 @@
   "tj0xlb": {
    "grade": 0,
    "assessor": "claude"
+  },
+  "sucu0n": {
+   "grade": 2,
+   "assessor": "claude"
   }
  },
  "Q2": {
@@ -195,6 +199,10 @@
    "assessor": "claude"
   },
   "qymb66": {
+   "grade": 1,
+   "assessor": "claude"
+  },
+  "q7yipi": {
    "grade": 1,
    "assessor": "claude"
   }
@@ -929,6 +937,10 @@
   "vwm79i": {
    "grade": 0,
    "assessor": "claude"
+  },
+  "scahd2": {
+   "grade": 0,
+   "assessor": "claude"
   }
  },
  "Q11": {
@@ -1157,6 +1169,14 @@
   "uzs7ha": {
    "grade": 0,
    "assessor": "claude"
+  },
+  "ttte08": {
+   "grade": 2,
+   "assessor": "claude"
+  },
+  "p26yso": {
+   "grade": 1,
+   "assessor": "claude"
   }
  },
  "Q13": {
@@ -1253,6 +1273,10 @@
    "assessor": "claude"
   },
   "n2d7si": {
+   "grade": 0,
+   "assessor": "claude"
+  },
+  "orv5rk": {
    "grade": 0,
    "assessor": "claude"
   }
@@ -1643,6 +1667,22 @@
   "uw1zxf": {
    "grade": 0,
    "assessor": "claude"
+  },
+  "vmahre": {
+   "grade": 1,
+   "assessor": "claude"
+  },
+  "tpp7hw": {
+   "grade": 1,
+   "assessor": "claude"
+  },
+  "ugt82d": {
+   "grade": 1,
+   "assessor": "claude"
+  },
+  "ur3o3j": {
+   "grade": 0,
+   "assessor": "claude"
   }
  },
  "Q18": {
@@ -2014,6 +2054,10 @@
   },
   "w5yngw": {
    "grade": 2,
+   "assessor": "claude"
+  },
+  "w3iy1r": {
+   "grade": 0,
    "assessor": "claude"
   }
  },
@@ -2791,6 +2835,10 @@
   "wead9v": {
    "grade": 0,
    "assessor": "claude"
+  },
+  "vpwfo1": {
+   "grade": 0,
+   "assessor": "claude"
   }
  },
  "Q30": {
@@ -2876,6 +2924,10 @@
   },
   "off3ip": {
    "grade": 1,
+   "assessor": "claude"
+  },
+  "qkudpf": {
+   "grade": 2,
    "assessor": "claude"
   }
  },
@@ -4201,6 +4253,18 @@
   "vkng6w": {
    "grade": 0,
    "assessor": "claude"
+  },
+  "pz2u2b": {
+   "grade": 0,
+   "assessor": "claude"
+  },
+  "porzzq": {
+   "grade": 0,
+   "assessor": "claude"
+  },
+  "vfqgzm": {
+   "grade": 0,
+   "assessor": "claude"
   }
  },
  "Q43": {
@@ -4447,6 +4511,26 @@
    "assessor": "claude"
   },
   "t6j1wj": {
+   "grade": 0,
+   "assessor": "claude"
+  },
+  "pkyogn": {
+   "grade": 1,
+   "assessor": "claude"
+  },
+  "qt1ejj": {
+   "grade": 0,
+   "assessor": "claude"
+  },
+  "ulnr9o": {
+   "grade": 0,
+   "assessor": "claude"
+  },
+  "oa2slo": {
+   "grade": 0,
+   "assessor": "claude"
+  },
+  "oa2sod": {
    "grade": 0,
    "assessor": "claude"
   }
@@ -5097,6 +5181,10 @@
   "vki58c": {
    "grade": 2,
    "assessor": "claude"
+  },
+  "rtr32a": {
+   "grade": 0,
+   "assessor": "claude"
   }
  },
  "Q51": {
@@ -5292,6 +5380,10 @@
   },
   "w55rcv": {
    "grade": 0,
+   "assessor": "claude"
+  },
+  "vpm9c3": {
+   "grade": 1,
    "assessor": "claude"
   }
  },
@@ -5509,6 +5601,10 @@
   "vwdiza": {
    "grade": 1,
    "assessor": "claude"
+  },
+  "t77w11": {
+   "grade": 1,
+   "assessor": "claude"
   }
  },
  "Q55": {
@@ -5625,6 +5721,10 @@
    "assessor": "claude"
   },
   "kgbgve": {
+   "grade": 0,
+   "assessor": "claude"
+  },
+  "sclscg": {
    "grade": 0,
    "assessor": "claude"
   }
@@ -5751,6 +5851,14 @@
    "assessor": "claude"
   },
   "vtogkd": {
+   "grade": 0,
+   "assessor": "claude"
+  },
+  "ukta74": {
+   "grade": 0,
+   "assessor": "claude"
+  },
+  "t0hmp7": {
    "grade": 0,
    "assessor": "claude"
   }
@@ -6007,6 +6115,14 @@
   "vbxdre": {
    "grade": 0,
    "assessor": "claude"
+  },
+  "vca3sw": {
+   "grade": 0,
+   "assessor": "claude"
+  },
+  "w3ae3j": {
+   "grade": 0,
+   "assessor": "claude"
   }
  },
  "Q60": {
@@ -6107,6 +6223,10 @@
    "assessor": "claude"
   },
   "v648et": {
+   "grade": 1,
+   "assessor": "claude"
+  },
+  "v4rcsz": {
    "grade": 1,
    "assessor": "claude"
   }
@@ -7223,6 +7343,10 @@
   "ndqfw1": {
    "grade": 2,
    "assessor": "claude"
+  },
+  "ndqfw2": {
+   "grade": 2,
+   "assessor": "claude"
   }
  },
  "Q72": {
@@ -7635,6 +7759,10 @@
    "assessor": "claude"
   },
   "mw1e5j": {
+   "grade": 1,
+   "assessor": "claude"
+  },
+  "vytaep": {
    "grade": 1,
    "assessor": "claude"
   }

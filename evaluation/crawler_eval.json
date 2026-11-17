@@ -1,0 +1,600 @@
+{
+ "stats": {
+  "crawled_at": "2026-11-17T16:50:26+00:00",
+  "run": {
+   "sites": {
+    "JEE": {
+     "seed": "https://jeemain.nta.nic.in/",
+     "pages": 0,
+     "notices": 0,
+     "errors": [
+      "403 Client Error: Forbidden for url: https://jeemain.nta.nic.in/"
+     ],
+     "robots_blocked": 0
+    },
+    "NEET": {
+     "seed": "https://neet.nta.nic.in/",
+     "pages": 0,
+     "notices": 0,
+     "errors": [
+      "403 Client Error: Forbidden for url: https://neet.nta.nic.in/"
+     ],
+     "robots_blocked": 0
+    },
+    "NTA": {
+     "seed": "https://nta.ac.in/",
+     "pages": 17,
+     "notices": 107,
+     "errors": [],
+     "robots_blocked": 0
+    }
+   },
+   "elapsed_s": 49.4,
+   "pdfs_fetched": 20,
+   "pdf_errors": 0,
+   "delay_s": 1.0,
+   "max_pages": 30,
+   "max_depth": 2,
+   "max_pdfs": 20
+  },
+  "notices": 107,
+  "by_exam": {
+   "JEE": 49,
+   "NEET": 58
+  },
+  "by_category": {
+   "application": 9,
+   "answer_key": 19,
+   "other": 35,
+   "admit_card": 19,
+   "dates": 10,
+   "result": 13,
+   "syllabus": 2
+  },
+  "by_year_published": {
+   "2026": 47,
+   "2025": 26,
+   "2024": 28,
+   "2023": 6
+  },
+  "pdf_full_text": 20,
+  "pdf_no_text_layer": 10,
+  "with_important_dates": 10,
+  "important_date_lines": 44,
+  "newest": "2026-10-30",
+  "oldest": "2023-03-15"
+ },
+ "classification_before_fix": {
+  "labelled": 107,
+  "exam_accuracy": 1.0,
+  "category_accuracy": 0.813,
+  "per_category": {
+   "admit_card": {
+    "gold": 19,
+    "predicted": 19,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "answer_key": {
+    "gold": 18,
+    "predicted": 19,
+    "precision": 0.947,
+    "recall": 1.0
+   },
+   "application": {
+    "gold": 9,
+    "predicted": 12,
+    "precision": 0.75,
+    "recall": 1.0
+   },
+   "dates": {
+    "gold": 10,
+    "predicted": 6,
+    "precision": 0.5,
+    "recall": 0.3
+   },
+   "other": {
+    "gold": 36,
+    "predicted": 42,
+    "precision": 0.69,
+    "recall": 0.806
+   },
+   "result": {
+    "gold": 13,
+    "predicted": 7,
+    "precision": 1.0,
+    "recall": 0.538
+   },
+   "syllabus": {
+    "gold": 2,
+    "predicted": 2,
+    "precision": 1.0,
+    "recall": 1.0
+   }
+  },
+  "confusions": [
+   [
+    "dates -> other",
+    7
+   ],
+   [
+    "result -> other",
+    6
+   ],
+   [
+    "other -> application",
+    3
+   ],
+   [
+    "other -> dates",
+    3
+   ],
+   [
+    "other -> answer_key",
+    1
+   ]
+  ],
+  "errors": [
+   {
+    "title": "Claims regarding OMR answer sheets of NEET (UG) 2026 being circulated on social media.",
+    "predicted": "answer_key",
+    "gold": "other"
+   },
+   {
+    "title": "Final Opportunity for Confirmation, Correction or Updation of Bank Account Details for Refund of Examination F",
+    "predicted": "application",
+    "gold": "other"
+   },
+   {
+    "title": "Final Opportunity for Confirmation, Correction or Updation of Bank Account Details for Refund of Examination F",
+    "predicted": "application",
+    "gold": "other"
+   },
+   {
+    "title": "Change of Venue of Examination for Candidates Scheduled to Appear in Harivansh Rai Bachchan Cultural Centre; U",
+    "predicted": "dates",
+    "gold": "other"
+   },
+   {
+    "title": "Opening of Bank Account Re-confirmation/Correction Window for Refund of NEET (UG) 2026 Examination Fee (Examin",
+    "predicted": "application",
+    "gold": "other"
+   },
+   {
+    "title": "Portal for Submitting Scribe Details by the PwD/PwBD Candidates of NEET (UG)-2026, Scheduled on 21 June 2026-r",
+    "predicted": "dates",
+    "gold": "other"
+   },
+   {
+    "title": "Conduct of Re-examination for National Eligibility-cum-Entrance Test [NEET (UG)] 2026-Reg.",
+    "predicted": "other",
+    "gold": "dates"
+   },
+   {
+    "title": "Declaration of Joint Entrance Examination [JEE (Main) – 2026] Session 1 NTA Scores for Paper 2 (B. Arch and B.",
+    "predicted": "other",
+    "gold": "result"
+   },
+   {
+    "title": "Declaration of Joint Entrance Examination [JEE (Main) - 2026] Session 1 NTA Scores for Paper 1 (B.E. / B. Tech",
+    "predicted": "other",
+    "gold": "result"
+   },
+   {
+    "title": "Declaration of Joint Entrance Examination [JEE (Main) – 2025] Session-1 NTA Scores for Paper-2 (B.Arch and B.P",
+    "predicted": "other",
+    "gold": "result"
+   },
+   {
+    "title": "Declaration of Joint Entrance Examination [JEE (Main) – 2025] Session-1 NTA Scores for Paper-1 (B.E./ B.Tech.)",
+    "predicted": "other",
+    "gold": "result"
+   },
+   {
+    "title": "Change in venue of examination for candidates scheduled to appear in Institute for Advanced Computer Technolog",
+    "predicted": "dates",
+    "gold": "other"
+   },
+   {
+    "title": "Conduct of National Eligibility-cum-Entrance Test [(NEET (UG)) 2025 - reg.",
+    "predicted": "other",
+    "gold": "dates"
+   },
+   {
+    "title": "Rescheduling of JEE (Main)-2025, Session-1 Examination for Few Candidates who appeared in Examination Centre e",
+    "predicted": "other",
+    "gold": "dates"
+   },
+   {
+    "title": "Conduct of National Eligibility-cum-Entrance Test [(NEET (UG)] 2025 - reg.",
+    "predicted": "other",
+    "gold": "dates"
+   },
+   {
+    "title": "Conduct of National Eligibility-cum-Entrance Test [(NEET (UG)] 2025 - reg.",
+    "predicted": "other",
+    "gold": "dates"
+   },
+   {
+    "title": "Reconduct of the NEET (UG) – 2024 for affected candidates",
+    "predicted": "other",
+    "gold": "dates"
+   },
+   {
+    "title": "Declaration of Joint Entrance Examination [JEE (Main) - 2024] Session 1 NTA Scores for Paper 2 (B.Arch. / B.Pl",
+    "predicted": "other",
+    "gold": "result"
+   },
+   {
+    "title": "Declaration of Joint Entrance Examination [JEE (Main) - 2024] Session 1 NTA Scores for Paper 1 (B.E. / B.Tech.",
+    "predicted": "other",
+    "gold": "result"
+   },
+   {
+    "title": "Conduct of the Joint Entrance Examination [JEE (Main) - 2024] Session 1",
+    "predicted": "other",
+    "gold": "dates"
+   }
+  ]
+ },
+ "classification": {
+  "labelled": 107,
+  "exam_accuracy": 1.0,
+  "category_accuracy": 0.991,
+  "per_category": {
+   "admit_card": {
+    "gold": 19,
+    "predicted": 19,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "answer_key": {
+    "gold": 18,
+    "predicted": 19,
+    "precision": 0.947,
+    "recall": 1.0
+   },
+   "application": {
+    "gold": 9,
+    "predicted": 9,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "dates": {
+    "gold": 10,
+    "predicted": 10,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "other": {
+    "gold": 36,
+    "predicted": 35,
+    "precision": 1.0,
+    "recall": 0.972
+   },
+   "result": {
+    "gold": 13,
+    "predicted": 13,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "syllabus": {
+    "gold": 2,
+    "predicted": 2,
+    "precision": 1.0,
+    "recall": 1.0
+   }
+  },
+  "confusions": [
+   [
+    "other -> answer_key",
+    1
+   ]
+  ],
+  "errors": [
+   {
+    "title": "Claims regarding OMR answer sheets of NEET (UG) 2026 being circulated on social media.",
+    "predicted": "answer_key",
+    "gold": "other"
+   }
+  ]
+ },
+ "publish_dates": {
+  "notices_with_published_date": 107,
+  "notices_total": 107,
+  "day_precision": 107,
+  "checked_against_pdf": 4,
+  "exact_match": 0.5,
+  "within_3_days": 0.5,
+  "rows": [
+   {
+    "title": "Clarification regarding submission of a fresh Online Application Form for JEE (M",
+    "from_url": "2026-10-30",
+    "in_pdf": "2026-10-30",
+    "days_apart": 0
+   },
+   {
+    "title": "Inviting Online Application form for the Joint Entrance Examination (JEE)-2027 (",
+    "from_url": "2026-10-24",
+    "in_pdf": "2026-10-24",
+    "days_apart": 0
+   },
+   {
+    "title": "Syllabus for NEET (UG)-2026 Examination",
+    "from_url": "2026-01-08",
+    "in_pdf": "2025-12-22",
+    "days_apart": 17
+   },
+   {
+    "title": "Syllabus for NEET (UG) 2025 Examination - reg.",
+    "from_url": "2024-12-30",
+    "in_pdf": "2024-12-14",
+    "days_apart": 16
+   }
+  ]
+ },
+ "extraction": {
+  "pypdf": {
+   "date_lines": 36,
+   "docs_with_date_lines": 9,
+   "exam_date_rows": 0,
+   "mean_words_per_line": 7.9
+  },
+  "pdfplumber": {
+   "date_lines": 44,
+   "docs_with_date_lines": 10,
+   "exam_date_rows": 1,
+   "mean_words_per_line": 8.9
+  },
+  "pdfs": 20,
+  "download_errors": 0
+ },
+ "official_answers": {
+  "questions": 30,
+  "routing_accuracy": 0.967,
+  "official_questions": 20,
+  "official_answer_accuracy": 1.0,
+  "rows": [
+   {
+    "question": "when is jee main 2027?",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "JEE | application | Inviting Online Application form for the Joint Entrance Examination (JEE)-2027 (Session 1)"
+   },
+   {
+    "question": "jee main 2027 application last date",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "JEE | application | Clarification regarding submission of a fresh Online Application Form for JEE (Main) – 202"
+   },
+   {
+    "question": "neet 2026 result",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "says: No NEET 2026 result notice has been crawled yet. Latest NEET 2026 notice:"
+   },
+   {
+    "question": "jee mains 2026 answer key",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "JEE | answer_key | Final Answer Keys for JEE(Main) - 2026 Paper-II [B.Arch / B.Planning]"
+   },
+   {
+    "question": "neet ug 2026 admit card",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "NEET | admit_card | Downloading of Admit Cards for the Candidates of National Eligibility cum Entrance Test [N"
+   },
+   {
+    "question": "neet syllabus 2026",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "NEET | syllabus | Syllabus for NEET (UG)-2026 Examination"
+   },
+   {
+    "question": "jee main admit card",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "JEE | admit_card | Release of Admit Cards for the Candidates of JEE(Main) - 2026 Session-2 (April 2026) sched"
+   },
+   {
+    "question": "neet exam city slip",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "NEET | admit_card | Downloading of Admit Cards for the Candidates of National Eligibility cum Entrance Test [N"
+   },
+   {
+    "question": "when is neet 2027",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "says: No NTA notice mentioning 2027 has been crawled yet."
+   },
+   {
+    "question": "jee main 2025 session 2 schedule",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "JEE | dates | Public Notice regarding Change in the date of JEE (Main) 2025 Session-2 Examination of Cer"
+   },
+   {
+    "question": "neet 2024 final answer key",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "NEET | answer_key | NTA declares the Re-revised Score Card and the Revised Final Answer Keys of the National E"
+   },
+   {
+    "question": "jee mains 2024 result",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "JEE | result | Declaration of Joint Entrance Examination [JEE (Main) - 2024] Session 1 NTA Scores for Pap"
+   },
+   {
+    "question": "neet registration 2026 last date",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "NEET | application | Correction in Particulars for the National Eligibility-cum-Entrance Test [(NEET (UG)] 2026"
+   },
+   {
+    "question": "jee hall ticket kab aayega",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "JEE | admit_card | Release of Admit Cards for the Candidates of JEE(Main) - 2026 Session-2 (April 2026) sched"
+   },
+   {
+    "question": "neet ug answer key challenge",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "NEET | answer_key | Claims regarding OMR answer sheets of NEET (UG) 2026 being circulated on social media."
+   },
+   {
+    "question": "neet 2025 result",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "NEET | result | Declaration of Result of concerned Candidates for National Eligibility cum Entrance Test ("
+   },
+   {
+    "question": "jee main 2026 session 1 admit card",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "JEE | admit_card | Release of Admit Cards for the Candidates of JEE(Main) - 2026 Session-2 (April 2026) sched"
+   },
+   {
+    "question": "neet 2023 application form",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "NEET | application | Reopening the Online Application Form of National Eligibility cum Entrance Test (UG) – 202"
+   },
+   {
+    "question": "when is jee mains exam",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "JEE | application | Inviting Online Application form for the Joint Entrance Examination (JEE)-2027 (Session 1)"
+   },
+   {
+    "question": "nta jee main 2026 result declared?",
+    "expected_route": "official",
+    "route": "official",
+    "route_ok": true,
+    "answer_ok": true,
+    "answer": "JEE | result | Declaration of the Result/NTA Scores for the Joint Entrance Examination [JEE (Main) - 2026"
+   },
+   {
+    "question": "best book for organic chemistry",
+    "expected_route": "community",
+    "route": "community",
+    "route_ok": true,
+    "answer_ok": null,
+    "answer": ""
+   },
+   {
+    "question": "hc verma or dc pandey",
+    "expected_route": "community",
+    "route": "community",
+    "route_ok": true,
+    "answer_ok": null,
+    "answer": ""
+   },
+   {
+    "question": "should i take a drop",
+    "expected_route": "community",
+    "route": "community",
+    "route_ok": true,
+    "answer_ok": null,
+    "answer": ""
+   },
+   {
+    "question": "physics wallah vs unacademy",
+    "expected_route": "community",
+    "route": "community",
+    "route_ok": true,
+    "answer_ok": null,
+    "answer": ""
+   },
+   {
+    "question": "how many hours to study daily",
+    "expected_route": "community",
+    "route": "community",
+    "route_ok": true,
+    "answer_ok": null,
+    "answer": ""
+   },
+   {
+    "question": "kota hostel life",
+    "expected_route": "community",
+    "route": "community",
+    "route_ok": true,
+    "answer_ok": null,
+    "answer": ""
+   },
+   {
+    "question": "maths weak hai kya karu",
+    "expected_route": "community",
+    "route": "community",
+    "route_ok": true,
+    "answer_ok": null,
+    "answer": ""
+   },
+   {
+    "question": "is ncert enough for neet biology",
+    "expected_route": "community",
+    "route": "community",
+    "route_ok": true,
+    "answer_ok": null,
+    "answer": ""
+   },
+   {
+    "question": "iit bombay cse cutoff rank",
+    "expected_route": "community",
+    "route": "community",
+    "route_ok": true,
+    "answer_ok": null,
+    "answer": ""
+   },
+   {
+    "question": "my jee result was bad, what now?",
+    "expected_route": "community",
+    "route": "official",
+    "route_ok": false,
+    "answer_ok": null,
+    "answer": ""
+   }
+  ]
+ }
+}

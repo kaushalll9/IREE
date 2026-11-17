@@ -75,7 +75,7 @@ Command-line versions: `python chatbot.py "hcv or irodov"`,
 | 2 | `clean_dataset.py` | Strips markdown/URLs, drops deleted and bot posts → 43,116 docs | Preprocessing |
 | 3 | `indexer.py` | Tokenises, removes stopwords, Porter-stems, and builds a map *term → list of (doc, title tf, body tf)* | Inverted index |
 | 4 | `ranker.py` | Scores docs with BM25F: rare terms count more (IDF), repeated terms saturate (k1), long posts are normalised (b), titles weigh 2.5×; plus a small upvote boost | Ranking |
-| 5 | `domain_dictionary.py` | Trains Word2Vec on the corpus and groups slang/abbreviations around seed terms (`hall ticket ≈ admit card`, `pw ≈ physics wallah`); search adds these at reduced weight | Embeddings, query expansion |
+| 5 | `domain_dictionary.py` | Hybrid dictionary: Word2Vec trained on the corpus groups slang/abbreviations around seed terms (`hall ticket ≈ admit card`, `pw ≈ physics wallah`), and TF-IDF salience filters out rare, drifting neighbours; search adds these at reduced weight | Embeddings, TF-IDF, query expansion |
 | 5b | `semantic_search.py` | Encodes every post (title + body) with the multilingual `paraphrase-multilingual-MiniLM-L12-v2` Sentence Transformer, caches the normalised vectors, and ranks by cosine similarity, so Hinglish queries like "JEE ki preparation kaise karu?" match posts with different wording | Dense retrieval |
 | 5c | `rrf.py`, `hybrid_search.py` | Takes the top 100 from BM25F and from semantic search and fuses them with Reciprocal Rank Fusion, score = Σ 1/(60 + rank). This is the search tab's default mode | Rank fusion |
 | 6 | `nta_crawler.py` | Crawls nta.ac.in (robots.txt respected), classifies notices by exam/type, extracts publish dates and the date lines from PDFs | Web crawling, information extraction |
@@ -109,8 +109,8 @@ How it is measured:
   development, plus a stratified sample) are used only for tuning. All reported
   numbers come from the 56 test queries.
 - **Judgments.** Graded 0/1/2 relevance labels in `evaluation/qrels.json`, pooled
-  from every system's top 10 (1,974 labels, 100% of the pooled top 10s judged).
-  Each label records its assessor. The 1,831 `claude` labels are LLM judgments and
+  from every system's top 10 (2,006 labels, 100% of the pooled top 10s judged).
+  Each label records its assessor. The 1,863 `claude` labels are LLM judgments and
   should be spot-checked by a person (`python evaluate.py annotate --review
   --assessor <name>`). Human labels always override them.
 - **Unjudged documents** are skipped (condensed rankings), not counted as
@@ -122,12 +122,12 @@ How it is measured:
 
 | System | NDCG@10 | P@5 | MAP | MRR | Success@5 | P95 latency |
 |---|---|---|---|---|---|---|
-| BM25F, equal field weights (baseline) | 0.488 | 0.554 | 0.339 | 0.701 | 0.875 | 11 ms |
-| BM25F (title 2.5×) | **0.532** | 0.575 | 0.372 | **0.727** | 0.911 | 11 ms |
-| BM25F + engagement boost | 0.520 | 0.564 | 0.361 | 0.728 | 0.893 | 13 ms |
-| + Word2Vec expansion | 0.517 | 0.579 | 0.359 | 0.722 | 0.911 | 13 ms |
-| Semantic only (MiniLM) | 0.376 | 0.425 | 0.251 | 0.616 | 0.750 | 16 ms |
-| **Hybrid RRF (deployed)** | 0.526 | **0.593** | **0.375** | 0.717 | 0.911 | 52 ms |
+| BM25F, equal field weights (baseline) | 0.484 | 0.554 | 0.329 | 0.701 | 0.875 | 11 ms |
+| BM25F (title 2.5×) | 0.529 | 0.575 | 0.363 | 0.727 | 0.911 | 11 ms |
+| BM25F + engagement boost | 0.517 | 0.564 | 0.352 | 0.728 | 0.893 | 12 ms |
+| + dictionary expansion (Word2Vec + TF-IDF) | 0.523 | 0.579 | 0.356 | 0.723 | 0.911 | 13 ms |
+| Semantic only (MiniLM) | 0.375 | 0.425 | 0.247 | 0.616 | 0.750 | 9 ms |
+| **Hybrid RRF (deployed)** | 0.525 | 0.596 | 0.370 | 0.720 | 0.911 | 37 ms |
 
 The deployed hybrid scores **HSES 75.5 / 100, marked incomplete** (90% of the
 weight is measured). It becomes complete once the chat tab has collected 20
@@ -141,9 +141,11 @@ feedback responses.
 - **Semantic search alone is clearly worse** (p = 0.02 vs baseline). It does
   recover misspelled queries (typo Success@5 0.83 vs 0.50), but most of that
   benefit is lost at weight 0.25.
-- **Word2Vec expansion** fired on 19 test queries: it helped 6 and hurt 9, and
-  added 17 judged-irrelevant documents to top-10s (query drift), so its net effect
-  is slightly negative.
+- **Domain dictionary (hybrid TF-IDF + Word2Vec).** Word2Vec finds terms that mean
+  the same; TF-IDF salience drops rare neighbours, which caused most query drift.
+  57% of the hybrid's expansions have the same meaning and 9% are unrelated,
+  compared with 34% and 20% for Word2Vec alone. Its effect on search NDCG is within
+  noise (`python eval_dictionary.py`).
 - **Failures.** The deployed system still fails on 5 test queries, mostly
   typos (`integeration practice`, `electrostatcs book`).
 
@@ -156,6 +158,9 @@ Full report with per-query analysis: `evaluation/evaluation_report.md`, or the
 python evaluate.py                 # full suite: ranking, performance, reliability, usefulness + reports (~45 s with a GPU)
 python evaluate.py ranking         # or: performance | reliability | usefulness | report
 python evaluate.py tune            # RRF grid search on the tuning split (reports only)
+python eval_dictionary.py          # domain dictionary ablation
+python eval_crawler.py             # crawler accuracy (re-downloads the fetched PDFs)
+python make_report.py              # IREE_Project_Numbers.pdf (needs Chrome/Chromium)
 python evaluate.py pool --show     # unjudged pooled documents after a ranking change
 python evaluate.py annotate --assessor <name> [--review]   # interactive human judging
 python evaluate.py import-judgments FILE --assessor <name> # bulk "query_id doc_id grade" lines
@@ -190,12 +195,15 @@ rrf.py                 Reciprocal Rank Fusion
 hybrid_search.py       BM25 + semantic fused with RRF
 test_search_modes.py   checks BM25 / semantic / hybrid on English + Hinglish queries
 indexer.py             inverted index builder + shared tokenizer
-domain_dictionary.py   Word2Vec domain dictionary + expand_query()
+domain_dictionary.py   hybrid TF-IDF + Word2Vec domain dictionary + expand_query()
 nta_crawler.py         NTA notice crawler and PDF date extraction
 evaluate.py            evaluation CLI: ranking, robustness, ablation, pooling, annotation, reports
 eval_metrics.py        P@k, Recall, AP, RR, NDCG, Success@k on condensed rankings
 eval_perf.py           latency percentiles, throughput, memory, index integrity + API checks
 hses.py                HSES scoring (weights in evaluation/hses_config.json)
+eval_dictionary.py     dictionary ablation: TF-IDF only vs Word2Vec only vs hybrid
+eval_crawler.py        crawler stats, notice classification, PDF extraction, official-answer accuracy
+make_report.py         builds IREE_Project_Numbers.pdf from the evaluation outputs
 tests/                 unit tests on a synthetic corpus
 clean_dataset.py, download_dataset.py
 templates/, static/    web UI (chat.js = chatbot tab)

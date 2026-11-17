@@ -3,4077 +3,5707 @@
   "jee": {
    "category": "exam",
    "seed": "jee",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 10
   },
   "mains": {
    "category": "exam",
    "seed": "mains",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 112
   },
   "advanced": {
    "category": "exam",
    "seed": "advanced",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 188
   },
   "neet": {
    "category": "exam",
    "seed": "neet",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 26
   },
   "bitsat": {
    "category": "exam",
    "seed": "bitsat",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 130
   },
   "boards": {
    "category": "exam",
    "seed": "boards",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 135
   },
   "cuet": {
    "category": "exam",
    "seed": "cuet",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1112
   },
   "kvpy": {
    "category": "exam",
    "seed": "kvpy",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 454
   },
   "olympiad": {
    "category": "exam",
    "seed": "olympiad",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 2448
   },
   "mhtcet": {
    "category": "exam",
    "seed": "mhtcet",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1478
   },
   "wbjee": {
    "category": "exam",
    "seed": "wbjee",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1769
   },
   "comedk": {
    "category": "exam",
    "seed": "comedk",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 729
   },
   "viteee": {
    "category": "exam",
    "seed": "viteee",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 458
   },
   "physics": {
    "category": "subject",
    "seed": "physics",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 52
   },
   "chemistry": {
    "category": "subject",
    "seed": "chemistry",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 80
   },
   "maths": {
    "category": "subject",
    "seed": "maths",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 77
   },
   "biology": {
    "category": "subject",
    "seed": "biology",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 544
   },
   "botany": {
    "category": "subject",
    "seed": "botany",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 3950
   },
   "zoology": {
    "category": "subject",
    "seed": "zoology",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 5662
   },
   "organic": {
    "category": "subject",
    "seed": "organic",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 263
   },
   "inorganic": {
    "category": "subject",
    "seed": "inorganic",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 499
   },
   "pcm": {
    "category": "subject",
    "seed": "pcm",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 423
   },
   "pcb": {
    "category": "subject",
    "seed": "pcb",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1054
   },
   "rotational": {
    "category": "topic",
    "seed": "rotational",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 3460
   },
   "electrostatics": {
    "category": "topic",
    "seed": "electrostatics",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1692
   },
   "thermodynamics": {
    "category": "topic",
    "seed": "thermodynamics",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1121
   },
   "kinematics": {
    "category": "topic",
    "seed": "kinematics",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 2149
   },
   "optics": {
    "category": "topic",
    "seed": "optics",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 2327
   },
   "calculus": {
    "category": "topic",
    "seed": "calculus",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1033
   },
   "integration": {
    "category": "topic",
    "seed": "integration",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1116
   },
   "probability": {
    "category": "topic",
    "seed": "probability",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 2135
   },
   "matrices": {
    "category": "topic",
    "seed": "matrices",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 4208
   },
   "genetics": {
    "category": "topic",
    "seed": "genetics",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 8590
   },
   "electrochemistry": {
    "category": "topic",
    "seed": "electrochemistry",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1456
   },
   "equilibrium": {
    "category": "topic",
    "seed": "equilibrium",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 2811
   },
   "mole": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 7091
   },
   "modern_physics": {
    "category": "topic",
    "seed": "modern_physics",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1774
   },
   "coordinate": {
    "category": "topic",
    "seed": "coordinate",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 4598
   },
   "vectors": {
    "category": "topic",
    "seed": "vectors",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1761
   },
   "magnetism": {
    "category": "topic",
    "seed": "magnetism",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 2575
   },
   "iit": {
    "category": "institute",
    "seed": "iit",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 115
   },
   "nit": {
    "category": "institute",
    "seed": "nit",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 477
   },
   "iiit": {
    "category": "institute",
    "seed": "iiit",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1609
   },
   "aiims": {
    "category": "institute",
    "seed": "aiims",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1838
   },
   "bits": {
    "category": "institute",
    "seed": "bits",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 510
   },
   "mbbs": {
    "category": "institute",
    "seed": "mbbs",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 979
   },
   "btech": {
    "category": "institute",
    "seed": "btech",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 791
   },
   "cse": {
    "category": "institute",
    "seed": "cse",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 174
   },
   "iisc": {
    "category": "institute",
    "seed": "iisc",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1874
   },
   "iiser": {
    "category": "institute",
    "seed": "iiser",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1985
   },
   "ece": {
    "category": "institute",
    "seed": "ece",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 671
   },
   "allen": {
    "category": "coaching",
    "seed": "allen",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 116
   },
   "aakash": {
    "category": "coaching",
    "seed": "aakash",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 445
   },
   "fiitjee": {
    "category": "coaching",
    "seed": "fiitjee",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 377
   },
   "pw": {
    "category": "coaching",
    "seed": "pw",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 122
   },
   "unacademy": {
    "category": "coaching",
    "seed": "unacademy",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 178
   },
   "vedantu": {
    "category": "coaching",
    "seed": "vedantu",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1682
   },
   "resonance": {
    "category": "coaching",
    "seed": "resonance",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 543
   },
   "narayana": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 2484
   },
   "byjus": {
    "category": "coaching",
    "seed": "byjus",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 2633
   },
   "ncert": {
    "category": "resource",
    "seed": "ncert",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 155
   },
   "hcv": {
    "category": "resource",
    "seed": "hcv",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1160
   },
   "irodov": {
    "category": "resource",
    "seed": "irodov",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 2369
   },
   "cengage": {
    "category": "resource",
    "seed": "cengage",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 511
   },
   "pyq": {
    "category": "resource",
    "seed": "pyq",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 692
   },
   "pyqs": {
    "category": "resource",
    "seed": "pyqs",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 358
   },
   "mock": {
    "category": "resource",
    "seed": "mock",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 659
   },
   "dpp": {
    "category": "resource",
    "seed": "dpp",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1512
   },
   "module": {
    "category": "resource",
    "seed": "module",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1162
   },
   "lectures": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 160
   },
   "counselling": {
    "category": "admission",
    "seed": "counselling",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 567
   },
   "josaa": {
    "category": "admission",
    "seed": "josaa",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 1387
   },
   "csab": {
    "category": "admission",
    "seed": "csab",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 3918
   },
   "cutoff": {
    "category": "admission",
    "seed": "cutoff",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 502
   },
   "rank": {
    "category": "admission",
    "seed": "rank",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 104
   },
   "percentile": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 150
   },
   "admit_card": {
    "category": "admission",
    "seed": "admit_card",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 215
   },
   "registration": {
    "category": "admission",
    "seed": "registration",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 647
   },
   "syllabus": {
    "category": "admission",
    "seed": "syllabus",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 153
   },
   "marks": {
    "category": "admission",
    "seed": "marks",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 88
   },
   "result": {
    "category": "admission",
    "seed": "result",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 177
   },
   "answer_key": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 589
   },
   "nta": {
    "category": "admission",
    "seed": "nta",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 120
   },
   "reservation": {
    "category": "admission",
    "seed": "reservation",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 514
   },
   "category": {
    "category": "admission",
    "seed": "category",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 882
   },
   "dropper": {
    "category": "student",
    "seed": "dropper",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 162
   },
   "drop": {
    "category": "student",
    "seed": "drop",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 148
   },
   "repeater": {
    "category": "student",
    "seed": "repeater",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 7277
   },
   "aspirant": {
    "category": "student",
    "seed": "aspirant",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 442
   },
   "11th": {
    "category": "student",
    "seed": "11th",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 69
   },
   "12th": {
    "category": "student",
    "seed": "12th",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 107
   },
   "backlog": {
    "category": "student",
    "seed": "backlog",
-   "similarity": 1.0
+   "similarity": 1.0,
+   "source": "seed",
+   "tfidf_rank": 376
   },
   "jee2022": {
    "category": "exam",
    "seed": "jee",
-   "similarity": 0.589
+   "similarity": 0.589,
+   "source": "embedding",
+   "tfidf_rank": 4264
   },
   "jee_2024": {
    "category": "exam",
    "seed": "jee",
-   "similarity": 0.582
+   "similarity": 0.582,
+   "source": "embedding",
+   "tfidf_rank": 1079
   },
   "jee23": {
    "category": "exam",
    "seed": "jee",
-   "similarity": 0.562
+   "similarity": 0.562,
+   "source": "embedding",
+   "tfidf_rank": 6077
   },
   "jee_mains": {
    "category": "exam",
    "seed": "mains",
-   "similarity": 0.723
+   "similarity": 0.723,
+   "source": "embedding",
+   "tfidf_rank": 61
   },
   "adv": {
    "category": "exam",
    "seed": "advanced",
-   "similarity": 0.779
+   "similarity": 0.779,
+   "source": "embedding",
+   "tfidf_rank": 608
   },
   "jee_main": {
    "category": "exam",
    "seed": "mains",
-   "similarity": 0.608
+   "similarity": 0.608,
+   "source": "embedding",
+   "tfidf_rank": 176
   },
   "220": {
    "category": "exam",
    "seed": "mains",
-   "similarity": 0.605
+   "similarity": 0.605,
+   "source": "embedding",
+   "tfidf_rank": 4535
   },
   "pyps": {
    "category": "resource",
    "seed": "mock",
-   "similarity": 0.62
+   "similarity": 0.62,
+   "source": "embedding",
+   "tfidf_rank": 9869
   },
   "jee_adv": {
    "category": "exam",
    "seed": "advanced",
-   "similarity": 0.609
+   "similarity": 0.609,
+   "source": "embedding",
+   "tfidf_rank": 686
   },
   "jee_advanced": {
    "category": "exam",
    "seed": "advanced",
-   "similarity": 0.65
+   "similarity": 0.65,
+   "source": "embedding",
+   "tfidf_rank": 209
   },
   "advance": {
    "category": "exam",
    "seed": "advanced",
-   "similarity": 0.629
+   "similarity": 0.629,
+   "source": "embedding",
+   "tfidf_rank": 293
   },
   "neet_2022": {
    "category": "exam",
    "seed": "neet",
-   "similarity": 0.585
+   "similarity": 0.585,
+   "source": "embedding",
+   "tfidf_rank": 527
   },
   "iat": {
    "category": "exam",
    "seed": "bitsat",
-   "similarity": 0.617
+   "similarity": 0.617,
+   "source": "embedding",
+   "tfidf_rank": 3150
   },
   "jeemains": {
    "category": "exam",
    "seed": "mhtcet",
-   "similarity": 0.685
+   "similarity": 0.685,
+   "source": "embedding",
+   "tfidf_rank": 5966
   },
   "mht_cet": {
    "category": "exam",
    "seed": "mhtcet",
-   "similarity": 0.716
+   "similarity": 0.716,
+   "source": "embedding",
+   "tfidf_rank": 1286
   },
   "kitee": {
    "category": "exam",
    "seed": "wbjee",
-   "similarity": 0.671
+   "similarity": 0.671,
+   "source": "embedding",
+   "tfidf_rank": 7610
   },
   "july_attempt": {
    "category": "exam",
    "seed": "bitsat",
-   "similarity": 0.586
+   "similarity": 0.586,
+   "source": "embedding",
+   "tfidf_rank": 2891
   },
   "embibe": {
    "category": "exam",
    "seed": "bitsat",
-   "similarity": 0.586
+   "similarity": 0.586,
+   "source": "embedding",
+   "tfidf_rank": 1426
   },
   "240": {
    "category": "resource",
    "seed": "mock",
-   "similarity": 0.586
+   "similarity": 0.586,
+   "source": "embedding",
+   "tfidf_rank": 3879
   },
   "390": {
    "category": "exam",
    "seed": "bitsat",
-   "similarity": 0.581
+   "similarity": 0.581,
+   "source": "embedding",
+   "tfidf_rank": 4293
   },
   "jeem": {
    "category": "exam",
    "seed": "bitsat",
-   "similarity": 0.579
+   "similarity": 0.579,
+   "source": "embedding",
+   "tfidf_rank": 7687
   },
   "logical_reasoning": {
    "category": "exam",
    "seed": "bitsat",
-   "similarity": 0.577
+   "similarity": 0.577,
+   "source": "embedding",
+   "tfidf_rank": 5667
   },
   "vitee": {
    "category": "exam",
    "seed": "viteee",
-   "similarity": 0.731
+   "similarity": 0.731,
+   "source": "embedding",
+   "tfidf_rank": 2915
   },
   "ayjr": {
    "category": "exam",
    "seed": "bitsat",
-   "similarity": 0.565
+   "similarity": 0.565,
+   "source": "embedding",
+   "tfidf_rank": 1778
   },
   "term_1": {
    "category": "exam",
    "seed": "boards",
-   "similarity": 0.694
+   "similarity": 0.694,
+   "source": "embedding",
+   "tfidf_rank": 665
   },
   "board": {
    "category": "exam",
    "seed": "boards",
-   "similarity": 0.673
+   "similarity": 0.673,
+   "source": "embedding",
+   "tfidf_rank": 472
   },
   "cbse": {
    "category": "exam",
    "seed": "boards",
-   "similarity": 0.66
+   "similarity": 0.66,
+   "source": "embedding",
+   "tfidf_rank": 273
   },
   "term_2": {
    "category": "exam",
    "seed": "boards",
-   "similarity": 0.659
+   "similarity": 0.659,
+   "source": "embedding",
+   "tfidf_rank": 664
   },
   "board_exams": {
    "category": "exam",
    "seed": "boards",
-   "similarity": 0.633
+   "similarity": 0.633,
+   "source": "embedding",
+   "tfidf_rank": 1551
   },
   "hsc": {
    "category": "subject",
    "seed": "pcb",
-   "similarity": 0.635
+   "similarity": 0.635,
+   "source": "embedding",
+   "tfidf_rank": 2022
   },
   "internals": {
    "category": "exam",
    "seed": "boards",
-   "similarity": 0.597
+   "similarity": 0.597,
+   "source": "embedding",
+   "tfidf_rank": 7752
   },
   "practicals": {
    "category": "exam",
    "seed": "boards",
-   "similarity": 0.596
+   "similarity": 0.596,
+   "source": "embedding",
+   "tfidf_rank": 1891
   },
   "isc": {
    "category": "subject",
    "seed": "pcm",
-   "similarity": 0.631
+   "similarity": 0.631,
+   "source": "embedding",
+   "tfidf_rank": 1980
   },
   "pre_boards": {
    "category": "exam",
    "seed": "boards",
-   "similarity": 0.595
+   "similarity": 0.595,
+   "source": "embedding",
+   "tfidf_rank": 3296
   },
   "74": {
    "category": "exam",
    "seed": "boards",
-   "similarity": 0.594
+   "similarity": 0.594,
+   "source": "embedding",
+   "tfidf_rank": 3827
   },
   "school_exams": {
    "category": "exam",
    "seed": "boards",
-   "similarity": 0.592
+   "similarity": 0.592,
+   "source": "embedding",
+   "tfidf_rank": 2283
   },
   "10th_boards": {
    "category": "exam",
    "seed": "boards",
-   "similarity": 0.585
+   "similarity": 0.585,
+   "source": "embedding",
+   "tfidf_rank": 3378
   },
   "maharashtra_board": {
    "category": "subject",
    "seed": "pcm",
-   "similarity": 0.617
+   "similarity": 0.617,
+   "source": "embedding",
+   "tfidf_rank": 2997
   },
   "board_exam": {
    "category": "exam",
    "seed": "boards",
-   "similarity": 0.576
+   "similarity": 0.576,
+   "source": "embedding",
+   "tfidf_rank": 2235
   },
   "improvement_exam": {
    "category": "subject",
    "seed": "pcb",
-   "similarity": 0.688
+   "similarity": 0.688,
+   "source": "embedding",
+   "tfidf_rank": 2947
   },
   "snusat": {
    "category": "exam",
    "seed": "mhtcet",
-   "similarity": 0.718
+   "similarity": 0.718,
+   "source": "embedding",
+   "tfidf_rank": 4248
   },
   "ggsipu": {
    "category": "admission",
    "seed": "csab",
-   "similarity": 0.768
+   "similarity": 0.768,
+   "source": "embedding",
+   "tfidf_rank": 10411
   },
   "last_date": {
    "category": "admission",
    "seed": "registration",
-   "similarity": 0.688
+   "similarity": 0.688,
+   "source": "embedding",
+   "tfidf_rank": 2519
   },
   "cucet": {
    "category": "exam",
    "seed": "cuet",
-   "similarity": 0.6
+   "similarity": 0.6,
+   "source": "embedding",
+   "tfidf_rank": 8300
   },
   "cet": {
    "category": "exam",
    "seed": "mhtcet",
-   "similarity": 0.695
+   "similarity": 0.695,
+   "source": "embedding",
+   "tfidf_rank": 1401
   },
   "jossa": {
    "category": "admission",
    "seed": "josaa",
-   "similarity": 0.734
+   "similarity": 0.734,
+   "source": "embedding",
+   "tfidf_rank": 4491
   },
   "kiitee": {
    "category": "exam",
    "seed": "viteee",
-   "similarity": 0.676
+   "similarity": 0.676,
+   "source": "embedding",
+   "tfidf_rank": 3029
   },
   "compartment": {
    "category": "subject",
    "seed": "pcb",
-   "similarity": 0.609
+   "similarity": 0.609,
+   "source": "embedding",
+   "tfidf_rank": 4986
   },
   "ip_university": {
    "category": "exam",
    "seed": "cuet",
-   "similarity": 0.58
+   "similarity": 0.58,
+   "source": "embedding",
+   "tfidf_rank": 6486
   },
   "bvsc": {
    "category": "institute",
    "seed": "btech",
-   "similarity": 0.647
+   "similarity": 0.647,
+   "source": "embedding",
+   "tfidf_rank": 5661
   },
   "refund_policy": {
    "category": "admission",
    "seed": "counselling",
-   "similarity": 0.655
+   "similarity": 0.655,
+   "source": "embedding",
+   "tfidf_rank": 5924
   },
   "hbcse": {
    "category": "exam",
    "seed": "kvpy",
-   "similarity": 0.633
+   "similarity": 0.633,
+   "source": "embedding",
+   "tfidf_rank": 7710
   },
   "aptitude_test": {
    "category": "exam",
    "seed": "kvpy",
-   "similarity": 0.626
+   "similarity": 0.626,
+   "source": "embedding",
+   "tfidf_rank": 9574
   },
   "kvpy_sa": {
    "category": "exam",
    "seed": "kvpy",
-   "similarity": 0.589
+   "similarity": 0.589,
+   "source": "embedding",
+   "tfidf_rank": 2398
   },
   "ioq": {
    "category": "exam",
    "seed": "kvpy",
-   "similarity": 0.573
+   "similarity": 0.573,
+   "source": "embedding",
+   "tfidf_rank": 6388
   },
   "merit_list": {
    "category": "exam",
    "seed": "kvpy",
-   "similarity": 0.566
+   "similarity": 0.566,
+   "source": "embedding",
+   "tfidf_rank": 4653
   },
   "uceed": {
    "category": "exam",
    "seed": "wbjee",
-   "similarity": 0.666
+   "similarity": 0.666,
+   "source": "embedding",
+   "tfidf_rank": 4730
   },
   "olympiads": {
    "category": "exam",
    "seed": "olympiad",
-   "similarity": 0.624
+   "similarity": 0.624,
+   "source": "embedding",
+   "tfidf_rank": 2545
   },
   "scholar": {
    "category": "exam",
    "seed": "kvpy",
-   "similarity": 0.559
+   "similarity": 0.559,
+   "source": "embedding",
+   "tfidf_rank": 9822
   },
   "regional": {
    "category": "exam",
    "seed": "olympiad",
-   "similarity": 0.674
+   "similarity": 0.674,
+   "source": "embedding",
+   "tfidf_rank": 8050
   },
   "astronomy": {
    "category": "exam",
    "seed": "olympiad",
-   "similarity": 0.654
+   "similarity": 0.654,
+   "source": "embedding",
+   "tfidf_rank": 8506
   },
   "russian": {
    "category": "exam",
    "seed": "olympiad",
-   "similarity": 0.647
+   "similarity": 0.647,
+   "source": "embedding",
+   "tfidf_rank": 6545
   },
   "rmo": {
    "category": "exam",
    "seed": "olympiad",
-   "similarity": 0.636
+   "similarity": 0.636,
+   "source": "embedding",
+   "tfidf_rank": 10819
   },
   "nda": {
    "category": "exam",
    "seed": "olympiad",
-   "similarity": 0.634
+   "similarity": 0.634,
+   "source": "embedding",
+   "tfidf_rank": 2243
   },
   "ioqc": {
    "category": "exam",
    "seed": "olympiad",
-   "similarity": 0.632
+   "similarity": 0.632,
+   "source": "embedding",
+   "tfidf_rank": 8761
   },
   "bhabha": {
    "category": "exam",
    "seed": "olympiad",
-   "similarity": 0.622
+   "similarity": 0.622,
+   "source": "embedding",
+   "tfidf_rank": 11338
   },
   "cmi": {
    "category": "institute",
    "seed": "iiser",
-   "similarity": 0.714
+   "similarity": 0.714,
+   "source": "embedding",
+   "tfidf_rank": 6664
   },
   "ioqa": {
    "category": "exam",
    "seed": "olympiad",
-   "similarity": 0.608
+   "similarity": 0.608,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "2015": {
    "category": "exam",
    "seed": "olympiad",
-   "similarity": 0.589
+   "similarity": 0.589,
+   "source": "embedding",
+   "tfidf_rank": 5542
   },
   "handouts": {
    "category": "exam",
    "seed": "olympiad",
-   "similarity": 0.584
+   "similarity": 0.584,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "isi": {
    "category": "exam",
    "seed": "olympiad",
-   "similarity": 0.579
+   "similarity": 0.579,
+   "source": "embedding",
+   "tfidf_rank": 2899
   },
   "authors": {
    "category": "exam",
    "seed": "olympiad",
-   "similarity": 0.576
+   "similarity": 0.576,
+   "source": "embedding",
+   "tfidf_rank": 7333
   },
   "mh": {
    "category": "exam",
    "seed": "mhtcet",
-   "similarity": 0.679
+   "similarity": 0.679,
+   "source": "embedding",
+   "tfidf_rank": 4363
   },
   "ugee": {
    "category": "exam",
    "seed": "mhtcet",
-   "similarity": 0.677
+   "similarity": 0.677,
+   "source": "embedding",
+   "tfidf_rank": 1179
   },
   "4th_attempt": {
    "category": "exam",
    "seed": "mhtcet",
-   "similarity": 0.672
+   "similarity": 0.672,
+   "source": "embedding",
+   "tfidf_rank": 2450
   },
   "entrances": {
    "category": "exam",
    "seed": "mhtcet",
-   "similarity": 0.657
+   "similarity": 0.657,
+   "source": "embedding",
+   "tfidf_rank": 5592
   },
   "slot_booking": {
    "category": "exam",
    "seed": "mhtcet",
-   "similarity": 0.657
+   "similarity": 0.657,
+   "source": "embedding",
+   "tfidf_rank": 4458
   },
   "kcet": {
    "category": "exam",
    "seed": "wbjee",
-   "similarity": 0.74
+   "similarity": 0.74,
+   "source": "embedding",
+   "tfidf_rank": 3636
   },
   "nest": {
    "category": "exam",
    "seed": "wbjee",
-   "similarity": 0.709
+   "similarity": 0.709,
+   "source": "embedding",
+   "tfidf_rank": 3596
   },
   "srmjeee": {
    "category": "exam",
    "seed": "comedk",
-   "similarity": 0.739
+   "similarity": 0.739,
+   "source": "embedding",
+   "tfidf_rank": 1606
   },
   "13k": {
    "category": "exam",
    "seed": "comedk",
-   "similarity": 0.712
+   "similarity": 0.712,
+   "source": "embedding",
+   "tfidf_rank": 7938
   },
   "aeee": {
    "category": "exam",
    "seed": "comedk",
-   "similarity": 0.695
+   "similarity": 0.695,
+   "source": "embedding",
+   "tfidf_rank": 7787
   },
   "eamcet": {
    "category": "exam",
    "seed": "wbjee",
-   "similarity": 0.677
+   "similarity": 0.677,
+   "source": "embedding",
+   "tfidf_rank": 8337
   },
   "comdek": {
    "category": "exam",
    "seed": "comedk",
-   "similarity": 0.699
+   "similarity": 0.699,
+   "source": "embedding",
+   "tfidf_rank": 8529
   },
   "17k": {
    "category": "exam",
    "seed": "comedk",
-   "similarity": 0.7
+   "similarity": 0.7,
+   "source": "embedding",
+   "tfidf_rank": 9805
   },
   "1k": {
    "category": "exam",
    "seed": "wbjee",
-   "similarity": 0.662
+   "similarity": 0.662,
+   "source": "embedding",
+   "tfidf_rank": 7369
   },
   "srmjee": {
    "category": "exam",
    "seed": "comedk",
-   "similarity": 0.752
+   "similarity": 0.752,
+   "source": "embedding",
+   "tfidf_rank": 1898
   },
   "41k": {
    "category": "exam",
    "seed": "comedk",
-   "similarity": 0.71
+   "similarity": 0.71,
+   "source": "embedding",
+   "tfidf_rank": 8108
   },
   "manipal": {
    "category": "exam",
    "seed": "comedk",
-   "similarity": 0.699
+   "similarity": 0.699,
+   "source": "embedding",
+   "tfidf_rank": 593
   },
   "35k": {
    "category": "exam",
    "seed": "comedk",
-   "similarity": 0.697
+   "similarity": 0.697,
+   "source": "embedding",
+   "tfidf_rank": 8957
   },
   "phase_3": {
    "category": "exam",
    "seed": "comedk",
-   "similarity": 0.694
+   "similarity": 0.694,
+   "source": "embedding",
+   "tfidf_rank": 3874
   },
   "phase_2": {
    "category": "exam",
    "seed": "viteee",
-   "similarity": 0.712
+   "similarity": 0.712,
+   "source": "embedding",
+   "tfidf_rank": 1310
   },
   "srm": {
    "category": "exam",
    "seed": "comedk",
-   "similarity": 0.687
+   "similarity": 0.687,
+   "source": "embedding",
+   "tfidf_rank": 520
   },
   "22k": {
    "category": "exam",
    "seed": "viteee",
-   "similarity": 0.68
+   "similarity": 0.68,
+   "source": "embedding",
+   "tfidf_rank": 9868
   },
   "vit": {
    "category": "exam",
    "seed": "viteee",
-   "similarity": 0.679
+   "similarity": 0.679,
+   "source": "embedding",
+   "tfidf_rank": 254
   },
   "phase_1": {
    "category": "exam",
    "seed": "viteee",
-   "similarity": 0.674
+   "similarity": 0.674,
+   "source": "embedding",
+   "tfidf_rank": 2256
   },
   "phy": {
    "category": "subject",
    "seed": "physics",
-   "similarity": 0.661
+   "similarity": 0.661,
+   "source": "embedding",
+   "tfidf_rank": 1004
   },
   "math": {
    "category": "subject",
    "seed": "maths",
-   "similarity": 0.728
+   "similarity": 0.728,
+   "source": "embedding",
+   "tfidf_rank": 404
   },
   "physical_chemistry": {
    "category": "subject",
    "seed": "inorganic",
-   "similarity": 0.755
+   "similarity": 0.755,
+   "source": "embedding",
+   "tfidf_rank": 849
   },
   "chem": {
    "category": "subject",
    "seed": "chemistry",
-   "similarity": 0.719
+   "similarity": 0.719,
+   "source": "embedding",
+   "tfidf_rank": 213
   },
   "inorganic_and_physical": {
    "category": "subject",
    "seed": "zoology",
-   "similarity": 0.677
+   "similarity": 0.677,
+   "source": "embedding",
+   "tfidf_rank": 4709
   },
   "phys": {
    "category": "subject",
    "seed": "zoology",
-   "similarity": 0.723
+   "similarity": 0.723,
+   "source": "embedding",
+   "tfidf_rank": 6041
   },
   "abc": {
    "category": "subject",
    "seed": "biology",
-   "similarity": 0.604
+   "similarity": 0.604,
+   "source": "embedding",
+   "tfidf_rank": 6170
   },
   "physical_chem": {
    "category": "subject",
    "seed": "inorganic",
-   "similarity": 0.72
+   "similarity": 0.72,
+   "source": "embedding",
+   "tfidf_rank": 2379
   },
   "bio": {
    "category": "subject",
    "seed": "biology",
-   "similarity": 0.683
+   "similarity": 0.683,
+   "source": "embedding",
+   "tfidf_rank": 534
   },
   "straightforward": {
    "category": "subject",
    "seed": "physics",
-   "similarity": 0.566
+   "similarity": 0.566,
+   "source": "embedding",
+   "tfidf_rank": 11118
   },
   "everyday_life": {
    "category": "subject",
    "seed": "inorganic",
-   "similarity": 0.669
+   "similarity": 0.669,
+   "source": "embedding",
+   "tfidf_rank": 2856
   },
   "organic_chemistry": {
    "category": "subject",
    "seed": "organic",
-   "similarity": 0.689
+   "similarity": 0.689,
+   "source": "embedding",
+   "tfidf_rank": 268
   },
   "coordination": {
    "category": "topic",
    "seed": "modern_physics",
-   "similarity": 0.825
+   "similarity": 0.825,
+   "source": "embedding",
+   "tfidf_rank": 4185
   },
   "basic_mathematics": {
    "category": "subject",
    "seed": "chemistry",
-   "similarity": 0.58
+   "similarity": 0.58,
+   "source": "embedding",
+   "tfidf_rank": 6122
   },
   "mathematics": {
    "category": "subject",
    "seed": "maths",
-   "similarity": 0.593
+   "similarity": 0.593,
+   "source": "embedding",
+   "tfidf_rank": 984
   },
   "lr": {
    "category": "subject",
    "seed": "maths",
-   "similarity": 0.565
+   "similarity": 0.565,
+   "source": "embedding",
+   "tfidf_rank": 5233
   },
   "advance_level": {
    "category": "subject",
    "seed": "maths",
-   "similarity": 0.565
+   "similarity": 0.565,
+   "source": "embedding",
+   "tfidf_rank": 2740
   },
   "flashcards": {
    "category": "subject",
    "seed": "biology",
-   "similarity": 0.653
+   "similarity": 0.653,
+   "source": "embedding",
+   "tfidf_rank": 5812
   },
   "phy_chem": {
    "category": "subject",
    "seed": "biology",
-   "similarity": 0.611
+   "similarity": 0.611,
+   "source": "embedding",
+   "tfidf_rank": 4733
   },
   "physical_education": {
    "category": "subject",
    "seed": "pcb",
-   "similarity": 0.61
+   "similarity": 0.61,
+   "source": "embedding",
+   "tfidf_rank": 4607
   },
   "mtg": {
    "category": "resource",
    "seed": "ncert",
-   "similarity": 0.685
+   "similarity": 0.685,
+   "source": "embedding",
+   "tfidf_rank": 2886
   },
   "errorless": {
    "category": "subject",
    "seed": "biology",
-   "similarity": 0.598
+   "similarity": 0.598,
+   "source": "embedding",
+   "tfidf_rank": 8416
   },
   "fingertips": {
    "category": "resource",
    "seed": "ncert",
-   "similarity": 0.614
+   "similarity": 0.614,
+   "source": "embedding",
+   "tfidf_rank": 4588
   },
   "pearson": {
    "category": "subject",
    "seed": "biology",
-   "similarity": 0.59
+   "similarity": 0.59,
+   "source": "embedding",
+   "tfidf_rank": 11316
   },
   "mcq's": {
    "category": "subject",
    "seed": "biology",
-   "similarity": 0.572
+   "similarity": 0.572,
+   "source": "embedding",
+   "tfidf_rank": 9065
   },
   "memorizing": {
    "category": "subject",
    "seed": "zoology",
-   "similarity": 0.674
+   "similarity": 0.674,
+   "source": "embedding",
+   "tfidf_rank": 10601
   },
   "animal_kingdom": {
    "category": "topic",
    "seed": "genetics",
-   "similarity": 0.815
+   "similarity": 0.815,
+   "source": "embedding",
+   "tfidf_rank": 7015
   },
   "fijiks": {
    "category": "subject",
    "seed": "botany",
-   "similarity": 0.658
+   "similarity": 0.658,
+   "source": "embedding",
+   "tfidf_rank": 5524
   },
   "physical_and_inorganic": {
    "category": "subject",
    "seed": "botany",
-   "similarity": 0.648
+   "similarity": 0.648,
+   "source": "embedding",
+   "tfidf_rank": 4861
   },
   "measurements": {
    "category": "topic",
    "seed": "optics",
-   "similarity": 0.826
+   "similarity": 0.826,
+   "source": "embedding",
+   "tfidf_rank": 10016
   },
   "atomic_structure": {
    "category": "topic",
    "seed": "thermodynamics",
-   "similarity": 0.808
+   "similarity": 0.808,
+   "source": "embedding",
+   "tfidf_rank": 2317
   },
   "states_of_matter": {
    "category": "topic",
    "seed": "optics",
-   "similarity": 0.841
+   "similarity": 0.841,
+   "source": "embedding",
+   "tfidf_rank": 5146
   },
   "pre_requisite": {
    "category": "subject",
    "seed": "botany",
-   "similarity": 0.63
+   "similarity": 0.63,
+   "source": "embedding",
+   "tfidf_rank": 3264
   },
   "stoichiometry": {
    "category": "topic",
    "seed": "rotational",
-   "similarity": 0.839
+   "similarity": 0.839,
+   "source": "embedding",
+   "tfidf_rank": 8600
   },
   "electromagnetism": {
    "category": "topic",
    "seed": "genetics",
-   "similarity": 0.798
+   "similarity": 0.798,
+   "source": "embedding",
+   "tfidf_rank": 10293
   },
   "tarun": {
    "category": "subject",
    "seed": "zoology",
-   "similarity": 0.677
+   "similarity": 0.677,
+   "source": "embedding",
+   "tfidf_rank": 10108
   },
   "meth": {
    "category": "subject",
    "seed": "botany",
-   "similarity": 0.623
+   "similarity": 0.623,
+   "source": "embedding",
+   "tfidf_rank": 3762
   },
   "nitin": {
    "category": "subject",
    "seed": "botany",
-   "similarity": 0.622
+   "similarity": 0.622,
+   "source": "embedding",
+   "tfidf_rank": 11053
   },
   "conic": {
    "category": "subject",
    "seed": "zoology",
-   "similarity": 0.715
+   "similarity": 0.715,
+   "source": "embedding",
+   "tfidf_rank": 9367
   },
   "calorimetry": {
    "category": "subject",
    "seed": "zoology",
-   "similarity": 0.699
+   "similarity": 0.699,
+   "source": "embedding",
+   "tfidf_rank": 9528
   },
   "weakest": {
    "category": "subject",
    "seed": "zoology",
-   "similarity": 0.698
+   "similarity": 0.698,
+   "source": "embedding",
+   "tfidf_rank": 6520
   },
   "very_weak": {
    "category": "subject",
    "seed": "zoology",
-   "similarity": 0.681
+   "similarity": 0.681,
+   "source": "embedding",
+   "tfidf_rank": 5504
   },
   "modern": {
    "category": "subject",
    "seed": "zoology",
-   "similarity": 0.671
+   "similarity": 0.671,
+   "source": "embedding",
+   "tfidf_rank": 2598
   },
   "mud": {
    "category": "subject",
    "seed": "zoology",
-   "similarity": 0.67
+   "similarity": 0.67,
+   "source": "embedding",
+   "tfidf_rank": 10933
   },
   "hes": {
    "category": "subject",
    "seed": "zoology",
-   "similarity": 0.669
+   "similarity": 0.669,
+   "source": "embedding",
+   "tfidf_rank": 9676
   },
   "organic_chem": {
    "category": "subject",
    "seed": "organic",
-   "similarity": 0.692
+   "similarity": 0.692,
+   "source": "embedding",
+   "tfidf_rank": 1446
   },
   "inorganic_chemistry": {
    "category": "subject",
    "seed": "inorganic",
-   "similarity": 0.673
+   "similarity": 0.673,
+   "source": "embedding",
+   "tfidf_rank": 1196
   },
   "thermochemistry": {
    "category": "topic",
    "seed": "modern_physics",
-   "similarity": 0.814
+   "similarity": 0.814,
+   "source": "embedding",
+   "tfidf_rank": 4385
   },
   "p_block": {
    "category": "topic",
    "seed": "thermodynamics",
-   "similarity": 0.791
+   "similarity": 0.791,
+   "source": "embedding",
+   "tfidf_rank": 1542
   },
   "ioc": {
    "category": "subject",
    "seed": "organic",
-   "similarity": 0.646
+   "similarity": 0.646,
+   "source": "embedding",
+   "tfidf_rank": 1958
   },
   "mechanics": {
    "category": "topic",
    "seed": "calculus",
-   "similarity": 0.7
+   "similarity": 0.7,
+   "source": "embedding",
+   "tfidf_rank": 1495
   },
   "reaction_mechanism": {
    "category": "topic",
    "seed": "modern_physics",
-   "similarity": 0.781
+   "similarity": 0.781,
+   "source": "embedding",
+   "tfidf_rank": 3755
   },
   "goc": {
    "category": "subject",
    "seed": "organic",
-   "similarity": 0.638
+   "similarity": 0.638,
+   "source": "embedding",
+   "tfidf_rank": 762
   },
   "redox": {
    "category": "topic",
    "seed": "equilibrium",
-   "similarity": 0.813
+   "similarity": 0.813,
+   "source": "embedding",
+   "tfidf_rank": 3628
   },
   "biomolecules": {
    "category": "subject",
    "seed": "inorganic",
-   "similarity": 0.687
+   "similarity": 0.687,
+   "source": "embedding",
+   "tfidf_rank": 2320
   },
   "op_tandon": {
    "category": "resource",
    "seed": "hcv",
-   "similarity": 0.705
+   "similarity": 0.705,
+   "source": "embedding",
+   "tfidf_rank": 7595
   },
   "inorg": {
    "category": "subject",
    "seed": "inorganic",
-   "similarity": 0.666
+   "similarity": 0.666,
+   "source": "embedding",
+   "tfidf_rank": 7532
   },
   "ionic_equilibrium": {
    "category": "topic",
    "seed": "modern_physics",
-   "similarity": 0.795
+   "similarity": 0.795,
+   "source": "embedding",
+   "tfidf_rank": 2739
   },
   "polymers": {
    "category": "subject",
    "seed": "inorganic",
-   "similarity": 0.661
+   "similarity": 0.661,
+   "source": "embedding",
+   "tfidf_rank": 3186
   },
   "bonding": {
    "category": "topic",
    "seed": "equilibrium",
-   "similarity": 0.821
+   "similarity": 0.821,
+   "source": "embedding",
+   "tfidf_rank": 3997
   },
   "aggregate": {
    "category": "subject",
    "seed": "pcm",
-   "similarity": 0.636
+   "similarity": 0.636,
+   "source": "embedding",
+   "tfidf_rank": 3802
   },
   "pcmb": {
    "category": "subject",
    "seed": "pcb",
-   "similarity": 0.746
+   "similarity": 0.746,
+   "source": "embedding",
+   "tfidf_rank": 1538
   },
   "sst": {
    "category": "subject",
    "seed": "pcb",
-   "similarity": 0.628
+   "similarity": 0.628,
+   "source": "embedding",
+   "tfidf_rank": 7429
   },
   "english": {
    "category": "subject",
    "seed": "pcm",
-   "similarity": 0.568
+   "similarity": 0.568,
+   "source": "embedding",
+   "tfidf_rank": 602
   },
   "subjects": {
    "category": "subject",
    "seed": "pcm",
-   "similarity": 0.565
+   "similarity": 0.565,
+   "source": "embedding",
+   "tfidf_rank": 832
   },
   "class_12th": {
    "category": "student",
    "seed": "12th",
-   "similarity": 0.681
+   "similarity": 0.681,
+   "source": "embedding",
+   "tfidf_rank": 806
   },
   "class_10th": {
    "category": "student",
    "seed": "12th",
-   "similarity": 0.597
+   "similarity": 0.597,
+   "source": "embedding",
+   "tfidf_rank": 1683
   },
   "psychology": {
    "category": "subject",
    "seed": "pcb",
-   "similarity": 0.638
+   "similarity": 0.638,
+   "source": "embedding",
+   "tfidf_rank": 6176
   },
   "pcb_student": {
    "category": "subject",
    "seed": "pcb",
-   "similarity": 0.634
+   "similarity": 0.634,
+   "source": "embedding",
+   "tfidf_rank": 4179
   },
   "hsc_board": {
    "category": "subject",
    "seed": "pcb",
-   "similarity": 0.634
+   "similarity": 0.634,
+   "source": "embedding",
+   "tfidf_rank": 5805
   },
   "commerce": {
    "category": "subject",
    "seed": "pcb",
-   "similarity": 0.614
+   "similarity": 0.614,
+   "source": "embedding",
+   "tfidf_rank": 2076
   },
   "improvement_exams": {
    "category": "subject",
    "seed": "pcb",
-   "similarity": 0.612
+   "similarity": 0.612,
+   "source": "embedding",
+   "tfidf_rank": 3505
   },
   "ip": {
    "category": "subject",
    "seed": "pcb",
-   "similarity": 0.608
+   "similarity": 0.608,
+   "source": "embedding",
+   "tfidf_rank": 3900
   },
   "kinematics_nlm": {
    "category": "topic",
    "seed": "rotational",
-   "similarity": 0.844
+   "similarity": 0.844,
+   "source": "embedding",
+   "tfidf_rank": 9768
   },
   "gravitation": {
    "category": "topic",
    "seed": "rotational",
-   "similarity": 0.837
+   "similarity": 0.837,
+   "source": "embedding",
+   "tfidf_rank": 2558
   },
   "dynamics": {
    "category": "topic",
    "seed": "rotational",
-   "similarity": 0.837
+   "similarity": 0.837,
+   "source": "embedding",
+   "tfidf_rank": 7600
   },
   "gaseous": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 0.865
+   "similarity": 0.865,
+   "source": "embedding",
+   "tfidf_rank": 9494
   },
   "shm_waves": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 0.863
+   "similarity": 0.863,
+   "source": "embedding",
+   "tfidf_rank": 7578
   },
   "elasticity": {
    "category": "topic",
    "seed": "matrices",
-   "similarity": 0.831
+   "similarity": 0.831,
+   "source": "embedding",
+   "tfidf_rank": 8949
   },
   "fluids": {
    "category": "topic",
    "seed": "optics",
-   "similarity": 0.828
+   "similarity": 0.828,
+   "source": "embedding",
+   "tfidf_rank": 4435
   },
   "periodicity": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 0.866
+   "similarity": 0.866,
+   "source": "embedding",
+   "tfidf_rank": 9093
   },
   "conductors": {
    "category": "topic",
    "seed": "rotational",
-   "similarity": 0.822
+   "similarity": 0.822,
+   "source": "embedding",
+   "tfidf_rank": 8790
   },
   "wep": {
    "category": "topic",
    "seed": "rotational",
-   "similarity": 0.822
+   "similarity": 0.822,
+   "source": "embedding",
+   "tfidf_rank": 10638
   },
   "rbd": {
    "category": "topic",
    "seed": "rotational",
-   "similarity": 0.82
+   "similarity": 0.82,
+   "source": "embedding",
+   "tfidf_rank": 3591
   },
   "properties_of_matter": {
    "category": "topic",
    "seed": "optics",
-   "similarity": 0.853
+   "similarity": 0.853,
+   "source": "embedding",
+   "tfidf_rank": 7295
   },
   "heat_transfer": {
    "category": "topic",
    "seed": "optics",
-   "similarity": 0.826
+   "similarity": 0.826,
+   "source": "embedding",
+   "tfidf_rank": 7899
   },
   "hydrocarbon": {
    "category": "topic",
    "seed": "optics",
-   "similarity": 0.827
+   "similarity": 0.827,
+   "source": "embedding",
+   "tfidf_rank": 3652
   },
   "electrostats": {
    "category": "topic",
    "seed": "optics",
-   "similarity": 0.831
+   "similarity": 0.831,
+   "source": "embedding",
+   "tfidf_rank": 6014
   },
   "current_electricity": {
    "category": "topic",
    "seed": "electrostatics",
-   "similarity": 0.783
+   "similarity": 0.783,
+   "source": "embedding",
+   "tfidf_rank": 1984
   },
   "electricity": {
    "category": "topic",
    "seed": "magnetism",
-   "similarity": 0.827
+   "similarity": 0.827,
+   "source": "embedding",
+   "tfidf_rank": 5021
   },
   "nlm": {
    "category": "topic",
    "seed": "kinematics",
-   "similarity": 0.776
+   "similarity": 0.776,
+   "source": "embedding",
+   "tfidf_rank": 3018
   },
   "capacitors": {
    "category": "topic",
    "seed": "optics",
-   "similarity": 0.833
+   "similarity": 0.833,
+   "source": "embedding",
+   "tfidf_rank": 7010
   },
   "trigonometric_functions": {
    "category": "topic",
    "seed": "kinematics",
-   "similarity": 0.791
+   "similarity": 0.791,
+   "source": "embedding",
+   "tfidf_rank": 8040
   },
   "conic_sections": {
    "category": "topic",
    "seed": "vectors",
-   "similarity": 0.811
+   "similarity": 0.811,
+   "source": "embedding",
+   "tfidf_rank": 4480
   },
   "chemical_equilibrium": {
    "category": "topic",
    "seed": "optics",
-   "similarity": 0.845
+   "similarity": 0.845,
+   "source": "embedding",
+   "tfidf_rank": 4174
   },
   "units_and_dimensions": {
    "category": "topic",
    "seed": "electrostatics",
-   "similarity": 0.77
+   "similarity": 0.77,
+   "source": "embedding",
+   "tfidf_rank": 5052
   },
   "solid_state": {
    "category": "topic",
    "seed": "matrices",
-   "similarity": 0.827
+   "similarity": 0.827,
+   "source": "embedding",
+   "tfidf_rank": 3108
   },
   "ktg": {
    "category": "topic",
    "seed": "thermodynamics",
-   "similarity": 0.807
+   "similarity": 0.807,
+   "source": "embedding",
+   "tfidf_rank": 3370
   },
   "matrices_and_determinants": {
    "category": "topic",
    "seed": "matrices",
-   "similarity": 0.857
+   "similarity": 0.857,
+   "source": "embedding",
+   "tfidf_rank": 4374
   },
   "straight_line": {
    "category": "topic",
    "seed": "kinematics",
-   "similarity": 0.789
+   "similarity": 0.789,
+   "source": "embedding",
+   "tfidf_rank": 5811
   },
   "parabola": {
    "category": "topic",
    "seed": "kinematics",
-   "similarity": 0.783
+   "similarity": 0.783,
+   "source": "embedding",
+   "tfidf_rank": 4101
   },
   "straight_lines": {
    "category": "topic",
    "seed": "coordinate",
-   "similarity": 0.815
+   "similarity": 0.815,
+   "source": "embedding",
+   "tfidf_rank": 3664
   },
   "conics": {
    "category": "topic",
    "seed": "coordinate",
-   "similarity": 0.822
+   "similarity": 0.822,
+   "source": "embedding",
+   "tfidf_rank": 7131
   },
   "thermo": {
    "category": "topic",
    "seed": "kinematics",
-   "similarity": 0.773
+   "similarity": 0.773,
+   "source": "embedding",
+   "tfidf_rank": 2716
   },
   "trig": {
    "category": "topic",
    "seed": "optics",
-   "similarity": 0.84
+   "similarity": 0.84,
+   "source": "embedding",
+   "tfidf_rank": 10274
   },
   "geometrical": {
    "category": "topic",
    "seed": "optics",
-   "similarity": 0.837
+   "similarity": 0.837,
+   "source": "embedding",
+   "tfidf_rank": 5780
   },
   "binomial_theorem": {
    "category": "topic",
    "seed": "optics",
-   "similarity": 0.824
+   "similarity": 0.824,
+   "source": "embedding",
+   "tfidf_rank": 3936
   },
   "algebra": {
    "category": "topic",
    "seed": "calculus",
-   "similarity": 0.724
+   "similarity": 0.724,
+   "source": "embedding",
+   "tfidf_rank": 2746
   },
   "3d_geometry": {
    "category": "topic",
    "seed": "vectors",
-   "similarity": 0.805
+   "similarity": 0.805,
+   "source": "embedding",
+   "tfidf_rank": 3614
   },
   "circles": {
    "category": "topic",
    "seed": "vectors",
-   "similarity": 0.819
+   "similarity": 0.819,
+   "source": "embedding",
+   "tfidf_rank": 2798
   },
   "coordinate_geometry": {
    "category": "topic",
    "seed": "calculus",
-   "similarity": 0.687
+   "similarity": 0.687,
+   "source": "embedding",
+   "tfidf_rank": 2936
   },
   "electrochem": {
    "category": "topic",
    "seed": "coordinate",
-   "similarity": 0.824
+   "similarity": 0.824,
+   "source": "embedding",
+   "tfidf_rank": 7262
   },
   "integral": {
    "category": "topic",
    "seed": "probability",
-   "similarity": 0.694
+   "similarity": 0.694,
+   "source": "embedding",
+   "tfidf_rank": 5576
   },
   "differentiation": {
    "category": "topic",
    "seed": "vectors",
-   "similarity": 0.8
+   "similarity": 0.8,
+   "source": "embedding",
+   "tfidf_rank": 3066
   },
   "lcd": {
    "category": "topic",
    "seed": "matrices",
-   "similarity": 0.837
+   "similarity": 0.837,
+   "source": "embedding",
+   "tfidf_rank": 10407
   },
   "trigonometry": {
    "category": "topic",
    "seed": "integration",
-   "similarity": 0.727
+   "similarity": 0.727,
+   "source": "embedding",
+   "tfidf_rank": 2134
   },
   "trigo": {
    "category": "topic",
    "seed": "integration",
-   "similarity": 0.726
+   "similarity": 0.726,
+   "source": "embedding",
+   "tfidf_rank": 3117
   },
   "curve": {
    "category": "topic",
    "seed": "integration",
-   "similarity": 0.725
+   "similarity": 0.725,
+   "source": "embedding",
+   "tfidf_rank": 5633
   },
   "aod": {
    "category": "topic",
    "seed": "coordinate",
-   "similarity": 0.831
+   "similarity": 0.831,
+   "source": "embedding",
+   "tfidf_rank": 5382
   },
   "eq": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 0.864
+   "similarity": 0.864,
+   "source": "embedding",
+   "tfidf_rank": 9671
   },
   "conic_section": {
    "category": "topic",
    "seed": "matrices",
-   "similarity": 0.823
+   "similarity": 0.823,
+   "source": "embedding",
+   "tfidf_rank": 5868
   },
   "inverse": {
    "category": "topic",
    "seed": "vectors",
-   "similarity": 0.777
+   "similarity": 0.777,
+   "source": "embedding",
+   "tfidf_rank": 6699
   },
   "continuity_and_differentiability": {
    "category": "topic",
    "seed": "probability",
-   "similarity": 0.736
+   "similarity": 0.736,
+   "source": "embedding",
+   "tfidf_rank": 7000
   },
   "differentiability": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 0.882
+   "similarity": 0.882,
+   "source": "embedding",
+   "tfidf_rank": 8157
   },
   "mathematical_reasoning": {
    "category": "topic",
    "seed": "probability",
-   "similarity": 0.727
+   "similarity": 0.727,
+   "source": "embedding",
+   "tfidf_rank": 5888
   },
   "triangles": {
    "category": "topic",
    "seed": "probability",
-   "similarity": 0.719
+   "similarity": 0.719,
+   "source": "embedding",
+   "tfidf_rank": 7962
   },
   "sequence_and_series": {
    "category": "topic",
    "seed": "coordinate",
-   "similarity": 0.812
+   "similarity": 0.812,
+   "source": "embedding",
+   "tfidf_rank": 6101
   },
   "quadratic_equations": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 0.88
+   "similarity": 0.88,
+   "source": "embedding",
+   "tfidf_rank": 7984
   },
   "logarithm": {
    "category": "topic",
    "seed": "probability",
-   "similarity": 0.704
+   "similarity": 0.704,
+   "source": "embedding",
+   "tfidf_rank": 11083
   },
   "reasoning": {
    "category": "topic",
    "seed": "probability",
-   "similarity": 0.702
+   "similarity": 0.702,
+   "source": "embedding",
+   "tfidf_rank": 5902
   },
   "hydrolysis": {
    "category": "topic",
    "seed": "probability",
-   "similarity": 0.697
+   "similarity": 0.697,
+   "source": "embedding",
+   "tfidf_rank": 7451
   },
   "induction": {
    "category": "topic",
    "seed": "probability",
-   "similarity": 0.695
+   "similarity": 0.695,
+   "source": "embedding",
+   "tfidf_rank": 9320
   },
   "area_under": {
    "category": "topic",
    "seed": "probability",
-   "similarity": 0.695
+   "similarity": 0.695,
+   "source": "embedding",
+   "tfidf_rank": 6926
   },
   "wpe": {
    "category": "topic",
    "seed": "matrices",
-   "similarity": 0.854
+   "similarity": 0.854,
+   "source": "embedding",
+   "tfidf_rank": 4331
   },
   "instruments": {
    "category": "topic",
    "seed": "matrices",
-   "similarity": 0.847
+   "similarity": 0.847,
+   "source": "embedding",
+   "tfidf_rank": 9090
   },
   "ellipse": {
    "category": "topic",
    "seed": "matrices",
-   "similarity": 0.843
+   "similarity": 0.843,
+   "source": "embedding",
+   "tfidf_rank": 7576
   },
   "emi": {
    "category": "topic",
    "seed": "matrices",
-   "similarity": 0.843
+   "similarity": 0.843,
+   "source": "embedding",
+   "tfidf_rank": 4357
   },
   "determinant": {
    "category": "topic",
    "seed": "matrices",
-   "similarity": 0.83
+   "similarity": 0.83,
+   "source": "embedding",
+   "tfidf_rank": 8522
   },
   "kinetics": {
    "category": "topic",
    "seed": "matrices",
-   "similarity": 0.829
+   "similarity": 0.829,
+   "source": "embedding",
+   "tfidf_rank": 6925
   },
   "oscillation": {
    "category": "topic",
    "seed": "matrices",
-   "similarity": 0.829
+   "similarity": 0.829,
+   "source": "embedding",
+   "tfidf_rank": 10198
   },
   "logarithms": {
    "category": "topic",
    "seed": "genetics",
-   "similarity": 0.802
+   "similarity": 0.802,
+   "source": "embedding",
+   "tfidf_rank": 9898
   },
   "physiology": {
    "category": "topic",
    "seed": "genetics",
-   "similarity": 0.795
+   "similarity": 0.795,
+   "source": "embedding",
+   "tfidf_rank": 8339
   },
   "plant": {
    "category": "topic",
    "seed": "genetics",
-   "similarity": 0.791
+   "similarity": 0.791,
+   "source": "embedding",
+   "tfidf_rank": 5000
   },
   "biomolecule": {
    "category": "topic",
    "seed": "genetics",
-   "similarity": 0.791
+   "similarity": 0.791,
+   "source": "embedding",
+   "tfidf_rank": 7942
   },
   "naming": {
    "category": "topic",
    "seed": "genetics",
-   "similarity": 0.787
+   "similarity": 0.787,
+   "source": "embedding",
+   "tfidf_rank": 7630
   },
   "iupac_nomenclature": {
    "category": "topic",
    "seed": "genetics",
-   "similarity": 0.785
+   "similarity": 0.785,
+   "source": "embedding",
+   "tfidf_rank": 6562
   },
   "derivation": {
    "category": "topic",
    "seed": "genetics",
-   "similarity": 0.78
+   "similarity": 0.78,
+   "source": "embedding",
+   "tfidf_rank": 7061
   },
   "redox_reactions": {
    "category": "topic",
    "seed": "genetics",
-   "similarity": 0.777
+   "similarity": 0.777,
+   "source": "embedding",
+   "tfidf_rank": 6178
   },
   "surface_chemistry": {
    "category": "topic",
    "seed": "electrochemistry",
-   "similarity": 0.821
+   "similarity": 0.821,
+   "source": "embedding",
+   "tfidf_rank": 3999
   },
   "chemical_kinetics": {
    "category": "topic",
    "seed": "electrochemistry",
-   "similarity": 0.801
+   "similarity": 0.801,
+   "source": "embedding",
+   "tfidf_rank": 2562
   },
   "qualitative_analysis": {
    "category": "topic",
    "seed": "electrochemistry",
-   "similarity": 0.783
+   "similarity": 0.783,
+   "source": "embedding",
+   "tfidf_rank": 4896
   },
   "coordination_compounds": {
    "category": "topic",
    "seed": "electrochemistry",
-   "similarity": 0.769
+   "similarity": 0.769,
+   "source": "embedding",
+   "tfidf_rank": 2710
   },
   "environmental_chemistry": {
    "category": "topic",
    "seed": "electrochemistry",
-   "similarity": 0.765
+   "similarity": 0.765,
+   "source": "embedding",
+   "tfidf_rank": 3697
   },
   "compunds": {
    "category": "topic",
    "seed": "electrochemistry",
-   "similarity": 0.763
+   "similarity": 0.763,
+   "source": "embedding",
+   "tfidf_rank": 9609
   },
   "haloarenes": {
    "category": "topic",
    "seed": "electrochemistry",
-   "similarity": 0.76
+   "similarity": 0.76,
+   "source": "embedding",
+   "tfidf_rank": 4277
   },
   "gaseous_state": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 0.876
+   "similarity": 0.876,
+   "source": "embedding",
+   "tfidf_rank": 5124
   },
   "em_waves": {
    "category": "topic",
    "seed": "equilibrium",
-   "similarity": 0.804
+   "similarity": 0.804,
+   "source": "embedding",
+   "tfidf_rank": 5989
   },
   "solids": {
    "category": "topic",
    "seed": "equilibrium",
-   "similarity": 0.798
+   "similarity": 0.798,
+   "source": "embedding",
+   "tfidf_rank": 6360
   },
   "surface": {
    "category": "topic",
    "seed": "coordinate",
-   "similarity": 0.815
+   "similarity": 0.815,
+   "source": "embedding",
+   "tfidf_rank": 4979
   },
   "low_practice": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 0.892
+   "similarity": 0.892,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "mechanical_properties": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 0.88
+   "similarity": 0.88,
+   "source": "embedding",
+   "tfidf_rank": 6514
   },
   "identities": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 0.875
+   "similarity": 0.875,
+   "source": "embedding",
+   "tfidf_rank": 8989
   },
   "laws": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 0.874
+   "similarity": 0.874,
+   "source": "embedding",
+   "tfidf_rank": 6432
   },
   "kinematic": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 0.87
+   "similarity": 0.87,
+   "source": "embedding",
+   "tfidf_rank": 10518
   },
   "capacitor": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 0.869
+   "similarity": 0.869,
+   "source": "embedding",
+   "tfidf_rank": 7266
   },
   "1d": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 0.865
+   "similarity": 0.865,
+   "source": "embedding",
+   "tfidf_rank": 10500
   },
   "matrices_determinants": {
    "category": "topic",
    "seed": "mole",
-   "similarity": 0.862
+   "similarity": 0.862,
+   "source": "embedding",
+   "tfidf_rank": 9117
   },
   "fluid_mechanics": {
    "category": "topic",
    "seed": "modern_physics",
-   "similarity": 0.823
+   "similarity": 0.823,
+   "source": "embedding",
+   "tfidf_rank": 4940
   },
   "prerequisite": {
    "category": "topic",
    "seed": "modern_physics",
-   "similarity": 0.785
+   "similarity": 0.785,
+   "source": "embedding",
+   "tfidf_rank": 1619
   },
   "geo": {
    "category": "topic",
    "seed": "coordinate",
-   "similarity": 0.83
+   "similarity": 0.83,
+   "source": "embedding",
+   "tfidf_rank": 9029
   },
   "geometry": {
    "category": "topic",
    "seed": "vectors",
-   "similarity": 0.794
+   "similarity": 0.794,
+   "source": "embedding",
+   "tfidf_rank": 3595
   },
   "electromagnetic": {
    "category": "topic",
    "seed": "magnetism",
-   "similarity": 0.785
+   "similarity": 0.785,
+   "source": "embedding",
+   "tfidf_rank": 9160
   },
   "circuits": {
    "category": "topic",
    "seed": "magnetism",
-   "similarity": 0.78
+   "similarity": 0.78,
+   "source": "embedding",
+   "tfidf_rank": 9560
   },
   "fluid": {
    "category": "topic",
    "seed": "magnetism",
-   "similarity": 0.778
+   "similarity": 0.778,
+   "source": "embedding",
+   "tfidf_rank": 6668
   },
   "capacitance": {
    "category": "topic",
    "seed": "magnetism",
-   "similarity": 0.776
+   "similarity": 0.776,
+   "source": "embedding",
+   "tfidf_rank": 4849
   },
   "semiconductors": {
    "category": "topic",
    "seed": "magnetism",
-   "similarity": 0.775
+   "similarity": 0.775,
+   "source": "embedding",
+   "tfidf_rank": 3215
   },
   "iit_delhi": {
    "category": "institute",
    "seed": "iit",
-   "similarity": 0.587
+   "similarity": 0.587,
+   "source": "embedding",
+   "tfidf_rank": 3586
   },
   "iitb_cse": {
    "category": "institute",
    "seed": "aiims",
-   "similarity": 0.609
+   "similarity": 0.609,
+   "source": "embedding",
+   "tfidf_rank": 3961
   },
   "roorkee": {
    "category": "institute",
    "seed": "iisc",
-   "similarity": 0.756
+   "similarity": 0.756,
+   "source": "embedding",
+   "tfidf_rank": 7388
   },
   "dholakpur": {
    "category": "institute",
    "seed": "iit",
-   "similarity": 0.573
+   "similarity": 0.573,
+   "source": "embedding",
+   "tfidf_rank": 5352
   },
   "iit_bombay": {
    "category": "institute",
    "seed": "aiims",
-   "similarity": 0.588
+   "similarity": 0.588,
+   "source": "embedding",
+   "tfidf_rank": 1434
   },
   "iitb": {
    "category": "institute",
    "seed": "iit",
-   "similarity": 0.559
+   "similarity": 0.559,
+   "source": "embedding",
+   "tfidf_rank": 1254
   },
   "mandi": {
    "category": "institute",
    "seed": "iit",
-   "similarity": 0.554
+   "similarity": 0.554,
+   "source": "embedding",
+   "tfidf_rank": 8956
   },
   "warangal": {
    "category": "institute",
    "seed": "nit",
-   "similarity": 0.751
+   "similarity": 0.751,
+   "source": "embedding",
+   "tfidf_rank": 8148
   },
   "surathkal": {
    "category": "institute",
    "seed": "nit",
-   "similarity": 0.743
+   "similarity": 0.743,
+   "source": "embedding",
+   "tfidf_rank": 7008
   },
   "cs_branch": {
    "category": "institute",
    "seed": "nit",
-   "similarity": 0.742
+   "similarity": 0.742,
+   "source": "embedding",
+   "tfidf_rank": 3951
   },
   "dtu": {
    "category": "institute",
    "seed": "nit",
-   "similarity": 0.735
+   "similarity": 0.735,
+   "source": "embedding",
+   "tfidf_rank": 1268
   },
   "govt_college": {
    "category": "institute",
    "seed": "nit",
-   "similarity": 0.735
+   "similarity": 0.735,
+   "source": "embedding",
+   "tfidf_rank": 4063
   },
   "government_college": {
    "category": "institute",
    "seed": "nit",
-   "similarity": 0.733
+   "similarity": 0.733,
+   "source": "embedding",
+   "tfidf_rank": 3281
   },
   "iiitd": {
    "category": "institute",
    "seed": "iisc",
-   "similarity": 0.722
+   "similarity": 0.722,
+   "source": "embedding",
+   "tfidf_rank": 4863
   },
   "gfti": {
    "category": "institute",
    "seed": "nit",
-   "similarity": 0.711
+   "similarity": 0.711,
+   "source": "embedding",
+   "tfidf_rank": 10430
   },
   "mnnit": {
    "category": "institute",
    "seed": "nit",
-   "similarity": 0.71
+   "similarity": 0.71,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "bits_goa": {
    "category": "institute",
    "seed": "nit",
-   "similarity": 0.709
+   "similarity": 0.709,
+   "source": "embedding",
+   "tfidf_rank": 6015
   },
   "nsit": {
    "category": "institute",
    "seed": "nit",
-   "similarity": 0.706
+   "similarity": 0.706,
+   "source": "embedding",
+   "tfidf_rank": 5917
   },
   "hamirpur": {
    "category": "institute",
    "seed": "nit",
-   "similarity": 0.706
+   "similarity": 0.706,
+   "source": "embedding",
+   "tfidf_rank": 10707
   },
   "nsut": {
    "category": "institute",
    "seed": "nit",
-   "similarity": 0.7
+   "similarity": 0.7,
+   "source": "embedding",
+   "tfidf_rank": 2457
   },
   "kurukshetra": {
    "category": "institute",
    "seed": "iiit",
-   "similarity": 0.707
+   "similarity": 0.707,
+   "source": "embedding",
+   "tfidf_rank": 9477
   },
   "allahabad": {
    "category": "institute",
    "seed": "iiit",
-   "similarity": 0.731
+   "similarity": 0.731,
+   "source": "embedding",
+   "tfidf_rank": 7529
   },
   "bhopal": {
    "category": "institute",
    "seed": "iiit",
-   "similarity": 0.718
+   "similarity": 0.718,
+   "source": "embedding",
+   "tfidf_rank": 3546
   },
   "kottayam": {
    "category": "institute",
    "seed": "iiit",
-   "similarity": 0.714
+   "similarity": 0.714,
+   "source": "embedding",
+   "tfidf_rank": 9537
   },
   "iiit_hyderabad": {
    "category": "institute",
    "seed": "iiit",
-   "similarity": 0.713
+   "similarity": 0.713,
+   "source": "embedding",
+   "tfidf_rank": 6037
   },
   "jaypee": {
    "category": "institute",
    "seed": "iiit",
-   "similarity": 0.703
+   "similarity": 0.703,
+   "source": "embedding",
+   "tfidf_rank": 5337
   },
   "bhubaneswar": {
    "category": "institute",
    "seed": "iiit",
-   "similarity": 0.702
+   "similarity": 0.702,
+   "source": "embedding",
+   "tfidf_rank": 6842
   },
   "iiit_bangalore": {
    "category": "admission",
    "seed": "csab",
-   "similarity": 0.764
+   "similarity": 0.764,
+   "source": "embedding",
+   "tfidf_rank": 6530
   },
   "vjti": {
    "category": "institute",
    "seed": "iiit",
-   "similarity": 0.698
+   "similarity": 0.698,
+   "source": "embedding",
+   "tfidf_rank": 5686
   },
   "jodhpur": {
    "category": "institute",
    "seed": "iiit",
-   "similarity": 0.692
+   "similarity": 0.692,
+   "source": "embedding",
+   "tfidf_rank": 6767
   },
   "raipur": {
    "category": "institute",
    "seed": "iiit",
-   "similarity": 0.69
+   "similarity": 0.69,
+   "source": "embedding",
+   "tfidf_rank": 10064
   },
   "upes": {
    "category": "institute",
    "seed": "iiit",
-   "similarity": 0.689
+   "similarity": 0.689,
+   "source": "embedding",
+   "tfidf_rank": 4766
   },
   "coe": {
    "category": "institute",
    "seed": "ece",
-   "similarity": 0.808
+   "similarity": 0.808,
+   "source": "embedding",
+   "tfidf_rank": 5131
   },
   "mohali": {
    "category": "institute",
    "seed": "iiser",
-   "similarity": 0.755
+   "similarity": 0.755,
+   "source": "embedding",
+   "tfidf_rank": 8968
   },
   "mnc": {
    "category": "institute",
    "seed": "iisc",
-   "similarity": 0.724
+   "similarity": 0.724,
+   "source": "embedding",
+   "tfidf_rank": 10276
   },
   "vmmc": {
    "category": "institute",
    "seed": "aiims",
-   "similarity": 0.64
+   "similarity": 0.64,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "dream_college": {
    "category": "institute",
    "seed": "aiims",
-   "similarity": 0.632
+   "similarity": 0.632,
+   "source": "embedding",
+   "tfidf_rank": 2911
   },
   "grads": {
    "category": "institute",
    "seed": "aiims",
-   "similarity": 0.619
+   "similarity": 0.619,
+   "source": "embedding",
+   "tfidf_rank": 9700
   },
   "kalej": {
    "category": "institute",
    "seed": "aiims",
-   "similarity": 0.602
+   "similarity": 0.602,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "navy": {
    "category": "institute",
    "seed": "iisc",
-   "similarity": 0.714
+   "similarity": 0.714,
+   "source": "embedding",
+   "tfidf_rank": 9513
   },
   "ropar": {
    "category": "institute",
    "seed": "aiims",
-   "similarity": 0.596
+   "similarity": 0.596,
+   "source": "embedding",
+   "tfidf_rank": 11167
   },
   "iim": {
    "category": "institute",
    "seed": "iisc",
-   "similarity": 0.737
+   "similarity": 0.737,
+   "source": "embedding",
+   "tfidf_rank": 6215
   },
   "firm": {
    "category": "institute",
    "seed": "aiims",
-   "similarity": 0.592
+   "similarity": 0.592,
+   "source": "embedding",
+   "tfidf_rank": 9946
   },
   "nits": {
    "category": "institute",
    "seed": "bits",
-   "similarity": 0.651
+   "similarity": 0.651,
+   "source": "embedding",
+   "tfidf_rank": 1258
   },
   "dubai": {
    "category": "institute",
    "seed": "bits",
-   "similarity": 0.624
+   "similarity": 0.624,
+   "source": "embedding",
+   "tfidf_rank": 6744
   },
   "waitlisted": {
    "category": "institute",
    "seed": "bits",
-   "similarity": 0.619
+   "similarity": 0.619,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "iiits": {
    "category": "institute",
    "seed": "bits",
-   "similarity": 0.618
+   "similarity": 0.618,
+   "source": "embedding",
+   "tfidf_rank": 2506
   },
   "bit_mesra": {
    "category": "institute",
    "seed": "bits",
-   "similarity": 0.617
+   "similarity": 0.617,
+   "source": "embedding",
+   "tfidf_rank": 6716
   },
   "iits_nits": {
    "category": "institute",
    "seed": "bits",
-   "similarity": 0.605
+   "similarity": 0.605,
+   "source": "embedding",
+   "tfidf_rank": 6534
   },
   "ktr_campus": {
    "category": "institute",
    "seed": "bits",
-   "similarity": 0.596
+   "similarity": 0.596,
+   "source": "embedding",
+   "tfidf_rank": 8832
   },
   "snu": {
    "category": "admission",
    "seed": "csab",
-   "similarity": 0.765
+   "similarity": 0.765,
+   "source": "embedding",
+   "tfidf_rank": 2312
   },
   "pilani_campus": {
    "category": "institute",
    "seed": "bits",
-   "similarity": 0.594
+   "similarity": 0.594,
+   "source": "embedding",
+   "tfidf_rank": 5883
   },
   "iteration": {
    "category": "institute",
    "seed": "bits",
-   "similarity": 0.594
+   "similarity": 0.594,
+   "source": "embedding",
+   "tfidf_rank": 7903
   },
   "top_nits": {
    "category": "institute",
    "seed": "bits",
-   "similarity": 0.59
+   "similarity": 0.59,
+   "source": "embedding",
+   "tfidf_rank": 6329
   },
   "bds": {
    "category": "institute",
    "seed": "mbbs",
-   "similarity": 0.787
+   "similarity": 0.787,
+   "source": "embedding",
+   "tfidf_rank": 2521
   },
   "mba": {
    "category": "institute",
    "seed": "mbbs",
-   "similarity": 0.699
+   "similarity": 0.699,
+   "source": "embedding",
+   "tfidf_rank": 5196
   },
   "settle": {
    "category": "institute",
    "seed": "mbbs",
-   "similarity": 0.633
+   "similarity": 0.633,
+   "source": "embedding",
+   "tfidf_rank": 5139
   },
   "medical_college": {
    "category": "institute",
    "seed": "mbbs",
-   "similarity": 0.63
+   "similarity": 0.63,
+   "source": "embedding",
+   "tfidf_rank": 2949
   },
   "loan": {
    "category": "institute",
    "seed": "mbbs",
-   "similarity": 0.625
+   "similarity": 0.625,
+   "source": "embedding",
+   "tfidf_rank": 4109
   },
   "abroad": {
    "category": "institute",
    "seed": "mbbs",
-   "similarity": 0.624
+   "similarity": 0.624,
+   "source": "embedding",
+   "tfidf_rank": 1615
   },
   "bams": {
    "category": "institute",
    "seed": "mbbs",
-   "similarity": 0.621
+   "similarity": 0.621,
+   "source": "embedding",
+   "tfidf_rank": 5470
   },
   "biotech": {
    "category": "institute",
    "seed": "btech",
-   "similarity": 0.65
+   "similarity": 0.65,
+   "source": "embedding",
+   "tfidf_rank": 3027
   },
   "russia": {
    "category": "institute",
    "seed": "iisc",
-   "similarity": 0.705
+   "similarity": 0.705,
+   "source": "embedding",
+   "tfidf_rank": 4670
   },
   "bachelor's": {
    "category": "institute",
    "seed": "btech",
-   "similarity": 0.651
+   "similarity": 0.651,
+   "source": "embedding",
+   "tfidf_rank": 8608
   },
   "canada": {
    "category": "institute",
    "seed": "mbbs",
-   "similarity": 0.612
+   "similarity": 0.612,
+   "source": "embedding",
+   "tfidf_rank": 6140
   },
   "medical": {
    "category": "institute",
    "seed": "mbbs",
-   "similarity": 0.61
+   "similarity": 0.61,
+   "source": "embedding",
+   "tfidf_rank": 1056
   },
   "masters": {
    "category": "institute",
    "seed": "mbbs",
-   "similarity": 0.61
+   "similarity": 0.61,
+   "source": "embedding",
+   "tfidf_rank": 4717
   },
   "state_govt": {
    "category": "institute",
    "seed": "mbbs",
-   "similarity": 0.609
+   "similarity": 0.609,
+   "source": "embedding",
+   "tfidf_rank": 8098
   },
   "b_tech": {
    "category": "institute",
    "seed": "btech",
-   "similarity": 0.716
+   "similarity": 0.716,
+   "source": "embedding",
+   "tfidf_rank": 1735
   },
   "bsc": {
    "category": "institute",
    "seed": "btech",
-   "similarity": 0.7
+   "similarity": 0.7,
+   "source": "embedding",
+   "tfidf_rank": 1148
   },
   "undergrad": {
    "category": "institute",
    "seed": "iisc",
-   "similarity": 0.708
+   "similarity": 0.708,
+   "source": "embedding",
+   "tfidf_rank": 5237
   },
   "bba": {
    "category": "institute",
    "seed": "btech",
-   "similarity": 0.684
+   "similarity": 0.684,
+   "source": "embedding",
+   "tfidf_rank": 9878
   },
   "mtech": {
    "category": "institute",
    "seed": "iisc",
-   "similarity": 0.727
+   "similarity": 0.727,
+   "source": "embedding",
+   "tfidf_rank": 8289
   },
   "ba": {
    "category": "institute",
    "seed": "btech",
-   "similarity": 0.649
+   "similarity": 0.649,
+   "source": "embedding",
+   "tfidf_rank": 5509
   },
   "germany": {
    "category": "institute",
    "seed": "btech",
-   "similarity": 0.636
+   "similarity": 0.636,
+   "source": "embedding",
+   "tfidf_rank": 5292
   },
   "mca": {
    "category": "institute",
    "seed": "btech",
-   "similarity": 0.636
+   "similarity": 0.636,
+   "source": "embedding",
+   "tfidf_rank": 7307
   },
   "b_sc": {
    "category": "institute",
    "seed": "btech",
-   "similarity": 0.635
+   "similarity": 0.635,
+   "source": "embedding",
+   "tfidf_rank": 5403
   },
   "nursing": {
    "category": "institute",
    "seed": "btech",
-   "similarity": 0.63
+   "similarity": 0.63,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "iiith": {
    "category": "institute",
    "seed": "btech",
-   "similarity": 0.628
+   "similarity": 0.628,
+   "source": "embedding",
+   "tfidf_rank": 5570
   },
   "eee": {
    "category": "institute",
    "seed": "ece",
-   "similarity": 0.848
+   "similarity": 0.848,
+   "source": "embedding",
+   "tfidf_rank": 2771
   },
   "cse_with_specialization": {
    "category": "institute",
    "seed": "ece",
-   "similarity": 0.795
+   "similarity": 0.795,
+   "source": "embedding",
+   "tfidf_rank": 5288
   },
   "main_campus": {
    "category": "institute",
    "seed": "cse",
-   "similarity": 0.758
+   "similarity": 0.758,
+   "source": "embedding",
+   "tfidf_rank": 1624
   },
   "cat_1": {
    "category": "institute",
    "seed": "ece",
-   "similarity": 0.832
+   "similarity": 0.832,
+   "source": "embedding",
+   "tfidf_rank": 3757
   },
   "specialisation": {
    "category": "institute",
    "seed": "ece",
-   "similarity": 0.78
+   "similarity": 0.78,
+   "source": "embedding",
+   "tfidf_rank": 5497
   },
   "vit_chennai": {
    "category": "institute",
    "seed": "ece",
-   "similarity": 0.785
+   "similarity": 0.785,
+   "source": "embedding",
+   "tfidf_rank": 2581
   },
   "ktr": {
    "category": "institute",
    "seed": "cse",
-   "similarity": 0.741
+   "similarity": 0.741,
+   "source": "embedding",
+   "tfidf_rank": 6568
   },
   "spec": {
    "category": "institute",
    "seed": "cse",
-   "similarity": 0.736
+   "similarity": 0.736,
+   "source": "embedding",
+   "tfidf_rank": 8592
   },
   "cat_2": {
    "category": "institute",
    "seed": "ece",
-   "similarity": 0.793
+   "similarity": 0.793,
+   "source": "embedding",
+   "tfidf_rank": 4022
   },
   "bits_hyderabad": {
    "category": "institute",
    "seed": "ece",
-   "similarity": 0.797
+   "similarity": 0.797,
+   "source": "embedding",
+   "tfidf_rank": 4946
   },
   "bits_hyd": {
    "category": "institute",
    "seed": "cse",
-   "similarity": 0.725
+   "similarity": 0.725,
+   "source": "embedding",
+   "tfidf_rank": 7395
   },
   "rvce": {
    "category": "institute",
    "seed": "cse",
-   "similarity": 0.725
+   "similarity": 0.725,
+   "source": "embedding",
+   "tfidf_rank": 5645
   },
   "vellore": {
    "category": "institute",
    "seed": "ece",
-   "similarity": 0.797
+   "similarity": 0.797,
+   "source": "embedding",
+   "tfidf_rank": 2931
   },
   "cse_core": {
    "category": "institute",
    "seed": "ece",
-   "similarity": 0.792
+   "similarity": 0.792,
+   "source": "embedding",
+   "tfidf_rank": 5996
   },
   "iisers": {
    "category": "institute",
    "seed": "iisc",
-   "similarity": 0.766
+   "similarity": 0.766,
+   "source": "embedding",
+   "tfidf_rank": 9969
   },
   "icar": {
    "category": "institute",
    "seed": "iiser",
-   "similarity": 0.751
+   "similarity": 0.751,
+   "source": "embedding",
+   "tfidf_rank": 7048
   },
   "iit_nit": {
    "category": "institute",
    "seed": "iisc",
-   "similarity": 0.713
+   "similarity": 0.713,
+   "source": "embedding",
+   "tfidf_rank": 3226
   },
   "computing": {
    "category": "institute",
    "seed": "iisc",
-   "similarity": 0.709
+   "similarity": 0.709,
+   "source": "embedding",
+   "tfidf_rank": 6087
   },
   "dtu_nsut": {
    "category": "institute",
    "seed": "iisc",
-   "similarity": 0.708
+   "similarity": 0.708,
+   "source": "embedding",
+   "tfidf_rank": 4673
   },
   "entrance_test": {
    "category": "institute",
    "seed": "iiser",
-   "similarity": 0.726
+   "similarity": 0.726,
+   "source": "embedding",
+   "tfidf_rank": 3978
   },
   "niser": {
    "category": "institute",
    "seed": "iiser",
-   "similarity": 0.71
+   "similarity": 0.71,
+   "source": "embedding",
+   "tfidf_rank": 10008
   },
   "dual_degree": {
    "category": "institute",
    "seed": "iiser",
-   "similarity": 0.707
+   "similarity": 0.707,
+   "source": "embedding",
+   "tfidf_rank": 5760
   },
   "nata": {
    "category": "institute",
    "seed": "iiser",
-   "similarity": 0.691
+   "similarity": 0.691,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "afmc": {
    "category": "institute",
    "seed": "iiser",
-   "similarity": 0.683
+   "similarity": 0.683,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "shiv_nadar": {
    "category": "institute",
    "seed": "iiser",
-   "similarity": 0.682
+   "similarity": 0.682,
+   "source": "embedding",
+   "tfidf_rank": 2689
   },
   "iist": {
    "category": "institute",
    "seed": "iiser",
-   "similarity": 0.682
+   "similarity": 0.682,
+   "source": "embedding",
+   "tfidf_rank": 10455
   },
   "ee": {
    "category": "institute",
    "seed": "ece",
-   "similarity": 0.789
+   "similarity": 0.789,
+   "source": "embedding",
+   "tfidf_rank": 4321
   },
   "eni": {
    "category": "institute",
    "seed": "ece",
-   "similarity": 0.78
+   "similarity": 0.78,
+   "source": "embedding",
+   "tfidf_rank": 8844
   },
   "computer_engineering": {
    "category": "institute",
    "seed": "ece",
-   "similarity": 0.778
+   "similarity": 0.778,
+   "source": "embedding",
+   "tfidf_rank": 7103
   },
   "hyd": {
    "category": "institute",
    "seed": "ece",
-   "similarity": 0.777
+   "similarity": 0.777,
+   "source": "embedding",
+   "tfidf_rank": 5507
   },
   "sankalp": {
    "category": "coaching",
    "seed": "byjus",
-   "similarity": 0.713
+   "similarity": 0.713,
+   "source": "embedding",
+   "tfidf_rank": 7238
   },
   "janakpuri": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 0.806
+   "similarity": 0.806,
+   "source": "embedding",
+   "tfidf_rank": 6361
   },
   "achiever": {
    "category": "coaching",
    "seed": "resonance",
-   "similarity": 0.641
+   "similarity": 0.641,
+   "source": "embedding",
+   "tfidf_rank": 7066
   },
   "allen_kota": {
    "category": "coaching",
    "seed": "allen",
-   "similarity": 0.631
+   "similarity": 0.631,
+   "source": "embedding",
+   "tfidf_rank": 1345
   },
   "fitjee": {
    "category": "coaching",
    "seed": "fiitjee",
-   "similarity": 0.634
+   "similarity": 0.634,
+   "source": "embedding",
+   "tfidf_rank": 2697
   },
   "vmc": {
    "category": "coaching",
    "seed": "fiitjee",
-   "similarity": 0.648
+   "similarity": 0.648,
+   "source": "embedding",
+   "tfidf_rank": 1201
   },
   "pitampura": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 0.806
+   "similarity": 0.806,
+   "source": "embedding",
+   "tfidf_rank": 5219
   },
   "leader": {
    "category": "coaching",
    "seed": "allen",
-   "similarity": 0.601
+   "similarity": 0.601,
+   "source": "embedding",
+   "tfidf_rank": 6430
   },
   "akash": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 0.731
+   "similarity": 0.731,
+   "source": "embedding",
+   "tfidf_rank": 2702
   },
   "allen_chandigarh": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 0.744
+   "similarity": 0.744,
+   "source": "embedding",
+   "tfidf_rank": 5038
   },
   "nurture": {
    "category": "coaching",
    "seed": "byjus",
-   "similarity": 0.688
+   "similarity": 0.688,
+   "source": "embedding",
+   "tfidf_rank": 5045
   },
   "vidyamandir": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 0.782
+   "similarity": 0.782,
+   "source": "embedding",
+   "tfidf_rank": 6754
   },
   "bagh": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 0.776
+   "similarity": 0.776,
+   "source": "embedding",
+   "tfidf_rank": 8941
   },
   "sikar": {
    "category": "coaching",
    "seed": "aakash",
-   "similarity": 0.633
+   "similarity": 0.633,
+   "source": "embedding",
+   "tfidf_rank": 8273
   },
   "punjabi": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 0.752
+   "similarity": 0.752,
+   "source": "embedding",
+   "tfidf_rank": 7122
   },
   "fts": {
    "category": "coaching",
    "seed": "aakash",
-   "similarity": 0.616
+   "similarity": 0.616,
+   "source": "embedding",
+   "tfidf_rank": 10104
   },
   "akaash": {
    "category": "coaching",
    "seed": "fiitjee",
-   "similarity": 0.632
+   "similarity": 0.632,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "dwarka": {
    "category": "coaching",
    "seed": "resonance",
-   "similarity": 0.617
+   "similarity": 0.617,
+   "source": "embedding",
+   "tfidf_rank": 5396
   },
   "sri_chaitanya": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 0.797
+   "similarity": 0.797,
+   "source": "embedding",
+   "tfidf_rank": 4850
   },
   "kalu_sarai": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 0.781
+   "similarity": 0.781,
+   "source": "embedding",
+   "tfidf_rank": 5541
   },
   "itutor": {
    "category": "coaching",
    "seed": "fiitjee",
-   "similarity": 0.613
+   "similarity": 0.613,
+   "source": "embedding",
+   "tfidf_rank": 8713
   },
   "physics_wallah": {
    "category": "coaching",
    "seed": "pw",
-   "similarity": 0.716
+   "similarity": 0.716,
+   "source": "embedding",
+   "tfidf_rank": 430
   },
   "physicswallah": {
    "category": "coaching",
    "seed": "pw",
-   "similarity": 0.687
+   "similarity": 0.687,
+   "source": "embedding",
+   "tfidf_rank": 1859
   },
   "2_0": {
    "category": "coaching",
    "seed": "pw",
-   "similarity": 0.675
+   "similarity": 0.675,
+   "source": "embedding",
+   "tfidf_rank": 1257
   },
   "lakshya": {
    "category": "coaching",
    "seed": "vedantu",
-   "similarity": 0.725
+   "similarity": 0.725,
+   "source": "embedding",
+   "tfidf_rank": 3518
   },
   "arjuna_batch": {
    "category": "coaching",
    "seed": "byjus",
-   "similarity": 0.731
+   "similarity": 0.731,
+   "source": "embedding",
+   "tfidf_rank": 5612
   },
   "arjuna": {
    "category": "coaching",
    "seed": "pw",
-   "similarity": 0.648
+   "similarity": 0.648,
+   "source": "embedding",
+   "tfidf_rank": 2874
   },
   "yakeen_batch": {
    "category": "coaching",
    "seed": "pw",
-   "similarity": 0.622
+   "similarity": 0.622,
+   "source": "embedding",
+   "tfidf_rank": 3479
   },
   "manzil": {
    "category": "coaching",
    "seed": "vedantu",
-   "similarity": 0.717
+   "similarity": 0.717,
+   "source": "embedding",
+   "tfidf_rank": 3604
   },
   "lakshya_batch": {
    "category": "coaching",
    "seed": "pw",
-   "similarity": 0.615
+   "similarity": 0.615,
+   "source": "embedding",
+   "tfidf_rank": 5433
   },
   "pw_arjuna": {
    "category": "student",
    "seed": "repeater",
-   "similarity": 0.73
+   "similarity": 0.73,
+   "source": "embedding",
+   "tfidf_rank": 4545
   },
   "yakeen": {
    "category": "coaching",
    "seed": "pw",
-   "similarity": 0.604
+   "similarity": 0.604,
+   "source": "embedding",
+   "tfidf_rank": 4350
   },
   "aman_dhattarwal": {
    "category": "coaching",
    "seed": "pw",
-   "similarity": 0.598
+   "similarity": 0.598,
+   "source": "embedding",
+   "tfidf_rank": 1752
   },
   "unacdemy": {
    "category": "coaching",
    "seed": "unacademy",
-   "similarity": 0.682
+   "similarity": 0.682,
+   "source": "embedding",
+   "tfidf_rank": 2463
   },
   "atp_star": {
    "category": "coaching",
    "seed": "unacademy",
-   "similarity": 0.656
+   "similarity": 0.656,
+   "source": "embedding",
+   "tfidf_rank": 4322
   },
   "unacademy_plus": {
    "category": "coaching",
    "seed": "unacademy",
-   "similarity": 0.651
+   "similarity": 0.651,
+   "source": "embedding",
+   "tfidf_rank": 748
   },
   "iconic": {
    "category": "coaching",
    "seed": "unacademy",
-   "similarity": 0.638
+   "similarity": 0.638,
+   "source": "embedding",
+   "tfidf_rank": 4204
   },
   "star_batch": {
    "category": "coaching",
    "seed": "unacademy",
-   "similarity": 0.628
+   "similarity": 0.628,
+   "source": "embedding",
+   "tfidf_rank": 7180
   },
   "unacademy_atoms": {
    "category": "coaching",
    "seed": "unacademy",
-   "similarity": 0.627
+   "similarity": 0.627,
+   "source": "embedding",
+   "tfidf_rank": 1657
   },
   "aarambh": {
    "category": "coaching",
    "seed": "vedantu",
-   "similarity": 0.72
+   "similarity": 0.72,
+   "source": "embedding",
+   "tfidf_rank": 7617
   },
   "manzil_batch": {
    "category": "coaching",
    "seed": "vedantu",
-   "similarity": 0.715
+   "similarity": 0.715,
+   "source": "embedding",
+   "tfidf_rank": 6247
   },
   "dhattarwal": {
    "category": "coaching",
    "seed": "vedantu",
-   "similarity": 0.695
+   "similarity": 0.695,
+   "source": "embedding",
+   "tfidf_rank": 4603
   },
   "roasting": {
    "category": "coaching",
    "seed": "vedantu",
-   "similarity": 0.695
+   "similarity": 0.695,
+   "source": "embedding",
+   "tfidf_rank": 6286
   },
   "pankaj": {
    "category": "coaching",
    "seed": "vedantu",
-   "similarity": 0.689
+   "similarity": 0.689,
+   "source": "embedding",
+   "tfidf_rank": 6253
   },
   "apni_kaksha": {
    "category": "coaching",
    "seed": "vedantu",
-   "similarity": 0.685
+   "similarity": 0.685,
+   "source": "embedding",
+   "tfidf_rank": 1944
   },
   "educator": {
    "category": "coaching",
    "seed": "vedantu",
-   "similarity": 0.685
+   "similarity": 0.685,
+   "source": "embedding",
+   "tfidf_rank": 7206
   },
   "maths_unplugged": {
    "category": "coaching",
    "seed": "vedantu",
-   "similarity": 0.681
+   "similarity": 0.681,
+   "source": "embedding",
+   "tfidf_rank": 3506
   },
   "etoos": {
    "category": "coaching",
    "seed": "vedantu",
-   "similarity": 0.674
+   "similarity": 0.674,
+   "source": "embedding",
+   "tfidf_rank": 1789
   },
   "sameer": {
    "category": "coaching",
    "seed": "vedantu",
-   "similarity": 0.672
+   "similarity": 0.672,
+   "source": "embedding",
+   "tfidf_rank": 5527
   },
   "rohit": {
    "category": "coaching",
    "seed": "vedantu",
-   "similarity": 0.671
+   "similarity": 0.671,
+   "source": "embedding",
+   "tfidf_rank": 9017
   },
   "reso": {
    "category": "coaching",
    "seed": "resonance",
-   "similarity": 0.724
+   "similarity": 0.724,
+   "source": "embedding",
+   "tfidf_rank": 2731
   },
   "rank_booster": {
    "category": "coaching",
    "seed": "resonance",
-   "similarity": 0.679
+   "similarity": 0.679,
+   "source": "embedding",
+   "tfidf_rank": 4295
   },
   "resonance_material": {
    "category": "coaching",
    "seed": "resonance",
-   "similarity": 0.663
+   "similarity": 0.663,
+   "source": "embedding",
+   "tfidf_rank": 4404
   },
   "hlp": {
    "category": "coaching",
    "seed": "resonance",
-   "similarity": 0.662
+   "similarity": 0.662,
+   "source": "embedding",
+   "tfidf_rank": 8433
   },
   "pratham_batch": {
    "category": "coaching",
    "seed": "resonance",
-   "similarity": 0.662
+   "similarity": 0.662,
+   "source": "embedding",
+   "tfidf_rank": 3958
   },
   "dlp": {
    "category": "resource",
    "seed": "dpp",
-   "similarity": 0.668
+   "similarity": 0.668,
+   "source": "embedding",
+   "tfidf_rank": 3472
   },
   "boosters": {
    "category": "coaching",
    "seed": "resonance",
-   "similarity": 0.634
+   "similarity": 0.634,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "mypat": {
    "category": "coaching",
    "seed": "resonance",
-   "similarity": 0.622
+   "similarity": 0.622,
+   "source": "embedding",
+   "tfidf_rank": 7544
   },
   "nucleus": {
    "category": "coaching",
    "seed": "resonance",
-   "similarity": 0.62
+   "similarity": 0.62,
+   "source": "embedding",
+   "tfidf_rank": 4958
   },
   "second_hand": {
    "category": "coaching",
    "seed": "resonance",
-   "similarity": 0.619
+   "similarity": 0.619,
+   "source": "embedding",
+   "tfidf_rank": 5537
   },
   "handbook": {
    "category": "coaching",
    "seed": "resonance",
-   "similarity": 0.616
+   "similarity": 0.616,
+   "source": "embedding",
+   "tfidf_rank": 6666
   },
   "kota's": {
    "category": "coaching",
    "seed": "resonance",
-   "similarity": 0.616
+   "similarity": 0.616,
+   "source": "embedding",
+   "tfidf_rank": 10846
   },
   "chaitanya": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 0.761
+   "similarity": 0.761,
+   "source": "embedding",
+   "tfidf_rank": 6725
   },
   "fiitjee_south": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 0.753
+   "similarity": 0.753,
+   "source": "embedding",
+   "tfidf_rank": 7947
   },
   "dps": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 0.731
+   "similarity": 0.731,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "vibrant": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 0.721
+   "similarity": 0.721,
+   "source": "embedding",
+   "tfidf_rank": 5967
   },
   "agra": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 0.714
+   "similarity": 0.714,
+   "source": "embedding",
+   "tfidf_rank": 9278
   },
   "shifting": {
    "category": "coaching",
    "seed": "narayana",
-   "similarity": 0.714
+   "similarity": 0.714,
+   "source": "embedding",
+   "tfidf_rank": 6950
   },
   "compitishun": {
    "category": "coaching",
    "seed": "byjus",
-   "similarity": 0.704
+   "similarity": 0.704,
+   "source": "embedding",
+   "tfidf_rank": 9889
   },
   "droppers_batch": {
    "category": "coaching",
    "seed": "byjus",
-   "similarity": 0.701
+   "similarity": 0.701,
+   "source": "embedding",
+   "tfidf_rank": 3784
   },
   "purchased": {
    "category": "coaching",
    "seed": "byjus",
-   "similarity": 0.697
+   "similarity": 0.697,
+   "source": "embedding",
+   "tfidf_rank": 4315
   },
   "pratham": {
    "category": "coaching",
    "seed": "byjus",
-   "similarity": 0.694
+   "similarity": 0.694,
+   "source": "embedding",
+   "tfidf_rank": 4875
   },
   "praveen_batch": {
    "category": "coaching",
    "seed": "byjus",
-   "similarity": 0.687
+   "similarity": 0.687,
+   "source": "embedding",
+   "tfidf_rank": 5160
   },
   "hc_verma": {
    "category": "resource",
    "seed": "hcv",
-   "similarity": 0.757
+   "similarity": 0.757,
+   "source": "embedding",
+   "tfidf_rank": 978
   },
   "rd_sharma": {
    "category": "resource",
    "seed": "hcv",
-   "similarity": 0.719
+   "similarity": 0.719,
+   "source": "embedding",
+   "tfidf_rank": 2330
   },
   "exemplar": {
    "category": "resource",
    "seed": "pyq",
-   "similarity": 0.711
+   "similarity": 0.711,
+   "source": "embedding",
+   "tfidf_rank": 4533
   },
   "aakash_modules": {
    "category": "resource",
    "seed": "hcv",
-   "similarity": 0.731
+   "similarity": 0.731,
+   "source": "embedding",
+   "tfidf_rank": 4898
   },
   "dc_pandey": {
    "category": "resource",
    "seed": "hcv",
-   "similarity": 0.792
+   "similarity": 0.792,
+   "source": "embedding",
+   "tfidf_rank": 1864
   },
   "jd_lee": {
    "category": "resource",
    "seed": "hcv",
-   "similarity": 0.702
+   "similarity": 0.702,
+   "source": "embedding",
+   "tfidf_rank": 5821
   },
   "ncerts": {
    "category": "resource",
    "seed": "module",
-   "similarity": 0.657
+   "similarity": 0.657,
+   "source": "embedding",
+   "tfidf_rank": 8644
   },
   "allen_module": {
    "category": "resource",
    "seed": "dpp",
-   "similarity": 0.676
+   "similarity": 0.676,
+   "source": "embedding",
+   "tfidf_rank": 4531
   },
   "allen_modules": {
    "category": "resource",
    "seed": "ncert",
-   "similarity": 0.576
+   "similarity": 0.576,
+   "source": "embedding",
+   "tfidf_rank": 2732
   },
   "arihant": {
    "category": "resource",
    "seed": "cengage",
-   "similarity": 0.761
+   "similarity": 0.761,
+   "source": "embedding",
+   "tfidf_rank": 1333
   },
   "solved_examples": {
    "category": "resource",
    "seed": "hcv",
-   "similarity": 0.732
+   "similarity": 0.732,
+   "source": "embedding",
+   "tfidf_rank": 8362
   },
   "dcp": {
    "category": "resource",
    "seed": "hcv",
-   "similarity": 0.729
+   "similarity": 0.729,
+   "source": "embedding",
+   "tfidf_rank": 9439
   },
   "awasthi": {
    "category": "resource",
    "seed": "hcv",
-   "similarity": 0.715
+   "similarity": 0.715,
+   "source": "embedding",
+   "tfidf_rank": 8676
   },
   "n_awasthi": {
    "category": "resource",
    "seed": "cengage",
-   "similarity": 0.737
+   "similarity": 0.737,
+   "source": "embedding",
+   "tfidf_rank": 4775
   },
   "illustrations": {
    "category": "resource",
    "seed": "hcv",
-   "similarity": 0.699
+   "similarity": 0.699,
+   "source": "embedding",
+   "tfidf_rank": 4519
   },
   "aakash_module": {
    "category": "resource",
    "seed": "hcv",
-   "similarity": 0.699
+   "similarity": 0.699,
+   "source": "embedding",
+   "tfidf_rank": 6523
   },
   "black_book": {
    "category": "resource",
    "seed": "cengage",
-   "similarity": 0.712
+   "similarity": 0.712,
+   "source": "embedding",
+   "tfidf_rank": 5793
   },
   "pathfinder": {
    "category": "resource",
    "seed": "irodov",
-   "similarity": 0.677
+   "similarity": 0.677,
+   "source": "embedding",
+   "tfidf_rank": 4190
   },
   "krotov": {
    "category": "resource",
    "seed": "irodov",
-   "similarity": 0.645
+   "similarity": 0.645,
+   "source": "embedding",
+   "tfidf_rank": 9997
   },
   "verma": {
    "category": "resource",
    "seed": "irodov",
-   "similarity": 0.633
+   "similarity": 0.633,
+   "source": "embedding",
+   "tfidf_rank": 6179
   },
   "illustration": {
    "category": "resource",
    "seed": "pyqs",
-   "similarity": 0.658
+   "similarity": 0.658,
+   "source": "embedding",
+   "tfidf_rank": 6885
   },
   "ms_chauhan": {
    "category": "resource",
    "seed": "irodov",
-   "similarity": 0.626
+   "similarity": 0.626,
+   "source": "embedding",
+   "tfidf_rank": 5884
   },
   "tiwari": {
    "category": "resource",
    "seed": "irodov",
-   "similarity": 0.621
+   "similarity": 0.621,
+   "source": "embedding",
+   "tfidf_rank": 5690
   },
   "avasthi": {
    "category": "resource",
    "seed": "irodov",
-   "similarity": 0.62
+   "similarity": 0.62,
+   "source": "embedding",
+   "tfidf_rank": 7927
   },
   "vk": {
    "category": "resource",
    "seed": "irodov",
-   "similarity": 0.619
+   "similarity": 0.619,
+   "source": "embedding",
+   "tfidf_rank": 7932
   },
   "disha": {
    "category": "resource",
    "seed": "pyq",
-   "similarity": 0.717
+   "similarity": 0.717,
+   "source": "embedding",
+   "tfidf_rank": 4038
   },
   "ms_chouhan": {
    "category": "resource",
    "seed": "cengage",
-   "similarity": 0.704
+   "similarity": 0.704,
+   "source": "embedding",
+   "tfidf_rank": 6273
   },
   "modules": {
    "category": "resource",
    "seed": "module",
-   "similarity": 0.722
+   "similarity": 0.722,
+   "source": "embedding",
+   "tfidf_rank": 672
   },
   "sl": {
    "category": "resource",
    "seed": "cengage",
-   "similarity": 0.701
+   "similarity": 0.701,
+   "source": "embedding",
+   "tfidf_rank": 4655
   },
   "resnick_halliday": {
    "category": "resource",
    "seed": "cengage",
-   "similarity": 0.698
+   "similarity": 0.698,
+   "source": "embedding",
+   "tfidf_rank": 6060
   },
   "archives": {
    "category": "resource",
    "seed": "pyqs",
-   "similarity": 0.72
+   "similarity": 0.72,
+   "source": "embedding",
+   "tfidf_rank": 9626
   },
   "pyq's": {
    "category": "resource",
    "seed": "pyqs",
-   "similarity": 0.696
+   "similarity": 0.696,
+   "source": "embedding",
+   "tfidf_rank": 2986
   },
   "archive": {
    "category": "resource",
    "seed": "pyq",
-   "similarity": 0.686
+   "similarity": 0.686,
+   "source": "embedding",
+   "tfidf_rank": 6866
   },
   "topicwise": {
    "category": "resource",
    "seed": "dpp",
-   "similarity": 0.707
+   "similarity": 0.707,
+   "source": "embedding",
+   "tfidf_rank": 6126
   },
   "qns": {
    "category": "resource",
    "seed": "pyq",
-   "similarity": 0.662
+   "similarity": 0.662,
+   "source": "embedding",
+   "tfidf_rank": 5724
   },
   "chapter_wise": {
    "category": "resource",
    "seed": "dpp",
-   "similarity": 0.7
+   "similarity": 0.7,
+   "source": "embedding",
+   "tfidf_rank": 1716
   },
   "chapterwise": {
    "category": "resource",
    "seed": "pyqs",
-   "similarity": 0.659
+   "similarity": 0.659,
+   "source": "embedding",
+   "tfidf_rank": 1526
   },
   "topic_wise": {
    "category": "resource",
    "seed": "dpp",
-   "similarity": 0.648
+   "similarity": 0.648,
+   "source": "embedding",
+   "tfidf_rank": 2907
   },
   "exercises": {
    "category": "resource",
    "seed": "module",
-   "similarity": 0.683
+   "similarity": 0.683,
+   "source": "embedding",
+   "tfidf_rank": 1982
   },
   "past_papers": {
    "category": "resource",
    "seed": "pyqs",
-   "similarity": 0.67
+   "similarity": 0.67,
+   "source": "embedding",
+   "tfidf_rank": 6116
   },
   "practise": {
    "category": "resource",
    "seed": "pyqs",
-   "similarity": 0.667
+   "similarity": 0.667,
+   "source": "embedding",
+   "tfidf_rank": 4399
   },
   "coaching_module": {
    "category": "resource",
    "seed": "module",
-   "similarity": 0.702
+   "similarity": 0.702,
+   "source": "embedding",
+   "tfidf_rank": 3700
   },
   "mock_test": {
    "category": "resource",
    "seed": "mock",
-   "similarity": 0.729
+   "similarity": 0.729,
+   "source": "embedding",
+   "tfidf_rank": 487
   },
   "mocks": {
    "category": "resource",
    "seed": "mock",
-   "similarity": 0.645
+   "similarity": 0.645,
+   "source": "embedding",
+   "tfidf_rank": 363
   },
   "mock_tests": {
    "category": "resource",
    "seed": "mock",
-   "similarity": 0.64
+   "similarity": 0.64,
+   "source": "embedding",
+   "tfidf_rank": 539
   },
   "full_syllabus": {
    "category": "resource",
    "seed": "mock",
-   "similarity": 0.633
+   "similarity": 0.633,
+   "source": "embedding",
+   "tfidf_rank": 1510
   },
   "june_session": {
    "category": "resource",
    "seed": "mock",
-   "similarity": 0.624
+   "similarity": 0.624,
+   "source": "embedding",
+   "tfidf_rank": 3819
   },
   "186": {
    "category": "resource",
    "seed": "mock",
-   "similarity": 0.602
+   "similarity": 0.602,
+   "source": "embedding",
+   "tfidf_rank": 10072
   },
   "fiitjee_aits": {
    "category": "resource",
    "seed": "mock",
-   "similarity": 0.6
+   "similarity": 0.6,
+   "source": "embedding",
+   "tfidf_rank": 5488
   },
   "abhyaas": {
    "category": "resource",
    "seed": "mock",
-   "similarity": 0.592
+   "similarity": 0.592,
+   "source": "embedding",
+   "tfidf_rank": 7416
   },
   "previous_year": {
    "category": "resource",
    "seed": "mock",
-   "similarity": 0.589
+   "similarity": 0.589,
+   "source": "embedding",
+   "tfidf_rank": 1487
   },
   "nta_abhyas": {
    "category": "resource",
    "seed": "mock",
-   "similarity": 0.579
+   "similarity": 0.579,
+   "source": "embedding",
+   "tfidf_rank": 1579
   },
   "manipal_entrance": {
    "category": "resource",
    "seed": "mock",
-   "similarity": 0.567
+   "similarity": 0.567,
+   "source": "embedding",
+   "tfidf_rank": 2879
   },
   "dpps": {
    "category": "resource",
    "seed": "dpp",
-   "similarity": 0.784
+   "similarity": 0.784,
+   "source": "embedding",
+   "tfidf_rank": 1504
   },
   "lec": {
    "category": "resource",
    "seed": "dpp",
-   "similarity": 0.67
+   "similarity": 0.67,
+   "source": "embedding",
+   "tfidf_rank": 4977
   },
   "coaching_material": {
    "category": "resource",
    "seed": "module",
-   "similarity": 0.669
+   "similarity": 0.669,
+   "source": "embedding",
+   "tfidf_rank": 1173
   },
   "cpp": {
    "category": "resource",
    "seed": "dpp",
-   "similarity": 0.657
+   "similarity": 0.657,
+   "source": "embedding",
+   "tfidf_rank": 8443
   },
   "sheets": {
    "category": "resource",
    "seed": "dpp",
-   "similarity": 0.646
+   "similarity": 0.646,
+   "source": "embedding",
+   "tfidf_rank": 1128
   },
   "video_lectures": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 0.728
+   "similarity": 0.728,
+   "source": "embedding",
+   "tfidf_rank": 1331
   },
   "yt_lectures": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 0.717
+   "similarity": 0.717,
+   "source": "embedding",
+   "tfidf_rank": 4132
   },
   "lecture": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 0.685
+   "similarity": 0.685,
+   "source": "embedding",
+   "tfidf_rank": 538
   },
   "lecs": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 0.675
+   "similarity": 0.675,
+   "source": "embedding",
+   "tfidf_rank": 4844
   },
   "one_shots": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 0.662
+   "similarity": 0.662,
+   "source": "embedding",
+   "tfidf_rank": 1332
   },
   "abj_sir's": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 0.653
+   "similarity": 0.653,
+   "source": "embedding",
+   "tfidf_rank": 3176
   },
   "mohit_tyagi": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 0.639
+   "similarity": 0.639,
+   "source": "embedding",
+   "tfidf_rank": 375
   },
   "playlists": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 0.636
+   "similarity": 0.636,
+   "source": "embedding",
+   "tfidf_rank": 3500
   },
   "sir's_lectures": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 0.635
+   "similarity": 0.635,
+   "source": "embedding",
+   "tfidf_rank": 9616
   },
   "mohit_tyagi's": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 0.629
+   "similarity": 0.629,
+   "source": "embedding",
+   "tfidf_rank": 5968
   },
   "vids": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 0.625
+   "similarity": 0.625,
+   "source": "embedding",
+   "tfidf_rank": 2979
   },
   "bounceback": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 0.625
+   "similarity": 0.625,
+   "source": "embedding",
+   "tfidf_rank": 2529
   },
   "fast_lane": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 0.624
+   "similarity": 0.624,
+   "source": "embedding",
+   "tfidf_rank": 3873
   },
   "brijarnia": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 0.622
+   "similarity": 0.622,
+   "source": "embedding",
+   "tfidf_rank": 7562
   },
   "youtube_videos": {
    "category": "resource",
    "seed": "lectures",
-   "similarity": 0.621
+   "similarity": 0.621,
+   "source": "embedding",
+   "tfidf_rank": 4149
   },
   "counseling": {
    "category": "admission",
    "seed": "counselling",
-   "similarity": 0.803
+   "similarity": 0.803,
+   "source": "embedding",
+   "tfidf_rank": 1102
   },
   "jac_delhi": {
    "category": "admission",
    "seed": "counselling",
-   "similarity": 0.724
+   "similarity": 0.724,
+   "source": "embedding",
+   "tfidf_rank": 5691
   },
   "councelling": {
    "category": "admission",
    "seed": "csab",
-   "similarity": 0.763
+   "similarity": 0.763,
+   "source": "embedding",
+   "tfidf_rank": 3365
   },
   "ipu": {
    "category": "admission",
    "seed": "counselling",
-   "similarity": 0.68
+   "similarity": 0.68,
+   "source": "embedding",
+   "tfidf_rank": 2085
   },
   "2nd_round": {
    "category": "admission",
    "seed": "csab",
-   "similarity": 0.776
+   "similarity": 0.776,
+   "source": "embedding",
+   "tfidf_rank": 6893
   },
   "choice_filling": {
    "category": "admission",
    "seed": "counselling",
-   "similarity": 0.672
+   "similarity": 0.672,
+   "source": "embedding",
+   "tfidf_rank": 3773
   },
   "jac": {
    "category": "admission",
    "seed": "josaa",
-   "similarity": 0.708
+   "similarity": 0.708,
+   "source": "embedding",
+   "tfidf_rank": 4352
   },
   "mcc": {
    "category": "admission",
    "seed": "josaa",
-   "similarity": 0.703
+   "similarity": 0.703,
+   "source": "embedding",
+   "tfidf_rank": 8125
   },
   "withdrawal": {
    "category": "admission",
    "seed": "josaa",
-   "similarity": 0.726
+   "similarity": 0.726,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "rounds": {
    "category": "admission",
    "seed": "csab",
-   "similarity": 0.78
+   "similarity": 0.78,
+   "source": "embedding",
+   "tfidf_rank": 8286
   },
   "documents": {
    "category": "admission",
    "seed": "josaa",
-   "similarity": 0.748
+   "similarity": 0.748,
+   "source": "embedding",
+   "tfidf_rank": 4017
   },
   "round": {
    "category": "admission",
    "seed": "josaa",
-   "similarity": 0.716
+   "similarity": 0.716,
+   "source": "embedding",
+   "tfidf_rank": 995
   },
   "correction_window": {
    "category": "admission",
    "seed": "registration",
-   "similarity": 0.684
+   "similarity": 0.684,
+   "source": "embedding",
+   "tfidf_rank": 4200
   },
   "iiit_delhi": {
    "category": "admission",
    "seed": "csab",
-   "similarity": 0.799
+   "similarity": 0.799,
+   "source": "embedding",
+   "tfidf_rank": 6315
   },
   "jiit_noida": {
    "category": "admission",
    "seed": "csab",
-   "similarity": 0.789
+   "similarity": 0.789,
+   "source": "embedding",
+   "tfidf_rank": 3361
   },
   "general_candidate": {
    "category": "admission",
    "seed": "csab",
-   "similarity": 0.786
+   "similarity": 0.786,
+   "source": "embedding",
+   "tfidf_rank": 6368
   },
   "thapar_university": {
    "category": "admission",
    "seed": "csab",
-   "similarity": 0.782
+   "similarity": 0.782,
+   "source": "embedding",
+   "tfidf_rank": 4590
   },
   "tn": {
    "category": "admission",
    "seed": "csab",
-   "similarity": 0.779
+   "similarity": 0.779,
+   "source": "embedding",
+   "tfidf_rank": 9749
   },
   "csai": {
    "category": "admission",
    "seed": "csab",
-   "similarity": 0.77
+   "similarity": 0.77,
+   "source": "embedding",
+   "tfidf_rank": 7178
   },
   "pict": {
    "category": "admission",
    "seed": "csab",
-   "similarity": 0.764
+   "similarity": 0.764,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "24k": {
    "category": "admission",
    "seed": "csab",
-   "similarity": 0.764
+   "similarity": 0.764,
+   "source": "embedding",
+   "tfidf_rank": 8381
   },
   "cut_off": {
    "category": "admission",
    "seed": "cutoff",
-   "similarity": 0.723
+   "similarity": 0.723,
+   "source": "embedding",
+   "tfidf_rank": 1896
   },
   "cutoffs": {
    "category": "admission",
    "seed": "cutoff",
-   "similarity": 0.678
+   "similarity": 0.678,
+   "source": "embedding",
+   "tfidf_rank": 2313
   },
   "expected_cutoff": {
    "category": "admission",
    "seed": "cutoff",
-   "similarity": 0.655
+   "similarity": 0.655,
+   "source": "embedding",
+   "tfidf_rank": 5758
   },
   "10k_rank": {
    "category": "admission",
    "seed": "rank",
-   "similarity": 0.638
+   "similarity": 0.638,
+   "source": "embedding",
+   "tfidf_rank": 4325
   },
   "sx": {
    "category": "admission",
    "seed": "cutoff",
-   "similarity": 0.612
+   "similarity": 0.612,
+   "source": "embedding",
+   "tfidf_rank": 7512
   },
   "eligibility_criteria": {
    "category": "admission",
    "seed": "cutoff",
-   "similarity": 0.597
+   "similarity": 0.597,
+   "source": "embedding",
+   "tfidf_rank": 1547
   },
   "crl": {
    "category": "admission",
    "seed": "category",
-   "similarity": 0.711
+   "similarity": 0.711,
+   "source": "embedding",
+   "tfidf_rank": 3082
   },
   "96_ile": {
    "category": "admission",
    "seed": "cutoff",
-   "similarity": 0.592
+   "similarity": 0.592,
+   "source": "embedding",
+   "tfidf_rank": 8839
   },
   "inflation": {
    "category": "admission",
    "seed": "cutoff",
-   "similarity": 0.586
+   "similarity": 0.586,
+   "source": "embedding",
+   "tfidf_rank": 8938
   },
   "ews": {
    "category": "admission",
    "seed": "category",
-   "similarity": 0.694
+   "similarity": 0.694,
+   "source": "embedding",
+   "tfidf_rank": 2056
   },
   "20k": {
    "category": "admission",
    "seed": "rank",
-   "similarity": 0.641
+   "similarity": 0.641,
+   "source": "embedding",
+   "tfidf_rank": 4257
   },
   "15k": {
    "category": "admission",
    "seed": "rank",
-   "similarity": 0.624
+   "similarity": 0.624,
+   "source": "embedding",
+   "tfidf_rank": 5276
   },
   "1600": {
    "category": "admission",
    "seed": "rank",
-   "similarity": 0.591
+   "similarity": 0.591,
+   "source": "embedding",
+   "tfidf_rank": 10684
   },
   "qualifying": {
    "category": "admission",
    "seed": "cutoff",
-   "similarity": 0.557
+   "similarity": 0.557,
+   "source": "embedding",
+   "tfidf_rank": 3136
   },
   "mrks": {
    "category": "admission",
    "seed": "cutoff",
-   "similarity": 0.555
+   "similarity": 0.555,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "5k": {
    "category": "admission",
    "seed": "category",
-   "similarity": 0.657
+   "similarity": 0.657,
+   "source": "embedding",
+   "tfidf_rank": 3836
   },
   "3k": {
    "category": "admission",
    "seed": "category",
-   "similarity": 0.65
+   "similarity": 0.65,
+   "source": "embedding",
+   "tfidf_rank": 5039
   },
   "2k": {
    "category": "admission",
    "seed": "rank",
-   "similarity": 0.62
+   "similarity": 0.62,
+   "source": "embedding",
+   "tfidf_rank": 4525
   },
   "ranks": {
    "category": "admission",
    "seed": "rank",
-   "similarity": 0.604
+   "similarity": 0.604,
+   "source": "embedding",
+   "tfidf_rank": 1529
   },
   "8k": {
    "category": "admission",
    "seed": "category",
-   "similarity": 0.642
+   "similarity": 0.642,
+   "source": "embedding",
+   "tfidf_rank": 5670
   },
   "27k": {
    "category": "admission",
    "seed": "rank",
-   "similarity": 0.593
+   "similarity": 0.593,
+   "source": "embedding",
+   "tfidf_rank": 9944
   },
   "7k": {
    "category": "admission",
    "seed": "rank",
-   "similarity": 0.591
+   "similarity": 0.591,
+   "source": "embedding",
+   "tfidf_rank": 5624
   },
   "2000": {
    "category": "admission",
    "seed": "rank",
-   "similarity": 0.589
+   "similarity": 0.589,
+   "source": "embedding",
+   "tfidf_rank": 6512
   },
   "16k": {
    "category": "admission",
    "seed": "rank",
-   "similarity": 0.589
+   "similarity": 0.589,
+   "source": "embedding",
+   "tfidf_rank": 7956
   },
   "air": {
    "category": "admission",
    "seed": "rank",
-   "similarity": 0.587
+   "similarity": 0.587,
+   "source": "embedding",
+   "tfidf_rank": 786
   },
   "ile": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 0.733
+   "similarity": 0.733,
+   "source": "embedding",
+   "tfidf_rank": 799
   },
   "tile": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 0.633
+   "similarity": 0.633,
+   "source": "embedding",
+   "tfidf_rank": 2985
   },
   "97": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 0.63
+   "similarity": 0.63,
+   "source": "embedding",
+   "tfidf_rank": 1863
   },
   "87": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 0.63
+   "similarity": 0.63,
+   "source": "embedding",
+   "tfidf_rank": 3677
   },
   "97_percentile": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 0.629
+   "similarity": 0.629,
+   "source": "embedding",
+   "tfidf_rank": 3911
   },
   "78": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 0.626
+   "similarity": 0.626,
+   "source": "embedding",
+   "tfidf_rank": 4493
   },
   "96_percentile": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 0.621
+   "similarity": 0.621,
+   "source": "embedding",
+   "tfidf_rank": 6468
   },
   "90_percentile": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 0.618
+   "similarity": 0.618,
+   "source": "embedding",
+   "tfidf_rank": 2846
   },
   "97_ile": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 0.618
+   "similarity": 0.618,
+   "source": "embedding",
+   "tfidf_rank": 7520
   },
   "98": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 0.617
+   "similarity": 0.617,
+   "source": "embedding",
+   "tfidf_rank": 1385
   },
   "82": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 0.615
+   "similarity": 0.615,
+   "source": "embedding",
+   "tfidf_rank": 4043
   },
   "99_percentile": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 0.612
+   "similarity": 0.612,
+   "source": "embedding",
+   "tfidf_rank": 2113
   },
   "94": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 0.608
+   "similarity": 0.608,
+   "source": "embedding",
+   "tfidf_rank": 2267
   },
   "96": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 0.608
+   "similarity": 0.608,
+   "source": "embedding",
+   "tfidf_rank": 1900
   },
   "94_percentile": {
    "category": "admission",
    "seed": "percentile",
-   "similarity": 0.607
+   "similarity": 0.607,
+   "source": "embedding",
+   "tfidf_rank": 6798
   },
   "hall_ticket": {
    "category": "admission",
    "seed": "admit_card",
-   "similarity": 0.702
+   "similarity": 0.702,
+   "source": "embedding",
+   "tfidf_rank": 5778
   },
   "admit_cards": {
    "category": "admission",
    "seed": "admit_card",
-   "similarity": 0.662
+   "similarity": 0.662,
+   "source": "embedding",
+   "tfidf_rank": 2343
   },
   "notification": {
    "category": "admission",
    "seed": "admit_card",
-   "similarity": 0.652
+   "similarity": 0.652,
+   "source": "embedding",
+   "tfidf_rank": 3925
   },
   "postcard_size": {
    "category": "admission",
    "seed": "admit_card",
-   "similarity": 0.644
+   "similarity": 0.644,
+   "source": "embedding",
+   "tfidf_rank": 7168
   },
   "undertaking": {
    "category": "admission",
    "seed": "admit_card",
-   "similarity": 0.639
+   "similarity": 0.639,
+   "source": "embedding",
+   "tfidf_rank": 8199
   },
   "confirmation": {
    "category": "admission",
    "seed": "admit_card",
-   "similarity": 0.637
+   "similarity": 0.637,
+   "source": "embedding",
+   "tfidf_rank": 6821
   },
   "roll_no": {
    "category": "admission",
    "seed": "admit_card",
-   "similarity": 0.637
+   "similarity": 0.637,
+   "source": "embedding",
+   "tfidf_rank": 5406
   },
   "correction": {
    "category": "admission",
    "seed": "registration",
-   "similarity": 0.644
+   "similarity": 0.644,
+   "source": "embedding",
+   "tfidf_rank": 3612
   },
   "aadhar_card": {
    "category": "admission",
    "seed": "admit_card",
-   "similarity": 0.627
+   "similarity": 0.627,
+   "source": "embedding",
+   "tfidf_rank": 4271
   },
   "application_form": {
    "category": "admission",
    "seed": "registration",
-   "similarity": 0.713
+   "similarity": 0.713,
+   "source": "embedding",
+   "tfidf_rank": 1708
   },
   "application_number": {
    "category": "admission",
    "seed": "registration",
-   "similarity": 0.627
+   "similarity": 0.627,
+   "source": "embedding",
+   "tfidf_rank": 5271
   },
   "exam_centre": {
    "category": "admission",
    "seed": "admit_card",
-   "similarity": 0.626
+   "similarity": 0.626,
+   "source": "embedding",
+   "tfidf_rank": 2518
   },
   "final_answer": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 0.668
+   "similarity": 0.668,
+   "source": "embedding",
+   "tfidf_rank": 2861
   },
   "intimation": {
    "category": "admission",
    "seed": "admit_card",
-   "similarity": 0.621
+   "similarity": 0.621,
+   "source": "embedding",
+   "tfidf_rank": 5751
   },
   "payment": {
    "category": "admission",
    "seed": "registration",
-   "similarity": 0.686
+   "similarity": 0.686,
+   "source": "embedding",
+   "tfidf_rank": 2520
   },
   "register": {
    "category": "admission",
    "seed": "registration",
-   "similarity": 0.669
+   "similarity": 0.669,
+   "source": "embedding",
+   "tfidf_rank": 1289
   },
   "registrations": {
    "category": "admission",
    "seed": "registration",
-   "similarity": 0.638
+   "similarity": 0.638,
+   "source": "embedding",
+   "tfidf_rank": 8486
   },
   "application": {
    "category": "admission",
    "seed": "registration",
-   "similarity": 0.637
+   "similarity": 0.637,
+   "source": "embedding",
+   "tfidf_rank": 1120
   },
   "portion": {
    "category": "admission",
    "seed": "syllabus",
-   "similarity": 0.726
+   "similarity": 0.726,
+   "source": "embedding",
+   "tfidf_rank": 1113
   },
   "portions": {
    "category": "admission",
    "seed": "syllabus",
-   "similarity": 0.62
+   "similarity": 0.62,
+   "source": "embedding",
+   "tfidf_rank": 2523
   },
   "march_end": {
    "category": "admission",
    "seed": "syllabus",
-   "similarity": 0.608
+   "similarity": 0.608,
+   "source": "embedding",
+   "tfidf_rank": 6758
   },
   "whole_syllabus": {
    "category": "admission",
    "seed": "syllabus",
-   "similarity": 0.601
+   "similarity": 0.601,
+   "source": "embedding",
+   "tfidf_rank": 3562
   },
   "pending": {
    "category": "student",
    "seed": "backlog",
-   "similarity": 0.603
+   "similarity": 0.603,
+   "source": "embedding",
+   "tfidf_rank": 8019
   },
   "ncert_level": {
    "category": "admission",
    "seed": "syllabus",
-   "similarity": 0.559
+   "similarity": 0.559,
+   "source": "embedding",
+   "tfidf_rank": 3076
   },
   "covering": {
    "category": "admission",
    "seed": "syllabus",
-   "similarity": 0.558
+   "similarity": 0.558,
+   "source": "embedding",
+   "tfidf_rank": 2546
   },
   "complete": {
    "category": "admission",
    "seed": "syllabus",
-   "similarity": 0.557
+   "similarity": 0.557,
+   "source": "embedding",
+   "tfidf_rank": 226
   },
   "score": {
    "category": "admission",
    "seed": "marks",
-   "similarity": 0.656
+   "similarity": 0.656,
+   "source": "embedding",
+   "tfidf_rank": 165
   },
   "40_marks": {
    "category": "admission",
    "seed": "marks",
-   "similarity": 0.638
+   "similarity": 0.638,
+   "source": "embedding",
+   "tfidf_rank": 3569
   },
   "160": {
    "category": "admission",
    "seed": "marks",
-   "similarity": 0.625
+   "similarity": 0.625,
+   "source": "embedding",
+   "tfidf_rank": 3028
   },
   "190": {
    "category": "admission",
    "seed": "marks",
-   "similarity": 0.62
+   "similarity": 0.62,
+   "source": "embedding",
+   "tfidf_rank": 5946
   },
   "130": {
    "category": "admission",
    "seed": "marks",
-   "similarity": 0.62
+   "similarity": 0.62,
+   "source": "embedding",
+   "tfidf_rank": 2712
   },
   "320": {
    "category": "admission",
    "seed": "marks",
-   "similarity": 0.612
+   "similarity": 0.612,
+   "source": "embedding",
+   "tfidf_rank": 8353
   },
   "110": {
    "category": "admission",
    "seed": "marks",
-   "similarity": 0.611
+   "similarity": 0.611,
+   "source": "embedding",
+   "tfidf_rank": 3847
   },
   "360": {
    "category": "admission",
    "seed": "marks",
-   "similarity": 0.607
+   "similarity": 0.607,
+   "source": "embedding",
+   "tfidf_rank": 3247
   },
   "160_170": {
    "category": "admission",
    "seed": "marks",
-   "similarity": 0.6
+   "similarity": 0.6,
+   "source": "embedding",
+   "tfidf_rank": 8010
   },
   "230": {
    "category": "admission",
    "seed": "marks",
-   "similarity": 0.599
+   "similarity": 0.599,
+   "source": "embedding",
+   "tfidf_rank": 6659
   },
   "85": {
    "category": "admission",
    "seed": "marks",
-   "similarity": 0.598
+   "similarity": 0.598,
+   "source": "embedding",
+   "tfidf_rank": 1771
   },
   "260": {
    "category": "admission",
    "seed": "marks",
-   "similarity": 0.596
+   "similarity": 0.596,
+   "source": "embedding",
+   "tfidf_rank": 5791
   },
   "450": {
    "category": "admission",
    "seed": "marks",
-   "similarity": 0.59
+   "similarity": 0.59,
+   "source": "embedding",
+   "tfidf_rank": 3992
   },
   "results": {
    "category": "admission",
    "seed": "result",
-   "similarity": 0.703
+   "similarity": 0.703,
+   "source": "embedding",
+   "tfidf_rank": 296
   },
   "datesheet": {
    "category": "admission",
    "seed": "result",
-   "similarity": 0.57
+   "similarity": 0.57,
+   "source": "embedding",
+   "tfidf_rank": 5054
   },
   "declared": {
    "category": "admission",
    "seed": "result",
-   "similarity": 0.552
+   "similarity": 0.552,
+   "source": "embedding",
+   "tfidf_rank": 2308
   },
   "response_sheet": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 0.796
+   "similarity": 0.796,
+   "source": "embedding",
+   "tfidf_rank": 2249
   },
   "key": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 0.712
+   "similarity": 0.712,
+   "source": "embedding",
+   "tfidf_rank": 1431
   },
   "official_answer": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 0.677
+   "similarity": 0.677,
+   "source": "embedding",
+   "tfidf_rank": 5945
   },
   "ans_key": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 0.666
+   "similarity": 0.666,
+   "source": "embedding",
+   "tfidf_rank": 6244
   },
   "answer_keys": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 0.662
+   "similarity": 0.662,
+   "source": "embedding",
+   "tfidf_rank": 3475
   },
   "29th_june": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 0.643
+   "similarity": 0.643,
+   "source": "embedding",
+   "tfidf_rank": 3668
   },
   "shift_1": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 0.638
+   "similarity": 0.638,
+   "source": "embedding",
+   "tfidf_rank": 1145
   },
   "25th_june": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 0.613
+   "similarity": 0.613,
+   "source": "embedding",
+   "tfidf_rank": 4193
   },
   "morning_shift": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 0.6
+   "similarity": 0.6,
+   "source": "embedding",
+   "tfidf_rank": 2892
   },
   "answers": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 0.595
+   "similarity": 0.595,
+   "source": "embedding",
+   "tfidf_rank": 747
   },
   "response": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 0.595
+   "similarity": 0.595,
+   "source": "embedding",
+   "tfidf_rank": 2359
   },
   "session_1": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 0.594
+   "similarity": 0.594,
+   "source": "embedding",
+   "tfidf_rank": 967
   },
   "shift_2": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 0.591
+   "similarity": 0.591,
+   "source": "embedding",
+   "tfidf_rank": 1130
   },
   "provisional": {
    "category": "admission",
    "seed": "answer_key",
-   "similarity": 0.586
+   "similarity": 0.586,
+   "source": "embedding",
+   "tfidf_rank": 3459
   },
   "fuck_nta": {
    "category": "admission",
    "seed": "nta",
-   "similarity": 0.562
+   "similarity": 0.562,
+   "source": "embedding",
+   "tfidf_rank": 1142
   },
   "quota": {
    "category": "admission",
    "seed": "category",
-   "similarity": 0.658
+   "similarity": 0.658,
+   "source": "embedding",
+   "tfidf_rank": 1699
   },
   "obc": {
    "category": "admission",
    "seed": "category",
-   "similarity": 0.655
+   "similarity": 0.655,
+   "source": "embedding",
+   "tfidf_rank": 1278
   },
   "caste": {
    "category": "admission",
    "seed": "reservation",
-   "similarity": 0.62
+   "similarity": 0.62,
+   "source": "embedding",
+   "tfidf_rank": 2009
   },
   "sc_st": {
    "category": "admission",
    "seed": "reservation",
-   "similarity": 0.614
+   "similarity": 0.614,
+   "source": "embedding",
+   "tfidf_rank": 2494
   },
   "reservations": {
    "category": "admission",
    "seed": "reservation",
-   "similarity": 0.613
+   "similarity": 0.613,
+   "source": "embedding",
+   "tfidf_rank": 2738
   },
   "pwd": {
    "category": "admission",
    "seed": "reservation",
-   "similarity": 0.61
+   "similarity": 0.61,
+   "source": "embedding",
+   "tfidf_rank": 2078
   },
   "certificates": {
    "category": "admission",
    "seed": "reservation",
-   "similarity": 0.608
+   "similarity": 0.608,
+   "source": "embedding",
+   "tfidf_rank": 8594
   },
   "creamy": {
    "category": "admission",
    "seed": "reservation",
-   "similarity": 0.573
+   "similarity": 0.573,
+   "source": "embedding",
+   "tfidf_rank": 8201
   },
   "equality": {
    "category": "admission",
    "seed": "reservation",
-   "similarity": 0.57
+   "similarity": 0.57,
+   "source": "embedding",
+   "tfidf_rank": 8073
   },
   "population": {
    "category": "admission",
    "seed": "reservation",
-   "similarity": 0.563
+   "similarity": 0.563,
+   "source": "embedding",
+   "tfidf_rank": 4290
   },
   "women": {
    "category": "admission",
    "seed": "reservation",
-   "similarity": 0.559
+   "similarity": 0.559,
+   "source": "embedding",
+   "tfidf_rank": 1940
   },
   "sc": {
    "category": "admission",
    "seed": "reservation",
-   "similarity": 0.55
+   "similarity": 0.55,
+   "source": "embedding",
+   "tfidf_rank": 2046
   },
   "gen_ews": {
    "category": "admission",
    "seed": "category",
-   "similarity": 0.697
+   "similarity": 0.697,
+   "source": "embedding",
+   "tfidf_rank": 4728
   },
   "obc_ncl": {
    "category": "admission",
    "seed": "category",
-   "similarity": 0.692
+   "similarity": 0.692,
+   "source": "embedding",
+   "tfidf_rank": 2805
   },
   "gen": {
    "category": "admission",
    "seed": "category",
-   "similarity": 0.663
+   "similarity": 0.663,
+   "source": "embedding",
+   "tfidf_rank": 2760
   },
   "home_state": {
    "category": "admission",
    "seed": "category",
-   "similarity": 0.66
+   "similarity": 0.66,
+   "source": "embedding",
+   "tfidf_rank": 3564
   },
   "kiit_cse": {
    "category": "admission",
    "seed": "category",
-   "similarity": 0.651
+   "similarity": 0.651,
+   "source": "embedding",
+   "tfidf_rank": 3715
   },
   "srm_phase": {
    "category": "admission",
    "seed": "category",
-   "similarity": 0.648
+   "similarity": 0.648,
+   "source": "embedding",
+   "tfidf_rank": 4372
   },
   "23_tard": {
    "category": "student",
    "seed": "repeater",
-   "similarity": 0.739
+   "similarity": 0.739,
+   "source": "embedding",
+   "tfidf_rank": 5809
   },
   "2024tard": {
    "category": "student",
    "seed": "dropper",
-   "similarity": 0.626
+   "similarity": 0.626,
+   "source": "embedding",
+   "tfidf_rank": 2841
   },
   "early_drop": {
    "category": "student",
    "seed": "repeater",
-   "similarity": 0.758
+   "similarity": 0.758,
+   "source": "embedding",
+   "tfidf_rank": 4433
   },
   "22tard": {
    "category": "student",
    "seed": "dropper",
-   "similarity": 0.618
+   "similarity": 0.618,
+   "source": "embedding",
+   "tfidf_rank": 2034
   },
   "2022tard": {
    "category": "student",
    "seed": "dropper",
-   "similarity": 0.615
+   "similarity": 0.615,
+   "source": "embedding",
+   "tfidf_rank": 2693
   },
   "early_dropper": {
    "category": "student",
    "seed": "dropper",
-   "similarity": 0.614
+   "similarity": 0.614,
+   "source": "embedding",
+   "tfidf_rank": 5212
   },
   "2024_jeetard": {
    "category": "student",
    "seed": "dropper",
-   "similarity": 0.614
+   "similarity": 0.614,
+   "source": "embedding",
+   "tfidf_rank": 2538
   },
   "partial_dropper": {
    "category": "student",
    "seed": "dropper",
-   "similarity": 0.61
+   "similarity": 0.61,
+   "source": "embedding",
+   "tfidf_rank": 4355
   },
   "2022_aspirant": {
    "category": "student",
    "seed": "aspirant",
-   "similarity": 0.67
+   "similarity": 0.67,
+   "source": "embedding",
+   "tfidf_rank": 2887
   },
   "23_aspirant": {
    "category": "student",
    "seed": "dropper",
-   "similarity": 0.605
+   "similarity": 0.605,
+   "source": "embedding",
+   "tfidf_rank": 4407
   },
   "pcmbtard": {
    "category": "student",
    "seed": "dropper",
-   "similarity": 0.603
+   "similarity": 0.603,
+   "source": "embedding",
+   "tfidf_rank": 8070
   },
   "2023_aspirant": {
    "category": "student",
    "seed": "dropper",
-   "similarity": 0.599
+   "similarity": 0.599,
+   "source": "embedding",
+   "tfidf_rank": 2567
   },
   "asp": {
    "category": "student",
    "seed": "dropper",
-   "similarity": 0.599
+   "similarity": 0.599,
+   "source": "embedding",
+   "tfidf_rank": 7924
   },
   "2023tard": {
    "category": "student",
    "seed": "dropper",
-   "similarity": 0.598
+   "similarity": 0.598,
+   "source": "embedding",
+   "tfidf_rank": 1474
   },
   "partial_drop": {
    "category": "student",
    "seed": "drop",
-   "similarity": 0.685
+   "similarity": 0.685,
+   "source": "embedding",
+   "tfidf_rank": 1718
   },
   "take_a_drop": {
    "category": "student",
    "seed": "drop",
-   "similarity": 0.629
+   "similarity": 0.629,
+   "source": "embedding",
+   "tfidf_rank": 549
   },
   "taking_a_drop": {
    "category": "student",
    "seed": "drop",
-   "similarity": 0.586
+   "similarity": 0.586,
+   "source": "embedding",
+   "tfidf_rank": 974
   },
   "drop_year": {
    "category": "student",
    "seed": "drop",
-   "similarity": 0.576
+   "similarity": 0.576,
+   "source": "embedding",
+   "tfidf_rank": 590
   },
   "dropping": {
    "category": "student",
    "seed": "drop",
-   "similarity": 0.574
+   "similarity": 0.574,
+   "source": "embedding",
+   "tfidf_rank": 1485
   },
   "leader_batch": {
    "category": "student",
    "seed": "repeater",
-   "similarity": 0.786
+   "similarity": 0.786,
+   "source": "embedding",
+   "tfidf_rank": 8394
   },
   "varanasi": {
    "category": "student",
    "seed": "repeater",
-   "similarity": 0.777
+   "similarity": 0.777,
+   "source": "embedding",
+   "tfidf_rank": 6977
   },
   "dora": {
    "category": "student",
    "seed": "repeater",
-   "similarity": 0.769
+   "similarity": 0.769,
+   "source": "embedding",
+   "tfidf_rank": null
   },
   "thinking_of_joining": {
    "category": "student",
    "seed": "repeater",
-   "similarity": 0.751
+   "similarity": 0.751,
+   "source": "embedding",
+   "tfidf_rank": 7728
   },
   "namaste": {
    "category": "student",
    "seed": "repeater",
-   "similarity": 0.749
+   "similarity": 0.749,
+   "source": "embedding",
+   "tfidf_rank": 9353
   },
   "kaksha": {
    "category": "student",
    "seed": "repeater",
-   "similarity": 0.735
+   "similarity": 0.735,
+   "source": "embedding",
+   "tfidf_rank": 9107
   },
   "ranker": {
    "category": "student",
    "seed": "repeater",
-   "similarity": 0.731
+   "similarity": 0.731,
+   "source": "embedding",
+   "tfidf_rank": 8960
   },
   "dropper's": {
    "category": "student",
    "seed": "repeater",
-   "similarity": 0.728
+   "similarity": 0.728,
+   "source": "embedding",
+   "tfidf_rank": 6285
   },
   "kerala": {
    "category": "student",
    "seed": "repeater",
-   "similarity": 0.728
+   "similarity": 0.728,
+   "source": "embedding",
+   "tfidf_rank": 9940
   },
   "asspirant": {
    "category": "student",
    "seed": "repeater",
-   "similarity": 0.726
+   "similarity": 0.726,
+   "source": "embedding",
+   "tfidf_rank": 3756
   },
   "lelu": {
    "category": "student",
    "seed": "repeater",
-   "similarity": 0.725
+   "similarity": 0.725,
+   "source": "embedding",
+   "tfidf_rank": 3236
   },
   "10th_grader": {
    "category": "student",
    "seed": "aspirant",
-   "similarity": 0.663
+   "similarity": 0.663,
+   "source": "embedding",
+   "tfidf_rank": 6214
   },
   "grader": {
    "category": "student",
    "seed": "aspirant",
-   "similarity": 0.662
+   "similarity": 0.662,
+   "source": "embedding",
+   "tfidf_rank": 8411
   },
   "neetard": {
    "category": "student",
    "seed": "aspirant",
-   "similarity": 0.646
+   "similarity": 0.646,
+   "source": "embedding",
+   "tfidf_rank": 657
   },
   "jeetard": {
    "category": "student",
    "seed": "aspirant",
-   "similarity": 0.64
+   "similarity": 0.64,
+   "source": "embedding",
+   "tfidf_rank": 475
   },
   "tard": {
    "category": "student",
    "seed": "aspirant",
-   "similarity": 0.637
+   "similarity": 0.637,
+   "source": "embedding",
+   "tfidf_rank": 1904
   },
   "tard_here": {
    "category": "student",
    "seed": "aspirant",
-   "similarity": 0.633
+   "similarity": 0.633,
+   "source": "embedding",
+   "tfidf_rank": 4749
   },
   "aspirant_here": {
    "category": "student",
    "seed": "aspirant",
-   "similarity": 0.63
+   "similarity": 0.63,
+   "source": "embedding",
+   "tfidf_rank": 3385
   },
   "neet_aspirant": {
    "category": "student",
    "seed": "aspirant",
-   "similarity": 0.62
+   "similarity": 0.62,
+   "source": "embedding",
+   "tfidf_rank": 1592
   },
   "retard": {
    "category": "student",
    "seed": "aspirant",
-   "similarity": 0.615
+   "similarity": 0.615,
+   "source": "embedding",
+   "tfidf_rank": 1491
   },
   "study_buddy": {
    "category": "student",
    "seed": "aspirant",
-   "similarity": 0.607
+   "similarity": 0.607,
+   "source": "embedding",
+   "tfidf_rank": 2983
   },
   "11th_grader": {
    "category": "student",
    "seed": "aspirant",
-   "similarity": 0.606
+   "similarity": 0.606,
+   "source": "embedding",
+   "tfidf_rank": 5380
   },
   "neetard_here": {
    "category": "student",
    "seed": "aspirant",
-   "similarity": 0.602
+   "similarity": 0.602,
+   "source": "embedding",
+   "tfidf_rank": 2595
   },
   "11_th": {
    "category": "student",
    "seed": "11th",
-   "similarity": 0.724
+   "similarity": 0.724,
+   "source": "embedding",
+   "tfidf_rank": 3988
   },
   "11th_and_12th": {
    "category": "student",
    "seed": "11th",
-   "similarity": 0.694
+   "similarity": 0.694,
+   "source": "embedding",
+   "tfidf_rank": 948
   },
   "12_th": {
    "category": "student",
    "seed": "12th",
-   "similarity": 0.661
+   "similarity": 0.661,
+   "source": "embedding",
+   "tfidf_rank": 2894
   },
   "class_11": {
    "category": "student",
    "seed": "11th",
-   "similarity": 0.64
+   "similarity": 0.64,
+   "source": "embedding",
+   "tfidf_rank": 276
   },
   "11th_grade": {
    "category": "student",
    "seed": "11th",
-   "similarity": 0.622
+   "similarity": 0.622,
+   "source": "embedding",
+   "tfidf_rank": 2404
   },
   "9th": {
    "category": "student",
    "seed": "11th",
-   "similarity": 0.602
+   "similarity": 0.602,
+   "source": "embedding",
+   "tfidf_rank": 1422
   },
   "std": {
    "category": "student",
    "seed": "11th",
-   "similarity": 0.599
+   "similarity": 0.599,
+   "source": "embedding",
+   "tfidf_rank": 3386
   },
   "10_th": {
    "category": "student",
    "seed": "11th",
-   "similarity": 0.594
+   "similarity": 0.594,
+   "source": "embedding",
+   "tfidf_rank": 9460
   },
   "9th_10th": {
    "category": "student",
    "seed": "11th",
-   "similarity": 0.579
+   "similarity": 0.579,
+   "source": "embedding",
+   "tfidf_rank": 7524
   },
   "11_12": {
    "category": "student",
    "seed": "11th",
-   "similarity": 0.575
+   "similarity": 0.575,
+   "source": "embedding",
+   "tfidf_rank": 3749
   },
   "10th": {
    "category": "student",
    "seed": "12th",
-   "similarity": 0.61
+   "similarity": 0.61,
+   "source": "embedding",
+   "tfidf_rank": 327
   },
   "nuked": {
    "category": "student",
    "seed": "11th",
-   "similarity": 0.561
+   "similarity": 0.561,
+   "source": "embedding",
+   "tfidf_rank": 6844
   },
   "class_12": {
    "category": "student",
    "seed": "12th",
-   "similarity": 0.626
+   "similarity": 0.626,
+   "source": "embedding",
+   "tfidf_rank": 362
   },
   "finals": {
    "category": "student",
    "seed": "12th",
-   "similarity": 0.59
+   "similarity": 0.59,
+   "source": "embedding",
+   "tfidf_rank": 3463
   },
   "term2": {
    "category": "student",
    "seed": "12th",
-   "similarity": 0.585
+   "similarity": 0.585,
+   "source": "embedding",
+   "tfidf_rank": 5871
   },
   "final_exams": {
    "category": "student",
    "seed": "12th",
-   "similarity": 0.57
+   "similarity": 0.57,
+   "source": "embedding",
+   "tfidf_rank": 6051
   },
   "backlogs": {
    "category": "student",
    "seed": "backlog",
-   "similarity": 0.672
+   "similarity": 0.672,
+   "source": "embedding",
+   "tfidf_rank": 854
   },
   "chp": {
    "category": "student",
    "seed": "backlog",
-   "similarity": 0.57
+   "similarity": 0.57,
+   "source": "embedding",
+   "tfidf_rank": 6387
   }
  },
  "related": {

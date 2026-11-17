@@ -12,14 +12,14 @@
      "expand": false
     },
     "tune": {
-     "ndcg@10": 0.6009,
+     "ndcg@10": 0.5992,
      "ndcg@5": 0.5902,
      "p@1": 0.8333,
      "p@5": 0.725,
      "p@10": 0.6417,
-     "recall@10": 0.5121,
+     "recall@10": 0.509,
      "success@5": 0.9583,
-     "map": 0.43,
+     "map": 0.4269,
      "mrr": 0.8715,
      "judged@10": 1.0,
      "queries": 24,
@@ -27,17 +27,17 @@
      "failed_queries": [
       "Q18"
      ],
-     "avg_latency_ms": 8.59
+     "avg_latency_ms": 7.62
     },
     "test": {
-     "ndcg@10": 0.4882,
-     "ndcg@5": 0.4447,
+     "ndcg@10": 0.4845,
+     "ndcg@5": 0.4444,
      "p@1": 0.5714,
      "p@5": 0.5536,
      "p@10": 0.5125,
-     "recall@10": 0.4858,
+     "recall@10": 0.474,
      "success@5": 0.875,
-     "map": 0.3387,
+     "map": 0.3292,
      "mrr": 0.7014,
      "judged@10": 1.0,
      "queries": 56,
@@ -51,24 +51,24 @@
       "Q55",
       "Q70"
      ],
-     "avg_latency_ms": 6.55
+     "avg_latency_ms": 5.71
     },
     "categories": {
      "abbreviation": {
-      "ndcg@10": 0.6205,
+      "ndcg@10": 0.6021,
       "ndcg@5": 0.6349,
       "p@1": 1.0,
       "p@5": 0.8,
       "p@10": 0.675,
-      "recall@10": 0.5379,
+      "recall@10": 0.4907,
       "success@5": 1.0,
-      "map": 0.484,
+      "map": 0.4398,
       "mrr": 1.0,
       "judged@10": 1.0,
       "queries": 8,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 2.52
+      "avg_latency_ms": 2.19
      },
      "comparison": {
       "ndcg@10": 0.5431,
@@ -76,15 +76,15 @@
       "p@1": 1.0,
       "p@5": 0.6333,
       "p@10": 0.5333,
-      "recall@10": 0.555,
+      "recall@10": 0.5487,
       "success@5": 1.0,
-      "map": 0.447,
+      "map": 0.4408,
       "mrr": 1.0,
       "judged@10": 1.0,
       "queries": 6,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 3.07
+      "avg_latency_ms": 2.69
      },
      "general": {
       "ndcg@10": 0.571,
@@ -92,9 +92,9 @@
       "p@1": 0.6667,
       "p@5": 0.65,
       "p@10": 0.5917,
-      "recall@10": 0.577,
+      "recall@10": 0.573,
       "success@5": 0.9167,
-      "map": 0.374,
+      "map": 0.3703,
       "mrr": 0.7667,
       "judged@10": 1.0,
       "queries": 12,
@@ -102,7 +102,7 @@
       "failed_queries": [
        "Q70"
       ],
-      "avg_latency_ms": 5.78
+      "avg_latency_ms": 4.94
      },
      "hinglish": {
       "ndcg@10": 0.3937,
@@ -121,7 +121,7 @@
        "Q33",
        "Q42"
       ],
-      "avg_latency_ms": 6.87
+      "avg_latency_ms": 5.86
      },
      "numerical": {
       "ndcg@10": 0.3179,
@@ -129,9 +129,9 @@
       "p@1": 0.1667,
       "p@5": 0.3333,
       "p@10": 0.3333,
-      "recall@10": 0.3655,
+      "recall@10": 0.3531,
       "success@5": 0.8333,
-      "map": 0.2188,
+      "map": 0.212,
       "mrr": 0.4222,
       "judged@10": 1.0,
       "queries": 6,
@@ -139,23 +139,23 @@
       "failed_queries": [
        "Q55"
       ],
-      "avg_latency_ms": 8.54
+      "avg_latency_ms": 7.63
      },
      "synonym": {
-      "ndcg@10": 0.5671,
-      "ndcg@5": 0.5529,
+      "ndcg@10": 0.5609,
+      "ndcg@5": 0.551,
       "p@1": 0.5556,
       "p@5": 0.6,
       "p@10": 0.6222,
-      "recall@10": 0.4505,
+      "recall@10": 0.4426,
       "success@5": 1.0,
-      "map": 0.3116,
+      "map": 0.3091,
       "mrr": 0.7444,
       "judged@10": 1.0,
       "queries": 9,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 15.59
+      "avg_latency_ms": 13.77
      },
      "typo": {
       "ndcg@10": 0.2847,
@@ -163,9 +163,9 @@
       "p@1": 0.1667,
       "p@5": 0.3333,
       "p@10": 0.3333,
-      "recall@10": 0.2833,
+      "recall@10": 0.2756,
       "success@5": 0.5,
-      "map": 0.2095,
+      "map": 0.2054,
       "mrr": 0.3333,
       "judged@10": 1.0,
       "queries": 6,
@@ -175,7 +175,7 @@
        "Q46",
        "Q47"
       ],
-      "avg_latency_ms": 0.89
+      "avg_latency_ms": 0.77
      }
     },
     "robustness": {
@@ -203,14 +203,14 @@
      "expand": false
     },
     "tune": {
-     "ndcg@10": 0.6359,
+     "ndcg@10": 0.6339,
      "ndcg@5": 0.5765,
      "p@1": 0.7083,
      "p@5": 0.7167,
      "p@10": 0.6583,
-     "recall@10": 0.5548,
+     "recall@10": 0.5513,
      "success@5": 0.9167,
-     "map": 0.4363,
+     "map": 0.4328,
      "mrr": 0.8264,
      "judged@10": 1.0,
      "queries": 24,
@@ -219,17 +219,17 @@
       "Q18",
       "Q43"
      ],
-     "avg_latency_ms": 3.9
+     "avg_latency_ms": 3.35
     },
     "test": {
-     "ndcg@10": 0.5317,
-     "ndcg@5": 0.4828,
+     "ndcg@10": 0.5288,
+     "ndcg@5": 0.4826,
      "p@1": 0.6071,
      "p@5": 0.575,
      "p@10": 0.5339,
-     "recall@10": 0.5115,
+     "recall@10": 0.501,
      "success@5": 0.9107,
-     "map": 0.3719,
+     "map": 0.3628,
      "mrr": 0.7271,
      "judged@10": 1.0,
      "queries": 56,
@@ -241,24 +241,24 @@
       "Q47",
       "Q78"
      ],
-     "avg_latency_ms": 8.44
+     "avg_latency_ms": 7.45
     },
     "categories": {
      "abbreviation": {
-      "ndcg@10": 0.6259,
+      "ndcg@10": 0.6087,
       "ndcg@5": 0.6289,
       "p@1": 0.875,
       "p@5": 0.75,
       "p@10": 0.65,
-      "recall@10": 0.5033,
+      "recall@10": 0.4623,
       "success@5": 1.0,
-      "map": 0.4447,
+      "map": 0.4037,
       "mrr": 0.9167,
       "judged@10": 1.0,
       "queries": 8,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 2.53
+      "avg_latency_ms": 2.13
      },
      "comparison": {
       "ndcg@10": 0.6605,
@@ -266,15 +266,15 @@
       "p@1": 0.8333,
       "p@5": 0.7333,
       "p@10": 0.6167,
-      "recall@10": 0.6577,
+      "recall@10": 0.6521,
       "success@5": 1.0,
-      "map": 0.5307,
+      "map": 0.5259,
       "mrr": 0.9167,
       "judged@10": 1.0,
       "queries": 6,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 3.07
+      "avg_latency_ms": 2.54
      },
      "general": {
       "ndcg@10": 0.6044,
@@ -282,9 +282,9 @@
       "p@1": 0.75,
       "p@5": 0.6667,
       "p@10": 0.6,
-      "recall@10": 0.49,
+      "recall@10": 0.4848,
       "success@5": 0.9167,
-      "map": 0.3902,
+      "map": 0.3852,
       "mrr": 0.8083,
       "judged@10": 1.0,
       "queries": 12,
@@ -292,7 +292,7 @@
       "failed_queries": [
        "Q78"
       ],
-      "avg_latency_ms": 15.11
+      "avg_latency_ms": 13.4
      },
      "hinglish": {
       "ndcg@10": 0.48,
@@ -310,7 +310,7 @@
       "failed_queries": [
        "Q41"
       ],
-      "avg_latency_ms": 18.74
+      "avg_latency_ms": 17.03
      },
      "numerical": {
       "ndcg@10": 0.4366,
@@ -318,31 +318,31 @@
       "p@1": 0.5,
       "p@5": 0.3667,
       "p@10": 0.4167,
-      "recall@10": 0.5738,
+      "recall@10": 0.5614,
       "success@5": 1.0,
-      "map": 0.2956,
+      "map": 0.2882,
       "mrr": 0.6222,
       "judged@10": 1.0,
       "queries": 6,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 8.58
+      "avg_latency_ms": 7.2
      },
      "synonym": {
-      "ndcg@10": 0.5476,
-      "ndcg@5": 0.5575,
+      "ndcg@10": 0.5448,
+      "ndcg@5": 0.5565,
       "p@1": 0.5556,
       "p@5": 0.6667,
       "p@10": 0.6,
-      "recall@10": 0.4347,
+      "recall@10": 0.4307,
       "success@5": 1.0,
-      "map": 0.3239,
+      "map": 0.3225,
       "mrr": 0.7778,
       "judged@10": 1.0,
       "queries": 9,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 3.06
+      "avg_latency_ms": 2.57
      },
      "typo": {
       "ndcg@10": 0.2805,
@@ -350,9 +350,9 @@
       "p@1": 0.1667,
       "p@5": 0.3333,
       "p@10": 0.35,
-      "recall@10": 0.2929,
+      "recall@10": 0.2839,
       "success@5": 0.5,
-      "map": 0.2156,
+      "map": 0.2099,
       "mrr": 0.3333,
       "judged@10": 1.0,
       "queries": 6,
@@ -362,7 +362,7 @@
        "Q46",
        "Q47"
       ],
-      "avg_latency_ms": 0.83
+      "avg_latency_ms": 0.73
      }
     },
     "robustness": {
@@ -375,8 +375,8 @@
      "wins": 31,
      "losses": 22,
      "ties": 3,
-     "ndcg@10_delta": 0.0435,
-     "p_value": 0.0448
+     "ndcg@10_delta": 0.0442,
+     "p_value": 0.0388
     }
    },
    "bm25f_eng": {
@@ -390,14 +390,14 @@
      "expand": false
     },
     "tune": {
-     "ndcg@10": 0.6357,
+     "ndcg@10": 0.6339,
      "ndcg@5": 0.58,
      "p@1": 0.7083,
      "p@5": 0.7167,
      "p@10": 0.6542,
-     "recall@10": 0.5547,
+     "recall@10": 0.5513,
      "success@5": 0.9167,
-     "map": 0.4281,
+     "map": 0.4248,
      "mrr": 0.8157,
      "judged@10": 1.0,
      "queries": 24,
@@ -406,17 +406,17 @@
       "Q18",
       "Q43"
      ],
-     "avg_latency_ms": 9.38
+     "avg_latency_ms": 4.02
     },
     "test": {
-     "ndcg@10": 0.5198,
-     "ndcg@5": 0.4738,
+     "ndcg@10": 0.5169,
+     "ndcg@5": 0.4737,
      "p@1": 0.6071,
      "p@5": 0.5643,
      "p@10": 0.5232,
-     "recall@10": 0.4985,
+     "recall@10": 0.4882,
      "success@5": 0.8929,
-     "map": 0.3606,
+     "map": 0.3517,
      "mrr": 0.7276,
      "judged@10": 1.0,
      "queries": 56,
@@ -429,18 +429,18 @@
       "Q47",
       "Q78"
      ],
-     "avg_latency_ms": 7.33
+     "avg_latency_ms": 6.34
     },
     "categories": {
      "abbreviation": {
-      "ndcg@10": 0.6043,
+      "ndcg@10": 0.5872,
       "ndcg@5": 0.5987,
       "p@1": 0.875,
       "p@5": 0.725,
       "p@10": 0.65,
-      "recall@10": 0.5033,
+      "recall@10": 0.4623,
       "success@5": 0.875,
-      "map": 0.4351,
+      "map": 0.3941,
       "mrr": 0.8929,
       "judged@10": 1.0,
       "queries": 8,
@@ -448,7 +448,7 @@
       "failed_queries": [
        "Q13"
       ],
-      "avg_latency_ms": 2.99
+      "avg_latency_ms": 2.64
      },
      "comparison": {
       "ndcg@10": 0.6743,
@@ -456,15 +456,15 @@
       "p@1": 1.0,
       "p@5": 0.7,
       "p@10": 0.6167,
-      "recall@10": 0.6577,
+      "recall@10": 0.6521,
       "success@5": 1.0,
-      "map": 0.5369,
+      "map": 0.5319,
       "mrr": 1.0,
       "judged@10": 1.0,
       "queries": 6,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 3.53
+      "avg_latency_ms": 2.98
      },
      "general": {
       "ndcg@10": 0.5951,
@@ -472,9 +472,9 @@
       "p@1": 0.75,
       "p@5": 0.6667,
       "p@10": 0.5917,
-      "recall@10": 0.4911,
+      "recall@10": 0.4859,
       "success@5": 0.9167,
-      "map": 0.3888,
+      "map": 0.3838,
       "mrr": 0.8125,
       "judged@10": 1.0,
       "queries": 12,
@@ -482,7 +482,7 @@
       "failed_queries": [
        "Q78"
       ],
-      "avg_latency_ms": 16.24
+      "avg_latency_ms": 5.7
      },
      "hinglish": {
       "ndcg@10": 0.4408,
@@ -500,7 +500,7 @@
       "failed_queries": [
        "Q41"
       ],
-      "avg_latency_ms": 8.15
+      "avg_latency_ms": 18.23
      },
      "numerical": {
       "ndcg@10": 0.412,
@@ -508,31 +508,31 @@
       "p@1": 0.3333,
       "p@5": 0.3667,
       "p@10": 0.4,
-      "recall@10": 0.5619,
+      "recall@10": 0.5503,
       "success@5": 1.0,
-      "map": 0.2696,
+      "map": 0.263,
       "mrr": 0.5472,
       "judged@10": 1.0,
       "queries": 6,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 9.76
+      "avg_latency_ms": 8.54
      },
      "synonym": {
-      "ndcg@10": 0.5546,
-      "ndcg@5": 0.5416,
+      "ndcg@10": 0.5518,
+      "ndcg@5": 0.5406,
       "p@1": 0.6667,
       "p@5": 0.6444,
       "p@10": 0.6,
-      "recall@10": 0.437,
+      "recall@10": 0.433,
       "success@5": 1.0,
-      "map": 0.324,
+      "map": 0.3226,
       "mrr": 0.8333,
       "judged@10": 1.0,
       "queries": 9,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 3.65
+      "avg_latency_ms": 2.97
      },
      "typo": {
       "ndcg@10": 0.2758,
@@ -540,9 +540,9 @@
       "p@1": 0.1667,
       "p@5": 0.3667,
       "p@10": 0.35,
-      "recall@10": 0.2929,
+      "recall@10": 0.2852,
       "success@5": 0.5,
-      "map": 0.2221,
+      "map": 0.2173,
       "mrr": 0.3333,
       "judged@10": 1.0,
       "queries": 6,
@@ -552,7 +552,7 @@
        "Q46",
        "Q47"
       ],
-      "avg_latency_ms": 0.98
+      "avg_latency_ms": 0.91
      }
     },
     "robustness": {
@@ -565,12 +565,12 @@
      "wins": 31,
      "losses": 21,
      "ties": 4,
-     "ndcg@10_delta": 0.0316,
-     "p_value": 0.1383
+     "ndcg@10_delta": 0.0323,
+     "p_value": 0.126
     }
    },
    "bm25f_eng_exp": {
-    "name": "BM25F + engagement + Word2Vec expansion",
+    "name": "BM25F + engagement + dictionary expansion (Word2Vec + TF-IDF)",
     "kind": "bm25",
     "config": {
      "k1": 1.2,
@@ -580,34 +580,34 @@
      "expand": true
     },
     "tune": {
-     "ndcg@10": 0.6464,
+     "ndcg@10": 0.6467,
      "ndcg@5": 0.596,
      "p@1": 0.75,
      "p@5": 0.7167,
      "p@10": 0.6542,
-     "recall@10": 0.5606,
+     "recall@10": 0.5573,
      "success@5": 0.9167,
-     "map": 0.4306,
+     "map": 0.4276,
      "mrr": 0.8352,
-     "judged@10": 1.0,
+     "judged@10": 0.9958,
      "queries": 24,
      "zero_result_rate": 0,
      "failed_queries": [
       "Q18",
       "Q43"
      ],
-     "avg_latency_ms": 5.23
+     "avg_latency_ms": 8.48
     },
     "test": {
-     "ndcg@10": 0.5167,
-     "ndcg@5": 0.4828,
+     "ndcg@10": 0.5226,
+     "ndcg@5": 0.4831,
      "p@1": 0.5893,
      "p@5": 0.5786,
-     "p@10": 0.5179,
-     "recall@10": 0.4952,
+     "p@10": 0.5268,
+     "recall@10": 0.4951,
      "success@5": 0.9107,
-     "map": 0.3591,
-     "mrr": 0.7222,
+     "map": 0.3561,
+     "mrr": 0.7231,
      "judged@10": 1.0,
      "queries": 56,
      "zero_result_rate": 0,
@@ -618,18 +618,18 @@
       "Q47",
       "Q78"
      ],
-     "avg_latency_ms": 8.07
+     "avg_latency_ms": 6.7
     },
     "categories": {
      "abbreviation": {
-      "ndcg@10": 0.5937,
+      "ndcg@10": 0.598,
       "ndcg@5": 0.6021,
       "p@1": 0.875,
       "p@5": 0.75,
-      "p@10": 0.625,
-      "recall@10": 0.4948,
+      "p@10": 0.6625,
+      "recall@10": 0.4748,
       "success@5": 0.875,
-      "map": 0.4334,
+      "map": 0.4066,
       "mrr": 0.8929,
       "judged@10": 1.0,
       "queries": 8,
@@ -637,7 +637,7 @@
       "failed_queries": [
        "Q13"
       ],
-      "avg_latency_ms": 3.95
+      "avg_latency_ms": 3.14
      },
      "comparison": {
       "ndcg@10": 0.6983,
@@ -645,15 +645,15 @@
       "p@1": 1.0,
       "p@5": 0.7333,
       "p@10": 0.6333,
-      "recall@10": 0.6762,
+      "recall@10": 0.6706,
       "success@5": 1.0,
-      "map": 0.5492,
+      "map": 0.5443,
       "mrr": 1.0,
       "judged@10": 1.0,
       "queries": 6,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 4.09
+      "avg_latency_ms": 3.19
      },
      "general": {
       "ndcg@10": 0.5951,
@@ -661,9 +661,9 @@
       "p@1": 0.75,
       "p@5": 0.6667,
       "p@10": 0.5917,
-      "recall@10": 0.4911,
+      "recall@10": 0.4859,
       "success@5": 0.9167,
-      "map": 0.3888,
+      "map": 0.3838,
       "mrr": 0.8125,
       "judged@10": 1.0,
       "queries": 12,
@@ -671,7 +671,7 @@
       "failed_queries": [
        "Q78"
       ],
-      "avg_latency_ms": 7.81
+      "avg_latency_ms": 6.04
      },
      "hinglish": {
       "ndcg@10": 0.4776,
@@ -687,39 +687,39 @@
       "queries": 9,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 8.63
+      "avg_latency_ms": 7.35
      },
      "numerical": {
-      "ndcg@10": 0.3712,
-      "ndcg@5": 0.2636,
+      "ndcg@10": 0.4046,
+      "ndcg@5": 0.2675,
       "p@1": 0.3333,
       "p@5": 0.3667,
-      "p@10": 0.3833,
-      "recall@10": 0.5016,
+      "p@10": 0.4,
+      "recall@10": 0.5462,
       "success@5": 1.0,
-      "map": 0.2412,
-      "mrr": 0.525,
+      "map": 0.2609,
+      "mrr": 0.5333,
       "judged@10": 1.0,
       "queries": 6,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 30.28
+      "avg_latency_ms": 26.33
      },
      "synonym": {
-      "ndcg@10": 0.52,
-      "ndcg@5": 0.5039,
+      "ndcg@10": 0.5306,
+      "ndcg@5": 0.5029,
       "p@1": 0.5556,
       "p@5": 0.6222,
-      "p@10": 0.5778,
-      "recall@10": 0.4246,
+      "p@10": 0.5889,
+      "recall@10": 0.4268,
       "success@5": 1.0,
-      "map": 0.3018,
+      "map": 0.3063,
       "mrr": 0.7778,
       "judged@10": 1.0,
       "queries": 9,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 3.85
+      "avg_latency_ms": 3.04
      },
      "typo": {
       "ndcg@10": 0.2748,
@@ -727,9 +727,9 @@
       "p@1": 0.1667,
       "p@5": 0.3667,
       "p@10": 0.35,
-      "recall@10": 0.2929,
+      "recall@10": 0.2852,
       "success@5": 0.5,
-      "map": 0.2181,
+      "map": 0.2137,
       "mrr": 0.3333,
       "judged@10": 1.0,
       "queries": 6,
@@ -739,7 +739,7 @@
        "Q46",
        "Q47"
       ],
-      "avg_latency_ms": 1.36
+      "avg_latency_ms": 1.21
      }
     },
     "robustness": {
@@ -749,11 +749,11 @@
      "synonym": 1.0
     },
     "vs_baseline": {
-     "wins": 30,
-     "losses": 23,
+     "wins": 31,
+     "losses": 22,
      "ties": 3,
-     "ndcg@10_delta": 0.0285,
-     "p_value": 0.179
+     "ndcg@10_delta": 0.038,
+     "p_value": 0.0767
     }
    },
    "semantic": {
@@ -761,14 +761,14 @@
     "kind": "semantic",
     "config": {},
     "tune": {
-     "ndcg@10": 0.4793,
+     "ndcg@10": 0.479,
      "ndcg@5": 0.4748,
      "p@1": 0.5417,
      "p@5": 0.5583,
      "p@10": 0.4833,
-     "recall@10": 0.4161,
+     "recall@10": 0.4148,
      "success@5": 0.875,
-     "map": 0.2932,
+     "map": 0.2924,
      "mrr": 0.68,
      "judged@10": 1.0,
      "queries": 24,
@@ -778,17 +778,17 @@
       "Q39",
       "Q43"
      ],
-     "avg_latency_ms": 17.71
+     "avg_latency_ms": 13.29
     },
     "test": {
-     "ndcg@10": 0.3764,
+     "ndcg@10": 0.3748,
      "ndcg@5": 0.3512,
      "p@1": 0.5,
      "p@5": 0.425,
      "p@10": 0.4071,
-     "recall@10": 0.342,
+     "recall@10": 0.3362,
      "success@5": 0.75,
-     "map": 0.2509,
+     "map": 0.2471,
      "mrr": 0.6158,
      "judged@10": 1.0,
      "queries": 56,
@@ -809,24 +809,24 @@
       "Q78",
       "Q80"
      ],
-     "avg_latency_ms": 12.67
+     "avg_latency_ms": 7.58
     },
     "categories": {
      "abbreviation": {
-      "ndcg@10": 0.4576,
+      "ndcg@10": 0.4478,
       "ndcg@5": 0.4231,
       "p@1": 0.5,
       "p@5": 0.55,
       "p@10": 0.5125,
-      "recall@10": 0.4021,
+      "recall@10": 0.3857,
       "success@5": 1.0,
-      "map": 0.2866,
+      "map": 0.2758,
       "mrr": 0.6917,
       "judged@10": 1.0,
       "queries": 8,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 11.19
+      "avg_latency_ms": 7.69
      },
      "comparison": {
       "ndcg@10": 0.2731,
@@ -834,9 +834,9 @@
       "p@1": 0.3333,
       "p@5": 0.2667,
       "p@10": 0.2,
-      "recall@10": 0.2066,
+      "recall@10": 0.2026,
       "success@5": 0.5,
-      "map": 0.152,
+      "map": 0.1482,
       "mrr": 0.3905,
       "judged@10": 1.0,
       "queries": 6,
@@ -846,7 +846,7 @@
        "Q64",
        "Q65"
       ],
-      "avg_latency_ms": 11.4
+      "avg_latency_ms": 7.39
      },
      "general": {
       "ndcg@10": 0.5071,
@@ -854,9 +854,9 @@
       "p@1": 0.75,
       "p@5": 0.5833,
       "p@10": 0.5667,
-      "recall@10": 0.3709,
+      "recall@10": 0.3654,
       "success@5": 0.8333,
-      "map": 0.3314,
+      "map": 0.3259,
       "mrr": 0.7917,
       "judged@10": 1.0,
       "queries": 12,
@@ -865,7 +865,7 @@
        "Q78",
        "Q80"
       ],
-      "avg_latency_ms": 12.59
+      "avg_latency_ms": 7.81
      },
      "hinglish": {
       "ndcg@10": 0.2177,
@@ -887,7 +887,7 @@
        "Q41",
        "Q42"
       ],
-      "avg_latency_ms": 14.31
+      "avg_latency_ms": 7.45
      },
      "numerical": {
       "ndcg@10": 0.1781,
@@ -895,9 +895,9 @@
       "p@1": 0.1667,
       "p@5": 0.2,
       "p@10": 0.2167,
-      "recall@10": 0.2728,
+      "recall@10": 0.2651,
       "success@5": 0.6667,
-      "map": 0.1116,
+      "map": 0.1086,
       "mrr": 0.4222,
       "judged@10": 1.0,
       "queries": 6,
@@ -906,17 +906,17 @@
        "Q53",
        "Q55"
       ],
-      "avg_latency_ms": 13.09
+      "avg_latency_ms": 7.62
      },
      "synonym": {
-      "ndcg@10": 0.4467,
+      "ndcg@10": 0.4455,
       "ndcg@5": 0.4461,
       "p@1": 0.4444,
       "p@5": 0.5333,
       "p@10": 0.5667,
-      "recall@10": 0.4008,
+      "recall@10": 0.3969,
       "success@5": 0.8889,
-      "map": 0.2757,
+      "map": 0.2749,
       "mrr": 0.664,
       "judged@10": 1.0,
       "queries": 9,
@@ -924,7 +924,7 @@
       "failed_queries": [
        "Q30"
       ],
-      "avg_latency_ms": 11.8
+      "avg_latency_ms": 7.53
      },
      "typo": {
       "ndcg@10": 0.4411,
@@ -932,9 +932,9 @@
       "p@1": 0.6667,
       "p@5": 0.4667,
       "p@10": 0.4667,
-      "recall@10": 0.5952,
+      "recall@10": 0.5927,
       "success@5": 0.8333,
-      "map": 0.4548,
+      "map": 0.4537,
       "mrr": 0.75,
       "judged@10": 1.0,
       "queries": 6,
@@ -942,7 +942,7 @@
       "failed_queries": [
        "Q46"
       ],
-      "avg_latency_ms": 14.55
+      "avg_latency_ms": 7.42
      }
     },
     "robustness": {
@@ -955,8 +955,8 @@
      "wins": 20,
      "losses": 35,
      "ties": 1,
-     "ndcg@10_delta": -0.1118,
-     "p_value": 0.0167
+     "ndcg@10_delta": -0.1097,
+     "p_value": 0.0177
     }
    },
    "hybrid": {
@@ -966,14 +966,14 @@
      "expand": true
     },
     "tune": {
-     "ndcg@10": 0.6677,
-     "ndcg@5": 0.6392,
+     "ndcg@10": 0.6618,
+     "ndcg@5": 0.634,
      "p@1": 0.7917,
-     "p@5": 0.7,
-     "p@10": 0.6583,
-     "recall@10": 0.549,
+     "p@5": 0.6917,
+     "p@10": 0.65,
+     "recall@10": 0.5399,
      "success@5": 0.9583,
-     "map": 0.4302,
+     "map": 0.4226,
      "mrr": 0.8681,
      "judged@10": 1.0,
      "queries": 24,
@@ -981,19 +981,19 @@
      "failed_queries": [
       "Q43"
      ],
-     "avg_latency_ms": 24.1
+     "avg_latency_ms": 23.85
     },
     "test": {
-     "ndcg@10": 0.5259,
-     "ndcg@5": 0.4774,
+     "ndcg@10": 0.5248,
+     "ndcg@5": 0.4789,
      "p@1": 0.5714,
-     "p@5": 0.5929,
-     "p@10": 0.5393,
-     "recall@10": 0.5098,
+     "p@5": 0.5964,
+     "p@10": 0.5411,
+     "recall@10": 0.4993,
      "success@5": 0.9107,
-     "map": 0.375,
-     "mrr": 0.7171,
-     "judged@10": 1.0,
+     "map": 0.3698,
+     "mrr": 0.7201,
+     "judged@10": 0.9982,
      "queries": 56,
      "zero_result_rate": 0,
      "failed_queries": [
@@ -1003,24 +1003,24 @@
       "Q47",
       "Q78"
      ],
-     "avg_latency_ms": 28.54
+     "avg_latency_ms": 23.13
     },
     "categories": {
      "abbreviation": {
-      "ndcg@10": 0.6376,
+      "ndcg@10": 0.6244,
       "ndcg@5": 0.5613,
       "p@1": 0.625,
       "p@5": 0.7,
-      "p@10": 0.725,
-      "recall@10": 0.5855,
+      "p@10": 0.7375,
+      "recall@10": 0.5472,
       "success@5": 1.0,
-      "map": 0.451,
+      "map": 0.4298,
       "mrr": 0.7917,
-      "judged@10": 1.0,
+      "judged@10": 0.9875,
       "queries": 8,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 34.4
+      "avg_latency_ms": 17.9
      },
      "comparison": {
       "ndcg@10": 0.6337,
@@ -1028,15 +1028,15 @@
       "p@1": 0.8333,
       "p@5": 0.8,
       "p@10": 0.6,
-      "recall@10": 0.6392,
+      "recall@10": 0.6336,
       "success@5": 1.0,
-      "map": 0.5299,
+      "map": 0.5248,
       "mrr": 0.9167,
       "judged@10": 1.0,
       "queries": 6,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 43.75
+      "avg_latency_ms": 15.97
      },
      "general": {
       "ndcg@10": 0.6401,
@@ -1044,9 +1044,9 @@
       "p@1": 0.8333,
       "p@5": 0.6833,
       "p@10": 0.6333,
-      "recall@10": 0.5165,
+      "recall@10": 0.5111,
       "success@5": 0.9167,
-      "map": 0.4435,
+      "map": 0.4383,
       "mrr": 0.875,
       "judged@10": 1.0,
       "queries": 12,
@@ -1054,7 +1054,7 @@
       "failed_queries": [
        "Q78"
       ],
-      "avg_latency_ms": 27.5
+      "avg_latency_ms": 25.27
      },
      "hinglish": {
       "ndcg@10": 0.4536,
@@ -1072,39 +1072,39 @@
       "failed_queries": [
        "Q40"
       ],
-      "avg_latency_ms": 28.27
+      "avg_latency_ms": 25.35
      },
      "numerical": {
-      "ndcg@10": 0.3562,
-      "ndcg@5": 0.2747,
+      "ndcg@10": 0.3688,
+      "ndcg@5": 0.2821,
       "p@1": 0.1667,
       "p@5": 0.4,
       "p@10": 0.4167,
-      "recall@10": 0.5534,
+      "recall@10": 0.5402,
       "success@5": 1.0,
-      "map": 0.2675,
-      "mrr": 0.4778,
+      "map": 0.2708,
+      "mrr": 0.5056,
       "judged@10": 1.0,
       "queries": 6,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 35.93
+      "avg_latency_ms": 48.23
      },
      "synonym": {
-      "ndcg@10": 0.5346,
-      "ndcg@5": 0.5345,
+      "ndcg@10": 0.5314,
+      "ndcg@5": 0.5383,
       "p@1": 0.5556,
-      "p@5": 0.6444,
+      "p@5": 0.6667,
       "p@10": 0.5778,
-      "recall@10": 0.4254,
+      "recall@10": 0.4194,
       "success@5": 1.0,
-      "map": 0.315,
+      "map": 0.3136,
       "mrr": 0.7315,
       "judged@10": 1.0,
       "queries": 9,
       "zero_result_rate": 0,
       "failed_queries": [],
-      "avg_latency_ms": 19.06
+      "avg_latency_ms": 17.86
      },
      "typo": {
       "ndcg@10": 0.3057,
@@ -1112,9 +1112,9 @@
       "p@1": 0.5,
       "p@5": 0.3667,
       "p@10": 0.35,
-      "recall@10": 0.2857,
+      "recall@10": 0.278,
       "success@5": 0.5,
-      "map": 0.2373,
+      "map": 0.2315,
       "mrr": 0.5,
       "judged@10": 1.0,
       "queries": 6,
@@ -1124,7 +1124,7 @@
        "Q46",
        "Q47"
       ],
-      "avg_latency_ms": 14.85
+      "avg_latency_ms": 12.48
      }
     },
     "robustness": {
@@ -1134,11 +1134,11 @@
      "synonym": 1.0
     },
     "vs_baseline": {
-     "wins": 31,
-     "losses": 22,
+     "wins": 32,
+     "losses": 21,
      "ties": 3,
-     "ndcg@10_delta": 0.0377,
-     "p_value": 0.1212
+     "ndcg@10_delta": 0.0403,
+     "p_value": 0.1007
     }
    }
   },
@@ -1149,7 +1149,7 @@
      "query": "physics wallah vs unacademy",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 4.0,
+     "latency_ms": 4.39,
      "top10": [
       "qttdqp",
       "vcnzuw",
@@ -1167,12 +1167,12 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 0.8,
-     "recall@10": 0.5714285714285714,
+     "recall@10": 0.5333333333333333,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.5482142857142857,
+     "ap": 0.5116666666666666,
      "ndcg@5": 0.9125299483251055,
-     "ndcg@10": 0.8175718484338613,
+     "ndcg@10": 0.7761413125771498,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -1181,7 +1181,7 @@
      "query": "best book for organic chemistry",
      "category": "general",
      "split": "tune",
-     "latency_ms": 4.02,
+     "latency_ms": 3.88,
      "top10": [
       "v37tm3",
       "wdj4oc",
@@ -1199,10 +1199,10 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 0.9,
-     "recall@10": 0.6,
+     "recall@10": 0.5625,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.6,
+     "ap": 0.5625,
      "ndcg@5": 0.9125299483251055,
      "ndcg@10": 0.8333296520821161,
      "judged@10": 1.0,
@@ -1213,7 +1213,7 @@
      "query": "marks vs percentile 2022",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 3.42,
+     "latency_ms": 3.2,
      "top10": [
       "wbr1xm",
       "vl6p8q",
@@ -1245,7 +1245,7 @@
      "query": "allen test series review",
      "category": "general",
      "split": "tune",
-     "latency_ms": 2.54,
+     "latency_ms": 2.66,
      "top10": [
       "twr9n9",
       "v8boga",
@@ -1277,7 +1277,7 @@
      "query": "dc pandey vs hc verma",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 0.46,
+     "latency_ms": 0.51,
      "top10": [
       "uvyblk",
       "pf71kf",
@@ -1309,7 +1309,7 @@
      "query": "maths dropper strategy",
      "category": "general",
      "split": "tune",
-     "latency_ms": 2.48,
+     "latency_ms": 2.21,
      "top10": [
       "ttksmg",
       "ok16c4",
@@ -1341,7 +1341,7 @@
      "query": "neet 600 marks government medical college",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 4.84,
+     "latency_ms": 4.82,
      "top10": [
       "w6sk91",
       "u7vh7a",
@@ -1373,7 +1373,7 @@
      "query": "mock test score stuck",
      "category": "general",
      "split": "tune",
-     "latency_ms": 3.07,
+     "latency_ms": 2.66,
      "top10": [
       "sq2b10",
       "vyvm0g",
@@ -1405,7 +1405,7 @@
      "query": "hostel food kota life",
      "category": "general",
      "split": "tune",
-     "latency_ms": 1.42,
+     "latency_ms": 1.21,
      "top10": [
       "ifib7f",
       "wdayhx",
@@ -1437,7 +1437,7 @@
      "query": "iit bombay cse cutoff rank",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 2.74,
+     "latency_ms": 2.63,
      "top10": [
       "s6xfhw",
       "vv4mil",
@@ -1469,7 +1469,7 @@
      "query": "HCV physics",
      "category": "abbreviation",
      "split": "tune",
-     "latency_ms": 2.02,
+     "latency_ms": 1.71,
      "top10": [
       "uvwje0",
       "ry2g78",
@@ -1501,7 +1501,7 @@
      "query": "PW vs Unacademy",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 1.38,
+     "latency_ms": 1.22,
      "top10": [
       "p1reob",
       "p0dmjs",
@@ -1519,12 +1519,12 @@
      "p@3": 1.0,
      "p@5": 0.6,
      "p@10": 0.4,
-     "recall@10": 0.5,
+     "recall@10": 0.4,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.425,
+     "ap": 0.33999999999999997,
      "ndcg@5": 0.4966197691292077,
-     "ndcg@10": 0.47529666653766467,
+     "ndcg@10": 0.4197883479903829,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -1533,7 +1533,7 @@
      "query": "IOC preparation tips",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 1.87,
+     "latency_ms": 1.67,
      "top10": [
       "w8m6zf",
       "qo6kpm",
@@ -1565,7 +1565,7 @@
      "query": "GOC concepts weak",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 0.7,
+     "latency_ms": 0.68,
      "top10": [
       "telydz",
       "tra1p0",
@@ -1597,7 +1597,7 @@
      "query": "PYQ practice for jee mains",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 9.38,
+     "latency_ms": 8.48,
      "top10": [
       "r8m1mb",
       "vsltfe",
@@ -1629,7 +1629,7 @@
      "query": "NCERT bio for neet",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 3.06,
+     "latency_ms": 2.5,
      "top10": [
       "nyrzvu",
       "sxtpax",
@@ -1661,7 +1661,7 @@
      "query": "AITS test series",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 1.77,
+     "latency_ms": 1.4,
      "top10": [
       "rrszrt",
       "w4ypmj",
@@ -1679,12 +1679,12 @@
      "p@3": 1.0,
      "p@5": 0.8,
      "p@10": 0.5,
-     "recall@10": 0.8333333333333334,
+     "recall@10": 0.5555555555555556,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.8055555555555555,
+     "ap": 0.537037037037037,
      "ndcg@5": 0.8076572091794476,
-     "ndcg@10": 0.8167120761250942,
+     "ndcg@10": 0.7256242509613605,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -1693,7 +1693,7 @@
      "query": "jee adv paper analysis",
      "category": "abbreviation",
      "split": "tune",
-     "latency_ms": 8.11,
+     "latency_ms": 6.42,
      "top10": [
       "vjouxk",
       "va0yxn",
@@ -1725,7 +1725,7 @@
      "query": "KVPY preparation",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 1.55,
+     "latency_ms": 1.19,
      "top10": [
       "t08ol2",
       "orv5rk",
@@ -1757,7 +1757,7 @@
      "query": "DPP solutions",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 0.45,
+     "latency_ms": 0.37,
      "top10": [
       "u9985h",
       "upi87h",
@@ -1789,7 +1789,7 @@
      "query": "JEE hall ticket",
      "category": "synonym",
      "split": "tune",
-     "latency_ms": 6.05,
+     "latency_ms": 5.04,
      "top10": [
       "po3na8",
       "vqhfaf",
@@ -1821,7 +1821,7 @@
      "query": "coaching institute fees",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 2.24,
+     "latency_ms": 2.08,
      "top10": [
       "tqqa1h",
       "uzlc22",
@@ -1853,7 +1853,7 @@
      "query": "taking a gap year for jee",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 8.81,
+     "latency_ms": 8.57,
      "top10": [
       "jc6lhu",
       "ts6g4z",
@@ -1885,7 +1885,7 @@
      "query": "feeling burnt out studying",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 117.75,
+     "latency_ms": 103.09,
      "top10": [
       "qhogck",
       "wc2cn8",
@@ -1917,7 +1917,7 @@
      "query": "exam postponed",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 2.28,
+     "latency_ms": 2.18,
      "top10": [
       "ty57cy",
       "qia08c",
@@ -1949,7 +1949,7 @@
      "query": "study timetable for repeaters",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 2.68,
+     "latency_ms": 2.36,
      "top10": [
       "t4qn7m",
       "n6zjm2",
@@ -1981,7 +1981,7 @@
      "query": "sleep schedule during preparation",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 1.46,
+     "latency_ms": 1.3,
      "top10": [
       "pqkqem",
       "vdzj44",
@@ -2013,7 +2013,7 @@
      "query": "online classes vs offline coaching",
      "category": "synonym",
      "split": "tune",
-     "latency_ms": 5.18,
+     "latency_ms": 4.06,
      "top10": [
       "uxc0nw",
       "mqqcnc",
@@ -2045,7 +2045,7 @@
      "query": "answer key challenge",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 0.93,
+     "latency_ms": 0.81,
      "top10": [
       "vs0aff",
       "q9ig2y",
@@ -2077,7 +2077,7 @@
      "query": "seat allotment counselling",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 0.59,
+     "latency_ms": 0.52,
      "top10": [
       "vueajt",
       "w09j37",
@@ -2095,12 +2095,12 @@
      "p@3": 0.0,
      "p@5": 0.2,
      "p@10": 0.4,
-     "recall@10": 0.5714285714285714,
+     "recall@10": 0.5,
      "success@5": 1.0,
      "rr": 0.2,
-     "ap": 0.18095238095238095,
-     "ndcg@5": 0.160957993938732,
-     "ndcg@10": 0.43005886493130313,
+     "ap": 0.15833333333333333,
+     "ndcg@5": 0.14378166738873713,
+     "ndcg@10": 0.3743004632057836,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -2109,7 +2109,7 @@
      "query": "exam day nervousness",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 3.54,
+     "latency_ms": 3.04,
      "top10": [
       "p0cg54",
       "soy3ab",
@@ -2141,7 +2141,7 @@
      "query": "maths weak hai kya karu",
      "category": "hinglish",
      "split": "tune",
-     "latency_ms": 8.02,
+     "latency_ms": 7.54,
      "top10": [
       "w8dtrk",
       "saro5p",
@@ -2173,7 +2173,7 @@
      "query": "JEE ki preparation kaise karu",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 9.22,
+     "latency_ms": 9.16,
      "top10": [
       "vqckd6",
       "qrdbsa",
@@ -2205,7 +2205,7 @@
      "query": "physics mein numericals kaise solve kare",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 4.28,
+     "latency_ms": 3.86,
      "top10": [
       "rvrasz",
       "v056av",
@@ -2237,7 +2237,7 @@
      "query": "chemistry ke liye best resources kya hain",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 8.29,
+     "latency_ms": 7.14,
      "top10": [
       "uakxqo",
       "vvvu3h",
@@ -2269,7 +2269,7 @@
      "query": "padhai mein mann nahi lagta",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 2.59,
+     "latency_ms": 2.33,
      "top10": [
       "t875rg",
       "ovtrdl",
@@ -2301,7 +2301,7 @@
      "query": "drop lena chahiye ya nahi",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 3.3,
+     "latency_ms": 3.21,
      "top10": [
       "s0ef7p",
       "q3s1ea",
@@ -2333,7 +2333,7 @@
      "query": "kota jaana sahi hai kya",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 8.02,
+     "latency_ms": 5.44,
      "top10": [
       "uuj7cv",
       "vwcywl",
@@ -2365,7 +2365,7 @@
      "query": "neet ke liye biology kaise padhe",
      "category": "hinglish",
      "split": "tune",
-     "latency_ms": 5.26,
+     "latency_ms": 5.16,
      "top10": [
       "w9l9e8",
       "vv58vw",
@@ -2397,7 +2397,7 @@
      "query": "mock test mein marks kam aa rahe hai",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 8.79,
+     "latency_ms": 7.57,
      "top10": [
       "vjgr4d",
       "vlyq0c",
@@ -2429,7 +2429,7 @@
      "query": "boards aur jee dono kaise manage kare",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 9.98,
+     "latency_ms": 8.48,
      "top10": [
       "pn9tt3",
       "w0h0w2",
@@ -2461,7 +2461,7 @@
      "query": "physics ka concept clear nahi hota",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 7.34,
+     "latency_ms": 5.55,
      "top10": [
       "ro1e4v",
       "ujm61p",
@@ -2493,7 +2493,7 @@
      "query": "orgnic chemistry",
      "category": "typo",
      "split": "tune",
-     "latency_ms": 1.37,
+     "latency_ms": 1.12,
      "top10": [
       "vpxx2q",
       "p31qto",
@@ -2525,7 +2525,7 @@
      "query": "physcis wallah lectures",
      "category": "typo",
      "split": "test",
-     "latency_ms": 1.11,
+     "latency_ms": 0.95,
      "top10": [
       "q77tgb",
       "rvw323",
@@ -2543,10 +2543,10 @@
      "p@3": 0.3333333333333333,
      "p@5": 0.4,
      "p@10": 0.6,
-     "recall@10": 0.5,
+     "recall@10": 0.46153846153846156,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.26296296296296295,
+     "ap": 0.24273504273504273,
      "ndcg@5": 0.3945674498005166,
      "ndcg@10": 0.5934897265171584,
      "judged@10": 1.0,
@@ -2557,7 +2557,7 @@
      "query": "thermodynamcs doubts",
      "category": "typo",
      "split": "test",
-     "latency_ms": 0.56,
+     "latency_ms": 0.48,
      "top10": [
       "pow775",
       "wdn726",
@@ -2589,7 +2589,7 @@
      "query": "integeration practice",
      "category": "typo",
      "split": "test",
-     "latency_ms": 0.53,
+     "latency_ms": 0.45,
      "top10": [
       "mbzrra",
       "qdbm5y",
@@ -2621,7 +2621,7 @@
      "query": "electrostatcs book",
      "category": "typo",
      "split": "test",
-     "latency_ms": 0.93,
+     "latency_ms": 0.8,
      "top10": [
       "mnjuhk",
       "vo6e0r",
@@ -2653,7 +2653,7 @@
      "query": "percentle vs marks",
      "category": "typo",
      "split": "test",
-     "latency_ms": 1.81,
+     "latency_ms": 1.59,
      "top10": [
       "pv2kvh",
       "wbr1xm",
@@ -2685,7 +2685,7 @@
      "query": "unacadmy plus subscription",
      "category": "typo",
      "split": "test",
-     "latency_ms": 0.39,
+     "latency_ms": 0.35,
      "top10": [
       "twp4c1",
       "vts4ac",
@@ -2717,7 +2717,7 @@
      "query": "nuet biology ncert",
      "category": "typo",
      "split": "tune",
-     "latency_ms": 0.84,
+     "latency_ms": 0.73,
      "top10": [
       "po08fr",
       "u3i8aa",
@@ -2749,7 +2749,7 @@
      "query": "NEET 600 marks",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 3.59,
+     "latency_ms": 3.01,
      "top10": [
       "vl3t50",
       "w25s5m",
@@ -2781,7 +2781,7 @@
      "query": "99 percentile in jee mains how many marks",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 11.19,
+     "latency_ms": 9.75,
      "top10": [
       "rwmxi7",
       "vl6p8q",
@@ -2799,10 +2799,10 @@
      "p@3": 0.6666666666666666,
      "p@5": 0.8,
      "p@10": 0.8,
-     "recall@10": 0.5714285714285714,
+     "recall@10": 0.5333333333333333,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.4344387755102041,
+     "ap": 0.4054761904761905,
      "ndcg@5": 0.4759908431563517,
      "ndcg@10": 0.5420819624207555,
      "judged@10": 1.0,
@@ -2813,7 +2813,7 @@
      "query": "jee advanced 2022 cutoff",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 8.64,
+     "latency_ms": 7.27,
      "top10": [
       "v3appm",
       "lssb1r",
@@ -2845,7 +2845,7 @@
      "query": "150 marks in jee mains percentile",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 9.93,
+     "latency_ms": 8.97,
      "top10": [
       "shw7vo",
       "ubmf1k",
@@ -2863,10 +2863,10 @@
      "p@3": 0.0,
      "p@5": 0.2,
      "p@10": 0.4,
-     "recall@10": 0.4,
+     "recall@10": 0.36363636363636365,
      "success@5": 1.0,
      "rr": 0.2,
-     "ap": 0.13051587301587303,
+     "ap": 0.11865079365079366,
      "ndcg@5": 0.053652664646244,
      "ndcg@10": 0.2991654888378594,
      "judged@10": 1.0,
@@ -2877,7 +2877,7 @@
      "query": "neet 2021 cutoff general category",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 3.63,
+     "latency_ms": 3.26,
      "top10": [
       "w6toch",
       "ryskcb",
@@ -2909,7 +2909,7 @@
      "query": "rank 10000 jee mains which nit",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 10.29,
+     "latency_ms": 9.75,
      "top10": [
       "qc6gpk",
       "qdcjav",
@@ -2941,7 +2941,7 @@
      "query": "6 months left for jee",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 7.57,
+     "latency_ms": 6.76,
      "top10": [
       "vkmvx0",
       "wd863f",
@@ -2973,7 +2973,7 @@
      "query": "75 percent criteria boards",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 1.7,
+     "latency_ms": 1.33,
      "top10": [
       "we1c12",
       "w6vvnm",
@@ -3005,7 +3005,7 @@
      "query": "allen vs aakash for neet",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 3.6,
+     "latency_ms": 3.17,
      "top10": [
       "t8n37g",
       "uvvj5s",
@@ -3037,7 +3037,7 @@
      "query": "cengage vs arihant maths",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 1.95,
+     "latency_ms": 1.71,
      "top10": [
       "sweh85",
       "rv03zg",
@@ -3055,10 +3055,10 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 0.8,
-     "recall@10": 0.5714285714285714,
+     "recall@10": 0.5333333333333333,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.5634920634920635,
+     "ap": 0.5259259259259259,
      "ndcg@5": 0.7369550334663224,
      "ndcg@10": 0.7178228329693148,
      "judged@10": 1.0,
@@ -3069,7 +3069,7 @@
      "query": "jee mains vs advanced difficulty",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 9.96,
+     "latency_ms": 9.01,
      "top10": [
       "vs17uf",
       "tcciyw",
@@ -3101,7 +3101,7 @@
      "query": "nit vs iiit",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 0.79,
+     "latency_ms": 0.65,
      "top10": [
       "ppywgj",
       "qn3qq4",
@@ -3133,7 +3133,7 @@
      "query": "iit vs bits pilani",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 1.99,
+     "latency_ms": 1.51,
      "top10": [
       "temqg7",
       "wafasx",
@@ -3165,7 +3165,7 @@
      "query": "kota vs online coaching",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 3.38,
+     "latency_ms": 2.94,
      "top10": [
       "pkb4w3",
       "uxc0nw",
@@ -3197,7 +3197,7 @@
      "query": "ms chouhan vs n awasthi",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 0.33,
+     "latency_ms": 0.29,
      "top10": [
       "vdpvqz",
       "jun7a8",
@@ -3229,7 +3229,7 @@
      "query": "neet vs jee which to choose",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 8.78,
+     "latency_ms": 106.2,
      "top10": [
       "sw3kpa",
       "w3ed2q",
@@ -3261,7 +3261,7 @@
      "query": "how to stay motivated during jee preparation",
      "category": "general",
      "split": "tune",
-     "latency_ms": 119.61,
+     "latency_ms": 6.67,
      "top10": [
       "wa1xbi",
       "t7vq84",
@@ -3293,7 +3293,7 @@
      "query": "best youtube channels for jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 8.2,
+     "latency_ms": 7.42,
      "top10": [
       "rvllpf",
       "pk5khw",
@@ -3325,7 +3325,7 @@
      "query": "self study without coaching",
      "category": "general",
      "split": "test",
-     "latency_ms": 5.6,
+     "latency_ms": 4.62,
      "top10": [
       "w0alr9",
       "vmi1dq",
@@ -3357,7 +3357,7 @@
      "query": "time management tips during exam",
      "category": "general",
      "split": "test",
-     "latency_ms": 5.56,
+     "latency_ms": 4.58,
      "top10": [
       "vq7oj2",
       "usicxh",
@@ -3389,7 +3389,7 @@
      "query": "how many hours to study daily",
      "category": "general",
      "split": "test",
-     "latency_ms": 4.11,
+     "latency_ms": 3.44,
      "top10": [
       "rpgw1w",
       "tth3oy",
@@ -3407,10 +3407,10 @@
      "p@3": 0.6666666666666666,
      "p@5": 0.8,
      "p@10": 0.8,
-     "recall@10": 0.34782608695652173,
+     "recall@10": 0.3333333333333333,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.27729468599033813,
+     "ap": 0.2657407407407407,
      "ndcg@5": 0.5854902818327059,
      "ndcg@10": 0.6053821208475277,
      "judged@10": 1.0,
@@ -3421,7 +3421,7 @@
      "query": "parents pressure jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 7.67,
+     "latency_ms": 5.8,
      "top10": [
       "r7a55b",
       "u0j88l",
@@ -3453,7 +3453,7 @@
      "query": "exam anxiety mental health",
      "category": "general",
      "split": "test",
-     "latency_ms": 2.7,
+     "latency_ms": 2.2,
      "top10": [
       "orex6j",
       "qhq1kd",
@@ -3485,7 +3485,7 @@
      "query": "revision strategy last month",
      "category": "general",
      "split": "tune",
-     "latency_ms": 2.95,
+     "latency_ms": 2.45,
      "top10": [
       "vilmzy",
       "twygax",
@@ -3517,7 +3517,7 @@
      "query": "best book for physics jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 10.18,
+     "latency_ms": 8.63,
      "top10": [
       "lepg31",
       "wai6fl",
@@ -3549,7 +3549,7 @@
      "query": "how to improve speed in maths",
      "category": "general",
      "split": "test",
-     "latency_ms": 1.79,
+     "latency_ms": 1.56,
      "top10": [
       "vwg9rf",
       "w20o4d",
@@ -3567,10 +3567,10 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 0.7,
-     "recall@10": 0.5,
+     "recall@10": 0.4666666666666667,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.49107142857142855,
+     "ap": 0.4583333333333333,
      "ndcg@5": 0.6568190367442152,
      "ndcg@10": 0.7015963627858072,
      "judged@10": 1.0,
@@ -3581,7 +3581,7 @@
      "query": "college life after jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 7.92,
+     "latency_ms": 7.15,
      "top10": [
       "v2fxwn",
       "vr4wge",
@@ -3613,7 +3613,7 @@
      "query": "attempt vs accuracy in jee mains",
      "category": "general",
      "split": "test",
-     "latency_ms": 9.54,
+     "latency_ms": 8.5,
      "top10": [
       "vwivsf",
       "pagkq0",
@@ -3645,7 +3645,7 @@
      "query": "how to solve previous year papers",
      "category": "general",
      "split": "test",
-     "latency_ms": 3.95,
+     "latency_ms": 3.42,
      "top10": [
       "rozaaa",
       "pd4xvd",
@@ -3677,7 +3677,7 @@
      "query": "neet biology diagrams",
      "category": "general",
      "split": "test",
-     "latency_ms": 2.16,
+     "latency_ms": 1.91,
      "top10": [
       "u3i8aa",
       "vbwp85",
@@ -3711,7 +3711,7 @@
      "query": "physics wallah vs unacademy",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 2.89,
+     "latency_ms": 2.48,
      "top10": [
       "u13nyh",
       "vcqn3x",
@@ -3729,12 +3729,12 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 0.9,
-     "recall@10": 0.6428571428571429,
+     "recall@10": 0.6,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.6357142857142858,
+     "ap": 0.5933333333333334,
      "ndcg@5": 0.8151510484299679,
-     "ndcg@10": 0.9384893003497141,
+     "ndcg@10": 0.8909312604248301,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -3743,7 +3743,7 @@
      "query": "best book for organic chemistry",
      "category": "general",
      "split": "tune",
-     "latency_ms": 3.79,
+     "latency_ms": 3.61,
      "top10": [
       "v37tm3",
       "u7y6za",
@@ -3761,10 +3761,10 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 1.0,
-     "recall@10": 0.6666666666666666,
+     "recall@10": 0.625,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.6666666666666666,
+     "ap": 0.625,
      "ndcg@5": 1.0,
      "ndcg@10": 0.9069212362975007,
      "judged@10": 1.0,
@@ -3775,7 +3775,7 @@
      "query": "marks vs percentile 2022",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 3.49,
+     "latency_ms": 2.95,
      "top10": [
       "vl6p8q",
       "wbr1xm",
@@ -3807,7 +3807,7 @@
      "query": "allen test series review",
      "category": "general",
      "split": "tune",
-     "latency_ms": 2.81,
+     "latency_ms": 2.38,
      "top10": [
       "v8boga",
       "twr9n9",
@@ -3839,7 +3839,7 @@
      "query": "dc pandey vs hc verma",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 0.48,
+     "latency_ms": 0.46,
      "top10": [
       "uvyblk",
       "ur0zb7",
@@ -3871,7 +3871,7 @@
      "query": "maths dropper strategy",
      "category": "general",
      "split": "tune",
-     "latency_ms": 2.43,
+     "latency_ms": 2.27,
      "top10": [
       "ttksmg",
       "w4fu3t",
@@ -3903,7 +3903,7 @@
      "query": "neet 600 marks government medical college",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 5.05,
+     "latency_ms": 4.71,
      "top10": [
       "ts2sbg",
       "u7vh7a",
@@ -3935,7 +3935,7 @@
      "query": "mock test score stuck",
      "category": "general",
      "split": "tune",
-     "latency_ms": 3.17,
+     "latency_ms": 2.64,
      "top10": [
       "sq2b10",
       "rrrfmi",
@@ -3967,7 +3967,7 @@
      "query": "hostel food kota life",
      "category": "general",
      "split": "tune",
-     "latency_ms": 1.48,
+     "latency_ms": 1.18,
      "top10": [
       "ifib7f",
       "ifi9fm",
@@ -3999,7 +3999,7 @@
      "query": "iit bombay cse cutoff rank",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 2.85,
+     "latency_ms": 2.44,
      "top10": [
       "vv4mil",
       "s6xfhw",
@@ -4031,7 +4031,7 @@
      "query": "HCV physics",
      "category": "abbreviation",
      "split": "tune",
-     "latency_ms": 2.07,
+     "latency_ms": 1.66,
      "top10": [
       "uvwje0",
       "w3o49x",
@@ -4063,7 +4063,7 @@
      "query": "PW vs Unacademy",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 1.48,
+     "latency_ms": 1.17,
      "top10": [
       "p1reob",
       "p0dmjs",
@@ -4081,12 +4081,12 @@
      "p@3": 0.6666666666666666,
      "p@5": 0.4,
      "p@10": 0.2,
-     "recall@10": 0.25,
+     "recall@10": 0.2,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.25,
+     "ap": 0.2,
      "ndcg@5": 0.3270396664923996,
-     "ndcg@10": 0.29367277729175045,
+     "ndcg@10": 0.2593757093377011,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -4095,7 +4095,7 @@
      "query": "IOC preparation tips",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 1.91,
+     "latency_ms": 1.57,
      "top10": [
       "qwuemk",
       "vgl54i",
@@ -4127,7 +4127,7 @@
      "query": "GOC concepts weak",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 0.72,
+     "latency_ms": 0.61,
      "top10": [
       "telydz",
       "vwgnju",
@@ -4159,7 +4159,7 @@
      "query": "PYQ practice for jee mains",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 9.8,
+     "latency_ms": 8.2,
      "top10": [
       "r8m1mb",
       "vsltfe",
@@ -4191,7 +4191,7 @@
      "query": "NCERT bio for neet",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 2.85,
+     "latency_ms": 2.56,
      "top10": [
       "qnr0ld",
       "nyrzvu",
@@ -4223,7 +4223,7 @@
      "query": "AITS test series",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 1.62,
+     "latency_ms": 1.4,
      "top10": [
       "w4ypmj",
       "rrszrt",
@@ -4241,12 +4241,12 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 0.5,
-     "recall@10": 0.8333333333333334,
+     "recall@10": 0.5555555555555556,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.8333333333333334,
+     "ap": 0.5555555555555556,
      "ndcg@5": 0.9686152031181796,
-     "ndcg@10": 0.9230159802497317,
+     "ndcg@10": 0.8200720901199107,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -4255,7 +4255,7 @@
      "query": "jee adv paper analysis",
      "category": "abbreviation",
      "split": "tune",
-     "latency_ms": 8.1,
+     "latency_ms": 6.18,
      "top10": [
       "uysu64",
       "vn90sw",
@@ -4287,7 +4287,7 @@
      "query": "KVPY preparation",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 1.42,
+     "latency_ms": 1.18,
      "top10": [
       "urql7g",
       "t08ol2",
@@ -4319,7 +4319,7 @@
      "query": "DPP solutions",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 0.45,
+     "latency_ms": 0.37,
      "top10": [
       "rm9us2",
       "ry76ss",
@@ -4351,7 +4351,7 @@
      "query": "JEE hall ticket",
      "category": "synonym",
      "split": "tune",
-     "latency_ms": 6.13,
+     "latency_ms": 5.29,
      "top10": [
       "po3na8",
       "v9rp32",
@@ -4383,7 +4383,7 @@
      "query": "coaching institute fees",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 2.23,
+     "latency_ms": 1.89,
      "top10": [
       "tqqa1h",
       "uzlc22",
@@ -4415,7 +4415,7 @@
      "query": "taking a gap year for jee",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 9.46,
+     "latency_ms": 7.81,
      "top10": [
       "ts6g4z",
       "jc6lhu",
@@ -4447,7 +4447,7 @@
      "query": "feeling burnt out studying",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 4.18,
+     "latency_ms": 3.36,
      "top10": [
       "qhogck",
       "wc2cn8",
@@ -4479,7 +4479,7 @@
      "query": "exam postponed",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 2.37,
+     "latency_ms": 2.09,
      "top10": [
       "txrsjl",
       "ty57cy",
@@ -4511,7 +4511,7 @@
      "query": "study timetable for repeaters",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 2.65,
+     "latency_ms": 2.36,
      "top10": [
       "t4qn7m",
       "p3hr4c",
@@ -4543,7 +4543,7 @@
      "query": "sleep schedule during preparation",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 1.48,
+     "latency_ms": 1.34,
      "top10": [
       "vdzj44",
       "pqkqem",
@@ -4575,7 +4575,7 @@
      "query": "online classes vs offline coaching",
      "category": "synonym",
      "split": "tune",
-     "latency_ms": 4.5,
+     "latency_ms": 3.85,
      "top10": [
       "uxc0nw",
       "uwlp5b",
@@ -4607,7 +4607,7 @@
      "query": "answer key challenge",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 0.93,
+     "latency_ms": 0.78,
      "top10": [
       "vqbwao",
       "q9ig2y",
@@ -4639,7 +4639,7 @@
      "query": "seat allotment counselling",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 0.58,
+     "latency_ms": 0.51,
      "top10": [
       "vueajt",
       "vufx77",
@@ -4657,12 +4657,12 @@
      "p@3": 0.3333333333333333,
      "p@5": 0.2,
      "p@10": 0.2,
-     "recall@10": 0.2857142857142857,
+     "recall@10": 0.25,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.10317460317460317,
-     "ndcg@5": 0.08750372712995078,
-     "ndcg@10": 0.19418317619626146,
+     "ap": 0.09027777777777778,
+     "ndcg@5": 0.07816593312080211,
+     "ndcg@10": 0.1690067540141073,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -4671,7 +4671,7 @@
      "query": "exam day nervousness",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 3.62,
+     "latency_ms": 3.03,
      "top10": [
       "p0cg54",
       "soy3ab",
@@ -4703,7 +4703,7 @@
      "query": "maths weak hai kya karu",
      "category": "hinglish",
      "split": "tune",
-     "latency_ms": 8.57,
+     "latency_ms": 6.95,
      "top10": [
       "saro5p",
       "vwdi8z",
@@ -4735,7 +4735,7 @@
      "query": "JEE ki preparation kaise karu",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 10.44,
+     "latency_ms": 8.62,
      "top10": [
       "vqckd6",
       "w9jmc7",
@@ -4767,7 +4767,7 @@
      "query": "physics mein numericals kaise solve kare",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 4.48,
+     "latency_ms": 4.04,
      "top10": [
       "rvrasz",
       "v056av",
@@ -4799,7 +4799,7 @@
      "query": "chemistry ke liye best resources kya hain",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 117.19,
+     "latency_ms": 6.65,
      "top10": [
       "tlyzst",
       "vncezy",
@@ -4831,7 +4831,7 @@
      "query": "padhai mein mann nahi lagta",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 3.12,
+     "latency_ms": 2.33,
      "top10": [
       "ovtrdl",
       "oz2fky",
@@ -4863,7 +4863,7 @@
      "query": "drop lena chahiye ya nahi",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 3.52,
+     "latency_ms": 101.53,
      "top10": [
       "uy7prq",
       "s0ef7p",
@@ -4895,7 +4895,7 @@
      "query": "kota jaana sahi hai kya",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 6.21,
+     "latency_ms": 6.73,
      "top10": [
       "vzst5u",
       "vi94xa",
@@ -4927,7 +4927,7 @@
      "query": "neet ke liye biology kaise padhe",
      "category": "hinglish",
      "split": "tune",
-     "latency_ms": 5.54,
+     "latency_ms": 5.18,
      "top10": [
       "t22iyu",
       "w9l9e8",
@@ -4959,7 +4959,7 @@
      "query": "mock test mein marks kam aa rahe hai",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 8.07,
+     "latency_ms": 8.1,
      "top10": [
       "pjgits",
       "tab007",
@@ -4991,7 +4991,7 @@
      "query": "boards aur jee dono kaise manage kare",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 9.66,
+     "latency_ms": 9.47,
      "top10": [
       "pn9tt3",
       "tpkmic",
@@ -5023,7 +5023,7 @@
      "query": "physics ka concept clear nahi hota",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 6.0,
+     "latency_ms": 5.81,
      "top10": [
       "s6yvh6",
       "q0zi1f",
@@ -5055,7 +5055,7 @@
      "query": "orgnic chemistry",
      "category": "typo",
      "split": "tune",
-     "latency_ms": 1.38,
+     "latency_ms": 1.15,
      "top10": [
       "vpxx2q",
       "p31qto",
@@ -5087,7 +5087,7 @@
      "query": "physcis wallah lectures",
      "category": "typo",
      "split": "test",
-     "latency_ms": 1.14,
+     "latency_ms": 0.93,
      "top10": [
       "q77tgb",
       "rvw323",
@@ -5105,10 +5105,10 @@
      "p@3": 0.6666666666666666,
      "p@5": 0.6,
      "p@10": 0.7,
-     "recall@10": 0.5833333333333334,
+     "recall@10": 0.5384615384615384,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.36874999999999997,
+     "ap": 0.3403846153846154,
      "ndcg@5": 0.3443700582404932,
      "ndcg@10": 0.47787809880246435,
      "judged@10": 1.0,
@@ -5119,7 +5119,7 @@
      "query": "thermodynamcs doubts",
      "category": "typo",
      "split": "test",
-     "latency_ms": 0.55,
+     "latency_ms": 0.46,
      "top10": [
       "m27338",
       "md00vl",
@@ -5151,7 +5151,7 @@
      "query": "integeration practice",
      "category": "typo",
      "split": "test",
-     "latency_ms": 0.5,
+     "latency_ms": 0.43,
      "top10": [
       "qdbm5y",
       "tkvgt8",
@@ -5183,7 +5183,7 @@
      "query": "electrostatcs book",
      "category": "typo",
      "split": "test",
-     "latency_ms": 0.88,
+     "latency_ms": 0.77,
      "top10": [
       "mnjuhk",
       "unb1b9",
@@ -5215,7 +5215,7 @@
      "query": "percentle vs marks",
      "category": "typo",
      "split": "test",
-     "latency_ms": 1.57,
+     "latency_ms": 1.48,
      "top10": [
       "pv2kvh",
       "vl6p8q",
@@ -5247,7 +5247,7 @@
      "query": "unacadmy plus subscription",
      "category": "typo",
      "split": "test",
-     "latency_ms": 0.35,
+     "latency_ms": 0.34,
      "top10": [
       "twp4c1",
       "ofl9bn",
@@ -5279,7 +5279,7 @@
      "query": "nuet biology ncert",
      "category": "typo",
      "split": "tune",
-     "latency_ms": 0.7,
+     "latency_ms": 0.71,
      "top10": [
       "po08fr",
       "prydei",
@@ -5311,7 +5311,7 @@
      "query": "NEET 600 marks",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 3.54,
+     "latency_ms": 3.04,
      "top10": [
       "w25s5m",
       "vl3t50",
@@ -5343,7 +5343,7 @@
      "query": "99 percentile in jee mains how many marks",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 11.21,
+     "latency_ms": 10.13,
      "top10": [
       "s259yj",
       "v5dbyp",
@@ -5361,10 +5361,10 @@
      "p@3": 1.0,
      "p@5": 0.8,
      "p@10": 0.8,
-     "recall@10": 0.5714285714285714,
+     "recall@10": 0.5333333333333333,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.488718820861678,
+     "ap": 0.4561375661375661,
      "ndcg@5": 0.766461598482399,
      "ndcg@10": 0.8430449354331391,
      "judged@10": 1.0,
@@ -5375,7 +5375,7 @@
      "query": "jee advanced 2022 cutoff",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 8.43,
+     "latency_ms": 7.34,
      "top10": [
       "ukta74",
       "lssb1r",
@@ -5407,7 +5407,7 @@
      "query": "150 marks in jee mains percentile",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 10.95,
+     "latency_ms": 8.78,
      "top10": [
       "ubmf1k",
       "vt849m",
@@ -5425,10 +5425,10 @@
      "p@3": 0.0,
      "p@5": 0.2,
      "p@10": 0.4,
-     "recall@10": 0.4,
+     "recall@10": 0.36363636363636365,
      "success@5": 1.0,
      "rr": 0.2,
-     "ap": 0.13083333333333333,
+     "ap": 0.11893939393939394,
      "ndcg@5": 0.160957993938732,
      "ndcg@10": 0.240907939667639,
      "judged@10": 1.0,
@@ -5439,7 +5439,7 @@
      "query": "neet 2021 cutoff general category",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 3.5,
+     "latency_ms": 2.98,
      "top10": [
       "w6toch",
       "wbtzcu",
@@ -5471,7 +5471,7 @@
      "query": "rank 10000 jee mains which nit",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 10.1,
+     "latency_ms": 7.82,
      "top10": [
       "qc6gpk",
       "q1vkjo",
@@ -5503,7 +5503,7 @@
      "query": "6 months left for jee",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 7.32,
+     "latency_ms": 6.15,
      "top10": [
       "vkmvx0",
       "untrkt",
@@ -5535,7 +5535,7 @@
      "query": "75 percent criteria boards",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 1.68,
+     "latency_ms": 1.3,
      "top10": [
       "we1c12",
       "qbcc93",
@@ -5567,7 +5567,7 @@
      "query": "allen vs aakash for neet",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 3.63,
+     "latency_ms": 2.96,
      "top10": [
       "uvvj5s",
       "t8n37g",
@@ -5599,7 +5599,7 @@
      "query": "cengage vs arihant maths",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 1.96,
+     "latency_ms": 1.63,
      "top10": [
       "sweh85",
       "w5u85k",
@@ -5617,10 +5617,10 @@
      "p@3": 1.0,
      "p@5": 0.8,
      "p@10": 0.7,
-     "recall@10": 0.5,
+     "recall@10": 0.4666666666666667,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.4345238095238095,
+     "ap": 0.40555555555555556,
      "ndcg@5": 0.9357847944877146,
      "ndcg@10": 0.8807577758786721,
      "judged@10": 1.0,
@@ -5631,7 +5631,7 @@
      "query": "jee mains vs advanced difficulty",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 10.44,
+     "latency_ms": 8.21,
      "top10": [
       "tcciyw",
       "vs17uf",
@@ -5663,7 +5663,7 @@
      "query": "nit vs iiit",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 0.72,
+     "latency_ms": 0.68,
      "top10": [
       "qn3qq4",
       "ppywgj",
@@ -5695,7 +5695,7 @@
      "query": "iit vs bits pilani",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 1.77,
+     "latency_ms": 1.53,
      "top10": [
       "temqg7",
       "pnuz2e",
@@ -5727,7 +5727,7 @@
      "query": "kota vs online coaching",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 3.19,
+     "latency_ms": 2.89,
      "top10": [
       "uxc0nw",
       "uwlp5b",
@@ -5759,7 +5759,7 @@
      "query": "ms chouhan vs n awasthi",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 0.32,
+     "latency_ms": 0.3,
      "top10": [
       "uuf2i7",
       "w3oxa8",
@@ -5791,7 +5791,7 @@
      "query": "neet vs jee which to choose",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 8.54,
+     "latency_ms": 7.87,
      "top10": [
       "w3ed2q",
       "uw184b",
@@ -5823,7 +5823,7 @@
      "query": "how to stay motivated during jee preparation",
      "category": "general",
      "split": "tune",
-     "latency_ms": 8.02,
+     "latency_ms": 6.8,
      "top10": [
       "wa1xbi",
       "t7vq84",
@@ -5855,7 +5855,7 @@
      "query": "best youtube channels for jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 8.32,
+     "latency_ms": 106.94,
      "top10": [
       "rvllpf",
       "tpe402",
@@ -5887,7 +5887,7 @@
      "query": "self study without coaching",
      "category": "general",
      "split": "test",
-     "latency_ms": 5.42,
+     "latency_ms": 4.75,
      "top10": [
       "vrd99z",
       "v1osyv",
@@ -5919,7 +5919,7 @@
      "query": "time management tips during exam",
      "category": "general",
      "split": "test",
-     "latency_ms": 5.11,
+     "latency_ms": 4.57,
      "top10": [
       "vq7oj2",
       "usicxh",
@@ -5951,7 +5951,7 @@
      "query": "how many hours to study daily",
      "category": "general",
      "split": "test",
-     "latency_ms": 4.1,
+     "latency_ms": 3.35,
      "top10": [
       "wcbttn",
       "rpgw1w",
@@ -5969,10 +5969,10 @@
      "p@3": 0.6666666666666666,
      "p@5": 0.6,
      "p@10": 0.8,
-     "recall@10": 0.34782608695652173,
+     "recall@10": 0.3333333333333333,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.27429261559696344,
+     "ap": 0.2628637566137566,
      "ndcg@5": 0.6843515475204855,
      "ndcg@10": 0.750996270178483,
      "judged@10": 1.0,
@@ -5983,7 +5983,7 @@
      "query": "parents pressure jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 6.9,
+     "latency_ms": 6.65,
      "top10": [
       "r7a55b",
       "ppiawb",
@@ -6015,7 +6015,7 @@
      "query": "exam anxiety mental health",
      "category": "general",
      "split": "test",
-     "latency_ms": 2.56,
+     "latency_ms": 2.27,
      "top10": [
       "orex6j",
       "qhq1kd",
@@ -6047,7 +6047,7 @@
      "query": "revision strategy last month",
      "category": "general",
      "split": "tune",
-     "latency_ms": 2.83,
+     "latency_ms": 2.46,
      "top10": [
       "vilmzy",
       "twygax",
@@ -6079,7 +6079,7 @@
      "query": "best book for physics jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 120.39,
+     "latency_ms": 8.76,
      "top10": [
       "vdhfhb",
       "pmchw1",
@@ -6111,7 +6111,7 @@
      "query": "how to improve speed in maths",
      "category": "general",
      "split": "test",
-     "latency_ms": 2.26,
+     "latency_ms": 1.57,
      "top10": [
       "vwg9rf",
       "w20o4d",
@@ -6129,10 +6129,10 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 1.0,
-     "recall@10": 0.7142857142857143,
+     "recall@10": 0.6666666666666666,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.7142857142857143,
+     "ap": 0.6666666666666666,
      "ndcg@5": 0.646910188523972,
      "ndcg@10": 0.8257830356444046,
      "judged@10": 1.0,
@@ -6143,7 +6143,7 @@
      "query": "college life after jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 8.46,
+     "latency_ms": 7.38,
      "top10": [
       "v2fxwn",
       "q950dq",
@@ -6175,7 +6175,7 @@
      "query": "attempt vs accuracy in jee mains",
      "category": "general",
      "split": "test",
-     "latency_ms": 11.74,
+     "latency_ms": 9.1,
      "top10": [
       "p0vlor",
       "vs17uf",
@@ -6207,7 +6207,7 @@
      "query": "how to solve previous year papers",
      "category": "general",
      "split": "test",
-     "latency_ms": 4.02,
+     "latency_ms": 3.44,
      "top10": [
       "rozaaa",
       "vf175c",
@@ -6239,7 +6239,7 @@
      "query": "neet biology diagrams",
      "category": "general",
      "split": "test",
-     "latency_ms": 2.07,
+     "latency_ms": 1.97,
      "top10": [
       "ov88yw",
       "spqiyc",
@@ -6273,7 +6273,7 @@
      "query": "physics wallah vs unacademy",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 3.25,
+     "latency_ms": 3.12,
      "top10": [
       "u13nyh",
       "vcqn3x",
@@ -6291,12 +6291,12 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 0.9,
-     "recall@10": 0.6428571428571429,
+     "recall@10": 0.6,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.6428571428571429,
+     "ap": 0.6,
      "ndcg@5": 0.9026211001048624,
-     "ndcg@10": 0.8933316914585785,
+     "ndcg@10": 0.8480620179175803,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -6305,7 +6305,7 @@
      "query": "best book for organic chemistry",
      "category": "general",
      "split": "tune",
-     "latency_ms": 5.19,
+     "latency_ms": 3.99,
      "top10": [
       "v37tm3",
       "u7y6za",
@@ -6323,10 +6323,10 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 0.9,
-     "recall@10": 0.6,
+     "recall@10": 0.5625,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.585925925925926,
+     "ap": 0.5493055555555556,
      "ndcg@5": 1.0,
      "ndcg@10": 0.8392456378643482,
      "judged@10": 1.0,
@@ -6337,7 +6337,7 @@
      "query": "marks vs percentile 2022",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 4.12,
+     "latency_ms": 3.5,
      "top10": [
       "wbr1xm",
       "vl6p8q",
@@ -6369,7 +6369,7 @@
      "query": "allen test series review",
      "category": "general",
      "split": "tune",
-     "latency_ms": 3.15,
+     "latency_ms": 2.78,
      "top10": [
       "v8boga",
       "twr9n9",
@@ -6401,7 +6401,7 @@
      "query": "dc pandey vs hc verma",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 0.54,
+     "latency_ms": 0.51,
      "top10": [
       "uvyblk",
       "ur0zb7",
@@ -6433,7 +6433,7 @@
      "query": "maths dropper strategy",
      "category": "general",
      "split": "tune",
-     "latency_ms": 2.94,
+     "latency_ms": 2.63,
      "top10": [
       "ttksmg",
       "w4fu3t",
@@ -6465,7 +6465,7 @@
      "query": "neet 600 marks government medical college",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 6.46,
+     "latency_ms": 5.13,
      "top10": [
       "ts2sbg",
       "u7vh7a",
@@ -6497,7 +6497,7 @@
      "query": "mock test score stuck",
      "category": "general",
      "split": "tune",
-     "latency_ms": 3.67,
+     "latency_ms": 3.21,
      "top10": [
       "sq2b10",
       "rrrfmi",
@@ -6529,7 +6529,7 @@
      "query": "hostel food kota life",
      "category": "general",
      "split": "tune",
-     "latency_ms": 1.63,
+     "latency_ms": 1.47,
      "top10": [
       "ifib7f",
       "ifi9fm",
@@ -6561,7 +6561,7 @@
      "query": "iit bombay cse cutoff rank",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 3.43,
+     "latency_ms": 2.86,
      "top10": [
       "vv4mil",
       "s6xfhw",
@@ -6593,7 +6593,7 @@
      "query": "HCV physics",
      "category": "abbreviation",
      "split": "tune",
-     "latency_ms": 2.59,
+     "latency_ms": 1.99,
      "top10": [
       "uvwje0",
       "w3o49x",
@@ -6625,7 +6625,7 @@
      "query": "PW vs Unacademy",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 1.72,
+     "latency_ms": 1.47,
      "top10": [
       "p1reob",
       "p0dmjs",
@@ -6643,12 +6643,12 @@
      "p@3": 0.6666666666666666,
      "p@5": 0.4,
      "p@10": 0.2,
-     "recall@10": 0.25,
+     "recall@10": 0.2,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.25,
+     "ap": 0.2,
      "ndcg@5": 0.3270396664923996,
-     "ndcg@10": 0.29367277729175045,
+     "ndcg@10": 0.2593757093377011,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -6657,7 +6657,7 @@
      "query": "IOC preparation tips",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 2.24,
+     "latency_ms": 1.92,
      "top10": [
       "vgl54i",
       "qwuemk",
@@ -6689,7 +6689,7 @@
      "query": "GOC concepts weak",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 0.82,
+     "latency_ms": 0.74,
      "top10": [
       "telydz",
       "vwgnju",
@@ -6721,7 +6721,7 @@
      "query": "PYQ practice for jee mains",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 11.05,
+     "latency_ms": 9.67,
      "top10": [
       "vsltfe",
       "r8m1mb",
@@ -6753,7 +6753,7 @@
      "query": "NCERT bio for neet",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 3.76,
+     "latency_ms": 3.51,
      "top10": [
       "nyrzvu",
       "qnr0ld",
@@ -6785,7 +6785,7 @@
      "query": "AITS test series",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 2.13,
+     "latency_ms": 1.89,
      "top10": [
       "w4ypmj",
       "rrszrt",
@@ -6803,12 +6803,12 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 0.5,
-     "recall@10": 0.8333333333333334,
+     "recall@10": 0.5555555555555556,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.8333333333333334,
+     "ap": 0.5555555555555556,
      "ndcg@5": 0.9686152031181796,
-     "ndcg@10": 0.9230159802497317,
+     "ndcg@10": 0.8200720901199107,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -6817,7 +6817,7 @@
      "query": "jee adv paper analysis",
      "category": "abbreviation",
      "split": "tune",
-     "latency_ms": 9.49,
+     "latency_ms": 8.35,
      "top10": [
       "uysu64",
       "vjouxk",
@@ -6849,7 +6849,7 @@
      "query": "KVPY preparation",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 1.72,
+     "latency_ms": 1.49,
      "top10": [
       "urql7g",
       "t08ol2",
@@ -6881,7 +6881,7 @@
      "query": "DPP solutions",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 0.5,
+     "latency_ms": 0.43,
      "top10": [
       "rm9us2",
       "ry76ss",
@@ -6913,7 +6913,7 @@
      "query": "JEE hall ticket",
      "category": "synonym",
      "split": "tune",
-     "latency_ms": 7.48,
+     "latency_ms": 6.02,
      "top10": [
       "po3na8",
       "v9rp32",
@@ -6945,7 +6945,7 @@
      "query": "coaching institute fees",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 2.6,
+     "latency_ms": 2.32,
      "top10": [
       "tqqa1h",
       "uzlc22",
@@ -6977,7 +6977,7 @@
      "query": "taking a gap year for jee",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 11.64,
+     "latency_ms": 8.58,
      "top10": [
       "ts6g4z",
       "jc6lhu",
@@ -7009,7 +7009,7 @@
      "query": "feeling burnt out studying",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 5.37,
+     "latency_ms": 4.17,
      "top10": [
       "qhogck",
       "pe4m8p",
@@ -7041,7 +7041,7 @@
      "query": "exam postponed",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 2.74,
+     "latency_ms": 2.39,
      "top10": [
       "txrsjl",
       "vb2xyv",
@@ -7073,7 +7073,7 @@
      "query": "study timetable for repeaters",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 3.06,
+     "latency_ms": 2.72,
      "top10": [
       "rpqclg",
       "t4qn7m",
@@ -7105,7 +7105,7 @@
      "query": "sleep schedule during preparation",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 1.78,
+     "latency_ms": 1.54,
      "top10": [
       "pqkqem",
       "vdzj44",
@@ -7137,7 +7137,7 @@
      "query": "online classes vs offline coaching",
      "category": "synonym",
      "split": "tune",
-     "latency_ms": 5.04,
+     "latency_ms": 4.69,
      "top10": [
       "uxc0nw",
       "uwlp5b",
@@ -7169,7 +7169,7 @@
      "query": "answer key challenge",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 1.08,
+     "latency_ms": 0.94,
      "top10": [
       "vqbwao",
       "q9ig2y",
@@ -7201,7 +7201,7 @@
      "query": "seat allotment counselling",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 0.67,
+     "latency_ms": 0.59,
      "top10": [
       "vueajt",
       "vufx77",
@@ -7219,12 +7219,12 @@
      "p@3": 0.3333333333333333,
      "p@5": 0.2,
      "p@10": 0.2,
-     "recall@10": 0.2857142857142857,
+     "recall@10": 0.25,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.10317460317460317,
-     "ndcg@5": 0.08750372712995078,
-     "ndcg@10": 0.19418317619626146,
+     "ap": 0.09027777777777778,
+     "ndcg@5": 0.07816593312080211,
+     "ndcg@10": 0.1690067540141073,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -7233,7 +7233,7 @@
      "query": "exam day nervousness",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 3.95,
+     "latency_ms": 3.48,
      "top10": [
       "p0cg54",
       "soy3ab",
@@ -7265,7 +7265,7 @@
      "query": "maths weak hai kya karu",
      "category": "hinglish",
      "split": "tune",
-     "latency_ms": 10.05,
+     "latency_ms": 8.04,
      "top10": [
       "saro5p",
       "vwdi8z",
@@ -7297,7 +7297,7 @@
      "query": "JEE ki preparation kaise karu",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 12.36,
+     "latency_ms": 10.32,
      "top10": [
       "vqckd6",
       "vvcpjc",
@@ -7329,7 +7329,7 @@
      "query": "physics mein numericals kaise solve kare",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 5.31,
+     "latency_ms": 4.5,
      "top10": [
       "rvrasz",
       "v056av",
@@ -7361,7 +7361,7 @@
      "query": "chemistry ke liye best resources kya hain",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 9.64,
+     "latency_ms": 8.34,
      "top10": [
       "vvv01o",
       "tlyzst",
@@ -7393,7 +7393,7 @@
      "query": "padhai mein mann nahi lagta",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 2.99,
+     "latency_ms": 2.74,
      "top10": [
       "ovtrdl",
       "oz2fky",
@@ -7425,7 +7425,7 @@
      "query": "drop lena chahiye ya nahi",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 4.32,
+     "latency_ms": 3.78,
      "top10": [
       "uy7prq",
       "s0ef7p",
@@ -7457,7 +7457,7 @@
      "query": "kota jaana sahi hai kya",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 7.63,
+     "latency_ms": 6.72,
      "top10": [
       "uuj7cv",
       "vi94xa",
@@ -7489,7 +7489,7 @@
      "query": "neet ke liye biology kaise padhe",
      "category": "hinglish",
      "split": "tune",
-     "latency_ms": 7.1,
+     "latency_ms": 5.78,
      "top10": [
       "t22iyu",
       "uhkba6",
@@ -7521,7 +7521,7 @@
      "query": "mock test mein marks kam aa rahe hai",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 10.82,
+     "latency_ms": 9.41,
      "top10": [
       "pjgits",
       "w3joyx",
@@ -7553,7 +7553,7 @@
      "query": "boards aur jee dono kaise manage kare",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 12.27,
+     "latency_ms": 111.13,
      "top10": [
       "pn9tt3",
       "tpkmic",
@@ -7585,7 +7585,7 @@
      "query": "physics ka concept clear nahi hota",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 8.02,
+     "latency_ms": 7.16,
      "top10": [
       "s6yvh6",
       "s974pq",
@@ -7617,7 +7617,7 @@
      "query": "orgnic chemistry",
      "category": "typo",
      "split": "tune",
-     "latency_ms": 1.54,
+     "latency_ms": 1.42,
      "top10": [
       "txe31j",
       "vpxx2q",
@@ -7667,10 +7667,10 @@
      "p@3": 0.6666666666666666,
      "p@5": 0.6,
      "p@10": 0.6,
-     "recall@10": 0.5,
+     "recall@10": 0.46153846153846156,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.3104166666666666,
+     "ap": 0.2865384615384615,
      "ndcg@5": 0.3443700582404932,
      "ndcg@10": 0.38816930227572377,
      "judged@10": 1.0,
@@ -7681,7 +7681,7 @@
      "query": "thermodynamcs doubts",
      "category": "typo",
      "split": "test",
-     "latency_ms": 0.6,
+     "latency_ms": 0.56,
      "top10": [
       "vynofb",
       "md00vl",
@@ -7713,7 +7713,7 @@
      "query": "integeration practice",
      "category": "typo",
      "split": "test",
-     "latency_ms": 0.59,
+     "latency_ms": 0.52,
      "top10": [
       "mbzrra",
       "strwtx",
@@ -7745,7 +7745,7 @@
      "query": "electrostatcs book",
      "category": "typo",
      "split": "test",
-     "latency_ms": 1.04,
+     "latency_ms": 0.94,
      "top10": [
       "q1miwm",
       "q0xyt9",
@@ -7777,7 +7777,7 @@
      "query": "percentle vs marks",
      "category": "typo",
      "split": "test",
-     "latency_ms": 2.0,
+     "latency_ms": 1.78,
      "top10": [
       "pv2kvh",
       "wbr1xm",
@@ -7809,7 +7809,7 @@
      "query": "unacadmy plus subscription",
      "category": "typo",
      "split": "test",
-     "latency_ms": 0.41,
+     "latency_ms": 0.42,
      "top10": [
       "twp4c1",
       "ofl9bn",
@@ -7841,7 +7841,7 @@
      "query": "nuet biology ncert",
      "category": "typo",
      "split": "tune",
-     "latency_ms": 0.89,
+     "latency_ms": 0.82,
      "top10": [
       "po08fr",
       "prydei",
@@ -7873,7 +7873,7 @@
      "query": "NEET 600 marks",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 115.45,
+     "latency_ms": 3.66,
      "top10": [
       "w25s5m",
       "vl3t50",
@@ -7905,7 +7905,7 @@
      "query": "99 percentile in jee mains how many marks",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 12.19,
+     "latency_ms": 11.62,
      "top10": [
       "s259yj",
       "v5dbyp",
@@ -7923,10 +7923,10 @@
      "p@3": 0.6666666666666666,
      "p@5": 0.8,
      "p@10": 0.7,
-     "recall@10": 0.5,
+     "recall@10": 0.4666666666666667,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.413718820861678,
+     "ap": 0.3861375661375661,
      "ndcg@5": 0.7429498456882975,
      "ndcg@10": 0.75668970399514,
      "judged@10": 1.0,
@@ -7937,7 +7937,7 @@
      "query": "jee advanced 2022 cutoff",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 10.37,
+     "latency_ms": 8.5,
      "top10": [
       "lssb1r",
       "ukta74",
@@ -7969,7 +7969,7 @@
      "query": "150 marks in jee mains percentile",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 12.73,
+     "latency_ms": 9.69,
      "top10": [
       "ubmf1k",
       "tq2ngo",
@@ -7987,10 +7987,10 @@
      "p@3": 0.0,
      "p@5": 0.2,
      "p@10": 0.4,
-     "recall@10": 0.4,
+     "recall@10": 0.36363636363636365,
      "success@5": 1.0,
      "rr": 0.2,
-     "ap": 0.13527777777777777,
+     "ap": 0.12297979797979798,
      "ndcg@5": 0.053652664646244,
      "ndcg@10": 0.3036799588226801,
      "judged@10": 1.0,
@@ -8001,7 +8001,7 @@
      "query": "neet 2021 cutoff general category",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 3.85,
+     "latency_ms": 3.81,
      "top10": [
       "w6toch",
       "wbtzcu",
@@ -8033,7 +8033,7 @@
      "query": "rank 10000 jee mains which nit",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 10.64,
+     "latency_ms": 10.21,
      "top10": [
       "qc6gpk",
       "q1vkjo",
@@ -8065,7 +8065,7 @@
      "query": "6 months left for jee",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 8.79,
+     "latency_ms": 7.4,
      "top10": [
       "vkmvx0",
       "untrkt",
@@ -8097,7 +8097,7 @@
      "query": "75 percent criteria boards",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 1.89,
+     "latency_ms": 1.6,
      "top10": [
       "we1c12",
       "qbcc93",
@@ -8129,7 +8129,7 @@
      "query": "allen vs aakash for neet",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 4.16,
+     "latency_ms": 3.47,
      "top10": [
       "uvvj5s",
       "t8n37g",
@@ -8161,7 +8161,7 @@
      "query": "cengage vs arihant maths",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 2.16,
+     "latency_ms": 1.95,
      "top10": [
       "sweh85",
       "w5u85k",
@@ -8179,10 +8179,10 @@
      "p@3": 1.0,
      "p@5": 0.8,
      "p@10": 0.7,
-     "recall@10": 0.5,
+     "recall@10": 0.4666666666666667,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.44586167800453513,
+     "ap": 0.41613756613756614,
      "ndcg@5": 0.9520727775370877,
      "ndcg@10": 0.8932296298305027,
      "judged@10": 1.0,
@@ -8193,7 +8193,7 @@
      "query": "jee mains vs advanced difficulty",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 11.14,
+     "latency_ms": 9.67,
      "top10": [
       "vs17uf",
       "tcciyw",
@@ -8225,7 +8225,7 @@
      "query": "nit vs iiit",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 1.25,
+     "latency_ms": 0.75,
      "top10": [
       "qn3qq4",
       "ppywgj",
@@ -8257,7 +8257,7 @@
      "query": "iit vs bits pilani",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 2.26,
+     "latency_ms": 1.81,
      "top10": [
       "temqg7",
       "pnuz2e",
@@ -8289,7 +8289,7 @@
      "query": "kota vs online coaching",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 3.95,
+     "latency_ms": 3.4,
      "top10": [
       "uxc0nw",
       "pkb4w3",
@@ -8321,7 +8321,7 @@
      "query": "ms chouhan vs n awasthi",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 0.42,
+     "latency_ms": 0.33,
      "top10": [
       "uuf2i7",
       "w3oxa8",
@@ -8353,7 +8353,7 @@
      "query": "neet vs jee which to choose",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 11.17,
+     "latency_ms": 9.52,
      "top10": [
       "w3ed2q",
       "q4kd7n",
@@ -8385,7 +8385,7 @@
      "query": "how to stay motivated during jee preparation",
      "category": "general",
      "split": "tune",
-     "latency_ms": 10.66,
+     "latency_ms": 8.98,
      "top10": [
       "wa1xbi",
       "t7vq84",
@@ -8417,7 +8417,7 @@
      "query": "best youtube channels for jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 9.78,
+     "latency_ms": 8.58,
      "top10": [
       "rvllpf",
       "tpe402",
@@ -8449,7 +8449,7 @@
      "query": "self study without coaching",
      "category": "general",
      "split": "test",
-     "latency_ms": 5.66,
+     "latency_ms": 4.89,
      "top10": [
       "vrd99z",
       "s0ad9h",
@@ -8481,7 +8481,7 @@
      "query": "time management tips during exam",
      "category": "general",
      "split": "test",
-     "latency_ms": 5.94,
+     "latency_ms": 5.45,
      "top10": [
       "vq7oj2",
       "usicxh",
@@ -8513,7 +8513,7 @@
      "query": "how many hours to study daily",
      "category": "general",
      "split": "test",
-     "latency_ms": 4.52,
+     "latency_ms": 3.81,
      "top10": [
       "wcbttn",
       "rpgw1w",
@@ -8531,10 +8531,10 @@
      "p@3": 0.6666666666666666,
      "p@5": 0.6,
      "p@10": 0.8,
-     "recall@10": 0.34782608695652173,
+     "recall@10": 0.3333333333333333,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.27429261559696344,
+     "ap": 0.2628637566137566,
      "ndcg@5": 0.596881495845591,
      "ndcg@10": 0.7384036740536618,
      "judged@10": 1.0,
@@ -8545,7 +8545,7 @@
      "query": "parents pressure jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 8.86,
+     "latency_ms": 7.51,
      "top10": [
       "r7a55b",
       "ppiawb",
@@ -8577,7 +8577,7 @@
      "query": "exam anxiety mental health",
      "category": "general",
      "split": "test",
-     "latency_ms": 3.15,
+     "latency_ms": 2.62,
      "top10": [
       "orex6j",
       "qhq1kd",
@@ -8609,7 +8609,7 @@
      "query": "revision strategy last month",
      "category": "general",
      "split": "tune",
-     "latency_ms": 3.29,
+     "latency_ms": 2.91,
      "top10": [
       "vilmzy",
       "qcpxng",
@@ -8641,7 +8641,7 @@
      "query": "best book for physics jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 12.3,
+     "latency_ms": 9.96,
      "top10": [
       "onuhu4",
       "pmchw1",
@@ -8673,7 +8673,7 @@
      "query": "how to improve speed in maths",
      "category": "general",
      "split": "test",
-     "latency_ms": 2.05,
+     "latency_ms": 1.86,
      "top10": [
       "vwg9rf",
       "w20o4d",
@@ -8691,10 +8691,10 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 1.0,
-     "recall@10": 0.7142857142857143,
+     "recall@10": 0.6666666666666666,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.7142857142857143,
+     "ap": 0.6666666666666666,
      "ndcg@5": 0.646910188523972,
      "ndcg@10": 0.8283715806041118,
      "judged@10": 1.0,
@@ -8705,7 +8705,7 @@
      "query": "college life after jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 10.12,
+     "latency_ms": 7.92,
      "top10": [
       "q950dq",
       "v2fxwn",
@@ -8737,7 +8737,7 @@
      "query": "attempt vs accuracy in jee mains",
      "category": "general",
      "split": "test",
-     "latency_ms": 125.55,
+     "latency_ms": 9.27,
      "top10": [
       "p0vlor",
       "vs17uf",
@@ -8769,7 +8769,7 @@
      "query": "how to solve previous year papers",
      "category": "general",
      "split": "test",
-     "latency_ms": 4.33,
+     "latency_ms": 4.18,
      "top10": [
       "rozaaa",
       "vf175c",
@@ -8801,7 +8801,7 @@
      "query": "neet biology diagrams",
      "category": "general",
      "split": "test",
-     "latency_ms": 2.64,
+     "latency_ms": 2.32,
      "top10": [
       "ov88yw",
       "spqiyc",
@@ -8835,7 +8835,7 @@
      "query": "physics wallah vs unacademy",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 5.28,
+     "latency_ms": 3.68,
      "top10": [
       "u13nyh",
       "vcqn3x",
@@ -8844,26 +8844,25 @@
       "vgcmru",
       "uwttyl",
       "ueh9xe",
-      "ntfsp2",
-      "ujwu33",
-      "wbyki5"
+      "wbyki5",
+      "vcnzuw",
+      "p1reob"
      ],
      "expanded_terms": {
       "pw": 0.716,
-      "unacdemy": 0.682,
-      "arjuna batch": 0.68
+      "unacdemy": 0.682
      },
      "p@1": 1.0,
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 0.9,
-     "recall@10": 0.6428571428571429,
+     "recall@10": 0.6,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.6357142857142858,
+     "ap": 0.6,
      "ndcg@5": 0.9026211001048624,
-     "ndcg@10": 0.8413817684043502,
-     "judged@10": 1.0,
+     "ndcg@10": 0.8480620179175803,
+     "judged@10": 0.9,
      "num_results": 20
     },
     {
@@ -8871,7 +8870,7 @@
      "query": "best book for organic chemistry",
      "category": "general",
      "split": "tune",
-     "latency_ms": 4.68,
+     "latency_ms": 3.89,
      "top10": [
       "v37tm3",
       "u7y6za",
@@ -8889,10 +8888,10 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 0.9,
-     "recall@10": 0.6,
+     "recall@10": 0.5625,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.585925925925926,
+     "ap": 0.5493055555555556,
      "ndcg@5": 1.0,
      "ndcg@10": 0.8392456378643482,
      "judged@10": 1.0,
@@ -8903,7 +8902,7 @@
      "query": "marks vs percentile 2022",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 5.91,
+     "latency_ms": 103.46,
      "top10": [
       "wbr1xm",
       "vl6p8q",
@@ -8939,7 +8938,7 @@
      "query": "allen test series review",
      "category": "general",
      "split": "tune",
-     "latency_ms": 3.25,
+     "latency_ms": 3.11,
      "top10": [
       "v8boga",
       "twr9n9",
@@ -8952,9 +8951,7 @@
       "w3rf1t",
       "rxlwkp"
      ],
-     "expanded_terms": {
-      "sankalp": 0.658
-     },
+     "expanded_terms": {},
      "p@1": 0.0,
      "p@3": 0.6666666666666666,
      "p@5": 0.6,
@@ -8973,7 +8970,7 @@
      "query": "dc pandey vs hc verma",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 0.71,
+     "latency_ms": 0.65,
      "top10": [
       "uvyblk",
       "ur0zb7",
@@ -9007,7 +9004,7 @@
      "query": "maths dropper strategy",
      "category": "general",
      "split": "tune",
-     "latency_ms": 2.99,
+     "latency_ms": 2.65,
      "top10": [
       "ttksmg",
       "w4fu3t",
@@ -9039,7 +9036,7 @@
      "query": "neet 600 marks government medical college",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 7.65,
+     "latency_ms": 6.8,
      "top10": [
       "ts2sbg",
       "u7vh7a",
@@ -9073,7 +9070,7 @@
      "query": "mock test score stuck",
      "category": "general",
      "split": "tune",
-     "latency_ms": 4.63,
+     "latency_ms": 4.13,
      "top10": [
       "sq2b10",
       "rrrfmi",
@@ -9107,7 +9104,7 @@
      "query": "hostel food kota life",
      "category": "general",
      "split": "tune",
-     "latency_ms": 1.62,
+     "latency_ms": 1.53,
      "top10": [
       "ifib7f",
       "ifi9fm",
@@ -9139,7 +9136,7 @@
      "query": "iit bombay cse cutoff rank",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 3.68,
+     "latency_ms": 3.15,
      "top10": [
       "vv4mil",
       "s6xfhw",
@@ -9154,8 +9151,7 @@
      ],
      "expanded_terms": {
       "cut off": 0.723,
-      "cutoffs": 0.678,
-      "expected cutoff": 0.655
+      "cutoffs": 0.678
      },
      "p@1": 0.0,
      "p@3": 0.6666666666666666,
@@ -9175,7 +9171,7 @@
      "query": "HCV physics",
      "category": "abbreviation",
      "split": "tune",
-     "latency_ms": 2.64,
+     "latency_ms": 2.45,
      "top10": [
       "kfmr9h",
       "s6415s",
@@ -9210,35 +9206,34 @@
      "query": "PW vs Unacademy",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 5.27,
+     "latency_ms": 3.66,
      "top10": [
       "p1reob",
       "p0dmjs",
       "u13nyh",
-      "ntfsp2",
       "pyirh6",
       "rwt659",
       "w2rs5x",
-      "uzkkv8",
       "pte89q",
-      "vbfi3j"
+      "vbfi3j",
+      "vvk846",
+      "wcn4ct"
      ],
      "expanded_terms": {
       "physics wallah": 0.716,
       "physicswallah": 0.687,
-      "unacdemy": 0.682,
-      "arjuna batch": 0.68
+      "unacdemy": 0.682
      },
      "p@1": 1.0,
      "p@3": 1.0,
      "p@5": 0.6,
      "p@10": 0.3,
-     "recall@10": 0.375,
+     "recall@10": 0.3,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.375,
+     "ap": 0.3,
      "ndcg@5": 0.4966197691292077,
-     "ndcg@10": 0.44595112397948744,
+     "ndcg@10": 0.39386997384920325,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -9247,7 +9242,7 @@
      "query": "IOC preparation tips",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 2.39,
+     "latency_ms": 2.01,
      "top10": [
       "vgl54i",
       "qwuemk",
@@ -9279,7 +9274,7 @@
      "query": "GOC concepts weak",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 0.85,
+     "latency_ms": 0.74,
      "top10": [
       "telydz",
       "vwgnju",
@@ -9311,33 +9306,30 @@
      "query": "PYQ practice for jee mains",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 11.17,
+     "latency_ms": 10.19,
      "top10": [
       "vsltfe",
       "r8m1mb",
       "uwm2wr",
       "rkftz0",
       "qsfvuk",
-      "vc419l",
-      "val297",
-      "vag6r7",
-      "qvax8a",
-      "oax6ht"
+      "oax6ht",
+      "p0d1ya",
+      "w4c2e6",
+      "t4az9i",
+      "mbt6df"
      ],
-     "expanded_terms": {
-      "disha": 0.717,
-      "exemplar": 0.711
-     },
+     "expanded_terms": {},
      "p@1": 1.0,
      "p@3": 1.0,
      "p@5": 1.0,
-     "p@10": 0.8,
-     "recall@10": 0.4,
+     "p@10": 0.9,
+     "recall@10": 0.45,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.4,
+     "ap": 0.42605158730158726,
      "ndcg@5": 0.773893196484256,
-     "ndcg@10": 0.5759348688047307,
+     "ndcg@10": 0.6355076418289203,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -9346,7 +9338,7 @@
      "query": "NCERT bio for neet",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 4.13,
+     "latency_ms": 3.4,
      "top10": [
       "tqqgwq",
       "nyrzvu",
@@ -9382,7 +9374,7 @@
      "query": "AITS test series",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 2.05,
+     "latency_ms": 1.69,
      "top10": [
       "w4ypmj",
       "rrszrt",
@@ -9400,12 +9392,12 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 0.5,
-     "recall@10": 0.8333333333333334,
+     "recall@10": 0.5555555555555556,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.8333333333333334,
+     "ap": 0.5555555555555556,
      "ndcg@5": 0.9686152031181796,
-     "ndcg@10": 0.9230159802497317,
+     "ndcg@10": 0.8200720901199107,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -9414,7 +9406,7 @@
      "query": "jee adv paper analysis",
      "category": "abbreviation",
      "split": "tune",
-     "latency_ms": 10.28,
+     "latency_ms": 8.89,
      "top10": [
       "uysu64",
       "vjouxk",
@@ -9448,7 +9440,7 @@
      "query": "KVPY preparation",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 3.53,
+     "latency_ms": 1.5,
      "top10": [
       "urql7g",
       "t08ol2",
@@ -9456,25 +9448,22 @@
       "orv5rk",
       "vnho64",
       "o2mw2b",
-      "synf8d",
       "rozz03",
-      "w1xos7",
-      "vqjhw8"
+      "vqjhw8",
+      "txr7t2",
+      "o2lkv8"
      ],
-     "expanded_terms": {
-      "hbcse": 0.633,
-      "aptitude test": 0.626
-     },
+     "expanded_terms": {},
      "p@1": 1.0,
      "p@3": 1.0,
      "p@5": 1.0,
-     "p@10": 0.6,
-     "recall@10": 0.42857142857142855,
+     "p@10": 0.8,
+     "recall@10": 0.5714285714285714,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.42857142857142855,
+     "ap": 0.5412698412698412,
      "ndcg@5": 0.660839794726384,
-     "ndcg@10": 0.5072380780124418,
+     "ndcg@10": 0.6371130896657825,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -9483,7 +9472,7 @@
      "query": "DPP solutions",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 2.19,
+     "latency_ms": 1.9,
      "top10": [
       "rm9us2",
       "ry76ss",
@@ -9498,7 +9487,6 @@
      ],
      "expanded_terms": {
       "dpps": 0.784,
-      "topicwise": 0.707,
       "chapter wise": 0.7
      },
      "p@1": 1.0,
@@ -9519,7 +9507,7 @@
      "query": "JEE hall ticket",
      "category": "synonym",
      "split": "tune",
-     "latency_ms": 9.04,
+     "latency_ms": 7.32,
      "top10": [
       "v4g8oy",
       "po3na8",
@@ -9553,7 +9541,7 @@
      "query": "coaching institute fees",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 3.03,
+     "latency_ms": 2.26,
      "top10": [
       "tqqa1h",
       "uzlc22",
@@ -9585,7 +9573,7 @@
      "query": "taking a gap year for jee",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 11.68,
+     "latency_ms": 9.08,
      "top10": [
       "ts6g4z",
       "jc6lhu",
@@ -9617,7 +9605,7 @@
      "query": "feeling burnt out studying",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 4.62,
+     "latency_ms": 3.97,
      "top10": [
       "qhogck",
       "pe4m8p",
@@ -9649,7 +9637,7 @@
      "query": "exam postponed",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 2.88,
+     "latency_ms": 2.45,
      "top10": [
       "txrsjl",
       "vb2xyv",
@@ -9681,7 +9669,7 @@
      "query": "study timetable for repeaters",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 3.51,
+     "latency_ms": 2.74,
      "top10": [
       "rpqclg",
       "t4qn7m",
@@ -9713,7 +9701,7 @@
      "query": "sleep schedule during preparation",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 1.83,
+     "latency_ms": 1.58,
      "top10": [
       "pqkqem",
       "vdzj44",
@@ -9745,7 +9733,7 @@
      "query": "online classes vs offline coaching",
      "category": "synonym",
      "split": "tune",
-     "latency_ms": 5.68,
+     "latency_ms": 4.53,
      "top10": [
       "uxc0nw",
       "uwlp5b",
@@ -9777,7 +9765,7 @@
      "query": "answer key challenge",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 1.67,
+     "latency_ms": 1.22,
      "top10": [
       "oxpd6k",
       "vqbwao",
@@ -9785,25 +9773,24 @@
       "vq8fg5",
       "vs0aff",
       "vq76o0",
-      "m7omaq",
       "weepi3",
-      "qajix9",
-      "vpw1p3"
+      "vpw1p3",
+      "v1lzsd",
+      "otv1uv"
      ],
      "expanded_terms": {
-      "response sheet": 0.796,
-      "official answer": 0.677
+      "response sheet": 0.796
      },
      "p@1": 0.0,
      "p@3": 0.6666666666666666,
      "p@5": 0.8,
-     "p@10": 0.7,
-     "recall@10": 0.3888888888888889,
+     "p@10": 0.8,
+     "recall@10": 0.4444444444444444,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.27314814814814814,
+     "ap": 0.32654320987654323,
      "ndcg@5": 0.660839794726384,
-     "ndcg@10": 0.6027148105968244,
+     "ndcg@10": 0.7228429916179896,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -9812,7 +9799,7 @@
      "query": "seat allotment counselling",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 1.1,
+     "latency_ms": 0.6,
      "top10": [
       "vueajt",
       "vufx77",
@@ -9826,19 +9813,18 @@
       "w2n6s2"
      ],
      "expanded_terms": {
-      "counseling": 0.803,
-      "jac delhi": 0.724
+      "counseling": 0.803
      },
      "p@1": 0.0,
      "p@3": 0.3333333333333333,
      "p@5": 0.2,
      "p@10": 0.2,
-     "recall@10": 0.2857142857142857,
+     "recall@10": 0.25,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.10317460317460317,
-     "ndcg@5": 0.08750372712995078,
-     "ndcg@10": 0.19418317619626146,
+     "ap": 0.09027777777777778,
+     "ndcg@5": 0.07816593312080211,
+     "ndcg@10": 0.1690067540141073,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -9847,7 +9833,7 @@
      "query": "exam day nervousness",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 4.29,
+     "latency_ms": 3.44,
      "top10": [
       "p0cg54",
       "soy3ab",
@@ -9879,7 +9865,7 @@
      "query": "maths weak hai kya karu",
      "category": "hinglish",
      "split": "tune",
-     "latency_ms": 9.82,
+     "latency_ms": 8.39,
      "top10": [
       "saro5p",
       "vwdi8z",
@@ -9911,7 +9897,7 @@
      "query": "JEE ki preparation kaise karu",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 12.08,
+     "latency_ms": 10.4,
      "top10": [
       "vqckd6",
       "vvcpjc",
@@ -9943,7 +9929,7 @@
      "query": "physics mein numericals kaise solve kare",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 5.21,
+     "latency_ms": 4.49,
      "top10": [
       "rvrasz",
       "v056av",
@@ -9975,7 +9961,7 @@
      "query": "chemistry ke liye best resources kya hain",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 9.65,
+     "latency_ms": 8.19,
      "top10": [
       "vvv01o",
       "tlyzst",
@@ -10007,7 +9993,7 @@
      "query": "padhai mein mann nahi lagta",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 3.08,
+     "latency_ms": 2.79,
      "top10": [
       "ovtrdl",
       "oz2fky",
@@ -10039,7 +10025,7 @@
      "query": "drop lena chahiye ya nahi",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 6.31,
+     "latency_ms": 5.45,
      "top10": [
       "uy7prq",
       "s0ef7p",
@@ -10074,7 +10060,7 @@
      "query": "kota jaana sahi hai kya",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 7.07,
+     "latency_ms": 6.81,
      "top10": [
       "uuj7cv",
       "vi94xa",
@@ -10106,7 +10092,7 @@
      "query": "neet ke liye biology kaise padhe",
      "category": "hinglish",
      "split": "tune",
-     "latency_ms": 6.65,
+     "latency_ms": 6.27,
      "top10": [
       "t22iyu",
       "uhkba6",
@@ -10138,7 +10124,7 @@
      "query": "mock test mein marks kam aa rahe hai",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 14.23,
+     "latency_ms": 10.26,
      "top10": [
       "pjgits",
       "w3joyx",
@@ -10172,7 +10158,7 @@
      "query": "boards aur jee dono kaise manage kare",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 12.33,
+     "latency_ms": 11.12,
      "top10": [
       "pn9tt3",
       "rzxt1p",
@@ -10207,7 +10193,7 @@
      "query": "physics ka concept clear nahi hota",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 7.7,
+     "latency_ms": 6.6,
      "top10": [
       "s6yvh6",
       "s974pq",
@@ -10239,7 +10225,7 @@
      "query": "orgnic chemistry",
      "category": "typo",
      "split": "tune",
-     "latency_ms": 1.5,
+     "latency_ms": 1.32,
      "top10": [
       "txe31j",
       "vpxx2q",
@@ -10271,7 +10257,7 @@
      "query": "physcis wallah lectures",
      "category": "typo",
      "split": "test",
-     "latency_ms": 2.29,
+     "latency_ms": 1.91,
      "top10": [
       "q77tgb",
       "rvw323",
@@ -10286,17 +10272,16 @@
      ],
      "expanded_terms": {
       "video lectures": 0.728,
-      "yt lectures": 0.717,
       "lecture": 0.685
      },
      "p@1": 0.0,
      "p@3": 0.3333333333333333,
      "p@5": 0.6,
      "p@10": 0.6,
-     "recall@10": 0.5,
+     "recall@10": 0.46153846153846156,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.28518518518518515,
+     "ap": 0.26324786324786326,
      "ndcg@5": 0.3357815719713554,
      "ndcg@10": 0.3782669798896269,
      "judged@10": 1.0,
@@ -10307,7 +10292,7 @@
      "query": "thermodynamcs doubts",
      "category": "typo",
      "split": "test",
-     "latency_ms": 0.62,
+     "latency_ms": 0.55,
      "top10": [
       "vynofb",
       "md00vl",
@@ -10339,7 +10324,7 @@
      "query": "integeration practice",
      "category": "typo",
      "split": "test",
-     "latency_ms": 0.57,
+     "latency_ms": 0.51,
      "top10": [
       "mbzrra",
       "strwtx",
@@ -10371,7 +10356,7 @@
      "query": "electrostatcs book",
      "category": "typo",
      "split": "test",
-     "latency_ms": 1.05,
+     "latency_ms": 0.94,
      "top10": [
       "q1miwm",
       "q0xyt9",
@@ -10403,7 +10388,7 @@
      "query": "percentle vs marks",
      "category": "typo",
      "split": "test",
-     "latency_ms": 3.2,
+     "latency_ms": 2.94,
      "top10": [
       "pv2kvh",
       "vwdiza",
@@ -10437,7 +10422,7 @@
      "query": "unacadmy plus subscription",
      "category": "typo",
      "split": "test",
-     "latency_ms": 0.43,
+     "latency_ms": 0.42,
      "top10": [
       "twp4c1",
       "ofl9bn",
@@ -10469,7 +10454,7 @@
      "query": "nuet biology ncert",
      "category": "typo",
      "split": "tune",
-     "latency_ms": 1.14,
+     "latency_ms": 1.05,
      "top10": [
       "uniymp",
       "po08fr",
@@ -10505,7 +10490,7 @@
      "query": "NEET 600 marks",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 5.17,
+     "latency_ms": 4.44,
      "top10": [
       "w25s5m",
       "vl3t50",
@@ -10539,7 +10524,7 @@
      "query": "99 percentile in jee mains how many marks",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 125.53,
+     "latency_ms": 115.25,
      "top10": [
       "s259yj",
       "vzeh1g",
@@ -10559,10 +10544,10 @@
      "p@3": 1.0,
      "p@5": 0.8,
      "p@10": 0.8,
-     "recall@10": 0.5714285714285714,
+     "recall@10": 0.5333333333333333,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.504875283446712,
+     "ap": 0.47121693121693115,
      "ndcg@5": 0.7112741403342753,
      "ndcg@10": 0.760108941465488,
      "judged@10": 1.0,
@@ -10573,23 +10558,22 @@
      "query": "jee advanced 2022 cutoff",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 11.89,
+     "latency_ms": 9.66,
      "top10": [
       "lssb1r",
       "ukta74",
-      "ozd5ad",
       "t0idms",
       "w9aec8",
       "wbs0ds",
       "v3appm",
       "w72lk4",
       "tyczwz",
-      "se3nxu"
+      "se3nxu",
+      "wa0g3v"
      ],
      "expanded_terms": {
       "cut off": 0.723,
-      "cutoffs": 0.678,
-      "expected cutoff": 0.655
+      "cutoffs": 0.678
      },
      "p@1": 0.0,
      "p@3": 0.3333333333333333,
@@ -10598,9 +10582,9 @@
      "recall@10": 0.4,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.18,
-     "ndcg@5": 0.34519134224686937,
-     "ndcg@10": 0.34519134224686937,
+     "ap": 0.2,
+     "ndcg@5": 0.36005461457723403,
+     "ndcg@10": 0.36005461457723403,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -10609,7 +10593,7 @@
      "query": "150 marks in jee mains percentile",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 14.71,
+     "latency_ms": 12.42,
      "top10": [
       "ubmf1k",
       "tq2ngo",
@@ -10631,10 +10615,10 @@
      "p@3": 0.0,
      "p@5": 0.2,
      "p@10": 0.3,
-     "recall@10": 0.3,
+     "recall@10": 0.2727272727272727,
      "success@5": 1.0,
      "rr": 0.2,
-     "ap": 0.09083333333333334,
+     "ap": 0.08257575757575758,
      "ndcg@5": 0.160957993938732,
      "ndcg@10": 0.28898623728631834,
      "judged@10": 1.0,
@@ -10645,37 +10629,34 @@
      "query": "neet 2021 cutoff general category",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 5.59,
+     "latency_ms": 3.78,
      "top10": [
       "w6toch",
       "vyu6vk",
       "wbtzcu",
-      "ubejg3",
       "iwz66a",
       "rrwalp",
       "ryskcb",
       "qlqunq",
-      "q36oqe",
-      "lssb1r"
+      "r73f3z",
+      "kg1bnt",
+      "qw9sln"
      ],
      "expanded_terms": {
       "cut off": 0.723,
       "cutoffs": 0.678,
-      "expected cutoff": 0.655,
-      "crl": 0.711,
-      "gen ews": 0.697,
       "ews": 0.694
      },
      "p@1": 0.0,
      "p@3": 0.0,
      "p@5": 0.2,
-     "p@10": 0.2,
-     "recall@10": 0.6666666666666666,
+     "p@10": 0.3,
+     "recall@10": 1.0,
      "success@5": 1.0,
-     "rr": 0.2,
-     "ap": 0.15,
-     "ndcg@5": 0.07173519834210915,
-     "ndcg@10": 0.24722780237385267,
+     "rr": 0.25,
+     "ap": 0.2896825396825397,
+     "ndcg@5": 0.07986155906569621,
+     "ndcg@10": 0.43275685962113547,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -10684,7 +10665,7 @@
      "query": "rank 10000 jee mains which nit",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 13.82,
+     "latency_ms": 9.28,
      "top10": [
       "qc6gpk",
       "q1vkjo",
@@ -10716,7 +10697,7 @@
      "query": "6 months left for jee",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 10.14,
+     "latency_ms": 7.6,
      "top10": [
       "vkmvx0",
       "untrkt",
@@ -10748,7 +10729,7 @@
      "query": "75 percent criteria boards",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 2.38,
+     "latency_ms": 1.96,
      "top10": [
       "we1c12",
       "qbcc93",
@@ -10783,7 +10764,7 @@
      "query": "allen vs aakash for neet",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 4.3,
+     "latency_ms": 3.76,
      "top10": [
       "uvvj5s",
       "t8n37g",
@@ -10796,10 +10777,7 @@
       "s8tlwm",
       "wcm6nl"
      ],
-     "expanded_terms": {
-      "sankalp": 0.658,
-      "janakpuri": 0.673
-     },
+     "expanded_terms": {},
      "p@1": 1.0,
      "p@3": 1.0,
      "p@5": 1.0,
@@ -10818,7 +10796,7 @@
      "query": "cengage vs arihant maths",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 2.72,
+     "latency_ms": 2.17,
      "top10": [
       "sweh85",
       "w5u85k",
@@ -10838,10 +10816,10 @@
      "p@3": 1.0,
      "p@5": 0.8,
      "p@10": 0.7,
-     "recall@10": 0.5,
+     "recall@10": 0.4666666666666667,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.4403061224489796,
+     "ap": 0.41095238095238096,
      "ndcg@5": 0.9520727775370877,
      "ndcg@10": 0.8919918671736512,
      "judged@10": 1.0,
@@ -10852,7 +10830,7 @@
      "query": "jee mains vs advanced difficulty",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 13.42,
+     "latency_ms": 10.55,
      "top10": [
       "vs17uf",
       "tcciyw",
@@ -10888,7 +10866,7 @@
      "query": "nit vs iiit",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 1.04,
+     "latency_ms": 0.77,
      "top10": [
       "qn3qq4",
       "ppywgj",
@@ -10920,7 +10898,7 @@
      "query": "iit vs bits pilani",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 2.37,
+     "latency_ms": 1.85,
      "top10": [
       "temqg7",
       "pnuz2e",
@@ -10952,7 +10930,7 @@
      "query": "kota vs online coaching",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 4.37,
+     "latency_ms": 3.28,
      "top10": [
       "uxc0nw",
       "pkb4w3",
@@ -10984,7 +10962,7 @@
      "query": "ms chouhan vs n awasthi",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 0.64,
+     "latency_ms": 0.53,
      "top10": [
       "uuf2i7",
       "w3oxa8",
@@ -11018,7 +10996,7 @@
      "query": "neet vs jee which to choose",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 11.72,
+     "latency_ms": 9.18,
      "top10": [
       "w3ed2q",
       "q4kd7n",
@@ -11050,7 +11028,7 @@
      "query": "how to stay motivated during jee preparation",
      "category": "general",
      "split": "tune",
-     "latency_ms": 10.86,
+     "latency_ms": 7.98,
      "top10": [
       "wa1xbi",
       "t7vq84",
@@ -11082,7 +11060,7 @@
      "query": "best youtube channels for jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 11.8,
+     "latency_ms": 8.69,
      "top10": [
       "rvllpf",
       "tpe402",
@@ -11114,7 +11092,7 @@
      "query": "self study without coaching",
      "category": "general",
      "split": "test",
-     "latency_ms": 6.38,
+     "latency_ms": 4.98,
      "top10": [
       "vrd99z",
       "s0ad9h",
@@ -11146,7 +11124,7 @@
      "query": "time management tips during exam",
      "category": "general",
      "split": "test",
-     "latency_ms": 6.97,
+     "latency_ms": 5.91,
      "top10": [
       "vq7oj2",
       "usicxh",
@@ -11178,7 +11156,7 @@
      "query": "how many hours to study daily",
      "category": "general",
      "split": "test",
-     "latency_ms": 5.23,
+     "latency_ms": 4.34,
      "top10": [
       "wcbttn",
       "rpgw1w",
@@ -11196,10 +11174,10 @@
      "p@3": 0.6666666666666666,
      "p@5": 0.6,
      "p@10": 0.8,
-     "recall@10": 0.34782608695652173,
+     "recall@10": 0.3333333333333333,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.27429261559696344,
+     "ap": 0.2628637566137566,
      "ndcg@5": 0.596881495845591,
      "ndcg@10": 0.7384036740536618,
      "judged@10": 1.0,
@@ -11210,7 +11188,7 @@
      "query": "parents pressure jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 10.36,
+     "latency_ms": 8.2,
      "top10": [
       "r7a55b",
       "ppiawb",
@@ -11242,7 +11220,7 @@
      "query": "exam anxiety mental health",
      "category": "general",
      "split": "test",
-     "latency_ms": 3.91,
+     "latency_ms": 2.93,
      "top10": [
       "orex6j",
       "qhq1kd",
@@ -11274,7 +11252,7 @@
      "query": "revision strategy last month",
      "category": "general",
      "split": "tune",
-     "latency_ms": 4.05,
+     "latency_ms": 2.98,
      "top10": [
       "vilmzy",
       "qcpxng",
@@ -11306,7 +11284,7 @@
      "query": "best book for physics jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 13.89,
+     "latency_ms": 10.52,
      "top10": [
       "onuhu4",
       "pmchw1",
@@ -11338,7 +11316,7 @@
      "query": "how to improve speed in maths",
      "category": "general",
      "split": "test",
-     "latency_ms": 2.64,
+     "latency_ms": 1.97,
      "top10": [
       "vwg9rf",
       "w20o4d",
@@ -11356,10 +11334,10 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 1.0,
-     "recall@10": 0.7142857142857143,
+     "recall@10": 0.6666666666666666,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.7142857142857143,
+     "ap": 0.6666666666666666,
      "ndcg@5": 0.646910188523972,
      "ndcg@10": 0.8283715806041118,
      "judged@10": 1.0,
@@ -11370,7 +11348,7 @@
      "query": "college life after jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 11.5,
+     "latency_ms": 8.3,
      "top10": [
       "q950dq",
       "v2fxwn",
@@ -11402,7 +11380,7 @@
      "query": "attempt vs accuracy in jee mains",
      "category": "general",
      "split": "test",
-     "latency_ms": 12.88,
+     "latency_ms": 9.74,
      "top10": [
       "p0vlor",
       "vs17uf",
@@ -11434,7 +11412,7 @@
      "query": "how to solve previous year papers",
      "category": "general",
      "split": "test",
-     "latency_ms": 5.16,
+     "latency_ms": 4.4,
      "top10": [
       "rozaaa",
       "vf175c",
@@ -11466,7 +11444,7 @@
      "query": "neet biology diagrams",
      "category": "general",
      "split": "test",
-     "latency_ms": 2.99,
+     "latency_ms": 2.46,
      "top10": [
       "ov88yw",
       "spqiyc",
@@ -11500,7 +11478,7 @@
      "query": "physics wallah vs unacademy",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 143.64,
+     "latency_ms": 137.81,
      "top10": [
       "uytn1f",
       "oj8ghv",
@@ -11518,12 +11496,12 @@
      "p@3": 0.0,
      "p@5": 0.0,
      "p@10": 0.2,
-     "recall@10": 0.14285714285714285,
+     "recall@10": 0.13333333333333333,
      "success@5": 0.0,
      "rr": 0.14285714285714285,
-     "ap": 0.026077097505668934,
+     "ap": 0.024338624338624337,
      "ndcg@5": 0.0,
-     "ndcg@10": 0.11007433000268345,
+     "ndcg@10": 0.10449630223079327,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -11532,7 +11510,7 @@
      "query": "best book for organic chemistry",
      "category": "general",
      "split": "tune",
-     "latency_ms": 8.37,
+     "latency_ms": 7.77,
      "top10": [
       "qieg1k",
       "t32r04",
@@ -11550,10 +11528,10 @@
      "p@3": 1.0,
      "p@5": 0.6,
      "p@10": 0.5,
-     "recall@10": 0.3333333333333333,
+     "recall@10": 0.3125,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.2814814814814815,
+     "ap": 0.2638888888888889,
      "ndcg@5": 0.7227265726449518,
      "ndcg@10": 0.6136525857537392,
      "judged@10": 1.0,
@@ -11564,7 +11542,7 @@
      "query": "marks vs percentile 2022",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 10.52,
+     "latency_ms": 10.69,
      "top10": [
       "vodzbb",
       "vmmyos",
@@ -11596,7 +11574,7 @@
      "query": "allen test series review",
      "category": "general",
      "split": "tune",
-     "latency_ms": 8.83,
+     "latency_ms": 12.62,
      "top10": [
       "w3rf1t",
       "w7thga",
@@ -11628,7 +11606,7 @@
      "query": "dc pandey vs hc verma",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 8.51,
+     "latency_ms": 8.3,
      "top10": [
       "ur0zb7",
       "uvyblk",
@@ -11660,7 +11638,7 @@
      "query": "maths dropper strategy",
      "category": "general",
      "split": "tune",
-     "latency_ms": 10.5,
+     "latency_ms": 7.41,
      "top10": [
       "we11e9",
       "pylhri",
@@ -11692,7 +11670,7 @@
      "query": "neet 600 marks government medical college",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 10.76,
+     "latency_ms": 7.45,
      "top10": [
       "vsr5nn",
       "vsowkx",
@@ -11724,7 +11702,7 @@
      "query": "mock test score stuck",
      "category": "general",
      "split": "tune",
-     "latency_ms": 10.45,
+     "latency_ms": 7.22,
      "top10": [
       "qnz3qu",
       "sq2b10",
@@ -11756,7 +11734,7 @@
      "query": "hostel food kota life",
      "category": "general",
      "split": "tune",
-     "latency_ms": 13.84,
+     "latency_ms": 7.28,
      "top10": [
       "ifib7f",
       "qye2ux",
@@ -11788,7 +11766,7 @@
      "query": "iit bombay cse cutoff rank",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 12.51,
+     "latency_ms": 7.27,
      "top10": [
       "qt882y",
       "q08sb0",
@@ -11820,7 +11798,7 @@
      "query": "HCV physics",
      "category": "abbreviation",
      "split": "tune",
-     "latency_ms": 11.58,
+     "latency_ms": 7.25,
      "top10": [
       "qmgugn",
       "oddtzl",
@@ -11852,7 +11830,7 @@
      "query": "PW vs Unacademy",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 16.3,
+     "latency_ms": 8.54,
      "top10": [
       "t75uei",
       "txnjt2",
@@ -11870,12 +11848,12 @@
      "p@3": 1.0,
      "p@5": 0.6,
      "p@10": 0.3,
-     "recall@10": 0.375,
+     "recall@10": 0.3,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.375,
+     "ap": 0.3,
      "ndcg@5": 0.5800690628219335,
-     "ndcg@10": 0.520886333229853,
+     "ndcg@10": 0.4600537489778509,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -11884,7 +11862,7 @@
      "query": "IOC preparation tips",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 8.17,
+     "latency_ms": 7.57,
      "top10": [
       "w8q1bn",
       "wav05j",
@@ -11916,7 +11894,7 @@
      "query": "GOC concepts weak",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 8.24,
+     "latency_ms": 7.39,
      "top10": [
       "w6sae3",
       "rskkqz",
@@ -11948,7 +11926,7 @@
      "query": "PYQ practice for jee mains",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 8.34,
+     "latency_ms": 8.05,
      "top10": [
       "vysmfs",
       "smm5m9",
@@ -11980,7 +11958,7 @@
      "query": "NCERT bio for neet",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 9.1,
+     "latency_ms": 7.33,
      "top10": [
       "sxtpax",
       "sxtpdr",
@@ -12012,7 +11990,7 @@
      "query": "AITS test series",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 10.06,
+     "latency_ms": 7.55,
      "top10": [
       "w3rf1t",
       "sx362z",
@@ -12030,12 +12008,12 @@
      "p@3": 0.0,
      "p@5": 0.2,
      "p@10": 0.1,
-     "recall@10": 0.16666666666666666,
+     "recall@10": 0.1111111111111111,
      "success@5": 1.0,
      "rr": 0.2,
-     "ap": 0.03333333333333333,
+     "ap": 0.022222222222222223,
      "ndcg@5": 0.160957993938732,
-     "ndcg@10": 0.15338062016383883,
+     "ndcg@10": 0.13627409324767645,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -12044,7 +12022,7 @@
      "query": "jee adv paper analysis",
      "category": "abbreviation",
      "split": "tune",
-     "latency_ms": 10.42,
+     "latency_ms": 7.35,
      "top10": [
       "uysu64",
       "r7xc15",
@@ -12076,7 +12054,7 @@
      "query": "KVPY preparation",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 12.63,
+     "latency_ms": 7.56,
      "top10": [
       "w1ziag",
       "okuehy",
@@ -12108,7 +12086,7 @@
      "query": "DPP solutions",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 16.65,
+     "latency_ms": 7.52,
      "top10": [
       "ud2sde",
       "u8rg5f",
@@ -12140,7 +12118,7 @@
      "query": "JEE hall ticket",
      "category": "synonym",
      "split": "tune",
-     "latency_ms": 9.1,
+     "latency_ms": 7.73,
      "top10": [
       "w8mp7b",
       "v4g8oy",
@@ -12172,7 +12150,7 @@
      "query": "coaching institute fees",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 9.13,
+     "latency_ms": 7.45,
      "top10": [
       "p1r4x9",
       "ophj2e",
@@ -12204,7 +12182,7 @@
      "query": "taking a gap year for jee",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 13.54,
+     "latency_ms": 7.45,
      "top10": [
       "s71p62",
       "o4w7du",
@@ -12236,7 +12214,7 @@
      "query": "feeling burnt out studying",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 11.57,
+     "latency_ms": 7.52,
      "top10": [
       "wc2cn8",
       "qkay63",
@@ -12268,7 +12246,7 @@
      "query": "exam postponed",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 11.82,
+     "latency_ms": 8.03,
      "top10": [
       "ty57cy",
       "memmcd",
@@ -12300,7 +12278,7 @@
      "query": "study timetable for repeaters",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 11.37,
+     "latency_ms": 7.38,
      "top10": [
       "vtpeph",
       "rpqclg",
@@ -12332,7 +12310,7 @@
      "query": "sleep schedule during preparation",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 16.27,
+     "latency_ms": 7.43,
      "top10": [
       "sqop6j",
       "t9fjcm",
@@ -12364,7 +12342,7 @@
      "query": "online classes vs offline coaching",
      "category": "synonym",
      "split": "tune",
-     "latency_ms": 15.3,
+     "latency_ms": 7.43,
      "top10": [
       "pt22b0",
       "uwmxwh",
@@ -12396,7 +12374,7 @@
      "query": "answer key challenge",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 10.4,
+     "latency_ms": 7.4,
      "top10": [
       "otxo56",
       "vqgnk2",
@@ -12428,7 +12406,7 @@
      "query": "seat allotment counselling",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 13.48,
+     "latency_ms": 7.66,
      "top10": [
       "vu46vr",
       "vueajt",
@@ -12446,12 +12424,12 @@
      "p@3": 0.0,
      "p@5": 0.0,
      "p@10": 0.2,
-     "recall@10": 0.2857142857142857,
+     "recall@10": 0.25,
      "success@5": 0.0,
      "rr": 0.14285714285714285,
-     "ap": 0.05612244897959184,
+     "ap": 0.049107142857142856,
      "ndcg@5": 0.0,
-     "ndcg@10": 0.08212782001429655,
+     "ndcg@10": 0.07147970564062865,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -12460,7 +12438,7 @@
      "query": "exam day nervousness",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 8.59,
+     "latency_ms": 7.44,
      "top10": [
       "rsmiqx",
       "w999av",
@@ -12492,7 +12470,7 @@
      "query": "maths weak hai kya karu",
      "category": "hinglish",
      "split": "tune",
-     "latency_ms": 15.22,
+     "latency_ms": 8.08,
      "top10": [
       "vwdi8z",
       "tjuee5",
@@ -12524,7 +12502,7 @@
      "query": "JEE ki preparation kaise karu",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 11.53,
+     "latency_ms": 7.43,
      "top10": [
       "uksrzz",
       "w5xwkh",
@@ -12556,7 +12534,7 @@
      "query": "physics mein numericals kaise solve kare",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 13.08,
+     "latency_ms": 7.69,
      "top10": [
       "usg655",
       "tig1ou",
@@ -12588,7 +12566,7 @@
      "query": "chemistry ke liye best resources kya hain",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 15.84,
+     "latency_ms": 7.38,
      "top10": [
       "vrvwcf",
       "w9eow1",
@@ -12620,7 +12598,7 @@
      "query": "padhai mein mann nahi lagta",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 15.95,
+     "latency_ms": 7.47,
      "top10": [
       "m0zd2x",
       "umf6fg",
@@ -12652,7 +12630,7 @@
      "query": "drop lena chahiye ya nahi",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 19.86,
+     "latency_ms": 7.42,
      "top10": [
       "rn2vqz",
       "qb59en",
@@ -12684,7 +12662,7 @@
      "query": "kota jaana sahi hai kya",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 13.1,
+     "latency_ms": 7.44,
      "top10": [
       "p7czj6",
       "w4i20w",
@@ -12716,7 +12694,7 @@
      "query": "neet ke liye biology kaise padhe",
      "category": "hinglish",
      "split": "tune",
-     "latency_ms": 16.5,
+     "latency_ms": 7.47,
      "top10": [
       "w3eqne",
       "w8jtq9",
@@ -12748,7 +12726,7 @@
      "query": "mock test mein marks kam aa rahe hai",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 9.69,
+     "latency_ms": 7.41,
      "top10": [
       "tab007",
       "pjgits",
@@ -12780,7 +12758,7 @@
      "query": "boards aur jee dono kaise manage kare",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 13.61,
+     "latency_ms": 7.34,
      "top10": [
       "vyz4sd",
       "u9dl35",
@@ -12812,7 +12790,7 @@
      "query": "physics ka concept clear nahi hota",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 16.11,
+     "latency_ms": 7.46,
      "top10": [
       "vbyx1t",
       "q94m13",
@@ -12844,7 +12822,7 @@
      "query": "orgnic chemistry",
      "category": "typo",
      "split": "tune",
-     "latency_ms": 11.24,
+     "latency_ms": 7.7,
      "top10": [
       "tr0fkt",
       "v88ovq",
@@ -12876,7 +12854,7 @@
      "query": "physcis wallah lectures",
      "category": "typo",
      "split": "test",
-     "latency_ms": 9.54,
+     "latency_ms": 7.55,
      "top10": [
       "scgefn",
       "v57lnb",
@@ -12894,10 +12872,10 @@
      "p@3": 0.3333333333333333,
      "p@5": 0.2,
      "p@10": 0.2,
-     "recall@10": 0.16666666666666666,
+     "recall@10": 0.15384615384615385,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.06944444444444443,
+     "ap": 0.0641025641025641,
      "ndcg@5": 0.07816593312080211,
      "ndcg@10": 0.10211650224329472,
      "judged@10": 1.0,
@@ -12908,7 +12886,7 @@
      "query": "thermodynamcs doubts",
      "category": "typo",
      "split": "test",
-     "latency_ms": 14.84,
+     "latency_ms": 7.41,
      "top10": [
       "uuiwp0",
       "rg51i2",
@@ -12940,7 +12918,7 @@
      "query": "integeration practice",
      "category": "typo",
      "split": "test",
-     "latency_ms": 18.25,
+     "latency_ms": 7.44,
      "top10": [
       "m70u5i",
       "vnkr4r",
@@ -12972,7 +12950,7 @@
      "query": "electrostatcs book",
      "category": "typo",
      "split": "test",
-     "latency_ms": 16.59,
+     "latency_ms": 7.35,
      "top10": [
       "sk7rmo",
       "uav3pm",
@@ -13004,7 +12982,7 @@
      "query": "percentle vs marks",
      "category": "typo",
      "split": "test",
-     "latency_ms": 11.26,
+     "latency_ms": 7.36,
      "top10": [
       "vodzbb",
       "vwctm1",
@@ -13036,7 +13014,7 @@
      "query": "unacadmy plus subscription",
      "category": "typo",
      "split": "test",
-     "latency_ms": 16.81,
+     "latency_ms": 7.38,
      "top10": [
       "rgxxmk",
       "tqtuji",
@@ -13068,7 +13046,7 @@
      "query": "nuet biology ncert",
      "category": "typo",
      "split": "tune",
-     "latency_ms": 10.84,
+     "latency_ms": 7.37,
      "top10": [
       "w8jtq9",
       "w3eqne",
@@ -13100,7 +13078,7 @@
      "query": "NEET 600 marks",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 12.49,
+     "latency_ms": 7.41,
      "top10": [
       "vlbovx",
       "w1d3lu",
@@ -13132,7 +13110,7 @@
      "query": "99 percentile in jee mains how many marks",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 11.21,
+     "latency_ms": 7.45,
      "top10": [
       "vtogkd",
       "t4xzfc",
@@ -13150,10 +13128,10 @@
      "p@3": 0.3333333333333333,
      "p@5": 0.4,
      "p@10": 0.4,
-     "recall@10": 0.2857142857142857,
+     "recall@10": 0.26666666666666666,
      "success@5": 1.0,
      "rr": 0.3333333333333333,
-     "ap": 0.12380952380952381,
+     "ap": 0.11555555555555556,
      "ndcg@5": 0.1002617267163833,
      "ndcg@10": 0.23307270466897917,
      "judged@10": 1.0,
@@ -13164,7 +13142,7 @@
      "query": "jee advanced 2022 cutoff",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 13.09,
+     "latency_ms": 7.49,
      "top10": [
       "qv70xj",
       "v7udu2",
@@ -13196,7 +13174,7 @@
      "query": "150 marks in jee mains percentile",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 15.64,
+     "latency_ms": 7.44,
      "top10": [
       "vtogkd",
       "vvr6go",
@@ -13214,10 +13192,10 @@
      "p@3": 0.3333333333333333,
      "p@5": 0.2,
      "p@10": 0.3,
-     "recall@10": 0.3,
+     "recall@10": 0.2727272727272727,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.10857142857142857,
+     "ap": 0.09870129870129869,
      "ndcg@5": 0.08750372712995078,
      "ndcg@10": 0.14233597915690765,
      "judged@10": 1.0,
@@ -13228,7 +13206,7 @@
      "query": "neet 2021 cutoff general category",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 15.54,
+     "latency_ms": 7.78,
      "top10": [
       "pnf5qf",
       "p12ml7",
@@ -13260,7 +13238,7 @@
      "query": "rank 10000 jee mains which nit",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 11.96,
+     "latency_ms": 7.83,
      "top10": [
       "tzsalc",
       "qqjvdg",
@@ -13292,7 +13270,7 @@
      "query": "6 months left for jee",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 11.09,
+     "latency_ms": 7.71,
      "top10": [
       "p460je",
       "s35ro0",
@@ -13324,7 +13302,7 @@
      "query": "75 percent criteria boards",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 9.06,
+     "latency_ms": 7.42,
      "top10": [
       "t0s86b",
       "t0vwxy",
@@ -13356,7 +13334,7 @@
      "query": "allen vs aakash for neet",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 9.18,
+     "latency_ms": 7.37,
      "top10": [
       "wae4ex",
       "uvvj5s",
@@ -13388,7 +13366,7 @@
      "query": "cengage vs arihant maths",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 11.91,
+     "latency_ms": 7.33,
      "top10": [
       "w5u85k",
       "sweh85",
@@ -13406,10 +13384,10 @@
      "p@3": 1.0,
      "p@5": 0.8,
      "p@10": 0.5,
-     "recall@10": 0.35714285714285715,
+     "recall@10": 0.3333333333333333,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.34523809523809523,
+     "ap": 0.3222222222222222,
      "ndcg@5": 0.8281827047067386,
      "ndcg@10": 0.8020713147301064,
      "judged@10": 1.0,
@@ -13420,7 +13398,7 @@
      "query": "jee mains vs advanced difficulty",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 9.24,
+     "latency_ms": 7.46,
      "top10": [
       "u0e3oh",
       "txt5sy",
@@ -13452,7 +13430,7 @@
      "query": "nit vs iiit",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 8.42,
+     "latency_ms": 7.34,
      "top10": [
       "pqez6o",
       "tj984n",
@@ -13484,7 +13462,7 @@
      "query": "iit vs bits pilani",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 12.45,
+     "latency_ms": 7.4,
      "top10": [
       "rzmpx1",
       "rz8wgy",
@@ -13516,7 +13494,7 @@
      "query": "kota vs online coaching",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 9.58,
+     "latency_ms": 7.31,
      "top10": [
       "wag7g9",
       "rl6is4",
@@ -13548,7 +13526,7 @@
      "query": "ms chouhan vs n awasthi",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 16.79,
+     "latency_ms": 7.48,
      "top10": [
       "ugxdjf",
       "utw09h",
@@ -13580,7 +13558,7 @@
      "query": "neet vs jee which to choose",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 21.57,
+     "latency_ms": 7.55,
      "top10": [
       "rr7599",
       "rorwiv",
@@ -13612,7 +13590,7 @@
      "query": "how to stay motivated during jee preparation",
      "category": "general",
      "split": "tune",
-     "latency_ms": 20.07,
+     "latency_ms": 7.56,
      "top10": [
       "v39bh0",
       "ool28x",
@@ -13644,7 +13622,7 @@
      "query": "best youtube channels for jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 9.66,
+     "latency_ms": 7.4,
      "top10": [
       "p27fys",
       "sp88ym",
@@ -13676,7 +13654,7 @@
      "query": "self study without coaching",
      "category": "general",
      "split": "test",
-     "latency_ms": 8.56,
+     "latency_ms": 7.34,
      "top10": [
       "w238sc",
       "vrd99z",
@@ -13708,7 +13686,7 @@
      "query": "time management tips during exam",
      "category": "general",
      "split": "test",
-     "latency_ms": 14.41,
+     "latency_ms": 8.0,
      "top10": [
       "pivoeb",
       "tmvba8",
@@ -13740,7 +13718,7 @@
      "query": "how many hours to study daily",
      "category": "general",
      "split": "test",
-     "latency_ms": 11.0,
+     "latency_ms": 7.67,
      "top10": [
       "wcbttn",
       "tq3ivc",
@@ -13758,10 +13736,10 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 1.0,
-     "recall@10": 0.43478260869565216,
+     "recall@10": 0.4166666666666667,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.43478260869565216,
+     "ap": 0.4166666666666667,
      "ndcg@5": 0.646910188523972,
      "ndcg@10": 0.6315026274115522,
      "judged@10": 1.0,
@@ -13772,7 +13750,7 @@
      "query": "parents pressure jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 11.68,
+     "latency_ms": 7.4,
      "top10": [
       "ppiawb",
       "tdrs3f",
@@ -13804,7 +13782,7 @@
      "query": "exam anxiety mental health",
      "category": "general",
      "split": "test",
-     "latency_ms": 17.93,
+     "latency_ms": 7.48,
      "top10": [
       "sodfcc",
       "uwmjb0",
@@ -13836,7 +13814,7 @@
      "query": "revision strategy last month",
      "category": "general",
      "split": "tune",
-     "latency_ms": 14.51,
+     "latency_ms": 7.41,
      "top10": [
       "vtlrlb",
       "vtpeph",
@@ -13868,7 +13846,7 @@
      "query": "best book for physics jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 18.82,
+     "latency_ms": 7.33,
      "top10": [
       "vdhfhb",
       "lepg31",
@@ -13900,7 +13878,7 @@
      "query": "how to improve speed in maths",
      "category": "general",
      "split": "test",
-     "latency_ms": 12.15,
+     "latency_ms": 7.41,
      "top10": [
       "w20o4d",
       "q0xylv",
@@ -13918,10 +13896,10 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 1.0,
-     "recall@10": 0.7142857142857143,
+     "recall@10": 0.6666666666666666,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.7142857142857143,
+     "ap": 0.6666666666666666,
      "ndcg@5": 0.6312356866612376,
      "ndcg@10": 0.6976377153898728,
      "judged@10": 1.0,
@@ -13932,7 +13910,7 @@
      "query": "college life after jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 10.41,
+     "latency_ms": 7.62,
      "top10": [
       "pkzsv6",
       "wde3y2",
@@ -13964,7 +13942,7 @@
      "query": "attempt vs accuracy in jee mains",
      "category": "general",
      "split": "test",
-     "latency_ms": 13.37,
+     "latency_ms": 7.53,
      "top10": [
       "vit26b",
       "vi7cck",
@@ -13996,7 +13974,7 @@
      "query": "how to solve previous year papers",
      "category": "general",
      "split": "test",
-     "latency_ms": 11.76,
+     "latency_ms": 7.37,
      "top10": [
       "rozaaa",
       "q0m376",
@@ -14028,7 +14006,7 @@
      "query": "neet biology diagrams",
      "category": "general",
      "split": "test",
-     "latency_ms": 11.29,
+     "latency_ms": 11.17,
      "top10": [
       "w8jtq9",
       "w3eqne",
@@ -14062,34 +14040,33 @@
      "query": "physics wallah vs unacademy",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 23.81,
+     "latency_ms": 16.98,
      "top10": [
       "u13nyh",
       "ueh9xe",
       "uwttyl",
       "vcqn3x",
-      "vcnzuw",
       "uytn1f",
+      "vcnzuw",
       "qttdqp",
+      "q94m13",
       "p6vuaf",
-      "vgcmru",
-      "ntfsp2"
+      "tj0xlb"
      ],
      "expanded_terms": {
       "pw": 0.716,
-      "unacdemy": 0.682,
-      "arjuna batch": 0.68
+      "unacdemy": 0.682
      },
      "p@1": 1.0,
      "p@3": 1.0,
-     "p@5": 1.0,
-     "p@10": 0.9,
-     "recall@10": 0.6428571428571429,
+     "p@5": 0.8,
+     "p@10": 0.7,
+     "recall@10": 0.4666666666666667,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.6086451247165533,
-     "ndcg@5": 0.8869465982421281,
-     "ndcg@10": 0.8759207837151991,
+     "ap": 0.43121693121693117,
+     "ndcg@5": 0.7557415207297863,
+     "ndcg@10": 0.727238179148107,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -14098,7 +14075,7 @@
      "query": "best book for organic chemistry",
      "category": "general",
      "split": "tune",
-     "latency_ms": 20.86,
+     "latency_ms": 17.18,
      "top10": [
       "v37tm3",
       "ufb2w3",
@@ -14116,10 +14093,10 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 1.0,
-     "recall@10": 0.6666666666666666,
+     "recall@10": 0.625,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.6666666666666666,
+     "ap": 0.625,
      "ndcg@5": 1.0,
      "ndcg@10": 0.911298659909514,
      "judged@10": 1.0,
@@ -14130,7 +14107,7 @@
      "query": "marks vs percentile 2022",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 23.93,
+     "latency_ms": 19.53,
      "top10": [
       "vl6p8q",
       "vpm9c3",
@@ -14166,7 +14143,7 @@
      "query": "allen test series review",
      "category": "general",
      "split": "tune",
-     "latency_ms": 17.38,
+     "latency_ms": 15.11,
      "top10": [
       "sx1yuh",
       "w3rf1t",
@@ -14179,9 +14156,7 @@
       "twr9n9",
       "qo3oqy"
      ],
-     "expanded_terms": {
-      "sankalp": 0.658
-     },
+     "expanded_terms": {},
      "p@1": 1.0,
      "p@3": 0.3333333333333333,
      "p@5": 0.4,
@@ -14200,7 +14175,7 @@
      "query": "dc pandey vs hc verma",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 14.31,
+     "latency_ms": 9.73,
      "top10": [
       "uvyblk",
       "ur0zb7",
@@ -14234,7 +14209,7 @@
      "query": "maths dropper strategy",
      "category": "general",
      "split": "tune",
-     "latency_ms": 15.83,
+     "latency_ms": 14.93,
      "top10": [
       "ttksmg",
       "oobtq9",
@@ -14266,7 +14241,7 @@
      "query": "neet 600 marks government medical college",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 27.86,
+     "latency_ms": 139.34,
      "top10": [
       "sgr73e",
       "ts2sbg",
@@ -14300,7 +14275,7 @@
      "query": "mock test score stuck",
      "category": "general",
      "split": "tune",
-     "latency_ms": 25.85,
+     "latency_ms": 19.85,
      "top10": [
       "sq2b10",
       "puep0g",
@@ -14334,7 +14309,7 @@
      "query": "hostel food kota life",
      "category": "general",
      "split": "tune",
-     "latency_ms": 15.84,
+     "latency_ms": 15.89,
      "top10": [
       "ifib7f",
       "ifi9fm",
@@ -14366,23 +14341,22 @@
      "query": "iit bombay cse cutoff rank",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 18.32,
+     "latency_ms": 15.96,
      "top10": [
       "vv4mil",
       "s6xfhw",
       "prubmb",
-      "n6u296",
       "q08sb0",
-      "qq1t2y",
+      "n6u296",
       "wcjeal",
       "vuhzp1",
+      "qq1t2y",
       "txrjzs",
       "ir8efd"
      ],
      "expanded_terms": {
       "cut off": 0.723,
-      "cutoffs": 0.678,
-      "expected cutoff": 0.655
+      "cutoffs": 0.678
      },
      "p@1": 0.0,
      "p@3": 0.6666666666666666,
@@ -14391,9 +14365,9 @@
      "recall@10": 0.75,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.44166666666666665,
-     "ndcg@5": 0.6490365334943614,
-     "ndcg@10": 0.6490365334943614,
+     "ap": 0.47916666666666663,
+     "ndcg@5": 0.6565619062195633,
+     "ndcg@10": 0.6565619062195633,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -14402,7 +14376,7 @@
      "query": "HCV physics",
      "category": "abbreviation",
      "split": "tune",
-     "latency_ms": 15.83,
+     "latency_ms": 19.93,
      "top10": [
       "kfmr9h",
       "rlfdby",
@@ -14437,36 +14411,35 @@
      "query": "PW vs Unacademy",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 19.72,
+     "latency_ms": 17.46,
      "top10": [
       "pyirh6",
       "w2rs5x",
       "txnjt2",
       "vbfi3j",
       "pte89q",
-      "uzkkv8",
       "t5xkaz",
       "p1reob",
+      "qqw74y",
       "p0dmjs",
-      "u13nyh"
+      "watzvd"
      ],
      "expanded_terms": {
       "physics wallah": 0.716,
       "physicswallah": 0.687,
-      "unacdemy": 0.682,
-      "arjuna batch": 0.68
+      "unacdemy": 0.682
      },
      "p@1": 0.0,
      "p@3": 0.3333333333333333,
      "p@5": 0.2,
      "p@10": 0.4,
-     "recall@10": 0.5,
+     "recall@10": 0.4,
      "success@5": 1.0,
      "rr": 0.3333333333333333,
-     "ap": 0.1645833333333333,
+     "ap": 0.13523809523809524,
      "ndcg@5": 0.05652670087893603,
-     "ndcg@10": 0.2625024232400203,
-     "judged@10": 1.0,
+     "ndcg@10": 0.18161102570635876,
+     "judged@10": 0.9,
      "num_results": 20
     },
     {
@@ -14474,7 +14447,7 @@
      "query": "IOC preparation tips",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 15.98,
+     "latency_ms": 14.32,
      "top10": [
       "vgl54i",
       "wav05j",
@@ -14506,7 +14479,7 @@
      "query": "GOC concepts weak",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 11.9,
+     "latency_ms": 11.86,
      "top10": [
       "rskkqz",
       "rrv9di",
@@ -14538,23 +14511,20 @@
      "query": "PYQ practice for jee mains",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 155.86,
+     "latency_ms": 32.0,
      "top10": [
       "r8m1mb",
       "vsltfe",
       "uwm2wr",
       "rkftz0",
       "w4c2e6",
-      "qsfvuk",
       "mbt6df",
       "t4az9i",
+      "qsfvuk",
       "rxzp4i",
-      "rgags2"
+      "tzn3ck"
      ],
-     "expanded_terms": {
-      "disha": 0.717,
-      "exemplar": 0.711
-     },
+     "expanded_terms": {},
      "p@1": 1.0,
      "p@3": 1.0,
      "p@5": 1.0,
@@ -14564,7 +14534,7 @@
      "rr": 1.0,
      "ap": 0.5,
      "ndcg@5": 0.7698724385020872,
-     "ndcg@10": 0.8043754776986981,
+     "ndcg@10": 0.8017536775903096,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -14573,7 +14543,7 @@
      "query": "NCERT bio for neet",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 19.97,
+     "latency_ms": 19.94,
      "top10": [
       "sxtpax",
       "sxtpdr",
@@ -14609,7 +14579,7 @@
      "query": "AITS test series",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 16.02,
+     "latency_ms": 15.83,
      "top10": [
       "w4ypmj",
       "w0yx2i",
@@ -14627,12 +14597,12 @@
      "p@3": 0.6666666666666666,
      "p@5": 0.6,
      "p@10": 0.5,
-     "recall@10": 0.8333333333333334,
+     "recall@10": 0.5555555555555556,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.637037037037037,
+     "ap": 0.4246913580246913,
      "ndcg@5": 0.6645320995916081,
-     "ndcg@10": 0.7996781480445108,
+     "ndcg@10": 0.7104901153636033,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -14641,7 +14611,7 @@
      "query": "jee adv paper analysis",
      "category": "abbreviation",
      "split": "tune",
-     "latency_ms": 31.82,
+     "latency_ms": 27.98,
      "top10": [
       "uysu64",
       "vnehos",
@@ -14675,33 +14645,30 @@
      "query": "KVPY preparation",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 18.67,
+     "latency_ms": 15.75,
      "top10": [
       "ugn50e",
       "orv5rk",
       "vnho64",
       "o2mw2b",
       "t08ol2",
-      "urql7g",
       "o2lkv8",
+      "urql7g",
       "ukh2lj",
       "okuehy",
-      "synf8d"
+      "q4g91u"
      ],
-     "expanded_terms": {
-      "hbcse": 0.633,
-      "aptitude test": 0.626
-     },
+     "expanded_terms": {},
      "p@1": 1.0,
      "p@3": 1.0,
      "p@5": 1.0,
-     "p@10": 0.9,
-     "recall@10": 0.6428571428571429,
+     "p@10": 1.0,
+     "recall@10": 0.7142857142857143,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.6428571428571429,
+     "ap": 0.7142857142857143,
      "ndcg@5": 0.773893196484256,
-     "ndcg@10": 0.737385854949878,
+     "ndcg@10": 0.8043628744017065,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -14710,7 +14677,7 @@
      "query": "DPP solutions",
      "category": "abbreviation",
      "split": "test",
-     "latency_ms": 17.1,
+     "latency_ms": 16.01,
      "top10": [
       "rzlir7",
       "ry76ss",
@@ -14725,7 +14692,6 @@
      ],
      "expanded_terms": {
       "dpps": 0.784,
-      "topicwise": 0.707,
       "chapter wise": 0.7
      },
      "p@1": 1.0,
@@ -14746,7 +14712,7 @@
      "query": "JEE hall ticket",
      "category": "synonym",
      "split": "tune",
-     "latency_ms": 27.88,
+     "latency_ms": 26.74,
      "top10": [
       "v4g8oy",
       "w8mp7b",
@@ -14780,7 +14746,7 @@
      "query": "coaching institute fees",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 16.05,
+     "latency_ms": 17.03,
      "top10": [
       "tqqa1h",
       "n11tw4",
@@ -14812,7 +14778,7 @@
      "query": "taking a gap year for jee",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 35.88,
+     "latency_ms": 31.96,
      "top10": [
       "ts6g4z",
       "o4w7du",
@@ -14844,7 +14810,7 @@
      "query": "feeling burnt out studying",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 19.84,
+     "latency_ms": 17.63,
      "top10": [
       "wc2cn8",
       "stud4m",
@@ -14876,7 +14842,7 @@
      "query": "exam postponed",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 15.89,
+     "latency_ms": 15.25,
      "top10": [
       "ty57cy",
       "txrsjl",
@@ -14908,7 +14874,7 @@
      "query": "study timetable for repeaters",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 19.83,
+     "latency_ms": 27.77,
      "top10": [
       "rpqclg",
       "p3hr4c",
@@ -14940,7 +14906,7 @@
      "query": "sleep schedule during preparation",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 16.14,
+     "latency_ms": 12.99,
      "top10": [
       "pbgsko",
       "ufqgb0",
@@ -14972,7 +14938,7 @@
      "query": "online classes vs offline coaching",
      "category": "synonym",
      "split": "tune",
-     "latency_ms": 23.71,
+     "latency_ms": 18.98,
      "top10": [
       "uwlp5b",
       "uxc0nw",
@@ -15004,33 +14970,32 @@
      "query": "answer key challenge",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 15.83,
+     "latency_ms": 11.66,
      "top10": [
       "oxpd6k",
       "vs0aff",
       "vqbwao",
       "vq8fg5",
-      "m7omaq",
       "piz3e7",
-      "q9ig2y",
-      "vsn6xa",
+      "m7omaq",
       "wead9v",
-      "vq76o0"
+      "q9ig2y",
+      "vq76o0",
+      "vpwfo1"
      ],
      "expanded_terms": {
-      "response sheet": 0.796,
-      "official answer": 0.677
+      "response sheet": 0.796
      },
      "p@1": 0.0,
      "p@3": 0.6666666666666666,
-     "p@5": 0.6,
+     "p@5": 0.8,
      "p@10": 0.6,
      "recall@10": 0.3333333333333333,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.21653439153439152,
-     "ndcg@5": 0.5296347172140421,
-     "ndcg@10": 0.554855391654734,
+     "ap": 0.2226851851851852,
+     "ndcg@5": 0.5733697430514895,
+     "ndcg@10": 0.5558943676480647,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -15039,7 +15004,7 @@
      "query": "seat allotment counselling",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 12.0,
+     "latency_ms": 9.63,
      "top10": [
       "vueajt",
       "vufx77",
@@ -15053,19 +15018,18 @@
       "qiv4fq"
      ],
      "expanded_terms": {
-      "counseling": 0.803,
-      "jac delhi": 0.724
+      "counseling": 0.803
      },
      "p@1": 0.0,
      "p@3": 0.3333333333333333,
      "p@5": 0.2,
      "p@10": 0.3,
-     "recall@10": 0.42857142857142855,
+     "recall@10": 0.375,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.15510204081632653,
-     "ndcg@5": 0.08750372712995078,
-     "ndcg@10": 0.23183420512988492,
+     "ap": 0.1357142857142857,
+     "ndcg@5": 0.07816593312080211,
+     "ndcg@10": 0.2017762158697088,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -15074,7 +15038,7 @@
      "query": "exam day nervousness",
      "category": "synonym",
      "split": "test",
-     "latency_ms": 20.06,
+     "latency_ms": 16.86,
      "top10": [
       "rllpvl",
       "rae689",
@@ -15106,7 +15070,7 @@
      "query": "maths weak hai kya karu",
      "category": "hinglish",
      "split": "tune",
-     "latency_ms": 28.95,
+     "latency_ms": 27.16,
      "top10": [
       "vwdi8z",
       "saro5p",
@@ -15138,7 +15102,7 @@
      "query": "JEE ki preparation kaise karu",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 34.74,
+     "latency_ms": 31.57,
      "top10": [
       "vvcpjc",
       "rvy8t6",
@@ -15170,7 +15134,7 @@
      "query": "physics mein numericals kaise solve kare",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 24.08,
+     "latency_ms": 19.36,
      "top10": [
       "thteha",
       "v62ib7",
@@ -15202,7 +15166,7 @@
      "query": "chemistry ke liye best resources kya hain",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 31.64,
+     "latency_ms": 26.19,
      "top10": [
       "rckccx",
       "teovm8",
@@ -15234,7 +15198,7 @@
      "query": "padhai mein mann nahi lagta",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 19.8,
+     "latency_ms": 15.39,
      "top10": [
       "t875rg",
       "m0zd2x",
@@ -15266,7 +15230,7 @@
      "query": "drop lena chahiye ya nahi",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 23.99,
+     "latency_ms": 24.53,
      "top10": [
       "uy7prq",
       "s0ef7p",
@@ -15301,7 +15265,7 @@
      "query": "kota jaana sahi hai kya",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 27.9,
+     "latency_ms": 23.08,
      "top10": [
       "uuj7cv",
       "vi94xa",
@@ -15333,7 +15297,7 @@
      "query": "neet ke liye biology kaise padhe",
      "category": "hinglish",
      "split": "tune",
-     "latency_ms": 29.89,
+     "latency_ms": 21.47,
      "top10": [
       "w8js87",
       "vv58vw",
@@ -15365,7 +15329,7 @@
      "query": "mock test mein marks kam aa rahe hai",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 31.78,
+     "latency_ms": 31.94,
      "top10": [
       "pjgits",
       "tab007",
@@ -15399,7 +15363,7 @@
      "query": "boards aur jee dono kaise manage kare",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 34.6,
+     "latency_ms": 32.35,
      "top10": [
       "pn9tt3",
       "w0h0w2",
@@ -15434,7 +15398,7 @@
      "query": "physics ka concept clear nahi hota",
      "category": "hinglish",
      "split": "test",
-     "latency_ms": 25.89,
+     "latency_ms": 23.75,
      "top10": [
       "s6yvh6",
       "s974pq",
@@ -15466,7 +15430,7 @@
      "query": "orgnic chemistry",
      "category": "typo",
      "split": "tune",
-     "latency_ms": 33.33,
+     "latency_ms": 12.77,
      "top10": [
       "v88ovq",
       "txe31j",
@@ -15498,7 +15462,7 @@
      "query": "physcis wallah lectures",
      "category": "typo",
      "split": "test",
-     "latency_ms": 16.06,
+     "latency_ms": 13.86,
      "top10": [
       "v57lnb",
       "w2u7oe",
@@ -15513,17 +15477,16 @@
      ],
      "expanded_terms": {
       "video lectures": 0.728,
-      "yt lectures": 0.717,
       "lecture": 0.685
      },
      "p@1": 1.0,
      "p@3": 0.6666666666666666,
      "p@5": 0.6,
      "p@10": 0.6,
-     "recall@10": 0.5,
+     "recall@10": 0.46153846153846156,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.3810185185185185,
+     "ap": 0.3517094017094017,
      "ndcg@5": 0.36212565638926153,
      "ndcg@10": 0.4002640646061072,
      "judged@10": 1.0,
@@ -15534,7 +15497,7 @@
      "query": "thermodynamcs doubts",
      "category": "typo",
      "split": "test",
-     "latency_ms": 11.9,
+     "latency_ms": 10.56,
      "top10": [
       "vynofb",
       "md00vl",
@@ -15566,7 +15529,7 @@
      "query": "integeration practice",
      "category": "typo",
      "split": "test",
-     "latency_ms": 15.64,
+     "latency_ms": 9.99,
      "top10": [
       "mbzrra",
       "strwtx",
@@ -15598,7 +15561,7 @@
      "query": "electrostatcs book",
      "category": "typo",
      "split": "test",
-     "latency_ms": 12.14,
+     "latency_ms": 11.02,
      "top10": [
       "q1miwm",
       "q0xyt9",
@@ -15630,7 +15593,7 @@
      "query": "percentle vs marks",
      "category": "typo",
      "split": "test",
-     "latency_ms": 16.22,
+     "latency_ms": 16.68,
      "top10": [
       "vwdiza",
       "w177lb",
@@ -15664,7 +15627,7 @@
      "query": "unacadmy plus subscription",
      "category": "typo",
      "split": "test",
-     "latency_ms": 17.17,
+     "latency_ms": 12.78,
      "top10": [
       "rgxxmk",
       "ofl9bn",
@@ -15696,7 +15659,7 @@
      "query": "nuet biology ncert",
      "category": "typo",
      "split": "tune",
-     "latency_ms": 30.08,
+     "latency_ms": 12.11,
      "top10": [
       "uniymp",
       "po08fr",
@@ -15732,7 +15695,7 @@
      "query": "NEET 600 marks",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 27.93,
+     "latency_ms": 19.49,
      "top10": [
       "w25s5m",
       "qkzzr6",
@@ -15766,7 +15729,7 @@
      "query": "99 percentile in jee mains how many marks",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 39.98,
+     "latency_ms": 35.59,
      "top10": [
       "vjvtpg",
       "sstyx3",
@@ -15786,10 +15749,10 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 0.7,
-     "recall@10": 0.5,
+     "recall@10": 0.4666666666666667,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.5,
+     "ap": 0.4666666666666667,
      "ndcg@5": 0.8869465982421281,
      "ndcg@10": 0.7427284758848213,
      "judged@10": 1.0,
@@ -15800,23 +15763,22 @@
      "query": "jee advanced 2022 cutoff",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 43.4,
+     "latency_ms": 147.45,
      "top10": [
-      "ozd5ad",
       "lssb1r",
       "ukta74",
       "w72lk4",
       "qv70xj",
       "u3k5pv",
       "t0idms",
+      "ozd5ad",
       "q36oqe",
       "w9aec8",
       "wbs0ds"
      ],
      "expanded_terms": {
       "cut off": 0.723,
-      "cutoffs": 0.678,
-      "expected cutoff": 0.655
+      "cutoffs": 0.678
      },
      "p@1": 0.0,
      "p@3": 0.3333333333333333,
@@ -15824,10 +15786,10 @@
      "p@10": 0.3,
      "recall@10": 0.6,
      "success@5": 1.0,
-     "rr": 0.3333333333333333,
-     "ap": 0.1833333333333333,
-     "ndcg@5": 0.16958010263680806,
-     "ndcg@10": 0.3786706301269835,
+     "rr": 0.5,
+     "ap": 0.21666666666666665,
+     "ndcg@5": 0.21398626473452756,
+     "ndcg@10": 0.42307679222470296,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -15836,7 +15798,7 @@
      "query": "150 marks in jee mains percentile",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 36.48,
+     "latency_ms": 32.02,
      "top10": [
       "vt849m",
       "shw7vo",
@@ -15858,10 +15820,10 @@
      "p@3": 0.0,
      "p@5": 0.2,
      "p@10": 0.5,
-     "recall@10": 0.5,
+     "recall@10": 0.45454545454545453,
      "success@5": 1.0,
      "rr": 0.2,
-     "ap": 0.1852777777777778,
+     "ap": 0.16843434343434344,
      "ndcg@5": 0.160957993938732,
      "ndcg@10": 0.2750948421824478,
      "judged@10": 1.0,
@@ -15872,25 +15834,22 @@
      "query": "neet 2021 cutoff general category",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 21.24,
+     "latency_ms": 17.16,
      "top10": [
       "vyu6vk",
       "iwz66a",
       "w6toch",
       "wbtzcu",
-      "q36oqe",
-      "ubejg3",
       "ukta74",
-      "kews3b",
       "kg1bnt",
-      "rrwalp"
+      "kews3b",
+      "q36oqe",
+      "rrwalp",
+      "ryskcb"
      ],
      "expanded_terms": {
       "cut off": 0.723,
       "cutoffs": 0.678,
-      "expected cutoff": 0.655,
-      "crl": 0.711,
-      "gen ews": 0.697,
       "ews": 0.694
      },
      "p@1": 0.0,
@@ -15900,9 +15859,9 @@
      "recall@10": 0.6666666666666666,
      "success@5": 1.0,
      "rr": 0.5,
-     "ap": 0.24074074074074073,
+     "ap": 0.27777777777777773,
      "ndcg@5": 0.11699506935449569,
-     "ndcg@10": 0.28445757221378837,
+     "ndcg@10": 0.3151525551492416,
      "judged@10": 1.0,
      "num_results": 20
     },
@@ -15911,7 +15870,7 @@
      "query": "rank 10000 jee mains which nit",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 35.25,
+     "latency_ms": 30.02,
      "top10": [
       "tzsalc",
       "qc6gpk",
@@ -15943,7 +15902,7 @@
      "query": "6 months left for jee",
      "category": "numerical",
      "split": "test",
-     "latency_ms": 39.24,
+     "latency_ms": 27.11,
      "top10": [
       "untrkt",
       "vv2p8j",
@@ -15975,7 +15934,7 @@
      "query": "75 percent criteria boards",
      "category": "numerical",
      "split": "tune",
-     "latency_ms": 15.83,
+     "latency_ms": 13.8,
      "top10": [
       "qbcc93",
       "t0vwxy",
@@ -16010,7 +15969,7 @@
      "query": "allen vs aakash for neet",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 19.95,
+     "latency_ms": 16.11,
      "top10": [
       "uvvj5s",
       "t8n37g",
@@ -16023,10 +15982,7 @@
       "w2rs5x",
       "uw184b"
      ],
-     "expanded_terms": {
-      "sankalp": 0.658,
-      "janakpuri": 0.673
-     },
+     "expanded_terms": {},
      "p@1": 1.0,
      "p@3": 1.0,
      "p@5": 1.0,
@@ -16045,7 +16001,7 @@
      "query": "cengage vs arihant maths",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 160.26,
+     "latency_ms": 13.72,
      "top10": [
       "sweh85",
       "w5u85k",
@@ -16065,10 +16021,10 @@
      "p@3": 1.0,
      "p@5": 0.8,
      "p@10": 0.7,
-     "recall@10": 0.5,
+     "recall@10": 0.4666666666666667,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.45436507936507936,
+     "ap": 0.42407407407407405,
      "ndcg@5": 0.9520727775370877,
      "ndcg@10": 0.8955958647914677,
      "judged@10": 1.0,
@@ -16079,7 +16035,7 @@
      "query": "jee mains vs advanced difficulty",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 46.16,
+     "latency_ms": 31.7,
      "top10": [
       "vs17uf",
       "tcciyw",
@@ -16115,7 +16071,7 @@
      "query": "nit vs iiit",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 13.46,
+     "latency_ms": 11.3,
      "top10": [
       "qhf8tv",
       "ppywgj",
@@ -16147,7 +16103,7 @@
      "query": "iit vs bits pilani",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 13.96,
+     "latency_ms": 12.76,
      "top10": [
       "pnuz2e",
       "rzmpx1",
@@ -16179,7 +16135,7 @@
      "query": "kota vs online coaching",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 17.7,
+     "latency_ms": 15.87,
      "top10": [
       "uwlp5b",
       "uwmxwh",
@@ -16211,7 +16167,7 @@
      "query": "ms chouhan vs n awasthi",
      "category": "comparison",
      "split": "test",
-     "latency_ms": 10.96,
+     "latency_ms": 10.48,
      "top10": [
       "uuf2i7",
       "w3oxa8",
@@ -16245,7 +16201,7 @@
      "query": "neet vs jee which to choose",
      "category": "comparison",
      "split": "tune",
-     "latency_ms": 40.85,
+     "latency_ms": 28.76,
      "top10": [
       "q4kd7n",
       "ql1u7w",
@@ -16277,7 +16233,7 @@
      "query": "how to stay motivated during jee preparation",
      "category": "general",
      "split": "tune",
-     "latency_ms": 31.77,
+     "latency_ms": 26.3,
      "top10": [
       "u7boi9",
       "t7vq84",
@@ -16309,7 +16265,7 @@
      "query": "best youtube channels for jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 31.92,
+     "latency_ms": 42.68,
      "top10": [
       "rvllpf",
       "sp88ym",
@@ -16341,7 +16297,7 @@
      "query": "self study without coaching",
      "category": "general",
      "split": "test",
-     "latency_ms": 24.04,
+     "latency_ms": 32.22,
      "top10": [
       "vrd99z",
       "vmi1dq",
@@ -16373,7 +16329,7 @@
      "query": "time management tips during exam",
      "category": "general",
      "split": "test",
-     "latency_ms": 29.44,
+     "latency_ms": 21.55,
      "top10": [
       "usicxh",
       "unbf5s",
@@ -16405,7 +16361,7 @@
      "query": "how many hours to study daily",
      "category": "general",
      "split": "test",
-     "latency_ms": 22.74,
+     "latency_ms": 18.79,
      "top10": [
       "wcbttn",
       "qped2r",
@@ -16423,10 +16379,10 @@
      "p@3": 1.0,
      "p@5": 0.8,
      "p@10": 0.9,
-     "recall@10": 0.391304347826087,
+     "recall@10": 0.375,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.35453761214630775,
+     "ap": 0.3397652116402116,
      "ndcg@5": 0.7112741403342753,
      "ndcg@10": 0.8126366730480795,
      "judged@10": 1.0,
@@ -16437,7 +16393,7 @@
      "query": "parents pressure jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 33.63,
+     "latency_ms": 26.45,
      "top10": [
       "ppiawb",
       "r7a55b",
@@ -16469,7 +16425,7 @@
      "query": "exam anxiety mental health",
      "category": "general",
      "split": "test",
-     "latency_ms": 16.84,
+     "latency_ms": 16.04,
      "top10": [
       "orex6j",
       "otduue",
@@ -16501,7 +16457,7 @@
      "query": "revision strategy last month",
      "category": "general",
      "split": "tune",
-     "latency_ms": 16.62,
+     "latency_ms": 16.34,
      "top10": [
       "vilmzy",
       "twygax",
@@ -16533,7 +16489,7 @@
      "query": "best book for physics jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 41.13,
+     "latency_ms": 33.03,
      "top10": [
       "onuhu4",
       "vt9ln8",
@@ -16565,7 +16521,7 @@
      "query": "how to improve speed in maths",
      "category": "general",
      "split": "test",
-     "latency_ms": 16.1,
+     "latency_ms": 14.81,
      "top10": [
       "w20o4d",
       "vwg9rf",
@@ -16583,10 +16539,10 @@
      "p@3": 1.0,
      "p@5": 1.0,
      "p@10": 1.0,
-     "recall@10": 0.7142857142857143,
+     "recall@10": 0.6666666666666666,
      "success@5": 1.0,
      "rr": 1.0,
-     "ap": 0.7142857142857143,
+     "ap": 0.6666666666666666,
      "ndcg@5": 0.5634608948312463,
      "ndcg@10": 0.7077625122333976,
      "judged@10": 1.0,
@@ -16597,7 +16553,7 @@
      "query": "college life after jee",
      "category": "general",
      "split": "test",
-     "latency_ms": 38.42,
+     "latency_ms": 29.68,
      "top10": [
       "q950dq",
       "so8er3",
@@ -16629,7 +16585,7 @@
      "query": "attempt vs accuracy in jee mains",
      "category": "general",
      "split": "test",
-     "latency_ms": 35.87,
+     "latency_ms": 34.05,
      "top10": [
       "p0vlor",
       "vs17uf",
@@ -16661,7 +16617,7 @@
      "query": "how to solve previous year papers",
      "category": "general",
      "split": "test",
-     "latency_ms": 20.17,
+     "latency_ms": 19.21,
      "top10": [
       "rozaaa",
       "pd4xvd",
@@ -16693,7 +16649,7 @@
      "query": "neet biology diagrams",
      "category": "general",
      "split": "test",
-     "latency_ms": 19.7,
+     "latency_ms": 14.73,
      "top10": [
       "spqiyc",
       "ov88yw",
@@ -16723,14 +16679,14 @@
    ]
   },
   "expansion": {
-   "queries_expanded": 19,
+   "queries_expanded": 17,
    "queries_total": 56,
    "helped": 6,
-   "hurt": 9,
-   "mean_ndcg@10_delta_when_expanded": -0.0091,
-   "drift_new_irrelevant": 17,
-   "drift_new_relevant": 11,
-   "mean_latency_delta_ms": 0.74,
+   "hurt": 6,
+   "mean_ndcg@10_delta_when_expanded": 0.0188,
+   "drift_new_irrelevant": 7,
+   "drift_new_relevant": 7,
+   "mean_latency_delta_ms": 0.37,
    "per_query": [
     {
      "query_id": "Q12",
@@ -16740,16 +16696,15 @@
      "terms": {
       "physics wallah": 0.716,
       "physicswallah": 0.687,
-      "unacdemy": 0.682,
-      "arjuna batch": 0.68
+      "unacdemy": 0.682
      },
-     "ndcg@10_delta": 0.1523,
+     "ndcg@10_delta": 0.1345,
      "success@5_delta": 0.0,
-     "overlap@10": 0.7,
-     "new_docs": 3,
-     "new_irrelevant": 2,
+     "overlap@10": 0.9,
+     "new_docs": 1,
+     "new_irrelevant": 0,
      "new_relevant": 1,
-     "latency_delta_ms": 3.55
+     "latency_delta_ms": 2.19
     },
     {
      "query_id": "Q13",
@@ -16763,7 +16718,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.15
+     "latency_delta_ms": 0.09
     },
     {
      "query_id": "Q14",
@@ -16777,24 +16732,21 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.03
+     "latency_delta_ms": 0.0
     },
     {
      "query_id": "Q15",
      "query": "PYQ practice for jee mains",
      "category": "abbreviation",
-     "expanded": true,
-     "terms": {
-      "disha": 0.717,
-      "exemplar": 0.711
-     },
-     "ndcg@10_delta": -0.0596,
+     "expanded": false,
+     "terms": {},
+     "ndcg@10_delta": 0.0,
      "success@5_delta": 0.0,
-     "overlap@10": 0.6,
-     "new_docs": 4,
-     "new_irrelevant": 1,
-     "new_relevant": 3,
-     "latency_delta_ms": 0.12
+     "overlap@10": 1.0,
+     "new_docs": 0,
+     "new_irrelevant": 0,
+     "new_relevant": 0,
+     "latency_delta_ms": 0.52
     },
     {
      "query_id": "Q16",
@@ -16812,7 +16764,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.37
+     "latency_delta_ms": -0.11
     },
     {
      "query_id": "Q17",
@@ -16826,24 +16778,21 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": -0.08
+     "latency_delta_ms": -0.2
     },
     {
      "query_id": "Q19",
      "query": "KVPY preparation",
      "category": "abbreviation",
-     "expanded": true,
-     "terms": {
-      "hbcse": 0.633,
-      "aptitude test": 0.626
-     },
-     "ndcg@10_delta": -0.1299,
+     "expanded": false,
+     "terms": {},
+     "ndcg@10_delta": 0.0,
      "success@5_delta": 0.0,
-     "overlap@10": 0.8,
-     "new_docs": 2,
-     "new_irrelevant": 2,
+     "overlap@10": 1.0,
+     "new_docs": 0,
+     "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 1.81
+     "latency_delta_ms": 0.01
     },
     {
      "query_id": "Q20",
@@ -16852,7 +16801,6 @@
      "expanded": true,
      "terms": {
       "dpps": 0.784,
-      "topicwise": 0.707,
       "chapter wise": 0.7
      },
      "ndcg@10_delta": 0.0,
@@ -16861,7 +16809,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 1.69
+     "latency_delta_ms": 1.47
     },
     {
      "query_id": "Q22",
@@ -16875,7 +16823,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.43
+     "latency_delta_ms": -0.06
     },
     {
      "query_id": "Q23",
@@ -16889,7 +16837,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.04
+     "latency_delta_ms": 0.5
     },
     {
      "query_id": "Q24",
@@ -16903,7 +16851,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": -0.75
+     "latency_delta_ms": -0.2
     },
     {
      "query_id": "Q25",
@@ -16917,7 +16865,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.14
+     "latency_delta_ms": 0.06
     },
     {
      "query_id": "Q26",
@@ -16931,7 +16879,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.45
+     "latency_delta_ms": 0.02
     },
     {
      "query_id": "Q27",
@@ -16945,7 +16893,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.05
+     "latency_delta_ms": 0.04
     },
     {
      "query_id": "Q29",
@@ -16953,16 +16901,15 @@
      "category": "synonym",
      "expanded": true,
      "terms": {
-      "response sheet": 0.796,
-      "official answer": 0.677
+      "response sheet": 0.796
      },
-     "ndcg@10_delta": -0.3115,
+     "ndcg@10_delta": -0.1913,
      "success@5_delta": 0.0,
-     "overlap@10": 0.6,
-     "new_docs": 4,
-     "new_irrelevant": 2,
-     "new_relevant": 2,
-     "latency_delta_ms": 0.59
+     "overlap@10": 0.8,
+     "new_docs": 2,
+     "new_irrelevant": 1,
+     "new_relevant": 1,
+     "latency_delta_ms": 0.28
     },
     {
      "query_id": "Q30",
@@ -16970,8 +16917,7 @@
      "category": "synonym",
      "expanded": true,
      "terms": {
-      "counseling": 0.803,
-      "jac delhi": 0.724
+      "counseling": 0.803
      },
      "ndcg@10_delta": 0.0,
      "success@5_delta": 0.0,
@@ -16979,7 +16925,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.43
+     "latency_delta_ms": 0.01
     },
     {
      "query_id": "Q31",
@@ -16993,7 +16939,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.34
+     "latency_delta_ms": -0.04
     },
     {
      "query_id": "Q33",
@@ -17007,7 +16953,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": -0.28
+     "latency_delta_ms": 0.08
     },
     {
      "query_id": "Q34",
@@ -17021,7 +16967,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": -0.1
+     "latency_delta_ms": -0.01
     },
     {
      "query_id": "Q35",
@@ -17035,7 +16981,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.01
+     "latency_delta_ms": -0.15
     },
     {
      "query_id": "Q36",
@@ -17049,7 +16995,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.09
+     "latency_delta_ms": 0.05
     },
     {
      "query_id": "Q37",
@@ -17066,7 +17012,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 1.99
+     "latency_delta_ms": 1.67
     },
     {
      "query_id": "Q38",
@@ -17080,7 +17026,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": -0.56
+     "latency_delta_ms": 0.09
     },
     {
      "query_id": "Q40",
@@ -17096,7 +17042,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 3.41
+     "latency_delta_ms": 0.85
     },
     {
      "query_id": "Q41",
@@ -17113,7 +17059,7 @@
      "new_docs": 1,
      "new_irrelevant": 0,
      "new_relevant": 1,
-     "latency_delta_ms": 0.06
+     "latency_delta_ms": -100.01
     },
     {
      "query_id": "Q42",
@@ -17127,7 +17073,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": -0.32
+     "latency_delta_ms": -0.56
     },
     {
      "query_id": "Q44",
@@ -17136,7 +17082,6 @@
      "expanded": true,
      "terms": {
       "video lectures": 0.728,
-      "yt lectures": 0.717,
       "lecture": 0.685
      },
      "ndcg@10_delta": -0.0099,
@@ -17145,7 +17090,7 @@
      "new_docs": 1,
      "new_irrelevant": 1,
      "new_relevant": 0,
-     "latency_delta_ms": 1.04
+     "latency_delta_ms": 0.66
     },
     {
      "query_id": "Q45",
@@ -17159,7 +17104,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.02
+     "latency_delta_ms": -0.01
     },
     {
      "query_id": "Q46",
@@ -17173,7 +17118,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": -0.02
+     "latency_delta_ms": -0.01
     },
     {
      "query_id": "Q47",
@@ -17187,7 +17132,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.01
+     "latency_delta_ms": 0.0
     },
     {
      "query_id": "Q48",
@@ -17203,7 +17148,7 @@
      "new_docs": 1,
      "new_irrelevant": 0,
      "new_relevant": 1,
-     "latency_delta_ms": 1.2
+     "latency_delta_ms": 1.16
     },
     {
      "query_id": "Q49",
@@ -17217,7 +17162,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.02
+     "latency_delta_ms": 0.0
     },
     {
      "query_id": "Q52",
@@ -17233,7 +17178,7 @@
      "new_docs": 2,
      "new_irrelevant": 0,
      "new_relevant": 2,
-     "latency_delta_ms": 113.34
+     "latency_delta_ms": 103.63
     },
     {
      "query_id": "Q53",
@@ -17242,16 +17187,15 @@
      "expanded": true,
      "terms": {
       "cut off": 0.723,
-      "cutoffs": 0.678,
-      "expected cutoff": 0.655
+      "cutoffs": 0.678
      },
-     "ndcg@10_delta": -0.0149,
+     "ndcg@10_delta": 0.0,
      "success@5_delta": 0.0,
-     "overlap@10": 0.9,
-     "new_docs": 1,
-     "new_irrelevant": 1,
+     "overlap@10": 1.0,
+     "new_docs": 0,
+     "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 1.52
+     "latency_delta_ms": 1.16
     },
     {
      "query_id": "Q54",
@@ -17269,7 +17213,7 @@
      "new_docs": 2,
      "new_irrelevant": 2,
      "new_relevant": 0,
-     "latency_delta_ms": 1.98
+     "latency_delta_ms": 2.73
     },
     {
      "query_id": "Q55",
@@ -17279,18 +17223,15 @@
      "terms": {
       "cut off": 0.723,
       "cutoffs": 0.678,
-      "expected cutoff": 0.655,
-      "crl": 0.711,
-      "gen ews": 0.697,
       "ews": 0.694
      },
-     "ndcg@10_delta": -0.2191,
+     "ndcg@10_delta": -0.0336,
      "success@5_delta": 0.0,
-     "overlap@10": 0.6,
-     "new_docs": 4,
-     "new_irrelevant": 4,
+     "overlap@10": 0.9,
+     "new_docs": 1,
+     "new_irrelevant": 1,
      "new_relevant": 0,
-     "latency_delta_ms": 1.74
+     "latency_delta_ms": -0.03
     },
     {
      "query_id": "Q56",
@@ -17304,7 +17245,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 3.18
+     "latency_delta_ms": -0.93
     },
     {
      "query_id": "Q57",
@@ -17318,7 +17259,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 1.35
+     "latency_delta_ms": 0.2
     },
     {
      "query_id": "Q60",
@@ -17334,7 +17275,7 @@
      "new_docs": 1,
      "new_irrelevant": 1,
      "new_relevant": 0,
-     "latency_delta_ms": 0.56
+     "latency_delta_ms": 0.22
     },
     {
      "query_id": "Q61",
@@ -17352,7 +17293,7 @@
      "new_docs": 2,
      "new_irrelevant": 1,
      "new_relevant": 1,
-     "latency_delta_ms": 2.28
+     "latency_delta_ms": 0.88
     },
     {
      "query_id": "Q62",
@@ -17366,7 +17307,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": -0.21
+     "latency_delta_ms": 0.02
     },
     {
      "query_id": "Q63",
@@ -17380,7 +17321,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.11
+     "latency_delta_ms": 0.04
     },
     {
      "query_id": "Q64",
@@ -17394,7 +17335,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.42
+     "latency_delta_ms": -0.12
     },
     {
      "query_id": "Q65",
@@ -17410,7 +17351,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.22
+     "latency_delta_ms": 0.2
     },
     {
      "query_id": "Q68",
@@ -17424,7 +17365,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 2.02
+     "latency_delta_ms": 0.11
     },
     {
      "query_id": "Q69",
@@ -17438,7 +17379,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.72
+     "latency_delta_ms": 0.09
     },
     {
      "query_id": "Q70",
@@ -17452,7 +17393,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 1.03
+     "latency_delta_ms": 0.46
     },
     {
      "query_id": "Q71",
@@ -17466,7 +17407,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.71
+     "latency_delta_ms": 0.53
     },
     {
      "query_id": "Q72",
@@ -17480,7 +17421,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 1.5
+     "latency_delta_ms": 0.69
     },
     {
      "query_id": "Q73",
@@ -17494,7 +17435,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.76
+     "latency_delta_ms": 0.31
     },
     {
      "query_id": "Q75",
@@ -17508,7 +17449,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 1.59
+     "latency_delta_ms": 0.56
     },
     {
      "query_id": "Q76",
@@ -17522,7 +17463,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.59
+     "latency_delta_ms": 0.11
     },
     {
      "query_id": "Q77",
@@ -17536,7 +17477,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 1.38
+     "latency_delta_ms": 0.38
     },
     {
      "query_id": "Q78",
@@ -17550,7 +17491,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": -112.67
+     "latency_delta_ms": 0.47
     },
     {
      "query_id": "Q79",
@@ -17564,7 +17505,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.83
+     "latency_delta_ms": 0.22
     },
     {
      "query_id": "Q80",
@@ -17578,7 +17519,7 @@
      "new_docs": 0,
      "new_irrelevant": 0,
      "new_relevant": 0,
-     "latency_delta_ms": 0.35
+     "latency_delta_ms": 0.14
     }
    ]
   }
@@ -17589,82 +17530,82 @@
     "n": 280,
     "runs": 5,
     "warmup_runs": 1,
-    "avg_ms": 6.96,
+    "avg_ms": 6.93,
     "p50_ms": 3.27,
-    "p95_ms": 11.18,
-    "p99_ms": 120.98,
-    "max_ms": 124.44
+    "p95_ms": 10.61,
+    "p99_ms": 110.63,
+    "max_ms": 111.43
    },
    "bm25f": {
     "n": 280,
     "runs": 5,
     "warmup_runs": 1,
-    "avg_ms": 7.29,
-    "p50_ms": 3.21,
-    "p95_ms": 10.91,
-    "p99_ms": 122.47,
-    "max_ms": 124.0
+    "avg_ms": 6.89,
+    "p50_ms": 3.25,
+    "p95_ms": 10.61,
+    "p99_ms": 108.6,
+    "max_ms": 113.12
    },
    "bm25f_eng": {
     "n": 280,
     "runs": 5,
     "warmup_runs": 1,
-    "avg_ms": 8.19,
-    "p50_ms": 4.0,
-    "p95_ms": 12.82,
-    "p99_ms": 123.68,
-    "max_ms": 126.13
+    "avg_ms": 7.7,
+    "p50_ms": 3.87,
+    "p95_ms": 12.46,
+    "p99_ms": 112.36,
+    "max_ms": 120.54
    },
    "bm25f_eng_exp": {
     "n": 280,
     "runs": 5,
     "warmup_runs": 1,
-    "avg_ms": 8.39,
-    "p50_ms": 4.38,
-    "p95_ms": 13.31,
-    "p99_ms": 121.7,
-    "max_ms": 126.72
+    "avg_ms": 7.85,
+    "p50_ms": 4.07,
+    "p95_ms": 12.64,
+    "p99_ms": 112.25,
+    "max_ms": 113.18
    },
    "semantic": {
     "n": 280,
     "runs": 5,
     "warmup_runs": 1,
-    "avg_ms": 11.09,
-    "p50_ms": 11.07,
-    "p95_ms": 15.65,
-    "p99_ms": 16.83,
-    "max_ms": 19.03
+    "avg_ms": 8.02,
+    "p50_ms": 7.86,
+    "p95_ms": 9.01,
+    "p99_ms": 10.29,
+    "max_ms": 13.6
    },
    "hybrid": {
     "n": 280,
     "runs": 5,
     "warmup_runs": 1,
-    "avg_ms": 32.47,
-    "p50_ms": 24.96,
-    "p95_ms": 52.32,
-    "p99_ms": 177.38,
-    "max_ms": 197.65
+    "avg_ms": 23.44,
+    "p50_ms": 18.0,
+    "p95_ms": 37.02,
+    "p99_ms": 146.81,
+    "max_ms": 155.08
    }
   },
   "throughput": [
    {
     "workers": 1,
     "queries": 112,
-    "seconds": 3.35,
-    "qps": 33.4
+    "seconds": 2.7,
+    "qps": 41.4
    },
    {
     "workers": 4,
     "queries": 112,
-    "seconds": 3.46,
-    "qps": 32.3
+    "seconds": 2.7,
+    "qps": 41.4
    }
   ],
   "index": {
    "files_mb": {
     "doc_embeddings.json": 0.0,
     "doc_embeddings.npy": 63.16,
-    "domain_dictionary.json": 0.12,
+    "domain_dictionary.json": 0.16,
     "metadata.json.gz": 4.05,
     "postings.pkl.gz": 2.12,
     "stats.json": 0.0,
@@ -17672,15 +17613,15 @@
    },
    "lexical_index_mb": 6.17,
    "embeddings_mb": 63.16,
-   "total_mb": 83.62,
+   "total_mb": 83.66,
    "indexing_time_s": 5.32,
    "total_docs": 43116,
    "vocab_size": 28255
   },
   "memory_rss_mb": {
-   "start_mb": 142.4,
-   "after_bm25_mb": 264.6,
-   "after_semantic_mb": 1228.1
+   "start_mb": 142.5,
+   "after_bm25_mb": 264.7,
+   "after_semantic_mb": 1230.6
   },
   "device": "cuda:0",
   "workload": {
@@ -17984,29 +17925,32 @@
   ]
  },
  "usefulness": {
-  "responses": 0,
+  "responses": 2,
   "min_required": 20,
   "task_completion": null,
   "satisfaction": null,
-  "solved_votes": 0,
-  "ratings": 0,
-  "mean_rating_1_5": null,
-  "recent_unsolved": []
+  "solved_votes": 2,
+  "ratings": 1,
+  "mean_rating_1_5": 1.0,
+  "recent_unsolved": [
+   "when is jee main 2027?",
+   "when is jee main 2027?"
+  ]
  },
  "hses": {
   "bm25_equal": {
    "hses": null,
    "complete": false,
-   "partial_hses": 73.54,
+   "partial_hses": 73.4,
    "measured_weight": 0.9,
    "missing": [
     "usefulness.task_completion",
     "usefulness.satisfaction"
    ],
    "contributions": {
-    "ndcg@10": 9.764,
+    "ndcg@10": 9.69,
     "p@5": 8.304,
-    "map": 1.694,
+    "map": 1.646,
     "mrr": 3.507,
     "robustness.abbreviation": 5.0,
     "robustness.synonym": 5.0,
@@ -18020,9 +17964,9 @@
     "usefulness.satisfaction": null
    },
    "scores": {
-    "ndcg@10": 0.4882,
+    "ndcg@10": 0.4845,
     "p@5": 0.5536,
-    "map": 0.3387,
+    "map": 0.3292,
     "mrr": 0.7014,
     "robustness.abbreviation": 1.0,
     "robustness.synonym": 1.0,
@@ -18039,16 +17983,16 @@
   "bm25f": {
    "hses": null,
    "complete": false,
-   "partial_hses": 76.02,
+   "partial_hses": 75.91,
    "measured_weight": 0.9,
    "missing": [
     "usefulness.task_completion",
     "usefulness.satisfaction"
    ],
    "contributions": {
-    "ndcg@10": 10.634,
+    "ndcg@10": 10.576,
     "p@5": 8.625,
-    "map": 1.86,
+    "map": 1.814,
     "mrr": 3.635,
     "robustness.abbreviation": 5.0,
     "robustness.synonym": 5.0,
@@ -18062,9 +18006,9 @@
     "usefulness.satisfaction": null
    },
    "scores": {
-    "ndcg@10": 0.5317,
+    "ndcg@10": 0.5288,
     "p@5": 0.575,
-    "map": 0.3719,
+    "map": 0.3628,
     "mrr": 0.7271,
     "robustness.abbreviation": 1.0,
     "robustness.synonym": 1.0,
@@ -18081,16 +18025,16 @@
   "bm25f_eng": {
    "hses": null,
    "complete": false,
-   "partial_hses": 74.83,
+   "partial_hses": 74.71,
    "measured_weight": 0.9,
    "missing": [
     "usefulness.task_completion",
     "usefulness.satisfaction"
    ],
    "contributions": {
-    "ndcg@10": 10.396,
+    "ndcg@10": 10.338,
     "p@5": 8.465,
-    "map": 1.803,
+    "map": 1.759,
     "mrr": 3.638,
     "robustness.abbreviation": 4.375,
     "robustness.synonym": 5.0,
@@ -18104,9 +18048,9 @@
     "usefulness.satisfaction": null
    },
    "scores": {
-    "ndcg@10": 0.5198,
+    "ndcg@10": 0.5169,
     "p@5": 0.5643,
-    "map": 0.3606,
+    "map": 0.3517,
     "mrr": 0.7276,
     "robustness.abbreviation": 0.875,
     "robustness.synonym": 1.0,
@@ -18123,17 +18067,17 @@
   "bm25f_eng_exp": {
    "hses": null,
    "complete": false,
-   "partial_hses": 75.33,
+   "partial_hses": 75.45,
    "measured_weight": 0.9,
    "missing": [
     "usefulness.task_completion",
     "usefulness.satisfaction"
    ],
    "contributions": {
-    "ndcg@10": 10.334,
+    "ndcg@10": 10.452,
     "p@5": 8.679,
-    "map": 1.795,
-    "mrr": 3.611,
+    "map": 1.781,
+    "mrr": 3.615,
     "robustness.abbreviation": 4.375,
     "robustness.synonym": 5.0,
     "robustness.hinglish_typo": 4.0,
@@ -18146,10 +18090,10 @@
     "usefulness.satisfaction": null
    },
    "scores": {
-    "ndcg@10": 0.5167,
+    "ndcg@10": 0.5226,
     "p@5": 0.5786,
-    "map": 0.3591,
-    "mrr": 0.7222,
+    "map": 0.3561,
+    "mrr": 0.7231,
     "robustness.abbreviation": 0.875,
     "robustness.synonym": 1.0,
     "robustness.hinglish_typo": 0.8,
@@ -18165,39 +18109,39 @@
   "semantic": {
    "hses": null,
    "complete": false,
-   "partial_hses": 64.41,
+   "partial_hses": 64.35,
    "measured_weight": 0.9,
    "missing": [
     "usefulness.task_completion",
     "usefulness.satisfaction"
    ],
    "contributions": {
-    "ndcg@10": 7.528,
+    "ndcg@10": 7.496,
     "p@5": 6.375,
-    "map": 1.255,
+    "map": 1.236,
     "mrr": 3.079,
     "robustness.abbreviation": 5.0,
     "robustness.synonym": 4.444,
     "robustness.hinglish_typo": 3.0,
     "robustness.numerical_comparison": 2.917,
     "efficiency.p95_latency": 10.0,
-    "efficiency.index_memory": 4.373,
+    "efficiency.index_memory": 4.371,
     "correctness.index": 5.0,
     "correctness.filters": 5.0,
     "usefulness.task_completion": null,
     "usefulness.satisfaction": null
    },
    "scores": {
-    "ndcg@10": 0.3764,
+    "ndcg@10": 0.3748,
     "p@5": 0.425,
-    "map": 0.2509,
+    "map": 0.2471,
     "mrr": 0.6158,
     "robustness.abbreviation": 1.0,
     "robustness.synonym": 0.8889,
     "robustness.hinglish_typo": 0.6,
     "robustness.numerical_comparison": 0.5833,
     "efficiency.p95_latency": 1.0,
-    "efficiency.index_memory": 0.8745,
+    "efficiency.index_memory": 0.8742,
     "correctness.index": 1.0,
     "correctness.filters": 1.0,
     "usefulness.task_completion": null,
@@ -18207,39 +18151,39 @@
   "hybrid": {
    "hses": null,
    "complete": false,
-   "partial_hses": 75.46,
+   "partial_hses": 75.48,
    "measured_weight": 0.9,
    "missing": [
     "usefulness.task_completion",
     "usefulness.satisfaction"
    ],
    "contributions": {
-    "ndcg@10": 10.518,
-    "p@5": 8.893,
-    "map": 1.875,
-    "mrr": 3.585,
+    "ndcg@10": 10.496,
+    "p@5": 8.946,
+    "map": 1.849,
+    "mrr": 3.6,
     "robustness.abbreviation": 5.0,
     "robustness.synonym": 5.0,
     "robustness.hinglish_typo": 3.666,
     "robustness.numerical_comparison": 5.0,
     "efficiency.p95_latency": 10.0,
-    "efficiency.index_memory": 4.373,
+    "efficiency.index_memory": 4.371,
     "correctness.index": 5.0,
     "correctness.filters": 5.0,
     "usefulness.task_completion": null,
     "usefulness.satisfaction": null
    },
    "scores": {
-    "ndcg@10": 0.5259,
-    "p@5": 0.5929,
-    "map": 0.375,
-    "mrr": 0.7171,
+    "ndcg@10": 0.5248,
+    "p@5": 0.5964,
+    "map": 0.3698,
+    "mrr": 0.7201,
     "robustness.abbreviation": 1.0,
     "robustness.synonym": 1.0,
     "robustness.hinglish_typo": 0.7333,
     "robustness.numerical_comparison": 1.0,
     "efficiency.p95_latency": 1.0,
-    "efficiency.index_memory": 0.8745,
+    "efficiency.index_memory": 0.8742,
     "correctness.index": 1.0,
     "correctness.filters": 1.0,
     "usefulness.task_completion": null,
@@ -18248,7 +18192,7 @@
   }
  },
  "meta": {
-  "generated_at": "2026-11-17T19:18:41",
+  "generated_at": "2026-11-17T22:16:18",
   "deployed_system": "hybrid",
   "baseline_system": "bm25_equal",
   "dataset": {
@@ -18261,10 +18205,10 @@
    "test": 56
   },
   "judgments": {
-   "total": 1974,
+   "total": 2006,
    "by_assessor": {
     "legacy": 143,
-    "claude": 1831
+    "claude": 1863
    },
    "queries_judged": 80
   },

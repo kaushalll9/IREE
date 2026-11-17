@@ -1,0 +1,198 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><title>IREE project numbers</title><style>
+@page { size: A4; margin: 14mm 14mm 16mm; }
+:root { --ink: #0b0b0b; --ink2: #52514e; --muted: #7a7973; --rule: #e4e3de; --surface: #ffffff; --tint: #f4f6fa; --blue: #2a78d6; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--surface); color: var(--ink); font: 10.2pt/1.5 "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif; }
+header { padding: 4mm 0 2mm; }
+.kicker { text-transform: uppercase; letter-spacing: .08em; font-size: 8pt; color: var(--blue); font-weight: 700; }
+h1 { font-size: 24pt; line-height: 1.15; margin: 2mm 0 3mm; }
+.lede { font-size: 11pt; color: var(--ink2); max-width: 165mm; }
+h2 { font-size: 15pt; margin: 0 0 3mm; padding-bottom: 2mm; border-bottom: 2px solid var(--ink); }
+h2 span { display: inline-block; width: 8mm; color: var(--blue); }
+h3 { font-size: 11.5pt; margin: 6mm 0 2mm; }
+h4 { font-size: 9.5pt; margin: 4mm 0 1.5mm; color: var(--ink2); }
+p { margin: 1.5mm 0 2.5mm; }
+.small, .note { font-size: 8.5pt; color: var(--ink2); }
+.note { background: var(--tint); padding: 2mm 3mm; border-radius: 4px; }
+code, pre { font-family: "DejaVu Sans Mono", monospace; font-size: 8.3pt; }
+pre { background: var(--tint); padding: 3mm; border-radius: 4px; white-space: pre-wrap; }
+.break { break-before: page; }
+table { width: 100%; border-collapse: collapse; margin: 2mm 0 3mm; font-size: 8.6pt; break-inside: auto; }
+th { text-align: left; font-weight: 600; color: var(--ink2); border-bottom: 1px solid var(--ink2); padding: 1.2mm 1.5mm; vertical-align: bottom; }
+td { border-bottom: 1px solid var(--rule); padding: 1.1mm 1.5mm; vertical-align: top; }
+tr { break-inside: avoid; }
+table.tight td, table.tight th { padding: .8mm 1.2mm; font-size: 8pt; }
+td:not(:first-child), th:not(:first-child) { font-variant-numeric: tabular-nums; }
+.tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5mm; margin: 3mm 0; }
+.tile { border: 1px solid var(--rule); border-radius: 6px; padding: 2.5mm 3mm; break-inside: avoid; }
+.tv { font-size: 15pt; font-weight: 700; font-variant-numeric: tabular-nums; }
+.tl { font-size: 8pt; color: var(--ink2); line-height: 1.3; }
+.stack figure { max-width: 150mm; }
+figure { max-width: 150mm; }
+figure { margin: 2mm 0 3mm; break-inside: avoid; }
+figcaption { font-size: 8pt; color: var(--ink2); margin-top: 1mm; }
+svg text.lab { font-size: 11px; fill: var(--ink2); }
+svg text.lab.hi { fill: var(--ink); font-weight: 700; }
+svg text.val { font-size: 11px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+svg .axis { stroke: var(--ink2); stroke-width: 1; }
+ul { padding-left: 5mm; } li { margin-bottom: 1.5mm; }
+</style></head><body>
+<header>
+  <div class="kicker">IRE course project · numbers report</div>
+  <h1>JEE/NEET assistant: the numbers</h1>
+  <p class="lede">A chatbot that answers JEE/NEET students' questions by searching 43,116 r/JEENEETards
+  posts, plus a crawler for official NTA notices. This report gives the measured numbers for the
+  <b>web crawler</b> and the <b>domain dictionary</b> in detail, and an overview of the rest. Every number is read from the
+  evaluation outputs in <code>evaluation/</code>, except one figure: the before-fix official-answer score (18/20),
+recorded from the first evaluation run.</p>
+  <p class="small">Generated 17 Nov 2026, 22:25 · evaluation run 2026-11-17 22:16:18 · NTA crawl 2026-11-17</p>
+</header>
+<div class="tiles"><div class="tile"><div class="tv">107</div><div class="tl">official NTA notices crawled</div></div><div class="tile"><div class="tv">81.3%</div><div class="tl">notice-type accuracy (before fixes)</div></div><div class="tile"><div class="tv">100%</div><div class="tl">official questions answered correctly</div></div><div class="tile"><div class="tv">815</div><div class="tl">domain dictionary terms</div></div><div class="tile"><div class="tv">57%</div><div class="tl">hybrid expansions with the same meaning</div></div><div class="tile"><div class="tv">75.5</div><div class="tl">HSES (partial, 90% of weight)</div></div></div>
+
+<section class="break">
+<h2><span>1</span> Web crawler: official NTA notices</h2>
+<p>The Reddit data ends in August 2022 and can't answer "when is the exam?". <code>nta_crawler.py</code> does a polite
+breadth-first crawl of the NTA sites. It collects every JEE/NEET notice, classifies each one by exam and type with ordered
+regular-expression rules, reads its upload date from the file name, and extracts the date lines from the PDF text. The chatbot
+routes official questions (an exam name plus an official topic such as admit card, result or last date) to the newest
+matching notice for the year asked.</p>
+<h3>1.1 Crawl run</h3>
+<table class=""><thead><tr><th>Site (seed)</th><th>Pages crawled</th><th>Notices found</th><th>Errors</th><th>Blocked by robots.txt</th></tr></thead><tbody><tr><td>https://jeemain.nta.nic.in/</td><td>0</td><td>0</td><td>403 Client Error: Forbidden for url: htt…</td><td>0</td></tr><tr><td>https://neet.nta.nic.in/</td><td>0</td><td>0</td><td>403 Client Error: Forbidden for url: htt…</td><td>0</td></tr><tr><td>https://nta.ac.in/</td><td>17</td><td>107</td><td>0</td><td>0</td></tr></tbody></table>
+<div class="tiles"><div class="tile"><div class="tv">49.4 s</div><div class="tl">total crawl time</div></div><div class="tile"><div class="tv">1 s</div><div class="tl">delay between requests</div></div><div class="tile"><div class="tv">depth 2</div><div class="tl">BFS limit · ≤30 pages/site</div></div><div class="tile"><div class="tv">20</div><div class="tl">PDFs downloaded for full text</div></div><div class="tile"><div class="tv">10</div><div class="tl">of them scanned images (no text)</div></div><div class="tile"><div class="tv">44</div><div class="tl">date lines extracted</div></div></div>
+<p class="note"><code>jeemain.nta.nic.in</code> and <code>neet.nta.nic.in</code> return HTTP 403 to non-browser clients. The
+crawler identifies itself honestly instead of faking a browser, so all notices come from <code>nta.ac.in</code>, which also lists
+JEE and NEET notices. robots.txt is checked before every request.</p>
+<div class="stack">
+<figure><svg viewBox="0 0 600 190" width="100%" role="img" aria-label="Notices by type (classifier output)"><text x="222" y="19" text-anchor="end" class="lab">other</text><rect x="230" y="8" width="300.0" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="8" width="4.0" height="14" fill="#a8a7a1"/><text x="536.0" y="19" class="val">35</text><text x="222" y="45" text-anchor="end" class="lab">answer_key</text><rect x="230" y="34" width="162.9" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="34" width="4.0" height="14" fill="#a8a7a1"/><text x="398.9" y="45" class="val">19</text><text x="222" y="71" text-anchor="end" class="lab">admit_card</text><rect x="230" y="60" width="162.9" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="60" width="4.0" height="14" fill="#a8a7a1"/><text x="398.9" y="71" class="val">19</text><text x="222" y="97" text-anchor="end" class="lab">result</text><rect x="230" y="86" width="111.4" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="86" width="4.0" height="14" fill="#a8a7a1"/><text x="347.4" y="97" class="val">13</text><text x="222" y="123" text-anchor="end" class="lab">dates</text><rect x="230" y="112" width="85.7" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="112" width="4.0" height="14" fill="#a8a7a1"/><text x="321.7" y="123" class="val">10</text><text x="222" y="149" text-anchor="end" class="lab">application</text><rect x="230" y="138" width="77.1" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="138" width="4.0" height="14" fill="#a8a7a1"/><text x="313.1" y="149" class="val">9</text><text x="222" y="175" text-anchor="end" class="lab">syllabus</text><rect x="230" y="164" width="17.1" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="164" width="4.0" height="14" fill="#a8a7a1"/><text x="253.1" y="175" class="val">2</text><line x1="230" y1="2" x2="230" y2="188" class="axis"/></svg><figcaption>Notices by type (classifier output)</figcaption></figure>
+<figure><svg viewBox="0 0 600 112" width="100%" role="img" aria-label="Notices by upload year (2023-03-15 → 2026-10-30)"><text x="222" y="19" text-anchor="end" class="lab">2026</text><rect x="230" y="8" width="300.0" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="8" width="4.0" height="14" fill="#a8a7a1"/><text x="536.0" y="19" class="val">47</text><text x="222" y="45" text-anchor="end" class="lab">2025</text><rect x="230" y="34" width="166.0" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="34" width="4.0" height="14" fill="#a8a7a1"/><text x="402.0" y="45" class="val">26</text><text x="222" y="71" text-anchor="end" class="lab">2024</text><rect x="230" y="60" width="178.7" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="60" width="4.0" height="14" fill="#a8a7a1"/><text x="414.7" y="71" class="val">28</text><text x="222" y="97" text-anchor="end" class="lab">2023</text><rect x="230" y="86" width="38.3" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="86" width="4.0" height="14" fill="#a8a7a1"/><text x="274.3" y="97" class="val">6</text><line x1="230" y1="2" x2="230" y2="110" class="axis"/></svg><figcaption>Notices by upload year (2023-03-15 → 2026-10-30)</figcaption></figure>
+</div>
+<p>Exam split: 49 JEE, 58 NEET.</p>
+
+<h3>1.2 Classification accuracy</h3>
+<p>Ground truth: all 107 notices hand-labelled by exam and type from their titles
+(<code>evaluation/nta_labels.json</code>, labelled by Claude). The first version of the classifier was measured against these labels.
+Its errors fell into three patterns: "NTA Scores" declarations not counted as results, "Conduct of…/Rescheduling" notices
+not counted as dates, and fee refunds counted as applications. Those rules were then fixed. <b>The before-fix accuracy is
+the honest number;</b> the after-fix accuracy is optimistic because the fixes were made using the same labels.</p>
+<div class="tiles"><div class="tile"><div class="tv">100.0%</div><div class="tl">exam (JEE/NEET) accuracy</div></div><div class="tile"><div class="tv">81.3%</div><div class="tl">notice-type accuracy, before fixes</div></div><div class="tile"><div class="tv">99.1%</div><div class="tl">after fixes (optimistic)</div></div></div>
+<table class=""><thead><tr><th>Type</th><th>Notices (gold)</th><th>Precision before</th><th>Recall before</th><th>Precision after</th><th>Recall after</th></tr></thead><tbody><tr><td>other</td><td>36</td><td>69%</td><td>81%</td><td>100%</td><td>97%</td></tr><tr><td>admit_card</td><td>19</td><td>100%</td><td>100%</td><td>100%</td><td>100%</td></tr><tr><td>answer_key</td><td>18</td><td>95%</td><td>100%</td><td>95%</td><td>100%</td></tr><tr><td>result</td><td>13</td><td>100%</td><td>54%</td><td>100%</td><td>100%</td></tr><tr><td>dates</td><td>10</td><td>50%</td><td>30%</td><td>100%</td><td>100%</td></tr><tr><td>application</td><td>9</td><td>75%</td><td>100%</td><td>100%</td><td>100%</td></tr><tr><td>syllabus</td><td>2</td><td>100%</td><td>100%</td><td>100%</td><td>100%</td></tr></tbody></table>
+<p class="small">Most common errors before the fixes: dates -&gt; other ×7, result -&gt; other ×6, other -&gt; application ×3, other -&gt; dates ×3, other -&gt; answer_key ×1.
+Remaining error after the fixes: Claims regarding OMR answer sheets of NEET (UG) 2026 being circulated  (other → answer_key).</p>
+
+<h3>1.3 Extracting dates from PDFs</h3>
+<p>NTA's important-dates tables have no ruling lines. pypdf's text extraction split them into roughly one word per line, so the
+row "Date of Examination 20, 21, 22, 23, 24 and 28 January 2027" was never extracted and the bot answered a 2027 question with a
+2025 notice. Switching to pdfplumber, which keeps each row on one line, fixed this. Both libraries were run on the same 20 PDFs:</p>
+<table class=""><thead><tr><th>Library</th><th>Date lines found</th><th>PDFs with ≥1 date line</th><th>&quot;Date of Examination&quot; rows found</th><th>Mean words per line</th></tr></thead><tbody><tr><td>pypdf</td><td>36</td><td>9</td><td>0</td><td>7.9</td></tr><tr><td>pdfplumber</td><td>44</td><td>10</td><td>1</td><td>8.9</td></tr></tbody></table>
+<p class="small">10 of the 20 PDFs are scanned images with no text layer, so neither library
+gets anything from them; OCR would be the fix.</p>
+
+<h3>1.4 Publication dates</h3>
+<p>107 of 107 notices get an exact upload date from the NTA file name
+(<code>/uploads/2026/04/20260409….pdf</code> → 2026-04-09). Only 4 PDFs print a parseable
+"Dated:" line to check against: 50% match exactly; the others were uploaded
+17, 16 days after the date printed on them
+(Syllabus for NEET (UG)-2026 Examination, Syllabus for NEET (UG) 2025 Examination ). So the stored date is the <i>upload</i> date,
+which is what "latest notice" needs.</p>
+
+<h3>1.5 End-to-end: does the chatbot answer official questions correctly?</h3>
+<p>30 student questions (<code>evaluation/official_questions.json</code>), written with their expected answer before
+the evaluation was run: 20 official questions with the exam, year and type the answer must have, and
+10 community questions that must <i>not</i> be routed to NTA notices.</p>
+<div class="tiles"><div class="tile"><div class="tv">96.7%</div><div class="tl">routing accuracy (29/30)</div></div><div class="tile"><div class="tv">100%</div><div class="tl">official answers correct (20/20)</div></div><div class="tile"><div class="tv">90%</div><div class="tl">official answers before the fixes (18/20, first run)</div></div></div>
+<table class="tight"><thead><tr><th>Question</th><th>Expected</th><th>Routed to</th><th>Correct?</th><th>Lead notice</th></tr></thead><tbody><tr><td>when is jee main 2027?</td><td>official</td><td>official</td><td>✓</td><td>JEE | application | Inviting Online Application form for the Joint Entrance Exam</td></tr><tr><td>jee main 2027 application last date</td><td>official</td><td>official</td><td>✓</td><td>JEE | application | Clarification regarding submission of a fresh Online Applica</td></tr><tr><td>neet 2026 result</td><td>official</td><td>official</td><td>✓</td><td>says: No NEET 2026 result notice has been crawled yet. Latest NEET 2026 notice:</td></tr><tr><td>jee mains 2026 answer key</td><td>official</td><td>official</td><td>✓</td><td>JEE | answer_key | Final Answer Keys for JEE(Main) - 2026 Paper-II [B.Arch / B.P</td></tr><tr><td>neet ug 2026 admit card</td><td>official</td><td>official</td><td>✓</td><td>NEET | admit_card | Downloading of Admit Cards for the Candidates of National El</td></tr><tr><td>neet syllabus 2026</td><td>official</td><td>official</td><td>✓</td><td>NEET | syllabus | Syllabus for NEET (UG)-2026 Examination</td></tr><tr><td>jee main admit card</td><td>official</td><td>official</td><td>✓</td><td>JEE | admit_card | Release of Admit Cards for the Candidates of JEE(Main) - 2026</td></tr><tr><td>neet exam city slip</td><td>official</td><td>official</td><td>✓</td><td>NEET | admit_card | Downloading of Admit Cards for the Candidates of National El</td></tr><tr><td>when is neet 2027</td><td>official</td><td>official</td><td>✓</td><td>says: No NTA notice mentioning 2027 has been crawled yet.</td></tr><tr><td>jee main 2025 session 2 schedule</td><td>official</td><td>official</td><td>✓</td><td>JEE | dates | Public Notice regarding Change in the date of JEE (Main) 2025 Sess</td></tr><tr><td>neet 2024 final answer key</td><td>official</td><td>official</td><td>✓</td><td>NEET | answer_key | NTA declares the Re-revised Score Card and the Revised Final</td></tr><tr><td>jee mains 2024 result</td><td>official</td><td>official</td><td>✓</td><td>JEE | result | Declaration of Joint Entrance Examination [JEE (Main) - 2024] Ses</td></tr><tr><td>neet registration 2026 last date</td><td>official</td><td>official</td><td>✓</td><td>NEET | application | Correction in Particulars for the National Eligibility-cum-</td></tr><tr><td>jee hall ticket kab aayega</td><td>official</td><td>official</td><td>✓</td><td>JEE | admit_card | Release of Admit Cards for the Candidates of JEE(Main) - 2026</td></tr><tr><td>neet ug answer key challenge</td><td>official</td><td>official</td><td>✓</td><td>NEET | answer_key | Claims regarding OMR answer sheets of NEET (UG) 2026 being c</td></tr><tr><td>neet 2025 result</td><td>official</td><td>official</td><td>✓</td><td>NEET | result | Declaration of Result of concerned Candidates for National Eligi</td></tr><tr><td>jee main 2026 session 1 admit card</td><td>official</td><td>official</td><td>✓</td><td>JEE | admit_card | Release of Admit Cards for the Candidates of JEE(Main) - 2026</td></tr><tr><td>neet 2023 application form</td><td>official</td><td>official</td><td>✓</td><td>NEET | application | Reopening the Online Application Form of National Eligibili</td></tr><tr><td>when is jee mains exam</td><td>official</td><td>official</td><td>✓</td><td>JEE | application | Inviting Online Application form for the Joint Entrance Exam</td></tr><tr><td>nta jee main 2026 result declared?</td><td>official</td><td>official</td><td>✓</td><td>JEE | result | Declaration of the Result/NTA Scores for the Joint Entrance Exami</td></tr><tr><td>best book for organic chemistry</td><td>community</td><td>community</td><td>✓</td><td></td></tr><tr><td>hc verma or dc pandey</td><td>community</td><td>community</td><td>✓</td><td></td></tr><tr><td>should i take a drop</td><td>community</td><td>community</td><td>✓</td><td></td></tr><tr><td>physics wallah vs unacademy</td><td>community</td><td>community</td><td>✓</td><td></td></tr><tr><td>how many hours to study daily</td><td>community</td><td>community</td><td>✓</td><td></td></tr><tr><td>kota hostel life</td><td>community</td><td>community</td><td>✓</td><td></td></tr><tr><td>maths weak hai kya karu</td><td>community</td><td>community</td><td>✓</td><td></td></tr><tr><td>is ncert enough for neet biology</td><td>community</td><td>community</td><td>✓</td><td></td></tr><tr><td>iit bombay cse cutoff rank</td><td>community</td><td>community</td><td>✓</td><td></td></tr><tr><td>my jee result was bad, what now?</td><td>community</td><td>official</td><td>✗</td><td></td></tr></tbody></table>
+<p class="small">The two answer failures before the fixes were "jee mains 2024 result" (the 2024 results are titled "NTA Scores")
+and "neet 2026 result" (no such notice has been published, but the bot showed an unrelated 2026 notice instead of saying so).
+The 20/20 is therefore partly optimistic: the fixes were informed by this question set. The remaining routing error,
+"my jee result was bad, what now?", is a limitation of keyword routing.</p>
+</section>
+
+<section class="break">
+<h2><span>2</span> Domain dictionary: TF-IDF + embeddings</h2>
+<p>Students write "pw", "hcv" and "hall ticket"; posts say "physics wallah", "hc verma" and "admit card". The dictionary
+adds such terms to the query at reduced weight (0.5 × similarity; the original words keep weight 1.0). Three ways of building it
+were compared, all with the same 92 seed terms in 8 categories and the same expansion rules (only exam, coaching,
+resource, admission and student terms expand; sibling seeds and digit tokens are never added; at most 3 terms per seed).</p>
+<table class=""><thead><tr><th>Variant</th><th>How related terms are found</th></tr></thead><tbody><tr><td>TF-IDF only (co-occurrence)</td><td>Terms whose TF-IDF document vectors are most similar to the seed's (they occur in the same posts). Statistics only, no embeddings.</td></tr><tr><td>Embeddings only (Word2Vec)</td><td>Nearest neighbours of the seed in a Word2Vec model trained on the posts (skip-gram, 150-d, window 5), cosine ≥ 0.55.</td></tr><tr><td>Hybrid (Word2Vec + TF-IDF)</td><td>Word2Vec neighbours, kept only if TF-IDF ranks them among the 3,000 most salient terms in the corpus. Embeddings decide <i>what means the same</i>; TF-IDF decides <i>what matters</i>.</td></tr></tbody></table>
+<p class="small">Pipeline: tokenise → detect phrases (gensim Phrases: "physics wallah" → <code>physics_wallah</code>) → TF-IDF over
+43,116 posts (11,559 terms in ≥5 posts) and Word2Vec (12,076-word vocabulary)
+→ dictionary of 815 terms (92 seeds + 723 learned).</p>
+
+<h3>2.1 Dictionary accuracy: are the added terms right?</h3>
+<p>Every (seed → added term) pair that a variant can put into a query was graded: <b>same meaning</b> (synonym, abbreviation,
+spelling variant), <b>related</b>, or <b>unrelated</b>, for 183
+unique pairs in total (<code>evaluation/dictionary_pairs.json</code>, graded by Claude).</p>
+<table class=""><thead><tr><th>Variant</th><th>Dictionary terms</th><th>Expansion pairs</th><th>Same meaning</th><th>Related or better</th><th>Unrelated (drift)</th></tr></thead><tbody><tr><td>TF-IDF only (co-occurrence)</td><td>262</td><td>79</td><td>1%</td><td>38%</td><td>62%</td></tr><tr><td>Embeddings only (Word2Vec)</td><td>815</td><td>110</td><td>34%</td><td>80%</td><td>20%</td></tr><tr><td>Hybrid (Word2Vec + TF-IDF)</td><td>815</td><td>58</td><td>57%</td><td>91%</td><td>9%</td></tr></tbody></table>
+<div class="stack">
+<figure><svg viewBox="0 0 600 86" width="100%" role="img" aria-label="Share of added terms with the same meaning (higher is better)"><text x="222" y="19" text-anchor="end" class="lab">TF-IDF only (co-occurrence)</text><rect x="230" y="8" width="3.9" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="8" width="3.9" height="14" fill="#a8a7a1"/><text x="239.9" y="19" class="val">1%</text><text x="222" y="45" text-anchor="end" class="lab">Embeddings only (Word2Vec)</text><rect x="230" y="34" width="100.8" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="34" width="4.0" height="14" fill="#a8a7a1"/><text x="336.8" y="45" class="val">34%</text><text x="222" y="71" text-anchor="end" class="lab hi">Hybrid (Word2Vec + TF-IDF)</text><rect x="230" y="60" width="170.7" height="14" rx="3" fill="#2a78d6"/><rect x="230" y="60" width="4.0" height="14" fill="#2a78d6"/><text x="406.7" y="71" class="val">57%</text><line x1="230" y1="2" x2="230" y2="84" class="axis"/></svg><figcaption>Share of added terms with the same meaning (higher is better)</figcaption></figure>
+<figure><svg viewBox="0 0 600 86" width="100%" role="img" aria-label="Share of added terms that are unrelated (lower is better)"><text x="222" y="19" text-anchor="end" class="lab">TF-IDF only (co-occurrence)</text><rect x="230" y="8" width="186.0" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="8" width="4.0" height="14" fill="#a8a7a1"/><text x="422.0" y="19" class="val">62%</text><text x="222" y="45" text-anchor="end" class="lab">Embeddings only (Word2Vec)</text><rect x="230" y="34" width="60.0" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="34" width="4.0" height="14" fill="#a8a7a1"/><text x="296.0" y="45" class="val">20%</text><text x="222" y="71" text-anchor="end" class="lab hi">Hybrid (Word2Vec + TF-IDF)</text><rect x="230" y="60" width="25.8" height="14" rx="3" fill="#2a78d6"/><rect x="230" y="60" width="4.0" height="14" fill="#2a78d6"/><text x="261.8" y="71" class="val">9%</text><line x1="230" y1="2" x2="230" y2="84" class="axis"/></svg><figcaption>Share of added terms that are unrelated (lower is better)</figcaption></figure>
+</div>
+<p>The hybrid is the most accurate dictionary. The TF-IDF filter removes rare neighbours (<i>hbcse</i>, <i>aptitude test</i>,
+<i>official answer</i>, <i>sankalp</i>), which were the main source of drift, and keeps salient ones (<i>physics wallah</i>,
+<i>admit card</i>, <i>cbse</i>). TF-IDF on its own finds words that appear <i>alongside</i> a seed (josaa → documents, round),
+not words that <i>mean</i> the same, so only 1% of its additions are synonyms.</p>
+
+<h3>2.2 Search quality with each dictionary</h3>
+<p>Each variant's setting was tuned on the 24 tuning queries only (TF-IDF threshold 0.1;
+hybrid salience cut-off 3,000). The numbers below are on the 56 held-out test queries.</p>
+<h4>BM25F + engagement + expansion (expansion's direct effect)</h4>
+<table class="tight"><thead><tr><th>Variant</th><th>NDCG@10</th><th>P@5</th><th>MAP</th><th>MRR</th><th>Success@5</th><th>Queries expanded</th><th>Helped / hurt</th><th>p vs none</th><th>Tune NDCG@10</th></tr></thead><tbody><tr><td>No expansion</td><td>0.517</td><td>0.564</td><td>0.352</td><td>0.728</td><td>0.893</td><td>0</td><td>– / –</td><td>–</td><td>0.634</td></tr><tr><td>TF-IDF only (co-occurrence)</td><td>0.520</td><td>0.579</td><td>0.360</td><td>0.737</td><td>0.893</td><td>35</td><td>13 / 7</td><td>0.657</td><td>0.636</td></tr><tr><td>Embeddings only (Word2Vec)</td><td>0.513</td><td>0.579</td><td>0.350</td><td>0.722</td><td>0.911</td><td>19</td><td>6 / 9</td><td>0.751</td><td>0.645</td></tr><tr><td><b>Hybrid (Word2Vec + TF-IDF)</b></td><td>0.523</td><td>0.579</td><td>0.356</td><td>0.723</td><td>0.911</td><td>17</td><td>6 / 6</td><td>0.485</td><td>0.647</td></tr></tbody></table>
+<h4>Deployed hybrid search (BM25F + semantic, RRF)</h4>
+<table class="tight"><thead><tr><th>Variant</th><th>NDCG@10</th><th>P@5</th><th>MAP</th><th>MRR</th><th>Success@5</th><th>Queries expanded</th><th>Helped / hurt</th><th>p vs none</th><th>Tune NDCG@10</th></tr></thead><tbody><tr><td>No expansion</td><td>0.522</td><td>0.586</td><td>0.370</td><td>0.737</td><td>0.893</td><td>0</td><td>– / –</td><td>–</td><td>0.644</td></tr><tr><td>TF-IDF only (co-occurrence)</td><td>0.532</td><td>0.589</td><td>0.380</td><td>0.743</td><td>0.893</td><td>35</td><td>12 / 8</td><td>0.231</td><td>0.649</td></tr><tr><td>Embeddings only (Word2Vec)</td><td>0.523</td><td>0.593</td><td>0.367</td><td>0.717</td><td>0.911</td><td>19</td><td>7 / 10</td><td>0.857</td><td>0.666</td></tr><tr><td><b>Hybrid (Word2Vec + TF-IDF)</b></td><td>0.525</td><td>0.596</td><td>0.370</td><td>0.720</td><td>0.911</td><td>17</td><td>6 / 8</td><td>0.550</td><td>0.662</td></tr></tbody></table>
+<figure><svg viewBox="0 0 600 112" width="100%" role="img" aria-label="NDCG@10, BM25F + expansion, test split (axis 0–0.6)"><text x="222" y="19" text-anchor="end" class="lab">No expansion</text><rect x="230" y="8" width="258.5" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="8" width="4.0" height="14" fill="#a8a7a1"/><text x="494.5" y="19" class="val">0.517</text><text x="222" y="45" text-anchor="end" class="lab">TF-IDF only (co-occurrence)</text><rect x="230" y="34" width="260.2" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="34" width="4.0" height="14" fill="#a8a7a1"/><text x="496.2" y="45" class="val">0.520</text><text x="222" y="71" text-anchor="end" class="lab">Embeddings only (Word2Vec)</text><rect x="230" y="60" width="256.8" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="60" width="4.0" height="14" fill="#a8a7a1"/><text x="492.8" y="71" class="val">0.513</text><text x="222" y="97" text-anchor="end" class="lab hi">Hybrid (Word2Vec + TF-IDF)</text><rect x="230" y="86" width="261.3" height="14" rx="3" fill="#2a78d6"/><rect x="230" y="86" width="4.0" height="14" fill="#2a78d6"/><text x="497.3" y="97" class="val">0.523</text><line x1="230" y1="2" x2="230" y2="110" class="axis"/></svg><figcaption>NDCG@10, BM25F + expansion, test split (axis 0–0.6)</figcaption></figure>
+<p><b>Reading the results honestly.</b> On search quality the four variants are within noise of each other and of no expansion:
+the differences are about ±0.01 NDCG@10, and no p-value comes near 0.05 (paired randomization test, 10,000 permutations).
+With BM25 the hybrid is best (0.523) and hurts the fewest queries
+(6 vs 9 for embeddings only). In the deployed system,
+TF-IDF only scores highest on the test split (0.532) despite its poor dictionary,
+because related words act as topical context. On the tuning split, however, embeddings only did best there. The hybrid's clear
+win is dictionary accuracy (fewer wrong expansions shown to users as "Also searched: …"), not ranking.</p>
+
+<h3>2.3 Where the TF-IDF filter changed the query (embeddings only → hybrid)</h3>
+<table class="tight"><thead><tr><th>Query</th><th>Terms the filter removed</th><th>ΔNDCG embeddings only</th><th>ΔNDCG hybrid</th></tr></thead><tbody><tr><td>PW vs Unacademy</td><td>arjuna batch</td><td>+0.134</td><td>+0.134</td></tr><tr><td>PYQ practice for jee mains</td><td>disha, exemplar</td><td>-0.060</td><td>+0.000</td></tr><tr><td>KVPY preparation</td><td>aptitude test, hbcse</td><td>-0.130</td><td>+0.000</td></tr><tr><td>DPP solutions</td><td>topicwise</td><td>+0.000</td><td>+0.000</td></tr><tr><td>answer key challenge</td><td>official answer</td><td>-0.311</td><td>-0.191</td></tr><tr><td>seat allotment counselling</td><td>jac delhi</td><td>+0.000</td><td>+0.000</td></tr><tr><td>physcis wallah lectures</td><td>yt lectures</td><td>-0.010</td><td>-0.010</td></tr><tr><td>jee advanced 2022 cutoff</td><td>expected cutoff</td><td>-0.015</td><td>+0.000</td></tr><tr><td>neet 2021 cutoff general category</td><td>crl, expected cutoff, gen ews</td><td>-0.219</td><td>-0.034</td></tr></tbody></table>
+<p class="small">ΔNDCG is relative to no expansion (BM25F + engagement, test split).</p>
+
+<h3>2.4 Tuning runs</h3>
+<table class="tight"><thead><tr><th>TF-IDF only: co-occurrence threshold</th><th>Tune NDCG@10</th></tr></thead><tbody><tr><td>0.1</td><td>0.649</td></tr><tr><td>0.15</td><td>0.640</td></tr><tr><td>0.2</td><td>0.646</td></tr><tr><td>0.3</td><td>0.644</td></tr></tbody></table>
+<table class="tight"><thead><tr><th>Hybrid: salience cut-off / TF-IDF candidate terms added</th><th>Tune NDCG@10</th></tr></thead><tbody><tr><td>top 1000 / 0</td><td>0.655</td></tr><tr><td>top 1000 / 1000</td><td>0.655</td></tr><tr><td>top 1000 / 2000</td><td>0.655</td></tr><tr><td>top 2000 / 0</td><td>0.659</td></tr><tr><td>top 2000 / 1000</td><td>0.659</td></tr><tr><td>top 2000 / 2000</td><td>0.659</td></tr><tr><td>top 3000 / 0</td><td>0.662</td></tr><tr><td>top 3000 / 1000</td><td>0.662</td></tr><tr><td>top 3000 / 2000</td><td>0.662</td></tr><tr><td>top 5000 / 0</td><td>0.662</td></tr><tr><td>top 5000 / 1000</td><td>0.662</td></tr><tr><td>top 5000 / 2000</td><td>0.662</td></tr></tbody></table>
+<p class="small">Adding TF-IDF-discovered candidate terms (e.g. <i>alakh pandey</i>, <i>mathongo</i>, <i>competishun</i>) to the
+dictionary changed no tuning query, so it is switched off (<code>TFIDF_CANDIDATES = 0</code>); the salience filter is what the
+hybrid uses.</p>
+</section>
+
+<section class="break">
+<h2><span>3</span> The rest of the system: overview</h2>
+<div class="tiles"><div class="tile"><div class="tv">43,116</div><div class="tl">Reddit posts (Aug 2020 – Aug 2022)</div></div><div class="tile"><div class="tv">28,255</div><div class="tl">terms in the inverted index</div></div><div class="tile"><div class="tv">5.32 s</div><div class="tl">index build time</div></div><div class="tile"><div class="tv">80</div><div class="tl">benchmark queries (56 test)</div></div><div class="tile"><div class="tv">2,006</div><div class="tl">graded relevance judgments</div></div><div class="tile"><div class="tv">37 ms</div><div class="tl">P95 latency, deployed search</div></div></div>
+<h3>3.1 Search systems (test split)</h3>
+<table class="tight"><thead><tr><th>System</th><th>NDCG@10</th><th>P@5</th><th>MAP</th><th>MRR</th><th>Success@5</th><th>P95 latency</th><th>ΔNDCG vs baseline (p)</th></tr></thead><tbody><tr><td>BM25F, equal field weights (baseline)</td><td>0.484</td><td>0.554</td><td>0.329</td><td>0.701</td><td>0.875</td><td>11 ms</td><td>baseline</td></tr><tr><td>BM25F (title 2.5x)</td><td>0.529</td><td>0.575</td><td>0.363</td><td>0.727</td><td>0.911</td><td>11 ms</td><td>+0.044 (0.039)</td></tr><tr><td>BM25F + engagement boost</td><td>0.517</td><td>0.564</td><td>0.352</td><td>0.728</td><td>0.893</td><td>12 ms</td><td>+0.032 (0.126)</td></tr><tr><td>BM25F + engagement + dictionary expansion (Word2Vec + TF-IDF)</td><td>0.523</td><td>0.579</td><td>0.356</td><td>0.723</td><td>0.911</td><td>13 ms</td><td>+0.038 (0.077)</td></tr><tr><td>Semantic (multilingual MiniLM)</td><td>0.375</td><td>0.425</td><td>0.247</td><td>0.616</td><td>0.750</td><td>9 ms</td><td>-0.110 (0.018)</td></tr><tr><td><b>Hybrid RRF (deployed: search default + chatbot)</b></td><td>0.525</td><td>0.596</td><td>0.370</td><td>0.720</td><td>0.911</td><td>37 ms</td><td>+0.040 (0.101)</td></tr></tbody></table>
+<figure><svg viewBox="0 0 600 164" width="100%" role="img" aria-label="NDCG@10 by search system, test split (axis 0–0.6)"><text x="222" y="19" text-anchor="end" class="lab">BM25F, equal field weights (baseline)</text><rect x="230" y="8" width="242.2" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="8" width="4.0" height="14" fill="#a8a7a1"/><text x="478.2" y="19" class="val">0.484</text><text x="222" y="45" text-anchor="end" class="lab">BM25F (title 2.5x)</text><rect x="230" y="34" width="264.4" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="34" width="4.0" height="14" fill="#a8a7a1"/><text x="500.4" y="45" class="val">0.529</text><text x="222" y="71" text-anchor="end" class="lab">BM25F + engagement boost</text><rect x="230" y="60" width="258.5" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="60" width="4.0" height="14" fill="#a8a7a1"/><text x="494.5" y="71" class="val">0.517</text><text x="222" y="97" text-anchor="end" class="lab">BM25F + engagement + dictionary expansion (Word2Vec + TF-IDF)</text><rect x="230" y="86" width="261.3" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="86" width="4.0" height="14" fill="#a8a7a1"/><text x="497.3" y="97" class="val">0.523</text><text x="222" y="123" text-anchor="end" class="lab">Semantic (multilingual MiniLM)</text><rect x="230" y="112" width="187.4" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="112" width="4.0" height="14" fill="#a8a7a1"/><text x="423.4" y="123" class="val">0.375</text><text x="222" y="149" text-anchor="end" class="lab hi">Hybrid RRF (deployed)</text><rect x="230" y="138" width="262.4" height="14" rx="3" fill="#2a78d6"/><rect x="230" y="138" width="4.0" height="14" fill="#2a78d6"/><text x="498.4" y="149" class="val">0.525</text><line x1="230" y1="2" x2="230" y2="162" class="axis"/></svg><figcaption>NDCG@10 by search system, test split (axis 0–0.6)</figcaption></figure>
+<p>BM25F weights the title 2.5×; the engagement boost multiplies by 1 + 0.05·log₁₀(1 + upvotes); semantic search uses
+multilingual MiniLM sentence embeddings; the deployed hybrid fuses BM25F and semantic rankings with weighted Reciprocal Rank
+Fusion (k = 60, semantic weight 0.25, tuned on the tuning split). The hybrid is level with BM25F on NDCG@10 and best on P@5.</p>
+<h3>3.2 Hybrid Search Evaluation Score (HSES)</h3>
+<p><b>75.5 / 100, incomplete</b>: 90% of the weight is measured. User usefulness
+needs 20 feedback responses from the chat tab; 2 have been collected so far.</p>
+<table class="tight"><thead><tr><th>Component</th><th>Weight</th><th>Score (0–1)</th><th>Points</th></tr></thead><tbody><tr><td>ndcg@10</td><td>20%</td><td>0.525</td><td>10.50</td></tr><tr><td>p@5</td><td>15%</td><td>0.596</td><td>8.95</td></tr><tr><td>map</td><td>5%</td><td>0.370</td><td>1.85</td></tr><tr><td>mrr</td><td>5%</td><td>0.720</td><td>3.60</td></tr><tr><td>robustness.abbreviation</td><td>5%</td><td>1.000</td><td>5.00</td></tr><tr><td>robustness.synonym</td><td>5%</td><td>1.000</td><td>5.00</td></tr><tr><td>robustness.hinglish_typo</td><td>5%</td><td>0.733</td><td>3.67</td></tr><tr><td>robustness.numerical_comparison</td><td>5%</td><td>1.000</td><td>5.00</td></tr><tr><td>efficiency.p95_latency</td><td>10%</td><td>1.000</td><td>10.00</td></tr><tr><td>efficiency.index_memory</td><td>5%</td><td>0.874</td><td>4.37</td></tr><tr><td>correctness.index</td><td>5%</td><td>1.000</td><td>5.00</td></tr><tr><td>correctness.filters</td><td>5%</td><td>1.000</td><td>5.00</td></tr><tr><td>usefulness.task_completion</td><td>5%</td><td>not measured</td><td>–</td></tr><tr><td>usefulness.satisfaction</td><td>5%</td><td>not measured</td><td>–</td></tr></tbody></table>
+<h3>3.3 Performance and reliability</h3>
+<table class=""><thead><tr><th>Measure</th><th>Value</th></tr></thead><tbody><tr><td>Latency, deployed hybrid (avg / P50 / P95 / P99)</td><td>23.4 / 18.0 / 37.0 / 146.8 ms</td></tr><tr><td>Throughput</td><td>41.4 q/s with 1 worker(s), 41.4 q/s with 4 worker(s)</td></tr><tr><td>Index size</td><td>lexical 6.17 MB · embeddings 63.16 MB · Word2Vec 14.17 MB</td></tr><tr><td>Memory (RSS)</td><td>265 MB with BM25 · 1231 MB with the semantic model</td></tr><tr><td>Device</td><td>cuda:0</td></tr><tr><td>Index integrity checks</td><td>14/14 passed</td></tr><tr><td>Filter and API checks</td><td>43/43 passed</td></tr></tbody></table>
+</section>
+<section>
+<h2><span>4</span> Method and caveats</h2>
+<ul>
+<li><b>Who labelled the data.</b> Relevance judgments: 1,863 by Claude (an LLM,
+graded against each query's stated intent) and 143 from the original project.
+The notice labels, the dictionary-pair grades and the official-question expectations were also made by Claude. All are saved in
+<code>evaluation/</code> and should be spot-checked by a person (<code>python evaluate.py annotate --review</code>).</li>
+<li><b>Tuning vs testing.</b> Every tuned setting (RRF weight, TF-IDF threshold, salience cut-off) was chosen on the
+24 tuning queries; all reported search numbers are on the 56 test queries.</li>
+<li><b>Unjudged documents</b> are skipped (condensed rankings), not counted as irrelevant; every system's top 10 is 99–100% judged.</li>
+<li><b>Small differences are noise.</b> With 56 test queries, differences under ~0.03 NDCG@10 are not significant.</li>
+<li><b>Crawler accuracy after fixes is optimistic</b>, because the fixes were made using the same labels and questions. The
+before-fix numbers (81.3% type accuracy, 90% official answers) are the unbiased ones.</li>
+<li><b>Data age.</b> The Reddit data ends in August 2022; official dates come from the live NTA crawl.</li>
+</ul>
+<h3>Reproduce</h3>
+<pre>python nta_crawler.py        # crawl NTA notices          python eval_crawler.py     # crawler numbers
+python domain_dictionary.py  # build the dictionary       python eval_dictionary.py  # dictionary numbers
+python evaluate.py           # search evaluation + HSES   python make_report.py      # this PDF</pre>
+</section></body></html>
