@@ -37,6 +37,8 @@ OFFICIAL_EXAM_RE = re.compile(r"\b(jee|neet|mains?|nta)\b", re.I)
 # Query words that mean a crawler category but aren't in its title patterns.
 CATEGORY_SYNONYMS = [("admit_card", r"hall ?ticket"), ("application", r"last date|deadline|register"),
                      ("dates", r"when (?:is|will|does|are)|exam date")]
+# "Date of Examination 20,21 ... January 2027" rows in bulletins / application notices.
+EXAM_DATE_RE = re.compile(r"date (?:of|for) (?:the )?exam|exam(?:ination)? dates?\b", re.I)
 # PDF footer/boilerplate lines that contain dates but say nothing.
 BOILERPLATE_RE = re.compile(r"generated from eoffice|page \d+ of \d+|^dated?\s*:", re.I)
 
@@ -189,8 +191,29 @@ class Chatbot:
             return None
         exam = classify(question, EXAMS) or ("JEE" if re.search(r"\bmains?\b", question, re.I) else None)
         category = classify(question, CATEGORIES + CATEGORY_SYNONYMS)
-        notices = [n for n in self.nta["notices"]
-                   if (not exam or n["exam"] == exam) and (not category or n["category"] == category)]
+        pool = [n for n in self.nta["notices"] if not exam or n["exam"] == exam]
+        # "JEE Main 2027": only notices about that exam year (title or extracted date lines).
+        years = set(re.findall(r"\b20\d\d\b", question))
+        missing_year = None
+        if years:
+            for_year = [n for n in pool if any(y in n["title"] or y in " ".join(n.get("important_dates", []))
+                                               for y in years)]
+            if for_year:
+                pool = for_year
+            else:
+                missing_year = ", ".join(sorted(years))
+        # Category narrows the pool, but a year match beats a category match
+        # ("when is jee 2027" -> the 2027 application notice holds the dates).
+        def has_exam_date(n):
+            return any(EXAM_DATE_RE.search(d) for d in n.get("important_dates", []))
+        # A "when is the exam" question is also answered by any notice that states the exam date
+        # (usually the application notice), not only by notices titled "schedule"/"dates".
+        notices = [n for n in pool if not category or n["category"] == category
+                   or (category == "dates" and has_exam_date(n))]
+        if not notices and years and not missing_year:
+            notices = pool
+        if category == "dates":
+            notices.sort(key=lambda n: not has_exam_date(n))   # stable: newest first within each group
         if not notices:
             return None
         top = notices[:3]
@@ -205,10 +228,14 @@ class Chatbot:
         } for n in top]
 
         lead = top[0]
-        lines = [f"Latest official NTA notice{' for ' + exam if exam else ''}"
-                 f"{' (' + category.replace('_', ' ') + ')' if category else ''}:",
+        lines = [f"No NTA notice mentioning {missing_year} has been crawled yet." if missing_year else ""]
+        label = category if category and lead["category"] == category else None
+        lines += [f"Latest official NTA notice{' for ' + exam if exam else ''}"
+                  f"{' ' + '/'.join(sorted(years)) if years and not missing_year else ''}"
+                  f"{' (' + label.replace('_', ' ') + ')' if label else ''}:",
                  f"**{lead['title']}** (published {lead['published']}) [1]"]
         dates = [d for d in lead.get("important_dates", []) if not BOILERPLATE_RE.search(d)]
+        dates.sort(key=lambda d: not EXAM_DATE_RE.search(d))  # exam date first
         if dates:
             lines.append("Key lines from the notice:")
             lines += [f"- {d}" for d in dates[:6]]
@@ -216,7 +243,7 @@ class Chatbot:
             lines.append("Other recent notices: " + "; ".join(
                 f"{n['title']} [{i}]" for i, n in enumerate(top[1:], start=2)))
         lines.append(f"(NTA data crawled {self.nta['crawled_at'][:10]}; always confirm on the official site.)")
-        return {"mode": "official", "answer": "\n".join(lines), "sources": sources,
+        return {"mode": "official", "answer": "\n".join(l for l in lines if l), "sources": sources,
                 "expanded_terms": {}, "generator": "extractive"}
 
     # --------------------------------------------------------------- community
@@ -284,7 +311,26 @@ class Chatbot:
         return "\n".join(lines)
 
 
+def _selfcheck_official():
+    def notice(title, cat, pub, dates=()):
+        return {"exam": "JEE", "category": cat, "title": title, "url": "u", "published": pub,
+                "important_dates": list(dates)}
+    bot = Chatbot.__new__(Chatbot)
+    bot.nta = {"crawled_at": "2026-11-15", "notices": [
+        notice("Inviting Online Application form for JEE-2027 (Session 1)", "application", "2026-10-24",
+               ["Exam: January 2027"]),
+        notice("Examination Schedule for JEE (Main)-2025 Session-2", "dates", "2025-03-10")]}
+    assert "2027" in bot.official("when is jee main 2027?")["sources"][0]["title"]
+    assert "2025" in bot.official("when is jee main exam date")["sources"][0]["title"]   # no year: category
+    bot.nta["notices"][0]["important_dates"] = ["Date of Examination 20,21 and 28 January 2027"]
+    r = bot.official("when is jee main exam")
+    assert "2027" in r["sources"][0]["title"] and "Date of Examination" in r["answer"]
+    r = bot.official("jee main 2029 dates")
+    assert r["answer"].startswith("No NTA notice mentioning 2029") and "2027" in r["sources"][0]["title"]
+
+
 def _selfcheck():
+    _selfcheck_official()
     cs = [{"parent_id": "t3_x", "author": "a", "body": "Buy MS Chouhan for [practice](http://x.y)", "score": 9},
           {"parent_id": "t3_x", "author": "e", "body": "same here bro, no idea what to do", "score": 1},
           {"parent_id": "t1_y", "author": "b", "body": "nested reply should be skipped", "score": 50},
