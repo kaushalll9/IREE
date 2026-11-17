@@ -47,28 +47,18 @@ async function initApp() {
         }
     });
 
-    // Automatically trigger initial search with default query for immediate visual feedback
-    setQuery('physics wallah vs unacademy');
+    // Pre-fill the search tab without leaving the (default) chat tab
+    input.value = 'physics wallah vs unacademy';
+    clearBtn.classList.remove('hidden');
+    triggerSearch();
 }
 
 function switchTab(tab) {
-    const searchView = document.getElementById('search-view');
-    const evalView = document.getElementById('eval-view');
-    const btnSearch = document.getElementById('tab-btn-search');
-    const btnEval = document.getElementById('tab-btn-eval');
-
-    if (tab === 'search') {
-        searchView.classList.add('active');
-        evalView.classList.remove('active');
-        btnSearch.classList.add('active');
-        btnEval.classList.remove('active');
-    } else {
-        searchView.classList.remove('active');
-        evalView.classList.add('active');
-        btnSearch.classList.remove('active');
-        btnEval.classList.add('active');
-        loadEvaluationData();
-    }
+    ['chat', 'search', 'eval'].forEach(name => {
+        document.getElementById(`${name}-view`).classList.toggle('active', name === tab);
+        document.getElementById(`tab-btn-${name}`).classList.toggle('active', name === tab);
+    });
+    if (tab === 'eval') loadEvaluationData();
 }
 
 function populateFlairs(flairs) {
