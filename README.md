@@ -65,7 +65,7 @@ writes each answer from the retrieved sources instead of quoting them. Without
 a key everything still works.
 
 Command-line versions: `python chatbot.py "hcv or irodov"`,
-`python search.py "physics wallah vs unacademy"`, `python evaluate.py`.
+`python search.py "physics wallah vs unacademy"`, `python evaluate.py` (see Evaluation below).
 
 ## How it works (for IR newcomers)
 
@@ -80,7 +80,7 @@ Command-line versions: `python chatbot.py "hcv or irodov"`,
 | 5c | `rrf.py`, `hybrid_search.py` | Takes the top 100 from BM25F and from semantic search and fuses them with Reciprocal Rank Fusion, score = Σ 1/(60 + rank). This is the search tab's default mode | Rank fusion |
 | 6 | `nta_crawler.py` | Crawls nta.ac.in (robots.txt respected), classifies notices by exam/type, extracts publish dates and the date lines from PDFs | Web crawling, information extraction |
 | 7 | `chatbot.py` | Routes the question, retrieves with hybrid search, fetches top replies, builds a cited answer | Retrieval-augmented QA |
-| 8 | `evaluate.py` | P@k, MAP, MRR, NDCG@10 over 10 queries with pooled relevance judgments | Evaluation |
+| 8 | `evaluate.py`, `eval_metrics.py`, `eval_perf.py`, `hses.py` | 80 graded benchmark queries, ranking metrics, latency/memory, integrity and API checks, user feedback, combined into the HSES score | Evaluation |
 
 **Why fetch comments?** The dataset contains posts only, but on Reddit the
 answers are in the replies. For the top threads, the chatbot fetches replies
@@ -88,23 +88,80 @@ from the Arctic Shift API (cached in `data/comments_cache/`). It keeps the
 top-voted direct answers and drops chatter (counter-questions, "same here",
 replies nobody upvoted).
 
-## Results
+## Evaluation (HSES)
 
-10 benchmark queries; judgments pooled from every configuration's top 10
-(`python evaluate.py --pool`):
+`python evaluate.py` scores the system with the **Hybrid Search Evaluation Score**,
+a weighted 0–100 score built from separately reported metrics. The weights and
+normalisation targets live in `evaluation/hses_config.json`.
 
-| Configuration | P@1 | P@5 | MAP | NDCG@10 |
-|---|---|---|---|---|
-| Standard BM25 | 1.0 | 0.84 | **0.704** | 0.773 |
-| BM25F (title 2.5×) | 0.8 | 0.84 | 0.683 | 0.769 |
-| BM25F + engagement boost | 0.8 | 0.84 | 0.701 | 0.805 |
-| + domain expansion (used by the app) | 0.8 | 0.82 | 0.695 | **0.807** |
+| Category | Metrics (weight) |
+|---|---|
+| Retrieval & ranking (45%) | NDCG@10 (20), P@5 (15), MAP (5), MRR (5) |
+| Query understanding (20%) | Success@5 on abbreviations, synonyms, Hinglish & typos, numerical & comparison queries (5 each) |
+| Performance (15%) | P95 latency (10), index size & memory (5) |
+| Reliability (10%) | index integrity checks (5), filter & API checks (5) |
+| User usefulness (10%) | "Did this answer your question?" (5), 1–5 rating (5), from the chat tab |
 
-Title weighting improves the graded ordering (NDCG) but sometimes ranks a
-bodiless meme post whose title matches first. Expansion is neutral here because
-these queries already use the posts' own words; it helps with mismatches like
-"hall ticket" vs "admit card". With 10 queries, gaps of a few points are noise.
-See `evaluation/evaluation_report.md`.
+How it is measured:
+
+- **Queries.** 80 queries in `evaluation/queries.json`, each tagged with a category
+  and an intent. The 24 tuning queries (the original 10, which were seen during
+  development, plus a stratified sample) are used only for tuning. All reported
+  numbers come from the 56 test queries.
+- **Judgments.** Graded 0/1/2 relevance labels in `evaluation/qrels.json`, pooled
+  from every system's top 10 (1,974 labels, 100% of the pooled top 10s judged).
+  Each label records its assessor. The 1,831 `claude` labels are LLM judgments and
+  should be spot-checked by a person (`python evaluate.py annotate --review
+  --assessor <name>`). Human labels always override them.
+- **Unjudged documents** are skipped (condensed rankings), not counted as
+  irrelevant. Judged@10 reports coverage.
+- **Missing measurements** make the score *incomplete*. The report then shows a
+  partial score over the measured weight instead of guessing.
+
+### Results (test split, 56 queries)
+
+| System | NDCG@10 | P@5 | MAP | MRR | Success@5 | P95 latency |
+|---|---|---|---|---|---|---|
+| BM25F, equal field weights (baseline) | 0.488 | 0.554 | 0.339 | 0.701 | 0.875 | 11 ms |
+| BM25F (title 2.5×) | **0.532** | 0.575 | 0.372 | **0.727** | 0.911 | 11 ms |
+| BM25F + engagement boost | 0.520 | 0.564 | 0.361 | 0.728 | 0.893 | 13 ms |
+| + Word2Vec expansion | 0.517 | 0.579 | 0.359 | 0.722 | 0.911 | 13 ms |
+| Semantic only (MiniLM) | 0.376 | 0.425 | 0.251 | 0.616 | 0.750 | 16 ms |
+| **Hybrid RRF (deployed)** | 0.526 | **0.593** | **0.375** | 0.717 | 0.911 | 52 ms |
+
+The deployed hybrid scores **HSES 75.5 / 100, marked incomplete** (90% of the
+weight is measured). It becomes complete once the chat tab has collected 20
+feedback responses.
+
+- **Hybrid tuning.** Plain RRF with equal weights scored 0.481 NDCG@10, below
+  BM25F. The semantic ranking was then down-weighted to 0.25 using the tuning
+  split only (`python evaluate.py tune`), which gave the numbers above. Hybrid is
+  now level with BM25F on NDCG (the difference is not significant) and best on
+  P@5 and MAP.
+- **Semantic search alone is clearly worse** (p = 0.02 vs baseline). It does
+  recover misspelled queries (typo Success@5 0.83 vs 0.50), but most of that
+  benefit is lost at weight 0.25.
+- **Word2Vec expansion** fired on 19 test queries: it helped 6 and hurt 9, and
+  added 17 judged-irrelevant documents to top-10s (query drift), so its net effect
+  is slightly negative.
+- **Failures.** The deployed system still fails on 5 test queries, mostly
+  typos (`integeration practice`, `electrostatcs book`).
+
+Full report with per-query analysis: `evaluation/evaluation_report.md`, or the
+**Evaluation** tab in the app (it also links JSON and CSV exports).
+
+### Commands
+
+```bash
+python evaluate.py                 # full suite: ranking, performance, reliability, usefulness + reports (~45 s with a GPU)
+python evaluate.py ranking         # or: performance | reliability | usefulness | report
+python evaluate.py tune            # RRF grid search on the tuning split (reports only)
+python evaluate.py pool --show     # unjudged pooled documents after a ranking change
+python evaluate.py annotate --assessor <name> [--review]   # interactive human judging
+python evaluate.py import-judgments FILE --assessor <name> # bulk "query_id doc_id grade" lines
+python -m unittest discover -s tests -v                    # unit tests (synthetic corpus, no data needed)
+python test_search_modes.py        # integration checks for BM25 / semantic / hybrid search
+```
 
 ## Limitations
 
@@ -113,9 +170,14 @@ See `evaluation/evaluation_report.md`.
   re-run `nta_crawler.py` to refresh.
 - `jeemain.nta.nic.in` and `neet.nta.nic.in` reject non-browser crawlers, so
   notices are collected through `nta.ac.in`.
-- Reply filtering and routing are keyword heuristics, and many replies are in
-  Hinglish.
-- The benchmark has only 10 queries, judged by one assessor.
+- Without an `ANTHROPIC_API_KEY`, answers quote community replies. Replies are
+  kept only if they are semantically close to the question, so memes and polls
+  are dropped, but quoted replies are student opinions and can be wrong.
+- Some Hinglish questions still retrieve chatty threads ("JEE ki preparation
+  kaise karu" matches "Kaise karu face?"), and typo robustness is the weakest
+  category.
+- Most relevance labels come from one LLM assessor; a human review of a sample
+  would make the numbers more trustworthy. User-usefulness needs real users.
 
 ## Project structure
 
@@ -130,7 +192,11 @@ test_search_modes.py   checks BM25 / semantic / hybrid on English + Hinglish que
 indexer.py             inverted index builder + shared tokenizer
 domain_dictionary.py   Word2Vec domain dictionary + expand_query()
 nta_crawler.py         NTA notice crawler and PDF date extraction
-evaluate.py            benchmark queries, qrels, metrics, pooling
+evaluate.py            evaluation CLI: ranking, robustness, ablation, pooling, annotation, reports
+eval_metrics.py        P@k, Recall, AP, RR, NDCG, Success@k on condensed rankings
+eval_perf.py           latency percentiles, throughput, memory, index integrity + API checks
+hses.py                HSES scoring (weights in evaluation/hses_config.json)
+tests/                 unit tests on a synthetic corpus
 clean_dataset.py, download_dataset.py
 templates/, static/    web UI (chat.js = chatbot tab)
 index/                 generated index + domain_dictionary.json

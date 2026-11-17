@@ -10,9 +10,11 @@ from rrf import rrf_fuse
 
 
 def hybrid_search(bm25_engine, semantic_engine, query: str, top_k: int = 10,
-                  candidate_k: int = 100, rrf_k: int = 60, filter_flair: Optional[str] = None,
+                  candidate_k: int = 100, rrf_k: int = 60, semantic_weight: float = 0.25,
+                  filter_flair: Optional[str] = None,
                   min_score: Optional[int] = None, expand: bool = True,
                   bm25_kwargs: Optional[dict] = None) -> Dict[str, Any]:
+    # semantic_weight 0.25 = best NDCG@10 on the tuning split (python evaluate.py tune); 1.0 is plain RRF.
     start = time.time()
     depth = max(candidate_k, top_k)
     bm25_res = bm25_engine.search(query=query, top_k=depth, filter_flair=filter_flair,
@@ -20,7 +22,8 @@ def hybrid_search(bm25_engine, semantic_engine, query: str, top_k: int = 10,
     sem_res = semantic_engine.search(query, top_k=depth, filter_flair=filter_flair,
                                      min_score=min_score)
 
-    fused = rrf_fuse({"bm25": bm25_res["results"], "semantic": sem_res["results"]}, k=rrf_k)
+    fused = rrf_fuse({"bm25": bm25_res["results"], "semantic": sem_res["results"]}, k=rrf_k,
+                     weights={"bm25": 1.0, "semantic": semantic_weight})
     results = []
     for rank, doc in enumerate(fused[:top_k], start=1):
         doc.pop("matched_terms", None)

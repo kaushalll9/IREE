@@ -1,0 +1,562 @@
+[
+ {
+  "query_id": "Q1",
+  "query": "physics wallah vs unacademy",
+  "category": "comparison",
+  "intent": "Comparison between Physics Wallah and Unacademy platforms for JEE/NEET preparation",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q2",
+  "query": "best book for organic chemistry",
+  "category": "general",
+  "intent": "Recommendations for JEE/NEET organic chemistry theory and problem-solving books",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q3",
+  "query": "marks vs percentile 2022",
+  "category": "numerical",
+  "intent": "Analysis or questions regarding marks to percentile conversion for JEE Main 2022",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q4",
+  "query": "allen test series review",
+  "category": "general",
+  "intent": "Reviews, feedback, or difficulty comparison of Allen leader/major test series",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q5",
+  "query": "dc pandey vs hc verma",
+  "category": "comparison",
+  "intent": "Comparison between DC Pandey and HC Verma physics books for JEE physics concepts and problems",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q6",
+  "query": "maths dropper strategy",
+  "category": "general",
+  "intent": "Advice and study schedules for droppers struggling with or targeting JEE Mathematics",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q7",
+  "query": "neet 600 marks government medical college",
+  "category": "numerical",
+  "intent": "Possibility and cutoffs for securing a government MBBS seat with 600 marks in NEET",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q8",
+  "query": "mock test score stuck",
+  "category": "general",
+  "intent": "Advice for students whose mock scores plateaued or are not improving",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q9",
+  "query": "hostel food kota life",
+  "category": "general",
+  "intent": "Discussions, reality checks, and experiences with hostel food and life in Kota",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q10",
+  "query": "iit bombay cse cutoff rank",
+  "category": "numerical",
+  "intent": "Cutoff ranks, closing ranks, and percentiles required for Computer Science at IIT Bombay",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q11",
+  "query": "HCV physics",
+  "category": "abbreviation",
+  "intent": "Using HC Verma (HCV) for JEE/NEET physics: whether it's enough, how to study it",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q12",
+  "query": "PW vs Unacademy",
+  "category": "abbreviation",
+  "intent": "Comparing Physics Wallah (PW) with Unacademy for preparation",
+  "split": "test"
+ },
+ {
+  "query_id": "Q13",
+  "query": "IOC preparation tips",
+  "category": "abbreviation",
+  "intent": "How to prepare/memorise inorganic chemistry (IOC)",
+  "split": "test"
+ },
+ {
+  "query_id": "Q14",
+  "query": "GOC concepts weak",
+  "category": "abbreviation",
+  "intent": "Struggling with General Organic Chemistry (GOC) concepts and how to fix it",
+  "split": "test"
+ },
+ {
+  "query_id": "Q15",
+  "query": "PYQ practice for jee mains",
+  "category": "abbreviation",
+  "intent": "Solving previous year questions (PYQs) for JEE Main: value, sources, strategy",
+  "split": "test"
+ },
+ {
+  "query_id": "Q16",
+  "query": "NCERT bio for neet",
+  "category": "abbreviation",
+  "intent": "Importance/strategy of reading NCERT biology for NEET",
+  "split": "test"
+ },
+ {
+  "query_id": "Q17",
+  "query": "AITS test series",
+  "category": "abbreviation",
+  "intent": "Reviews/experience of All India Test Series (AITS), e.g. FIITJEE AITS",
+  "split": "test"
+ },
+ {
+  "query_id": "Q18",
+  "query": "jee adv paper analysis",
+  "category": "abbreviation",
+  "intent": "Analysis, difficulty or reactions to the JEE Advanced paper",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q19",
+  "query": "KVPY preparation",
+  "category": "abbreviation",
+  "intent": "How to prepare for KVPY, resources and experience",
+  "split": "test"
+ },
+ {
+  "query_id": "Q20",
+  "query": "DPP solutions",
+  "category": "abbreviation",
+  "intent": "Daily practice problems (DPPs): where to get them / solutions / usefulness",
+  "split": "test"
+ },
+ {
+  "query_id": "Q21",
+  "query": "JEE hall ticket",
+  "category": "synonym",
+  "intent": "JEE admit card (hall ticket) release, download, issues",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q22",
+  "query": "coaching institute fees",
+  "category": "synonym",
+  "intent": "Cost/fees of coaching institutes and whether they are worth it",
+  "split": "test"
+ },
+ {
+  "query_id": "Q23",
+  "query": "taking a gap year for jee",
+  "category": "synonym",
+  "intent": "Dropping a year to reattempt JEE: advice and experiences",
+  "split": "test"
+ },
+ {
+  "query_id": "Q24",
+  "query": "feeling burnt out studying",
+  "category": "synonym",
+  "intent": "Burnout, exhaustion or demotivation from studying and how to cope",
+  "split": "test"
+ },
+ {
+  "query_id": "Q25",
+  "query": "exam postponed",
+  "category": "synonym",
+  "intent": "JEE/NEET exam postponement news or discussion",
+  "split": "test"
+ },
+ {
+  "query_id": "Q26",
+  "query": "study timetable for repeaters",
+  "category": "synonym",
+  "intent": "Daily schedule/timetable for droppers (repeaters)",
+  "split": "test"
+ },
+ {
+  "query_id": "Q27",
+  "query": "sleep schedule during preparation",
+  "category": "synonym",
+  "intent": "How much/when to sleep while preparing for JEE/NEET",
+  "split": "test"
+ },
+ {
+  "query_id": "Q28",
+  "query": "online classes vs offline coaching",
+  "category": "synonym",
+  "intent": "Comparing online lectures with offline/classroom coaching",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q29",
+  "query": "answer key challenge",
+  "category": "synonym",
+  "intent": "Challenging the provisional answer key / objections for JEE or NEET",
+  "split": "test"
+ },
+ {
+  "query_id": "Q30",
+  "query": "seat allotment counselling",
+  "category": "synonym",
+  "intent": "JoSAA / MCC counselling, choice filling and seat allotment",
+  "split": "test"
+ },
+ {
+  "query_id": "Q31",
+  "query": "exam day nervousness",
+  "category": "synonym",
+  "intent": "Handling nervousness/anxiety on the exam day itself",
+  "split": "test"
+ },
+ {
+  "query_id": "Q32",
+  "query": "maths weak hai kya karu",
+  "category": "hinglish",
+  "intent": "Student weak in maths asking how to improve",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q33",
+  "query": "JEE ki preparation kaise karu",
+  "category": "hinglish",
+  "intent": "How to start/plan JEE preparation",
+  "split": "test"
+ },
+ {
+  "query_id": "Q34",
+  "query": "physics mein numericals kaise solve kare",
+  "category": "hinglish",
+  "intent": "How to get better at solving physics numericals",
+  "split": "test"
+ },
+ {
+  "query_id": "Q35",
+  "query": "chemistry ke liye best resources kya hain",
+  "category": "hinglish",
+  "intent": "Best books/lectures/resources for chemistry",
+  "split": "test"
+ },
+ {
+  "query_id": "Q36",
+  "query": "padhai mein mann nahi lagta",
+  "category": "hinglish",
+  "intent": "Can't focus / no motivation to study, what to do",
+  "split": "test"
+ },
+ {
+  "query_id": "Q37",
+  "query": "drop lena chahiye ya nahi",
+  "category": "hinglish",
+  "intent": "Whether to take a drop year",
+  "split": "test"
+ },
+ {
+  "query_id": "Q38",
+  "query": "kota jaana sahi hai kya",
+  "category": "hinglish",
+  "intent": "Whether going to Kota for coaching is a good idea",
+  "split": "test"
+ },
+ {
+  "query_id": "Q39",
+  "query": "neet ke liye biology kaise padhe",
+  "category": "hinglish",
+  "intent": "How to study biology for NEET",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q40",
+  "query": "mock test mein marks kam aa rahe hai",
+  "category": "hinglish",
+  "intent": "Low marks in mock tests, how to improve",
+  "split": "test"
+ },
+ {
+  "query_id": "Q41",
+  "query": "boards aur jee dono kaise manage kare",
+  "category": "hinglish",
+  "intent": "Balancing board exams with JEE preparation",
+  "split": "test"
+ },
+ {
+  "query_id": "Q42",
+  "query": "physics ka concept clear nahi hota",
+  "category": "hinglish",
+  "intent": "Physics concepts not clear, how to build understanding",
+  "split": "test"
+ },
+ {
+  "query_id": "Q43",
+  "query": "orgnic chemistry",
+  "category": "typo",
+  "intent": "Organic chemistry preparation, resources or doubts",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q44",
+  "query": "physcis wallah lectures",
+  "category": "typo",
+  "intent": "Physics Wallah lectures: quality, which batch, experience",
+  "split": "test"
+ },
+ {
+  "query_id": "Q45",
+  "query": "thermodynamcs doubts",
+  "category": "typo",
+  "intent": "Thermodynamics (physics or chemistry) doubts or how to study it",
+  "split": "test"
+ },
+ {
+  "query_id": "Q46",
+  "query": "integeration practice",
+  "category": "typo",
+  "intent": "Practising integration / integral calculus for JEE",
+  "split": "test"
+ },
+ {
+  "query_id": "Q47",
+  "query": "electrostatcs book",
+  "category": "typo",
+  "intent": "Books or resources for electrostatics",
+  "split": "test"
+ },
+ {
+  "query_id": "Q48",
+  "query": "percentle vs marks",
+  "category": "typo",
+  "intent": "Marks vs percentile relation in JEE Main",
+  "split": "test"
+ },
+ {
+  "query_id": "Q49",
+  "query": "unacadmy plus subscription",
+  "category": "typo",
+  "intent": "Unacademy Plus/Iconic subscription worth, experience",
+  "split": "test"
+ },
+ {
+  "query_id": "Q50",
+  "query": "nuet biology ncert",
+  "category": "typo",
+  "intent": "NCERT biology for NEET",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q51",
+  "query": "NEET 600 marks",
+  "category": "numerical",
+  "intent": "What 600 marks in NEET means: rank, colleges, possibility",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q52",
+  "query": "99 percentile in jee mains how many marks",
+  "category": "numerical",
+  "intent": "Marks needed for 99 percentile in JEE Main",
+  "split": "test"
+ },
+ {
+  "query_id": "Q53",
+  "query": "jee advanced 2022 cutoff",
+  "category": "numerical",
+  "intent": "JEE Advanced 2022 qualifying cutoff",
+  "split": "test"
+ },
+ {
+  "query_id": "Q54",
+  "query": "150 marks in jee mains percentile",
+  "category": "numerical",
+  "intent": "Percentile/rank for about 150 marks in JEE Main",
+  "split": "test"
+ },
+ {
+  "query_id": "Q55",
+  "query": "neet 2021 cutoff general category",
+  "category": "numerical",
+  "intent": "NEET 2021 cutoff for general category",
+  "split": "test"
+ },
+ {
+  "query_id": "Q56",
+  "query": "rank 10000 jee mains which nit",
+  "category": "numerical",
+  "intent": "Which NIT/branch is possible with ~10000 JEE Main rank",
+  "split": "test"
+ },
+ {
+  "query_id": "Q57",
+  "query": "6 months left for jee",
+  "category": "numerical",
+  "intent": "Strategy with about 6 months left before JEE",
+  "split": "test"
+ },
+ {
+  "query_id": "Q58",
+  "query": "75 percent criteria boards",
+  "category": "numerical",
+  "intent": "The 75% board marks eligibility criterion for JEE/IITs",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q59",
+  "query": "allen vs aakash for neet",
+  "category": "comparison",
+  "intent": "Comparing Allen and Aakash coaching for NEET",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q60",
+  "query": "cengage vs arihant maths",
+  "category": "comparison",
+  "intent": "Comparing Cengage and Arihant books for JEE maths",
+  "split": "test"
+ },
+ {
+  "query_id": "Q61",
+  "query": "jee mains vs advanced difficulty",
+  "category": "comparison",
+  "intent": "How JEE Main and Advanced differ in difficulty/preparation",
+  "split": "test"
+ },
+ {
+  "query_id": "Q62",
+  "query": "nit vs iiit",
+  "category": "comparison",
+  "intent": "Choosing between NITs and IIITs",
+  "split": "test"
+ },
+ {
+  "query_id": "Q63",
+  "query": "iit vs bits pilani",
+  "category": "comparison",
+  "intent": "Choosing between an IIT and BITS Pilani",
+  "split": "test"
+ },
+ {
+  "query_id": "Q64",
+  "query": "kota vs online coaching",
+  "category": "comparison",
+  "intent": "Kota coaching versus studying online from home",
+  "split": "test"
+ },
+ {
+  "query_id": "Q65",
+  "query": "ms chouhan vs n awasthi",
+  "category": "comparison",
+  "intent": "MS Chouhan (organic) vs N Awasthi (physical) chemistry books, which/how to use",
+  "split": "test"
+ },
+ {
+  "query_id": "Q66",
+  "query": "neet vs jee which to choose",
+  "category": "comparison",
+  "intent": "Deciding between preparing for NEET or JEE",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q67",
+  "query": "how to stay motivated during jee preparation",
+  "category": "general",
+  "intent": "Staying motivated through long JEE preparation",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q68",
+  "query": "best youtube channels for jee",
+  "category": "general",
+  "intent": "Recommended YouTube channels/teachers for JEE",
+  "split": "test"
+ },
+ {
+  "query_id": "Q69",
+  "query": "self study without coaching",
+  "category": "general",
+  "intent": "Preparing for JEE/NEET by self study without coaching",
+  "split": "test"
+ },
+ {
+  "query_id": "Q70",
+  "query": "time management tips during exam",
+  "category": "general",
+  "intent": "Managing time inside the exam hall / paper strategy",
+  "split": "test"
+ },
+ {
+  "query_id": "Q71",
+  "query": "how many hours to study daily",
+  "category": "general",
+  "intent": "Daily study hours needed for JEE/NEET",
+  "split": "test"
+ },
+ {
+  "query_id": "Q72",
+  "query": "parents pressure jee",
+  "category": "general",
+  "intent": "Dealing with parental pressure about JEE/NEET",
+  "split": "test"
+ },
+ {
+  "query_id": "Q73",
+  "query": "exam anxiety mental health",
+  "category": "general",
+  "intent": "Exam-related anxiety, stress and mental health",
+  "split": "test"
+ },
+ {
+  "query_id": "Q74",
+  "query": "revision strategy last month",
+  "category": "general",
+  "intent": "How to revise in the last month before the exam",
+  "split": "tune"
+ },
+ {
+  "query_id": "Q75",
+  "query": "best book for physics jee",
+  "category": "general",
+  "intent": "Best physics books for JEE",
+  "split": "test"
+ },
+ {
+  "query_id": "Q76",
+  "query": "how to improve speed in maths",
+  "category": "general",
+  "intent": "Getting faster at solving maths problems",
+  "split": "test"
+ },
+ {
+  "query_id": "Q77",
+  "query": "college life after jee",
+  "category": "general",
+  "intent": "What college life is like after clearing JEE",
+  "split": "test"
+ },
+ {
+  "query_id": "Q78",
+  "query": "attempt vs accuracy in jee mains",
+  "category": "general",
+  "intent": "Balancing number of attempted questions vs accuracy",
+  "split": "test"
+ },
+ {
+  "query_id": "Q79",
+  "query": "how to solve previous year papers",
+  "category": "general",
+  "intent": "How to approach and analyse previous year papers",
+  "split": "test"
+ },
+ {
+  "query_id": "Q80",
+  "query": "neet biology diagrams",
+  "category": "general",
+  "intent": "Learning/remembering NCERT biology diagrams for NEET",
+  "split": "test"
+ }
+]

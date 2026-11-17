@@ -1,7 +1,7 @@
 """
 Runs the same queries through BM25, Semantic and Hybrid (via the Flask API) and checks:
 BM25 output is identical to calling the existing engine directly, semantic/hybrid doc ids
-are valid and unique, metadata/URLs match the index, and hybrid scores equal RRF of the ranks.
+are valid and unique, metadata/URLs match the index, and hybrid scores equal weighted RRF of the ranks.
 Usage: python test_search_modes.py   (needs the index and embedding cache)
 """
 
@@ -19,7 +19,7 @@ QUERIES = [
     ("paraphrase", "my mock test marks are not increasing"),
     ("paraphrase", "score stuck in practice exams"),
 ]
-TOP_K, RRF_K = 10, 60
+TOP_K, RRF_K, SEM_W = 10, 60, 0.25  # must match hybrid_search defaults
 BY_ID = {m["doc_id"]: m for m in engine.metadata}
 
 
@@ -51,7 +51,7 @@ for kind, q in QUERIES:
     assert all(-1.0 <= r["score"] <= 1.0 for r in sem)
     assert [r["score"] for r in sem] == sorted((r["score"] for r in sem), reverse=True)
     for r in hyb:
-        expect = sum(1 / (RRF_K + rk) for rk in (r["bm25_rank"], r["semantic_rank"]) if rk)
+        expect = sum(w / (RRF_K + rk) for w, rk in ((1.0, r["bm25_rank"]), (SEM_W, r["semantic_rank"])) if rk)
         assert abs(r["score"] - expect) < 1e-6, (r["score"], expect)
     assert [r["score"] for r in hyb] == sorted((r["score"] for r in hyb), reverse=True)
 

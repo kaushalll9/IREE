@@ -1079,3 +1079,37 @@ a.cite {
     .nav-tab-btn { flex: 1 1 0; min-width: 0; padding: 8px 6px; justify-content: center; }
     .nav-tab-btn svg { display: none; }
 }
+
+/* ---- HSES dashboard ---- */
+.eval-exports { margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted); }
+.eval-exports a { color: var(--accent-cyan); }
+.hses-card { display: grid; grid-template-columns: minmax(180px, 240px) 1fr; gap: 1.5rem; align-items: start; }
+.hses-score-block { display: flex; flex-direction: column; gap: 0.4rem; }
+.hses-score { font-size: 3.4rem; font-weight: 800; line-height: 1; background: var(--primary-gradient);
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
+.bar-track { height: 8px; min-width: 80px; border-radius: 4px; background: var(--border-subtle); overflow: hidden; }
+.bar-fill { height: 100%; background: var(--primary-gradient); border-radius: 4px; }
+.bar-chart { margin-top: 1.2rem; display: flex; flex-direction: column; gap: 0.45rem; }
+.bar-row { display: grid; grid-template-columns: minmax(140px, 300px) 1fr 52px; gap: 0.75rem; align-items: center; font-size: 0.85rem; }
+.bar-row.is-deployed .bar-label { font-weight: 700; }
+.bar-value { font-variant-numeric: tabular-nums; text-align: right; }
+.eval-note { color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin: 0.6rem 0; }
+.sub-heading { margin: 1rem 0 0.4rem; font-size: 0.95rem; }
+.failed-list { margin: 0.3rem 0 0 1.1rem; font-size: 0.88rem; line-height: 1.7; }
+.muted, .muted-row td { color: var(--text-muted); }
+.pos { color: var(--accent-emerald); }
+.neg { color: var(--accent-rose); }
+.fail-row td:first-child { box-shadow: inset 3px 0 0 var(--accent-rose); }
+.rel-group { margin-bottom: 0.6rem; }
+@media (max-width: 720px) {
+    .hses-card { grid-template-columns: 1fr; }
+    .bar-row { grid-template-columns: 1fr 52px; }
+    .bar-row .bar-track { grid-column: 1 / -1; grid-row: 2; }
+}
+
+/* ---- chat answer feedback ---- */
+.chat-feedback { margin-top: 0.8rem; padding-top: 0.6rem; border-top: 1px solid var(--border-subtle);
+    display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; font-size: 0.85rem; color: var(--text-muted); }
+.chat-feedback button { border: 1px solid var(--border-subtle); background: transparent; color: inherit;
+    border-radius: 999px; padding: 0.2rem 0.7rem; cursor: pointer; font: inherit; }
+.chat-feedback button:hover, .chat-feedback button:focus-visible { border-color: var(--border-focus); color: var(--primary); }

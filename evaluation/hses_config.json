@@ -1,0 +1,28 @@
+{
+  "weights": {
+    "ndcg@10": 0.20,
+    "p@5": 0.15,
+    "map": 0.05,
+    "mrr": 0.05,
+    "robustness.abbreviation": 0.05,
+    "robustness.synonym": 0.05,
+    "robustness.hinglish_typo": 0.05,
+    "robustness.numerical_comparison": 0.05,
+    "efficiency.p95_latency": 0.10,
+    "efficiency.index_memory": 0.05,
+    "correctness.index": 0.05,
+    "correctness.filters": 0.05,
+    "usefulness.task_completion": 0.05,
+    "usefulness.satisfaction": 0.05
+  },
+  "targets": {
+    "p95_latency_ms": {"best": 100, "worst": 1000},
+    "index_disk_mb": {"best": 50, "worst": 500},
+    "memory_mb": {"best": 500, "worst": 4000}
+  },
+  "min_judged_at_10": 0.8,
+  "min_feedback": 20,
+  "split": "test",
+  "latency_runs": 5,
+  "warmup_runs": 1
+}

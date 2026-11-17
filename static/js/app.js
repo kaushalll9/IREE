@@ -242,62 +242,163 @@ function escapeHtml(str) {
 
 async function loadEvaluationData() {
     if (evaluationDataLoaded) return;
-    
     try {
         const resp = await fetch('/api/evaluation');
         const data = await resp.json();
-        
-        // 1. Models comparison table
-        const modelsTbody = document.getElementById('models-table-body');
-        const bestIdx = data.models_evaluated.reduce((best, m, i, all) => m.map > all[best].map ? i : best, 0);
-        modelsTbody.innerHTML = data.models_evaluated.map((m, idx) => {
-            const isBest = idx === bestIdx;
-            return `
-                <tr class="${isBest ? 'highlight-row' : ''}">
-                    <td><strong>${escapeHtml(m.config_name)}</strong> ${isBest ? '🏆' : ''}</td>
-                    <td>${m['mean_p@1'].toFixed(4)}</td>
-                    <td>${m['mean_p@5'].toFixed(4)}</td>
-                    <td>${m['mean_p@10'].toFixed(4)}</td>
-                    <td>${m.mrr.toFixed(4)}</td>
-                    <td>${m.map.toFixed(4)}</td>
-                    <td>${m['ndcg@10'].toFixed(4)}</td>
-                    <td>${m.avg_latency_ms} ms</td>
-                </tr>
-            `;
-        }).join('');
-
-        // 2. Per-Query breakdown (using the proposed model)
-        const proposedModel = data.models_evaluated[data.models_evaluated.length - 1];
-
-        // Metric cards: proposed model, with change vs. the first (baseline) configuration
-        const baseline = data.models_evaluated[0];
-        const delta = key => {
-            const pct = baseline[key] ? (proposedModel[key] - baseline[key]) / baseline[key] * 100 : 0;
-            return `${pct >= 0 ? '+' : ''}${pct.toFixed(1)}% vs ${baseline.config_name}`;
-        };
-        document.getElementById('metric-mrr').innerText = proposedModel.mrr.toFixed(4);
-        document.getElementById('metric-map').innerText = proposedModel.map.toFixed(4);
-        document.getElementById('metric-ndcg').innerText = proposedModel['ndcg@10'].toFixed(4);
-        document.getElementById('metric-latency').innerText = `${proposedModel.avg_latency_ms} ms`;
-        document.getElementById('metric-mrr-desc').innerText = delta('mrr');
-        document.getElementById('metric-map-desc').innerText = delta('map');
-        document.getElementById('metric-ndcg-desc').innerText = delta('ndcg@10');
-        const queriesTbody = document.getElementById('queries-table-body');
-        queriesTbody.innerHTML = proposedModel.per_query.map(q => `
-            <tr>
-                <td><strong>${escapeHtml(q.query_id)}</strong></td>
-                <td><code>${escapeHtml(q.query)}</code></td>
-                <td>${q['p@1'].toFixed(4)}</td>
-                <td>${q['p@5'].toFixed(4)}</td>
-                <td>${q.rr.toFixed(4)}</td>
-                <td>${q.ap.toFixed(4)}</td>
-                <td>${q['ndcg@10'].toFixed(4)}</td>
-                <td>${q.latency_ms} ms</td>
-            </tr>
-        `).join('');
-
+        if (!resp.ok) throw new Error(data.error || `HTTP ${resp.status}`);
+        renderEvaluation(data);
         evaluationDataLoaded = true;
     } catch (err) {
         console.error('Failed to load evaluation data:', err);
+        document.getElementById('eval-subtitle').innerText = `Evaluation results unavailable: ${err.message}`;
     }
+}
+
+const fmt = (v, d = 3) => (v === null || v === undefined) ? '–' : Number(v).toFixed(d);
+const COMPONENT_LABELS = {
+    'ndcg@10': 'NDCG@10', 'p@5': 'Precision@5', 'map': 'MAP', 'mrr': 'MRR',
+    'robustness.abbreviation': 'Abbreviations', 'robustness.synonym': 'Synonyms',
+    'robustness.hinglish_typo': 'Hinglish & typos', 'robustness.numerical_comparison': 'Numerical & comparison',
+    'efficiency.p95_latency': 'P95 latency', 'efficiency.index_memory': 'Index & memory',
+    'correctness.index': 'Index correctness', 'correctness.filters': 'Filter & API correctness',
+    'usefulness.task_completion': 'Task completion', 'usefulness.satisfaction': 'Satisfaction',
+};
+
+function bar(v) {
+    const pct = v === null || v === undefined ? 0 : Math.max(0, Math.min(1, v)) * 100;
+    return `<div class="bar-track"><div class="bar-fill" style="width:${pct.toFixed(1)}%"></div></div>`;
+}
+
+function renderEvaluation(data) {
+    const meta = data.meta, cfg = meta.config, split = cfg.split;
+    const dep = meta.deployed_system, base = meta.baseline_system;
+    const h = data.hses[dep];
+    const rk = data.ranking || null, perf = data.performance || null;
+    const sysName = id => rk ? rk.systems[id].name : id;
+
+    document.getElementById('eval-subtitle').innerText =
+        `${meta.dataset.docs.toLocaleString()} posts · ${meta.queries.total} queries (${meta.queries.test} test / ` +
+        `${meta.queries.tune} tuning) · ${meta.judgments.total.toLocaleString()} graded judgments · generated ${meta.generated_at.replace('T', ' ')}`;
+
+    // HSES headline + components
+    document.getElementById('hses-score').innerText = h.complete ? fmt(h.hses, 1) : `${fmt(h.partial_hses, 1)}*`;
+    document.getElementById('hses-status').innerText = h.complete
+        ? 'Complete: every component measured.'
+        : `* Incomplete: partial score over the ${(h.measured_weight * 100).toFixed(0)}% of weight that was measured. ` +
+          `Missing: ${h.missing.map(m => COMPONENT_LABELS[m] || m).join(', ')}.`;
+    document.getElementById('hses-components').innerHTML = Object.entries(cfg.weights).map(([k, w]) => `
+        <tr class="${h.scores[k] === null ? 'muted-row' : ''}">
+            <td>${escapeHtml(COMPONENT_LABELS[k] || k)}</td><td>${(w * 100).toFixed(0)}%</td>
+            <td>${h.scores[k] === null ? 'not measured' : fmt(h.scores[k])}</td><td>${bar(h.scores[k])}</td>
+            <td>${fmt(h.contributions[k], 2)}</td>
+        </tr>`).join('');
+
+    // Metric cards for the deployed system
+    if (rk) {
+        const t = rk.systems[dep][split], b = rk.systems[base][split];
+        const cards = [['NDCG@10', 'ndcg@10'], ['Precision@5', 'p@5'], ['MAP', 'map'], ['MRR', 'mrr'], ['Success@5', 'success@5']];
+        document.getElementById('eval-metric-cards').innerHTML = cards.map(([label, k]) => `
+            <div class="metric-card highlight">
+                <span class="metric-title">${label}</span>
+                <span class="metric-val">${fmt(t[k])}</span>
+                <span class="metric-desc">baseline ${fmt(b[k])}</span>
+            </div>`).join('') + (perf ? `
+            <div class="metric-card">
+                <span class="metric-title">P95 latency</span>
+                <span class="metric-val">${fmt(perf.latency[dep].p95_ms, 1)} ms</span>
+                <span class="metric-desc">target ≤ ${cfg.targets.p95_latency_ms.best} ms</span>
+            </div>` : '');
+
+        document.getElementById('split-tag').innerText = `${split} split · ${t.queries} queries`;
+        const ids = Object.keys(rk.systems);
+        document.getElementById('models-table-body').innerHTML = ids.map(id => {
+            const s = rk.systems[id], m = s[split], vb = s.vs_baseline;
+            const lat = perf && perf.latency[id] ? `${fmt(perf.latency[id].p95_ms, 1)} ms` : '–';
+            return `<tr class="${id === dep ? 'highlight-row' : ''}">
+                <td><strong>${escapeHtml(s.name)}</strong></td>
+                <td>${fmt(m['ndcg@10'])}</td><td>${fmt(m['p@5'])}</td><td>${fmt(m.map)}</td><td>${fmt(m.mrr)}</td>
+                <td>${fmt(m['recall@10'])}</td><td>${fmt(m['success@5'])}</td><td>${fmt(m['judged@10'], 2)}</td><td>${lat}</td>
+                <td>${id === base ? 'baseline' : `${vb['ndcg@10_delta'] >= 0 ? '+' : ''}${fmt(vb['ndcg@10_delta'])} (${fmt(vb.p_value)})`}</td>
+                <td>${fmt(data.hses[id].partial_hses, 1)}</td></tr>`;
+        }).join('');
+        const maxN = Math.max(...ids.map(id => rk.systems[id][split]['ndcg@10'] || 0));
+        document.getElementById('ndcg-chart').innerHTML = ids.map(id => {
+            const v = rk.systems[id][split]['ndcg@10'] || 0;
+            return `<div class="bar-row ${id === dep ? 'is-deployed' : ''}">
+                <span class="bar-label">${escapeHtml(rk.systems[id].name)}</span>
+                <div class="bar-track"><div class="bar-fill" style="width:${(v / maxN * 100).toFixed(1)}%"></div></div>
+                <span class="bar-value">${fmt(v)}</span></div>`;
+        }).join('');
+
+        // Robustness
+        const cats = Object.keys(rk.systems[dep].categories).sort();
+        document.getElementById('robust-head').innerHTML = `<tr><th>System</th>${cats.map(c => `<th>${escapeHtml(c)}</th>`).join('')}</tr>`;
+        document.getElementById('robust-body').innerHTML = ids.map(id => `<tr class="${id === dep ? 'highlight-row' : ''}">
+            <td><strong>${escapeHtml(rk.systems[id].name)}</strong></td>
+            ${cats.map(c => `<td>${fmt(rk.systems[id].categories[c]['success@5'], 2)}</td>`).join('')}</tr>`).join('');
+        const failed = (rk.per_query || []).filter(q => q.split === split && q['success@5'] === 0);
+        document.getElementById('failed-queries').innerHTML = failed.length
+            ? failed.map(q => `<li><code>${escapeHtml(q.query)}</code> <span class="muted">(${escapeHtml(q.category)})</span></li>`).join('')
+            : '<li>None</li>';
+
+        // Expansion
+        const e = rk.expansion;
+        document.getElementById('expansion-summary').innerText =
+            `Expansion fired on ${e.queries_expanded} of ${e.queries_total} ${split} queries. NDCG@10 rose on ${e.helped} and fell on ${e.hurt} ` +
+            `(mean ${e['mean_ndcg@10_delta_when_expanded'] >= 0 ? '+' : ''}${fmt(e['mean_ndcg@10_delta_when_expanded'], 4)} where it fired). ` +
+            `Drift: it pulled ${e.drift_new_irrelevant} judged-irrelevant and ${e.drift_new_relevant} relevant posts into top-10s. ` +
+            `Extra latency: ${fmt(e.mean_latency_delta_ms, 2)} ms.`;
+        document.getElementById('expansion-body').innerHTML = e.per_query.filter(r => r.expanded).map(r => `<tr>
+            <td><code>${escapeHtml(r.query)}</code></td>
+            <td>${Object.keys(r.terms).map(escapeHtml).join(', ')}</td>
+            <td class="${r['ndcg@10_delta'] > 0 ? 'pos' : r['ndcg@10_delta'] < 0 ? 'neg' : ''}">${r['ndcg@10_delta'] >= 0 ? '+' : ''}${fmt(r['ndcg@10_delta'])}</td>
+            <td>${r.new_relevant}</td><td>${r.new_irrelevant}</td><td>${fmt(r['overlap@10'], 2)}</td></tr>`).join('');
+
+        // Per-query
+        document.getElementById('queries-table-body').innerHTML = (rk.per_query || []).map(q => `
+            <tr class="${q['success@5'] === 0 && q.split === split ? 'fail-row' : ''}">
+                <td>${escapeHtml(q.query_id)}</td><td><code>${escapeHtml(q.query)}</code></td>
+                <td>${escapeHtml(q.category)}</td><td>${escapeHtml(q.split)}</td>
+                <td>${fmt(q['ndcg@10'])}</td><td>${fmt(q['p@5'], 2)}</td><td>${q['success@5'] ? '✓' : '✗'}</td>
+                <td>${fmt(q['judged@10'], 2)}</td></tr>`).join('');
+    }
+
+    // Performance
+    if (perf) {
+        document.getElementById('perf-device').innerText = `device: ${perf.device}`;
+        document.getElementById('latency-body').innerHTML = Object.entries(perf.latency).map(([id, l]) => `
+            <tr class="${id === dep ? 'highlight-row' : ''}"><td>${escapeHtml(sysName(id))}</td>
+            <td>${fmt(l.avg_ms, 1)} ms</td><td>${fmt(l.p50_ms, 1)} ms</td><td>${fmt(l.p95_ms, 1)} ms</td><td>${fmt(l.p99_ms, 1)} ms</td></tr>`).join('');
+        const idx = perf.index, rss = perf.memory_rss_mb;
+        document.getElementById('index-stats').innerText =
+            `Inverted index ${idx.lexical_index_mb} MB (built in ${idx.indexing_time_s} s, ${idx.vocab_size.toLocaleString()} terms) · ` +
+            `embeddings ${idx.embeddings_mb} MB · memory ${fmt(rss.after_bm25_mb, 0)} MB with BM25, ${fmt(rss.after_semantic_mb, 0)} MB with the semantic model · ` +
+            `throughput ${perf.throughput.map(t => `${t.qps} q/s with ${t.workers} worker${t.workers > 1 ? 's' : ''}`).join(', ')} ` +
+            `(${perf.workload.latency_runs} timed runs after ${perf.workload.warmup_runs} warm-up over ${perf.workload.queries} queries).`;
+    }
+
+    // Reliability
+    const rel = data.reliability;
+    document.getElementById('reliability').innerHTML = rel ? Object.entries(rel).map(([name, checks]) => {
+        const ok = checks.filter(c => c.passed).length, bad = checks.filter(c => !c.passed);
+        return `<div class="rel-group"><strong>${name === 'index_integrity' ? 'Index integrity' : 'Filters & API'}:</strong>
+            <span class="${bad.length ? 'neg' : 'pos'}">${ok}/${checks.length} passed</span>
+            ${bad.length ? `<ul class="failed-list">${bad.map(c => `<li>${escapeHtml(c.check)} <span class="muted">${escapeHtml(c.detail)}</span></li>`).join('')}</ul>` : ''}</div>`;
+    }).join('') : '<p class="eval-note">Not measured. Run <code>python evaluate.py reliability</code>.</p>';
+
+    // Usefulness
+    const u = data.usefulness;
+    document.getElementById('usefulness-summary').innerText = u.responses
+        ? `${u.responses} responses (${u.solved_votes} “solved?” votes, ${u.ratings} ratings; ${u.min_required} needed per score). ` +
+          `Task completion: ${u.task_completion === null ? 'not enough votes yet' : (u.task_completion * 100).toFixed(0) + '%'}. ` +
+          `Satisfaction: ${u.mean_rating_1_5 === null ? '–' : u.mean_rating_1_5 + ' / 5'}${u.satisfaction === null ? ' (not enough ratings yet)' : ''}.`
+        : `No feedback yet. Answers in the chat tab have “Did this answer your question?” buttons; ${u.min_required} responses complete the score.`;
+    document.getElementById('unsolved-list').innerHTML = (u.recent_unsolved || []).map(q => `<li>Unsolved: <code>${escapeHtml(q)}</code></li>`).join('');
+
+    // Completeness
+    const assessors = Object.entries(meta.judgments.by_assessor).map(([a, n]) => `${a}: ${n}`).join(', ');
+    document.getElementById('completeness').innerText =
+        `Judgments by assessor (${assessors}). “claude” labels are LLM judgments made against each query's stated intent and should be ` +
+        `spot-checked by a human (python evaluate.py annotate --review); human labels always take precedence. Tuning queries are excluded ` +
+        `from every reported number. ${h.complete ? 'All HSES components are measured.' : `HSES is incomplete until ${h.missing.length} component(s) are measured.`}`;
 }
