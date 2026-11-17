@@ -1,0 +1,887 @@
+{
+ "chosen": {
+  "tfidf_threshold": 0.1,
+  "hybrid_tfidf_top": 3000,
+  "hybrid_candidates": 0
+ },
+ "names": {
+  "none": "No expansion",
+  "tfidf": "TF-IDF only (co-occurrence)",
+  "embedding": "Embeddings only (Word2Vec)",
+  "hybrid": "Hybrid (Word2Vec + TF-IDF)"
+ },
+ "tuning_ndcg@10": {
+  "tfidf": {
+   "0.1": 0.6495,
+   "0.15": 0.6405,
+   "0.2": 0.6456,
+   "0.3": 0.6437
+  },
+  "hybrid": {
+   "top1000_cand0": 0.6554,
+   "top1000_cand1000": 0.6554,
+   "top1000_cand2000": 0.6554,
+   "top2000_cand0": 0.6594,
+   "top2000_cand1000": 0.6594,
+   "top2000_cand2000": 0.6594,
+   "top3000_cand0": 0.6618,
+   "top3000_cand1000": 0.6618,
+   "top3000_cand2000": 0.6618,
+   "top5000_cand0": 0.6618,
+   "top5000_cand1000": 0.6618,
+   "top5000_cand2000": 0.6618
+  }
+ },
+ "retrieval": {
+  "bm25": {
+   "none": {
+    "test": {
+     "ndcg@10": 0.5169,
+     "p@5": 0.5643,
+     "map": 0.3517,
+     "mrr": 0.7276,
+     "success@5": 0.8929,
+     "judged@10": 1.0,
+     "queries": 56,
+     "queries_expanded": 0
+    },
+    "tune": {
+     "ndcg@10": 0.6339,
+     "p@5": 0.7167,
+     "map": 0.4248,
+     "mrr": 0.8157,
+     "success@5": 0.9167,
+     "judged@10": 1.0,
+     "queries": 24,
+     "queries_expanded": 0
+    }
+   },
+   "tfidf": {
+    "test": {
+     "ndcg@10": 0.5205,
+     "p@5": 0.5786,
+     "map": 0.3604,
+     "mrr": 0.7371,
+     "success@5": 0.8929,
+     "judged@10": 1.0,
+     "queries": 56,
+     "queries_expanded": 35,
+     "helped": 13,
+     "hurt": 7,
+     "p_vs_none": 0.6568
+    },
+    "tune": {
+     "ndcg@10": 0.6356,
+     "p@5": 0.7167,
+     "map": 0.4222,
+     "mrr": 0.8144,
+     "success@5": 0.9167,
+     "judged@10": 1.0,
+     "queries": 24,
+     "queries_expanded": 16,
+     "helped": 3,
+     "hurt": 5,
+     "p_vs_none": 0.7877
+    },
+    "examples": [
+     {
+      "query": "PW vs Unacademy",
+      "added": [
+       "bounce back",
+       "emotion",
+       "stan",
+       "vidyapeeth"
+      ],
+      "ndcg@10_delta": 0.134
+     },
+     {
+      "query": "IOC preparation tips",
+      "added": [
+       "jee"
+      ],
+      "ndcg@10_delta": -0.101
+     },
+     {
+      "query": "PYQ practice for jee mains",
+      "added": [
+       "advanced",
+       "chapterwise",
+       "disha"
+      ],
+      "ndcg@10_delta": 0.033
+     },
+     {
+      "query": "NCERT bio for neet",
+      "added": [
+       "enough",
+       "exemplar",
+       "jee",
+       "rude"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "AITS test series",
+      "added": [
+       "allen"
+      ],
+      "ndcg@10_delta": 0.09
+     },
+     {
+      "query": "KVPY preparation",
+      "added": [
+       "jee"
+      ],
+      "ndcg@10_delta": 0.096
+     },
+     {
+      "query": "taking a gap year for jee",
+      "added": [
+       "and",
+       "i"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "study timetable for repeaters",
+      "added": [
+       "jee"
+      ],
+      "ndcg@10_delta": 0.008
+     },
+     {
+      "query": "sleep schedule during preparation",
+      "added": [
+       "jee"
+      ],
+      "ndcg@10_delta": 0.004
+     },
+     {
+      "query": "answer key challenge",
+      "added": [
+       "aayegi"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "seat allotment counselling",
+      "added": [
+       "manipal",
+       "round"
+      ],
+      "ndcg@10_delta": 0.147
+     },
+     {
+      "query": "JEE ki preparation kaise karu",
+      "added": [
+       "and",
+       "for",
+       "i"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "drop lena chahiye ya nahi",
+      "added": [
+       "decided to take",
+       "should",
+       "take"
+      ],
+      "ndcg@10_delta": 0.012
+     },
+     {
+      "query": "mock test mein marks kam aa rahe hai",
+      "added": [
+       "embibe",
+       "i",
+       "in"
+      ],
+      "ndcg@10_delta": 0.015
+     },
+     {
+      "query": "boards aur jee dono kaise manage kare",
+      "added": [
+       "and",
+       "for",
+       "i"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "physics ka concept clear nahi hota",
+      "added": [
+       "cutoff"
+      ],
+      "ndcg@10_delta": -0.085
+     },
+     {
+      "query": "physcis wallah lectures",
+      "added": [
+       "mohit tyagi",
+       "watch",
+       "youtube"
+      ],
+      "ndcg@10_delta": -0.108
+     },
+     {
+      "query": "percentle vs marks",
+      "added": [
+       "i",
+       "in"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "99 percentile in jee mains how many marks",
+      "added": [
+       "advanced",
+       "i",
+       "marks vs"
+      ],
+      "ndcg@10_delta": -0.018
+     },
+     {
+      "query": "jee advanced 2022 cutoff",
+      "added": [
+       "and",
+       "clear",
+       "for",
+       "i",
+       "jee mains"
+      ],
+      "ndcg@10_delta": 0.223
+     },
+     {
+      "query": "150 marks in jee mains percentile",
+      "added": [
+       "advanced",
+       "i",
+       "marks vs"
+      ],
+      "ndcg@10_delta": -0.092
+     },
+     {
+      "query": "neet 2021 cutoff general category",
+      "added": [
+       "belong",
+       "clear",
+       "crl",
+       "for",
+       "obc"
+      ],
+      "ndcg@10_delta": -0.188
+     },
+     {
+      "query": "rank 10000 jee mains which nit",
+      "added": [
+       "advanced",
+       "get",
+       "in"
+      ],
+      "ndcg@10_delta": 0.078
+     },
+     {
+      "query": "6 months left for jee",
+      "added": [
+       "and",
+       "i"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "cengage vs arihant maths",
+      "added": [
+       "illustrations",
+       "pdf"
+      ],
+      "ndcg@10_delta": 0.026
+     },
+     {
+      "query": "jee mains vs advanced difficulty",
+      "added": [
+       "for"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "best youtube channels for jee",
+      "added": [
+       "and",
+       "i",
+       "lectures"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "how many hours to study daily",
+      "added": [
+       "jee"
+      ],
+      "ndcg@10_delta": 0.004
+     },
+     {
+      "query": "parents pressure jee",
+      "added": [
+       "and",
+       "for",
+       "i"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "best book for physics jee",
+      "added": [
+       "and",
+       "i"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "how to improve speed in maths",
+      "added": [
+       "jee"
+      ],
+      "ndcg@10_delta": -0.078
+     },
+     {
+      "query": "college life after jee",
+      "added": [
+       "and",
+       "for",
+       "i"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "attempt vs accuracy in jee mains",
+      "added": [
+       "advanced"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "how to solve previous year papers",
+      "added": [
+       "jee"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "neet biology diagrams",
+      "added": [
+       "for"
+      ],
+      "ndcg@10_delta": 0.0
+     }
+    ]
+   },
+   "embedding": {
+    "test": {
+     "ndcg@10": 0.5135,
+     "p@5": 0.5786,
+     "map": 0.3497,
+     "mrr": 0.7222,
+     "success@5": 0.9107,
+     "judged@10": 1.0,
+     "queries": 56,
+     "queries_expanded": 19,
+     "helped": 6,
+     "hurt": 9,
+     "p_vs_none": 0.7513
+    },
+    "tune": {
+     "ndcg@10": 0.6446,
+     "p@5": 0.7167,
+     "map": 0.4273,
+     "mrr": 0.8352,
+     "success@5": 0.9167,
+     "judged@10": 1.0,
+     "queries": 24,
+     "queries_expanded": 14,
+     "helped": 6,
+     "hurt": 4,
+     "p_vs_none": 0.2634
+    },
+    "examples": [
+     {
+      "query": "PW vs Unacademy",
+      "added": [
+       "arjuna batch",
+       "physics wallah",
+       "physicswallah",
+       "unacdemy"
+      ],
+      "ndcg@10_delta": 0.134
+     },
+     {
+      "query": "PYQ practice for jee mains",
+      "added": [
+       "disha",
+       "exemplar"
+      ],
+      "ndcg@10_delta": -0.06
+     },
+     {
+      "query": "NCERT bio for neet",
+      "added": [
+       "hc verma",
+       "mtg",
+       "rd sharma"
+      ],
+      "ndcg@10_delta": -0.048
+     },
+     {
+      "query": "KVPY preparation",
+      "added": [
+       "aptitude test",
+       "hbcse"
+      ],
+      "ndcg@10_delta": -0.13
+     },
+     {
+      "query": "DPP solutions",
+      "added": [
+       "chapter wise",
+       "dpps",
+       "topicwise"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "answer key challenge",
+      "added": [
+       "official answer",
+       "response sheet"
+      ],
+      "ndcg@10_delta": -0.311
+     },
+     {
+      "query": "seat allotment counselling",
+      "added": [
+       "counseling",
+       "jac delhi"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "drop lena chahiye ya nahi",
+      "added": [
+       "partial drop",
+       "take a drop"
+      ],
+      "ndcg@10_delta": 0.027
+     },
+     {
+      "query": "mock test mein marks kam aa rahe hai",
+      "added": [
+       "score"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "boards aur jee dono kaise manage kare",
+      "added": [
+       "board",
+       "cbse"
+      ],
+      "ndcg@10_delta": 0.304
+     },
+     {
+      "query": "physcis wallah lectures",
+      "added": [
+       "lecture",
+       "video lectures",
+       "yt lectures"
+      ],
+      "ndcg@10_delta": -0.01
+     },
+     {
+      "query": "percentle vs marks",
+      "added": [
+       "score"
+      ],
+      "ndcg@10_delta": 0.004
+     },
+     {
+      "query": "99 percentile in jee mains how many marks",
+      "added": [
+       "score"
+      ],
+      "ndcg@10_delta": 0.003
+     },
+     {
+      "query": "jee advanced 2022 cutoff",
+      "added": [
+       "cut off",
+       "cutoffs",
+       "expected cutoff"
+      ],
+      "ndcg@10_delta": -0.015
+     },
+     {
+      "query": "150 marks in jee mains percentile",
+      "added": [
+       "ile",
+       "score",
+       "tile"
+      ],
+      "ndcg@10_delta": -0.015
+     },
+     {
+      "query": "neet 2021 cutoff general category",
+      "added": [
+       "crl",
+       "cut off",
+       "cutoffs",
+       "ews",
+       "expected cutoff",
+       "gen ews"
+      ],
+      "ndcg@10_delta": -0.219
+     },
+     {
+      "query": "cengage vs arihant maths",
+      "added": [
+       "hc verma"
+      ],
+      "ndcg@10_delta": -0.001
+     },
+     {
+      "query": "jee mains vs advanced difficulty",
+      "added": [
+       "adv",
+       "advance",
+       "jee advanced"
+      ],
+      "ndcg@10_delta": 0.145
+     },
+     {
+      "query": "ms chouhan vs n awasthi",
+      "added": [
+       "cengage"
+      ],
+      "ndcg@10_delta": 0.0
+     }
+    ]
+   },
+   "hybrid": {
+    "test": {
+     "ndcg@10": 0.5226,
+     "p@5": 0.5786,
+     "map": 0.3561,
+     "mrr": 0.7231,
+     "success@5": 0.9107,
+     "judged@10": 1.0,
+     "queries": 56,
+     "queries_expanded": 17,
+     "helped": 6,
+     "hurt": 6,
+     "p_vs_none": 0.4846
+    },
+    "tune": {
+     "ndcg@10": 0.6467,
+     "p@5": 0.7167,
+     "map": 0.4276,
+     "mrr": 0.8352,
+     "success@5": 0.9167,
+     "judged@10": 0.9958,
+     "queries": 24,
+     "queries_expanded": 12,
+     "helped": 6,
+     "hurt": 3,
+     "p_vs_none": 0.1677
+    },
+    "examples": [
+     {
+      "query": "PW vs Unacademy",
+      "added": [
+       "physics wallah",
+       "physicswallah",
+       "unacdemy"
+      ],
+      "ndcg@10_delta": 0.134
+     },
+     {
+      "query": "NCERT bio for neet",
+      "added": [
+       "hc verma",
+       "mtg",
+       "rd sharma"
+      ],
+      "ndcg@10_delta": -0.048
+     },
+     {
+      "query": "DPP solutions",
+      "added": [
+       "chapter wise",
+       "dpps"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "answer key challenge",
+      "added": [
+       "response sheet"
+      ],
+      "ndcg@10_delta": -0.191
+     },
+     {
+      "query": "seat allotment counselling",
+      "added": [
+       "counseling"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "drop lena chahiye ya nahi",
+      "added": [
+       "partial drop",
+       "take a drop"
+      ],
+      "ndcg@10_delta": 0.027
+     },
+     {
+      "query": "mock test mein marks kam aa rahe hai",
+      "added": [
+       "score"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "boards aur jee dono kaise manage kare",
+      "added": [
+       "board",
+       "cbse"
+      ],
+      "ndcg@10_delta": 0.304
+     },
+     {
+      "query": "physcis wallah lectures",
+      "added": [
+       "lecture",
+       "video lectures"
+      ],
+      "ndcg@10_delta": -0.01
+     },
+     {
+      "query": "percentle vs marks",
+      "added": [
+       "score"
+      ],
+      "ndcg@10_delta": 0.004
+     },
+     {
+      "query": "99 percentile in jee mains how many marks",
+      "added": [
+       "score"
+      ],
+      "ndcg@10_delta": 0.003
+     },
+     {
+      "query": "jee advanced 2022 cutoff",
+      "added": [
+       "cut off",
+       "cutoffs"
+      ],
+      "ndcg@10_delta": 0.0
+     },
+     {
+      "query": "150 marks in jee mains percentile",
+      "added": [
+       "ile",
+       "score",
+       "tile"
+      ],
+      "ndcg@10_delta": -0.015
+     },
+     {
+      "query": "neet 2021 cutoff general category",
+      "added": [
+       "cut off",
+       "cutoffs",
+       "ews"
+      ],
+      "ndcg@10_delta": -0.034
+     },
+     {
+      "query": "cengage vs arihant maths",
+      "added": [
+       "hc verma"
+      ],
+      "ndcg@10_delta": -0.001
+     },
+     {
+      "query": "jee mains vs advanced difficulty",
+      "added": [
+       "adv",
+       "advance",
+       "jee advanced"
+      ],
+      "ndcg@10_delta": 0.145
+     },
+     {
+      "query": "ms chouhan vs n awasthi",
+      "added": [
+       "cengage"
+      ],
+      "ndcg@10_delta": 0.0
+     }
+    ]
+   }
+  },
+  "deployed": {
+   "none": {
+    "test": {
+     "ndcg@10": 0.5223,
+     "p@5": 0.5857,
+     "map": 0.3704,
+     "mrr": 0.7366,
+     "success@5": 0.8929,
+     "judged@10": 0.9982,
+     "queries": 56,
+     "queries_expanded": 0
+    },
+    "tune": {
+     "ndcg@10": 0.6437,
+     "p@5": 0.6667,
+     "map": 0.4168,
+     "mrr": 0.8958,
+     "success@5": 0.9583,
+     "judged@10": 1.0,
+     "queries": 24,
+     "queries_expanded": 0
+    }
+   },
+   "tfidf": {
+    "test": {
+     "ndcg@10": 0.5318,
+     "p@5": 0.5893,
+     "map": 0.3798,
+     "mrr": 0.7426,
+     "success@5": 0.8929,
+     "judged@10": 1.0,
+     "queries": 56,
+     "queries_expanded": 35,
+     "helped": 12,
+     "hurt": 8,
+     "p_vs_none": 0.2312
+    },
+    "tune": {
+     "ndcg@10": 0.6495,
+     "p@5": 0.6667,
+     "map": 0.4233,
+     "mrr": 0.8958,
+     "success@5": 0.9583,
+     "judged@10": 1.0,
+     "queries": 24,
+     "queries_expanded": 16,
+     "helped": 4,
+     "hurt": 3,
+     "p_vs_none": 0.4871
+    }
+   },
+   "embedding": {
+    "test": {
+     "ndcg@10": 0.5232,
+     "p@5": 0.5929,
+     "map": 0.3671,
+     "mrr": 0.7171,
+     "success@5": 0.9107,
+     "judged@10": 1.0,
+     "queries": 56,
+     "queries_expanded": 19,
+     "helped": 7,
+     "hurt": 10,
+     "p_vs_none": 0.8574
+    },
+    "tune": {
+     "ndcg@10": 0.6658,
+     "p@5": 0.7,
+     "map": 0.4267,
+     "mrr": 0.8681,
+     "success@5": 0.9583,
+     "judged@10": 1.0,
+     "queries": 24,
+     "queries_expanded": 14,
+     "helped": 5,
+     "hurt": 4,
+     "p_vs_none": 0.369
+    }
+   },
+   "hybrid": {
+    "test": {
+     "ndcg@10": 0.5248,
+     "p@5": 0.5964,
+     "map": 0.3698,
+     "mrr": 0.7201,
+     "success@5": 0.9107,
+     "judged@10": 0.9982,
+     "queries": 56,
+     "queries_expanded": 17,
+     "helped": 6,
+     "hurt": 8,
+     "p_vs_none": 0.5496
+    },
+    "tune": {
+     "ndcg@10": 0.6618,
+     "p@5": 0.6917,
+     "map": 0.4226,
+     "mrr": 0.8681,
+     "success@5": 0.9583,
+     "judged@10": 1.0,
+     "queries": 24,
+     "queries_expanded": 12,
+     "helped": 5,
+     "hurt": 3,
+     "p_vs_none": 0.4569
+    }
+   }
+  }
+ },
+ "dictionaries": {
+  "tfidf": {
+   "terms": 262,
+   "by_source": {
+    "seed": 92,
+    "tfidf": 170
+   },
+   "quality": {
+    "pairs": 79,
+    "judged": 79,
+    "same_meaning": 0.013,
+    "related_or_better": 0.38,
+    "unrelated": 0.62
+   }
+  },
+  "embedding": {
+   "terms": 815,
+   "by_source": {
+    "seed": 92,
+    "embedding": 723
+   },
+   "quality": {
+    "pairs": 110,
+    "judged": 110,
+    "same_meaning": 0.336,
+    "related_or_better": 0.8,
+    "unrelated": 0.2
+   }
+  },
+  "hybrid": {
+   "terms": 815,
+   "by_source": {
+    "seed": 92,
+    "embedding": 723
+   },
+   "quality": {
+    "pairs": 58,
+    "judged": 58,
+    "same_meaning": 0.569,
+    "related_or_better": 0.914,
+    "unrelated": 0.086
+   }
+  }
+ },
+ "tfidf_vocab": 11559,
+ "word2vec_vocab": 12076
+}

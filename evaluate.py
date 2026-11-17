@@ -53,7 +53,7 @@ SYSTEMS = [
      "kwargs": {**_BM25F, "use_engagement_boost": False, "expand": False}},
     {"id": "bm25f_eng", "kind": "bm25", "name": "BM25F + engagement boost",
      "kwargs": {**_BM25F, "use_engagement_boost": True, "expand": False}},
-    {"id": "bm25f_eng_exp", "kind": "bm25", "name": "BM25F + engagement + Word2Vec expansion",
+    {"id": "bm25f_eng_exp", "kind": "bm25", "name": "BM25F + engagement + dictionary expansion (Word2Vec + TF-IDF)",
      "kwargs": {**_BM25F, "use_engagement_boost": True, "expand": True}},
     {"id": "semantic", "kind": "semantic", "name": "Semantic (multilingual MiniLM)", "kwargs": {}},
     {"id": "hybrid", "kind": "hybrid", "name": "Hybrid RRF (deployed: search default + chatbot)",

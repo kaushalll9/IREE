@@ -210,8 +210,9 @@ class Chatbot:
         # (usually the application notice), not only by notices titled "schedule"/"dates".
         notices = [n for n in pool if not category or n["category"] == category
                    or (category == "dates" and has_exam_date(n))]
+        missing_category = None
         if not notices and years and not missing_year:
-            notices = pool
+            notices, missing_category = pool, category   # that year exists, but not that kind of notice
         if category == "dates":
             notices.sort(key=lambda n: not has_exam_date(n))   # stable: newest first within each group
         if not notices:
@@ -228,12 +229,17 @@ class Chatbot:
         } for n in top]
 
         lead = top[0]
-        lines = [f"No NTA notice mentioning {missing_year} has been crawled yet." if missing_year else ""]
-        label = category if category and lead["category"] == category else None
-        lines += [f"Latest official NTA notice{' for ' + exam if exam else ''}"
-                  f"{' ' + '/'.join(sorted(years)) if years and not missing_year else ''}"
-                  f"{' (' + label.replace('_', ' ') + ')' if label else ''}:",
-                 f"**{lead['title']}** (published {lead['published']}) [1]"]
+        yr = "/".join(sorted(years))
+        if missing_category:   # say so instead of passing off another notice as the answer
+            header = (f"No {exam or 'NTA'} {yr} {missing_category.replace('_', ' ')} notice has been crawled yet. "
+                      f"Latest {exam or 'NTA'} {yr} notice:")
+        else:
+            label = category if category and lead["category"] == category else None
+            header = (f"Latest official NTA notice{' for ' + exam if exam else ''}"
+                      f"{' ' + yr if years and not missing_year else ''}"
+                      f"{' (' + label.replace('_', ' ') + ')' if label else ''}:")
+        lines = [f"No NTA notice mentioning {missing_year} has been crawled yet." if missing_year else "",
+                 header, f"**{lead['title']}** (published {lead['published']}) [1]"]
         dates = [d for d in lead.get("important_dates", []) if not BOILERPLATE_RE.search(d)]
         dates.sort(key=lambda d: not EXAM_DATE_RE.search(d))  # exam date first
         if dates:
@@ -325,6 +331,8 @@ def _selfcheck_official():
     bot.nta["notices"][0]["important_dates"] = ["Date of Examination 20,21 and 28 January 2027"]
     r = bot.official("when is jee main exam")
     assert "2027" in r["sources"][0]["title"] and "Date of Examination" in r["answer"]
+    r = bot.official("jee main 2025 result")                      # year exists, no result notice for it
+    assert r["answer"].startswith("No JEE 2025 result notice has been crawled yet")
     r = bot.official("jee main 2029 dates")
     assert r["answer"].startswith("No NTA notice mentioning 2029") and "2027" in r["sources"][0]["title"]
 

@@ -51,9 +51,10 @@ CATEGORIES = [  # first match wins, order matters
     ("bulletin", r"information bulletin|brochure|prospectus"),
     ("admit_card", r"admit card|exam(?:ination)? city|city intimation"),
     ("answer_key", r"answer key|recorded response|omr"),
-    ("result", r"result|score ?card|topper|cut-?off|percentile|rank"),
+    ("result", r"result|score ?card|nta scores?|topper|cut-?off|percentile|rank"),
+    ("other", r"refund"),   # fee-refund notices mention "correction" but aren't applications
     ("application", r"application|registration|correction|apply"),
-    ("dates", r"\bdates?\b|schedule|calendar|postpone"),
+    ("dates", r"\bdates?\b|schedule\b|calendar|postpone|reschedul|^conduct of|re-?conduct"),
 ]
 EXAMS = [("JEE", r"(?<!nchm-)(?<!nchm )\bjee\b"), ("NEET", r"\bneet\b|national eligibility")]
 FULLTEXT_CATS = {"bulletin", "syllabus", "dates", "application"}
@@ -110,6 +111,7 @@ class Crawler:
         self.s = requests.Session()
         self.s.headers["User-Agent"] = ua
         self.robots = {}
+        self.stats = {}   # per site: pages, notices, errors, robots_blocked
 
     def allowed(self, url):
         host = urlparse(url).netloc
@@ -131,13 +133,16 @@ class Crawler:
     def crawl_site(self, source, seed):
         host = urlparse(seed).netloc
         queue, seen, notices, pages = deque([(seed, 0)]), {seed}, {}, 0
+        st = self.stats[source] = {"seed": seed, "pages": 0, "notices": 0, "errors": [], "robots_blocked": 0}
         while queue and pages < MAX_PAGES:
             url, depth = queue.popleft()
             if not self.allowed(url):
+                st["robots_blocked"] += 1
                 continue
             try:
                 r = self.get(url)
             except requests.RequestException as e:
+                st["errors"].append(str(e)[:120])
                 print(f"    [!] {url}: {e}")
                 if depth == 0 and "403" in str(e):
                     print("        site rejected the User-Agent; see --user-agent")
@@ -168,6 +173,7 @@ class Crawler:
                       and link not in seen and not is_notice):
                     seen.add(link)
                     queue.append((link, depth + 1))
+        st["pages"], st["notices"] = pages, len(notices)
         print(f"[+] {source}: {pages} pages crawled, {len(notices)} notices")
         return list(notices.values())
 
@@ -181,6 +187,7 @@ class Crawler:
 
 
 def crawl(ua=UA):
+    t0 = time.time()
     c = Crawler(ua)
     notices = {}
     for source, seed in SEEDS.items():
@@ -190,7 +197,7 @@ def crawl(ua=UA):
 
     # Full text for the newest bulletins / syllabus / schedule / application notices
     # (newest first, so this year's notices aren't crowded out by old bulletins).
-    fetched = 0
+    fetched, pdf_errors = 0, 0
     for n in notices:
         if fetched >= MAX_PDFS:
             break
@@ -198,6 +205,7 @@ def crawl(ua=UA):
             try:
                 text = c.pdf_text(n["url"])
             except Exception as e:
+                pdf_errors += 1
                 print(f"    [!] pdf {n['url']}: {e}")
                 continue
             n["text"] = text
@@ -206,6 +214,9 @@ def crawl(ua=UA):
             print(f"    [pdf] {n['exam']} {n['category']}: {n['title'][:70]}")
 
     out = {"crawled_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+           "stats": {"sites": c.stats, "elapsed_s": round(time.time() - t0, 1), "pdfs_fetched": fetched,
+                     "pdf_errors": pdf_errors, "delay_s": DELAY, "max_pages": MAX_PAGES,
+                     "max_depth": MAX_DEPTH, "max_pdfs": MAX_PDFS},
            "notices": notices}
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
     with open(OUT_PATH, "w", encoding="utf-8") as f:
@@ -234,6 +245,10 @@ def _selfcheck():
     assert published_date("https://x/uploads/2025/01/99999999.pdf") == "2025-01"
     assert published_date("https://nta.ac.in/Download/Notice/Notice_20261114192445.pdf") == "2026-11-14"
     assert classify("Hotel Management (NCHM-JEE) 2027", EXAMS) is None
+    assert classify("Declaration of JEE (Main) - 2024 Session 1 NTA Scores for Paper 1", CATEGORIES) == "result"
+    assert classify("Conduct of the Joint Entrance Examination [JEE (Main) - 2024] Session 1", CATEGORIES) == "dates"
+    assert classify("Correction of Bank Account Details for Refund of Examination Fee", CATEGORIES) == "other"
+    assert classify("Change of Venue for Candidates Scheduled to Appear on 21 June", CATEGORIES) is None
     from bs4 import BeautifulSoup as BS
     a = BS("<p><content>Exam Calendar JEE</content><a href='x.pdf'>Read More</a></p>", "html.parser").a
     assert link_title(a) == "Exam Calendar JEE"
