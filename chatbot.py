@@ -5,7 +5,7 @@ Routes each question to one of two answer sources:
   - official:  exam dates, syllabus, admit cards, results, registration...
                -> latest NTA notices crawled by nta_crawler.py (data/nta_updates.json)
   - community: everything else (books, coaching, strategy, colleges...)
-               -> BM25F search (with domain-dictionary expansion) over r/JEENEETards
+               -> hybrid BM25F + semantic search (RRF) over r/JEENEETards
 
 Answers are extractive by default (no API key needed). If ANTHROPIC_API_KEY is
 set, Claude writes the final answer from the same retrieved sources (RAG), with
@@ -24,6 +24,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 import requests
 
+from hybrid_search import hybrid_search
 from nta_crawler import CATEGORIES, EXAMS, classify, OUT_PATH as NTA_PATH
 
 # A question is "official" when it names an NTA exam AND an official topic.
@@ -153,12 +154,17 @@ def route(question):
 
 
 class Chatbot:
-    def __init__(self, engine=None, nta_path=NTA_PATH):
+    def __init__(self, engine=None, semantic=None, nta_path=NTA_PATH):
         if engine is None:
             from ranker import BM25SearchEngine
             engine = BM25SearchEngine(index_dir="index")
             engine.load_index()
+        if semantic is None:
+            from semantic_search import SemanticSearchEngine
+            semantic = SemanticSearchEngine(engine)
+            semantic.load()
         self.engine = engine
+        self.semantic = semantic
         self.nta = None
         if os.path.exists(nta_path):
             with open(nta_path, encoding="utf-8") as f:
@@ -213,7 +219,8 @@ class Chatbot:
 
     # --------------------------------------------------------------- community
     def community(self, question, k=5):
-        res = self.engine.search(question, top_k=k, expand=True)
+        # Hybrid (BM25 + semantic, RRF) so Hinglish / reworded questions still find threads.
+        res = hybrid_search(self.engine, self.semantic, question, top_k=k, expand=True)
         sources = [{
             "type": "reddit",
             "doc_id": r["doc_id"],

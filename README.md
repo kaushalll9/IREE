@@ -19,8 +19,8 @@ always citing its sources.
         └─────────────────────────────┘      └────────────────────┘ │
                          ▼                              │           │
         ┌─────────────────────────────┐                 │           │
-        │ BM25F search over 43k posts │                 │           │
-        │ (indexer.py + ranker.py)    │                 │           │
+        │ BM25F + semantic search,    │                 │           │
+        │ fused by RRF (43k posts)    │                 │           │
         └─────────────────────────────┘                 │           │
                          ▼                              │           │
         ┌─────────────────────────────┐                 │           │
@@ -79,7 +79,7 @@ Command-line versions: `python chatbot.py "hcv or irodov"`,
 | 5b | `semantic_search.py` | Encodes every post (title + body) with the multilingual `paraphrase-multilingual-MiniLM-L12-v2` Sentence Transformer, caches the normalised vectors, and ranks by cosine similarity, so Hinglish queries like "JEE ki preparation kaise karu?" match posts with different wording | Dense retrieval |
 | 5c | `rrf.py`, `hybrid_search.py` | Takes the top 100 from BM25F and from semantic search and fuses them with Reciprocal Rank Fusion, score = Σ 1/(60 + rank). This is the search tab's default mode | Rank fusion |
 | 6 | `nta_crawler.py` | Crawls nta.ac.in (robots.txt respected), classifies notices by exam/type, extracts publish dates and the date lines from PDFs | Web crawling, information extraction |
-| 7 | `chatbot.py` | Routes the question, retrieves, fetches top replies, builds a cited answer | Retrieval-augmented QA |
+| 7 | `chatbot.py` | Routes the question, retrieves with hybrid search, fetches top replies, builds a cited answer | Retrieval-augmented QA |
 | 8 | `evaluate.py` | P@k, MAP, MRR, NDCG@10 over 10 queries with pooled relevance judgments | Evaluation |
 
 **Why fetch comments?** The dataset contains posts only, but on Reddit the
