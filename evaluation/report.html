@@ -35,17 +35,30 @@ svg text.lab { font-size: 11px; fill: var(--ink2); }
 svg text.lab.hi { fill: var(--ink); font-weight: 700; }
 svg text.val { font-size: 11px; fill: var(--ink); font-variant-numeric: tabular-nums; }
 svg .axis { stroke: var(--ink2); stroke-width: 1; }
-ul { padding-left: 5mm; } li { margin-bottom: 1.5mm; }
+ul, ol { padding-left: 5mm; } li { margin-bottom: 1.5mm; }
+.flow { display: flex; align-items: stretch; gap: 1.5mm; margin: 3mm 0 4mm; break-inside: avoid; }
+.flow .box { flex: 1; border: 1px solid var(--ink2); border-radius: 5px; padding: 2mm; font-size: 8.5pt; text-align: center; line-height: 1.3; }
+.flow .box small { color: var(--ink2); font-size: 7.5pt; }
+.flow .box.hi { border: 2px solid var(--blue); }
+.flow .arr { align-self: center; color: var(--ink2); font-size: 12pt; }
+.small-flow .box { font-size: 8pt; }
+.formula { background: var(--tint); border-left: 3px solid var(--blue); padding: 2mm 3mm; margin: 2mm 0 3mm; font-size: 9.5pt; break-inside: avoid; }
+.formula small { color: var(--ink2); font-size: 8pt; }
+.worked { border: 1px solid var(--rule); border-radius: 6px; padding: 1mm 3mm; margin: 3mm 0; break-inside: avoid; }
+.ok { color: #1a7f37; font-weight: 600; }
+.bad { color: var(--ink2); }
+.g { color: var(--ink2); font-size: 7.5pt; }
 </style></head><body>
 <header>
   <div class="kicker">IRE course project · numbers report</div>
   <h1>JEE/NEET assistant: the numbers</h1>
   <p class="lede">A chatbot that answers JEE/NEET students' questions by searching 43,116 r/JEENEETards
-  posts, plus a crawler for official NTA notices. This report gives the measured numbers for the
-  <b>web crawler</b> and the <b>domain dictionary</b> in detail, and an overview of the rest. Every number is read from the
+  posts, plus a crawler for official NTA notices. This report explains the
+  <b>domain dictionary</b> end to end (what it is, how it is built, where it is used, the concepts behind it and how it was
+  evaluated and improved), gives the measured numbers for the <b>web crawler</b>, and an overview of the rest. Every number is read from the
   evaluation outputs in <code>evaluation/</code>, except one figure: the before-fix official-answer score (18/20),
 recorded from the first evaluation run.</p>
-  <p class="small">Generated 17 Nov 2026, 22:25 · evaluation run 2026-11-17 22:16:18 · NTA crawl 2026-11-17</p>
+  <p class="small">Generated 17 Nov 2026, 22:42 · evaluation run 2026-11-17 22:16:18 · NTA crawl 2026-11-17</p>
 </header>
 <div class="tiles"><div class="tile"><div class="tv">107</div><div class="tl">official NTA notices crawled</div></div><div class="tile"><div class="tv">81.3%</div><div class="tl">notice-type accuracy (before fixes)</div></div><div class="tile"><div class="tv">100%</div><div class="tl">official questions answered correctly</div></div><div class="tile"><div class="tv">815</div><div class="tl">domain dictionary terms</div></div><div class="tile"><div class="tv">57%</div><div class="tl">hybrid expansions with the same meaning</div></div><div class="tile"><div class="tv">75.5</div><div class="tl">HSES (partial, 90% of weight)</div></div></div>
 
@@ -108,56 +121,204 @@ The 20/20 is therefore partly optimistic: the fixes were informed by this questi
 </section>
 
 <section class="break">
-<h2><span>2</span> Domain dictionary: TF-IDF + embeddings</h2>
-<p>Students write "pw", "hcv" and "hall ticket"; posts say "physics wallah", "hc verma" and "admit card". The dictionary
-adds such terms to the query at reduced weight (0.5 × similarity; the original words keep weight 1.0). Three ways of building it
-were compared, all with the same 92 seed terms in 8 categories and the same expansion rules (only exam, coaching,
-resource, admission and student terms expand; sibling seeds and digit tokens are never added; at most 3 terms per seed).</p>
-<table class=""><thead><tr><th>Variant</th><th>How related terms are found</th></tr></thead><tbody><tr><td>TF-IDF only (co-occurrence)</td><td>Terms whose TF-IDF document vectors are most similar to the seed's (they occur in the same posts). Statistics only, no embeddings.</td></tr><tr><td>Embeddings only (Word2Vec)</td><td>Nearest neighbours of the seed in a Word2Vec model trained on the posts (skip-gram, 150-d, window 5), cosine ≥ 0.55.</td></tr><tr><td>Hybrid (Word2Vec + TF-IDF)</td><td>Word2Vec neighbours, kept only if TF-IDF ranks them among the 3,000 most salient terms in the corpus. Embeddings decide <i>what means the same</i>; TF-IDF decides <i>what matters</i>.</td></tr></tbody></table>
-<p class="small">Pipeline: tokenise → detect phrases (gensim Phrases: "physics wallah" → <code>physics_wallah</code>) → TF-IDF over
-43,116 posts (11,559 terms in ≥5 posts) and Word2Vec (12,076-word vocabulary)
-→ dictionary of 815 terms (92 seeds + 723 learned).</p>
+<h2><span>2</span> Domain dictionary</h2>
+<h3>2.1 The problem: vocabulary mismatch</h3>
+<p>The search engine (BM25F) finds posts that contain the <i>same words</i> as the question, after stemming. Students and
+posts often use different words for the same thing:</p>
+<table class="tight"><thead><tr><th>A student types…</th><th>…but many relevant posts say</th><th>Kind of variation</th></tr></thead><tbody><tr><td>pw</td><td>physics wallah, physicswallah</td><td>abbreviation / brand spelling</td></tr><tr><td>hall ticket</td><td>admit card</td><td>synonym</td></tr><tr><td>hcv</td><td>hc verma</td><td>abbreviation of a book</td></tr><tr><td>boards</td><td>board, cbse</td><td>inflection / specific instance</td></tr><tr><td>unacademy</td><td>unacdemy</td><td>misspelling</td></tr><tr><td>josaa</td><td>jossa, counselling</td><td>misspelling / process name</td></tr></tbody></table>
+<p>A general thesaurus such as WordNet knows none of this slang, abbreviations or Hinglish. The domain dictionary
+<b>learns these equivalences from the 43,116 posts themselves</b> and adds them to the query. This
+is called <b>query expansion</b>.</p>
 
-<h3>2.1 Dictionary accuracy: are the added terms right?</h3>
-<p>Every (seed → added term) pair that a variant can put into a query was graded: <b>same meaning</b> (synonym, abbreviation,
-spelling variant), <b>related</b>, or <b>unrelated</b>, for 183
-unique pairs in total (<code>evaluation/dictionary_pairs.json</code>, graded by Claude).</p>
+<h3>2.2 Where it is used</h3>
+<div class="flow">
+  <div class="box">Student question<br><small>chat tab or search tab</small></div><div class="arr">→</div>
+  <div class="box hi"><b>expand_query()</b><br><small>adds dictionary terms</small></div><div class="arr">→</div>
+  <div class="box">BM25F ranking<br><small>added terms at reduced weight</small></div><div class="arr">→</div>
+  <div class="box">RRF fusion<br><small>with semantic ranking</small></div><div class="arr">→</div>
+  <div class="box">Answer / results<br><small>"Also searched: …"</small></div>
+</div>
+<table class=""><thead><tr><th>Place</th><th>What happens</th></tr></thead><tbody><tr><td><b>Chat tab</b> (community answers)</td><td><code>chatbot.py</code> calls <code>hybrid_search(…, expand=True)</code>. The expanded query goes to the BM25F half; the semantic half uses the original question; RRF fuses both. The answer shows "Also searched: …".</td></tr><tr><td><b>Search tab</b></td><td><code>/api/search?expand=1</code> (default on; the <i>expand</i> toggle turns it off). The added terms appear as <code>+term</code> tags, and matches are highlighted in snippets.</td></tr><tr><td><b>Ranker</b></td><td><code>ranker.py</code> loads <code>index/domain_dictionary.json</code> at start-up and calls <code>expand_query()</code> when <code>expand=True</code>.</td></tr><tr><td><b>Not used</b></td><td>Official NTA questions (they are matched by the crawler's classifier) and the semantic model (it already handles meaning through sentence embeddings).</td></tr></tbody></table>
+</section>
+
+<section class="break">
+<h3>2.3 How the dictionary is built (<code>python domain_dictionary.py</code>)</h3>
+<div class="flow small-flow">
+  <div class="box">43,116 posts</div><div class="arr">→</div>
+  <div class="box">1 · tokenise</div><div class="arr">→</div>
+  <div class="box">2 · phrases</div><div class="arr">→</div>
+  <div class="box">3 · TF-IDF ranks<br>4 · Word2Vec</div><div class="arr">→</div>
+  <div class="box">5 · seeds → 6 · neighbours</div><div class="arr">→</div>
+  <div class="box hi">domain_dictionary.json</div>
+</div>
+
+<h4>Step 1 · Tokenisation</h4>
+<p>Each post's title and body are lower-cased and split into word tokens with the pattern <code>[a-z0-9]+('[a-z]+)?</code>.
+Hinglish is kept as is ("kaise", "karu"). No stop words are removed, because Word2Vec needs the full context.</p>
+
+<h4>Step 2 · Phrase detection (collocations)</h4>
+<p>Many domain terms are multi-word ("physics wallah", "hall ticket", "jee mains"). gensim's <code>Phrases</code> joins two
+adjacent words into one token when they occur together far more often than chance:</p>
+<div class="formula">score(a, b) = (count(a b) − min_count) × |V| ÷ (count(a) × count(b)) &nbsp;&nbsp;→ join if score &gt; 15
+<br><small>min_count = 10, |V| = vocabulary size; this is a PMI-style association score</small></div>
+<p>The final vocabulary has <b>1,933 phrase tokens</b>. Examples in the dictionary: <code>jee_mains</code>, <code>jee_main</code>, <code>jee_advanced</code>, <code>admit_card</code>, <code>organic_chemistry</code>, <code>class_11</code>, <code>class_12</code>, <code>mohit_tyagi</code>, <code>physics_wallah</code>, <code>mock_test</code>, <code>neet_2022</code>, <code>mock_tests</code>, <code>take_a_drop</code>, <code>answer_key</code>.</p>
+
+<h4>Step 3 · TF-IDF salience (the statistical part)</h4>
+<p>TF-IDF scores how characteristic a term is of a document: frequent in the post (TF), rare across posts (IDF). We use it to
+rank <b>every term in the corpus by importance</b>:</p>
+<div class="formula">tfidf(t, d) = (1 + ln tf(t, d)) × (ln((1 + N) ÷ (1 + df(t))) + 1), each post vector L2-normalised
+<br>salience(t) = Σ<sub>d</sub> tfidf(t, d) &nbsp;&nbsp;→ rank 1 = most salient
+<br><small>N = 43,116 posts; terms in fewer than 5 posts are dropped (11,559 terms ranked); scikit-learn TfidfVectorizer, sublinear tf</small></div>
+<p>On its own, TF-IDF salience can't tell domain terms from chatter. The most salient terms overall are
+<code>i</code>, <code>to</code>, <code>for</code>, <code>the</code>, <code>in</code>, <code>and</code>, <code>is</code>, <code>a</code>, <code>of</code>, <code>hai</code>, <code>jee</code>, <code>me</code>, <code>my</code>, <code>this</code>, <code>do</code>, <code>you</code>. Restricted to dictionary terms, it ranks
+<code>jee</code>, <code>neet</code>, <code>physics</code>, <code>jee_mains</code>, <code>11th</code>, <code>maths</code>, <code>chemistry</code>, <code>marks</code>, <code>rank</code>, <code>12th</code>, <code>mains</code>, <code>iit</code>, <code>allen</code>, <code>nta</code>, <code>pw</code>, <code>bitsat</code> highest. So TF-IDF knows what <i>matters</i>, but not what
+<i>means the same</i>.</p>
+
+<h4>Step 4 · Word2Vec embeddings (the semantic part)</h4>
+<p>Word2Vec learns a vector for every word so that <b>words used in similar contexts get similar vectors</b> (the
+<i>distributional hypothesis</i>). "pw" and "physics wallah" appear around the same words ("lectures", "batch", "alakh sir"), so
+their vectors end up close together. We train the <b>skip-gram</b> variant: for each word, predict the words within ±5 positions,
+learning with <b>negative sampling</b> (5 random "wrong" words per real one). Similarity is the <b>cosine</b> of two vectors:</p>
+<div class="formula">cos(u, v) = (u · v) ÷ (‖u‖ ‖v‖) &nbsp;&nbsp;∈ [−1, 1]
+<br><small>150 dimensions · window 5 · min_count 5 · 10 epochs · seed 42 · vocabulary 12,076 words (incl. phrases)</small></div>
+
+<h4>Step 5 · Seed terms and categories</h4>
+<p>92 hand-picked seed terms in 8 categories anchor the dictionary. The embeddings then
+discover the rest automatically. Only 5 categories are <i>expanded</i>: in subject, topic and institute, the nearest neighbours
+are siblings (chemistry → physics, iit → nit), not synonyms, and adding them would change the question's meaning.</p>
+<table class="tight"><thead><tr><th>Category</th><th>Seed terms</th><th>Expanded in queries?</th></tr></thead><tbody><tr><td>exam</td><td>jee, mains, advanced, neet, bitsat, boards, cuet, kvpy, olympiad, mhtcet, wbjee, comedk, viteee</td><td>yes</td></tr><tr><td>subject</td><td>physics, chemistry, maths, biology, botany, zoology, organic, inorganic, pcm, pcb</td><td>no (siblings, not synonyms)</td></tr><tr><td>topic</td><td>rotational, electrostatics, thermodynamics, kinematics, optics, calculus, integration, probability, matrices, genetics, electrochemistry, equilibrium, mole, modern_physics, coordinate, vectors, magnetism</td><td>no (siblings, not synonyms)</td></tr><tr><td>institute</td><td>iit, nit, iiit, aiims, bits, mbbs, btech, cse, iisc, iiser, ece</td><td>no (siblings, not synonyms)</td></tr><tr><td>coaching</td><td>allen, aakash, fiitjee, pw, unacademy, vedantu, resonance, narayana, byjus</td><td>yes</td></tr><tr><td>resource</td><td>ncert, hcv, irodov, cengage, pyq, pyqs, mock, dpp, module, lectures</td><td>yes</td></tr><tr><td>admission</td><td>counselling, josaa, csab, cutoff, rank, percentile, admit_card, registration, syllabus, marks, result, answer_key, nta, reservation, category</td><td>yes</td></tr><tr><td>student</td><td>dropper, drop, repeater, aspirant, 11th, 12th, backlog</td><td>yes</td></tr></tbody></table>
+
+<h4>Step 6 · Neighbours + the TF-IDF filter</h4>
+<p>For each seed, the 15 nearest words with cosine ≥ 0.55 become dictionary terms (723 learned + 92 seeds
+= 815 terms). Each term records its category, its closest seed, the similarity and its TF-IDF rank. At query
+time a neighbour is only used if it ranks in the top 3,000 by TF-IDF salience. Real neighbours and what happens to them:</p>
+<table class="tight"><thead><tr><th>Seed</th><th>Word2Vec neighbour</th><th>Cosine</th><th>TF-IDF rank</th><th>In a query</th></tr></thead><tbody><tr><td>pw</td><td>physics wallah</td><td>0.716</td><td>431</td><td><span class="ok">added</span></td></tr><tr><td>pw</td><td>physicswallah</td><td>0.687</td><td>1,860</td><td><span class="ok">added</span></td></tr><tr><td>pw</td><td>unacademy</td><td>0.684</td><td>179</td><td><span class="bad">blocked: sibling seed</span></td></tr><tr><td>admit_card</td><td>hall ticket</td><td>0.702</td><td>5,779</td><td><span class="bad">filtered: rare (TF-IDF)</span></td></tr><tr><td>admit_card</td><td>correction window</td><td>0.667</td><td>4,201</td><td><span class="bad">filtered: rare (TF-IDF)</span></td></tr><tr><td>admit_card</td><td>admit cards</td><td>0.662</td><td>2,344</td><td><span class="ok">added</span></td></tr><tr><td>hcv</td><td>dc pandey</td><td>0.792</td><td>1,865</td><td><span class="ok">added</span></td></tr><tr><td>hcv</td><td>cengage</td><td>0.764</td><td>512</td><td><span class="bad">blocked: sibling seed</span></td></tr><tr><td>hcv</td><td>hc verma</td><td>0.757</td><td>979</td><td><span class="ok">added</span></td></tr><tr><td>josaa</td><td>rounds</td><td>0.764</td><td>8,287</td><td><span class="bad">filtered: rare (TF-IDF)</span></td></tr><tr><td>josaa</td><td>csab</td><td>0.749</td><td>3,919</td><td><span class="bad">blocked: sibling seed</span></td></tr><tr><td>josaa</td><td>documents</td><td>0.748</td><td>4,018</td><td><span class="bad">filtered: rare (TF-IDF)</span></td></tr><tr><td>kvpy</td><td>hbcse</td><td>0.633</td><td>7,711</td><td><span class="bad">filtered: rare (TF-IDF)</span></td></tr><tr><td>kvpy</td><td>iiser</td><td>0.630</td><td>1,986</td><td><span class="bad">blocked: sibling seed</span></td></tr><tr><td>kvpy</td><td>aptitude test</td><td>0.626</td><td>9,575</td><td><span class="bad">filtered: rare (TF-IDF)</span></td></tr><tr><td>answer_key</td><td>response sheet</td><td>0.796</td><td>2,250</td><td><span class="ok">added</span></td></tr><tr><td>answer_key</td><td>key</td><td>0.712</td><td>1,432</td><td><span class="ok">added</span></td></tr><tr><td>answer_key</td><td>official answer</td><td>0.677</td><td>5,946</td><td><span class="bad">filtered: rare (TF-IDF)</span></td></tr><tr><td>cutoff</td><td>cut off</td><td>0.723</td><td>1,897</td><td><span class="ok">added</span></td></tr><tr><td>cutoff</td><td>cutoffs</td><td>0.678</td><td>2,314</td><td><span class="ok">added</span></td></tr><tr><td>cutoff</td><td>expected cutoff</td><td>0.655</td><td>5,759</td><td><span class="bad">filtered: rare (TF-IDF)</span></td></tr><tr><td>boards</td><td>term 1</td><td>0.694</td><td>666</td><td><span class="bad">blocked: contains digits</span></td></tr><tr><td>boards</td><td>board</td><td>0.673</td><td>473</td><td><span class="ok">added</span></td></tr><tr><td>boards</td><td>cbse</td><td>0.660</td><td>274</td><td><span class="ok">added</span></td></tr><tr><td>mock</td><td>mock test</td><td>0.729</td><td>488</td><td><span class="ok">added</span></td></tr><tr><td>mock</td><td>mocks</td><td>0.645</td><td>364</td><td><span class="ok">added</span></td></tr><tr><td>mock</td><td>mock tests</td><td>0.640</td><td>540</td><td><span class="ok">added</span></td></tr><tr><td>chemistry</td><td>chem</td><td>0.719</td><td>214</td><td><span class="bad">not expanded (category)</span></td></tr><tr><td>chemistry</td><td>physical chemistry</td><td>0.684</td><td>850</td><td><span class="bad">not expanded (category)</span></td></tr><tr><td>chemistry</td><td>physics</td><td>0.671</td><td>53</td><td><span class="bad">not expanded (category)</span></td></tr></tbody></table>
+<p class="small">Output: <code>index/domain_dictionary.json</code> = {"terms": {term: {category, seed, similarity, tfidf_rank, source}},
+"related": {seed: [[neighbour, cosine], …]}}. Build time: about 10 s (Word2Vec is reused from <code>index/word2vec.model</code>;
+<code>--retrain</code> rebuilds it).</p>
+</section>
+
+<section class="break">
+<h3>2.4 How a query is expanded (<code>expand_query()</code>)</h3>
+<ol>
+<li>Split the query into words and adjacent word pairs ("hall ticket" → <code>hall_ticket</code>). A matched pair uses up
+its words, so "physics wallah" is not also treated as "physics".</li>
+<li>Look each one up in the dictionary. A hit pulls in its <b>seed</b> and the seed's <b>top 3 neighbours</b>.</li>
+<li>Drop a candidate term if it is already in the query, is another seed (allen → aakash would change the question), contains
+digits ("2024tard"), ranks outside the TF-IDF top 3,000, or has similarity below 0.6.</li>
+<li>Give each added term weight <b>0.5 × similarity</b>. The student's own words keep weight 1.0, so expansion can nudge the
+ranking but never overpower the question.</li>
+</ol>
+<p>Inside BM25F, the weight multiplies the term's score:</p>
+<div class="formula">score(D, Q) = Σ<sub>t ∈ Q</sub> <b>w(t)</b> × IDF(t) × tf̃(t, D) × (k₁ + 1) ÷ (tf̃(t, D) + k₁)
+<br><small>tf̃ = 2.5 × normalised title tf + 1.0 × normalised body tf; k₁ = 1.2, b = 0.75; w(t) = 1 for query words, 0.5 × cosine for added words</small></div>
+<h4>Worked examples (BM25F + engagement, real index)</h4>
+
+<div class="worked">
+<p><b>Query:</b> <code>hall ticket kab aayega</code></p>
+<p class="small">Stems: hall, ticket, kab, aayega · Dictionary adds: <b>admit card</b> (cosine 0.702)
+· Term weights: hall 1.00, ticket 1.00, kab 1.00, aayega 1.00, admit 0.35, card 0.35</p>
+<table class="tight"><thead><tr><th>#</th><th>Top 5 without expansion</th><th>Top 5 with expansion</th></tr></thead><tbody><tr><td>1</td><td>Has Mht CET Hall ticket been released?</td><td>ADMIT CARD KAB AAYEGA</td></tr><tr><td>2</td><td>Hall ticket has come?</td><td>kab aayega admit card🐸</td></tr><tr><td>3</td><td>bitsat hall ticket page size</td><td>Has Mht CET Hall ticket been released?</td></tr><tr><td>4</td><td>kab aayega</td><td>ADMIT CARD KAB AAYEGA BC</td></tr><tr><td>5</td><td>when will Hall ticket come?</td><td>when will Hall ticket come?</td></tr></tbody></table>
+<p class="small">Not a benchmark query, so no relevance judgments.</p>
+</div>
+<div class="worked">
+<p><b>Query:</b> <code>PW vs Unacademy</code></p>
+<p class="small">Stems: pw, vs, unacademi · Dictionary adds: <b>physics wallah</b> (cosine 0.716), <b>physicswallah</b> (cosine 0.687), <b>unacdemy</b> (cosine 0.682)
+· Term weights: pw 1.00, vs 1.00, unacademi 1.00, physic 0.36, wallah 0.36, physicswallah 0.34, unacdemi 0.34</p>
+<table class="tight"><thead><tr><th>#</th><th>Top 5 without expansion</th><th>Top 5 with expansion</th></tr></thead><tbody><tr><td>1</td><td>can someone explain the PW vs unacademy situation. <span class="g">(relevant)</span></td><td>can someone explain the PW vs unacademy situation. <span class="g">(relevant)</span></td></tr><tr><td>2</td><td>Unacademy vs PW vs BYJUS vs Vedantu vs Dhattarwal vs Other <span class="g">(highly relevant)</span></td><td>Unacademy vs PW vs BYJUS vs Vedantu vs Dhattarwal vs Other <span class="g">(highly relevant)</span></td></tr><tr><td>3</td><td>PW VS CHAMAN <span class="g">(not relevant)</span></td><td>Physics Wallah vs ATP Star vs Unacademy vs Vedantu vs Alle <span class="g">(highly relevant)</span></td></tr><tr><td>4</td><td>ALEC SIR SAMAPTI MAM BEST MOMENTS YAA FIR UNACADEMY VS PW <span class="g">(not relevant)</span></td><td>PW VS CHAMAN <span class="g">(not relevant)</span></td></tr><tr><td>5</td><td>PW vs Allen <span class="g">(not relevant)</span></td><td>ALEC SIR SAMAPTI MAM BEST MOMENTS YAA FIR UNACADEMY VS PW <span class="g">(not relevant)</span></td></tr></tbody></table>
+<p class="small">NDCG@10 without expansion 0.259 → with 0.394</p>
+</div>
+<div class="worked">
+<p><b>Query:</b> <code>boards aur jee dono kaise manage kare</code></p>
+<p class="small">Stems: board, aur, jee, dono, kais, manag, kare · Dictionary adds: <b>board</b> (cosine 0.673), <b>cbse</b> (cosine 0.660)
+· Term weights: board 1.00, aur 1.00, jee 1.00, dono 1.00, kais 1.00, manag 1.00, kare 1.00, cbse 0.33</p>
+<table class="tight"><thead><tr><th>#</th><th>Top 5 without expansion</th><th>Top 5 with expansion</th></tr></thead><tbody><tr><td>1</td><td>JEE Advanced inorganic kaise kare? <span class="g">(not relevant)</span></td><td>JEE Advanced inorganic kaise kare? <span class="g">(not relevant)</span></td></tr><tr><td>2</td><td>Mock Test mai improve kaise kare <span class="g">(not relevant)</span></td><td>Guys only 50days How to manage boards and Jee mains ? <span class="g">(highly relevant)</span></td></tr><tr><td>3</td><td>jee ka result kaise??? <span class="g">(not relevant)</span></td><td>Mock Test mai improve kaise kare <span class="g">(not relevant)</span></td></tr><tr><td>4</td><td>IPU colleges kaise hain <span class="g">(not relevant)</span></td><td>How do you plan on managing both jee and boards rn? <span class="g">(highly relevant)</span></td></tr><tr><td>5</td><td>Yeh Isomerism wale questions kaise kare? <span class="g">(not relevant)</span></td><td>jee ka result kaise??? <span class="g">(not relevant)</span></td></tr></tbody></table>
+<p class="small">NDCG@10 without expansion 0.295 → with 0.599</p>
+</div>
+<div class="worked">
+<p><b>Query:</b> <code>answer key challenge</code></p>
+<p class="small">Stems: answer, key, challeng · Dictionary adds: <b>response sheet</b> (cosine 0.796)
+· Term weights: answer 1.00, key 1.00, challeng 1.00, respons 0.40, sheet 0.40</p>
+<table class="tight"><thead><tr><th>#</th><th>Top 5 without expansion</th><th>Top 5 with expansion</th></tr></thead><tbody><tr><td>1</td><td>Are we supposed to challenge the answer key? <span class="g">(highly relevant)</span></td><td>Do you get your response sheet and answer key for bitsat?  <span class="g">(not relevant)</span></td></tr><tr><td>2</td><td>Neet 2021 answer key challenge <span class="g">(highly relevant)</span></td><td>Are we supposed to challenge the answer key? <span class="g">(highly relevant)</span></td></tr><tr><td>3</td><td>Necessary to challenge 29S2 chem answer key? <span class="g">(highly relevant)</span></td><td>Neet 2021 answer key challenge <span class="g">(highly relevant)</span></td></tr><tr><td>4</td><td>Checking answer key <span class="g">(highly relevant)</span></td><td>Necessary to challenge 29S2 chem answer key? <span class="g">(highly relevant)</span></td></tr><tr><td>5</td><td>Sath me answer key challenge karen? <span class="g">(highly relevant)</span></td><td>Checking answer key <span class="g">(highly relevant)</span></td></tr></tbody></table>
+<p class="small">NDCG@10 without expansion 0.914 → with 0.723</p>
+</div>
+</section>
+
+<section>
+<h3>2.5 Key concepts</h3>
+<table class="tight"><thead><tr><th>Concept</th><th>What it means here</th></tr></thead><tbody><tr><td>Query expansion</td><td>Adding related terms to a query to find relevant posts that use different words. It improves <i>recall</i>, at the risk of drift.</td></tr><tr><td>Vocabulary mismatch</td><td>The question and a relevant post describe the same thing with different words (pw / physics wallah).</td></tr><tr><td>Query drift</td><td>Expansion adds a term that changes the question's meaning ("answer key challenge" + "official answer" pulls in unrelated posts). Precision drops.</td></tr><tr><td>Distributional hypothesis</td><td>Words that occur in similar contexts have similar meanings. This is the basis of Word2Vec.</td></tr><tr><td>Word embedding (Word2Vec, skip-gram)</td><td>A dense vector per word, learned by predicting nearby words, so that similar words are near each other.</td></tr><tr><td>Negative sampling</td><td>Training trick: instead of scoring every word in the vocabulary, push the real context word up and 5 random words down.</td></tr><tr><td>Cosine similarity</td><td>The angle between two vectors (1 = same direction). It measures how similar two words are.</td></tr><tr><td>Collocation / phrase detection</td><td>Finding word pairs that occur together more than chance (PMI-style score) and treating them as one term.</td></tr><tr><td>TF-IDF</td><td>Term frequency × inverse document frequency: a term matters if it is frequent in a post but rare across posts.</td></tr><tr><td>Sublinear TF, smoothed IDF</td><td>1 + ln(tf) stops very repetitive posts from dominating; +1 smoothing avoids division by zero.</td></tr><tr><td>Salience</td><td>A term's total TF-IDF weight over the corpus: how important it is to this corpus. Used here as a filter.</td></tr><tr><td>Paradigmatic vs syntagmatic relations</td><td>Word2Vec finds words that can <i>replace</i> each other (pw ↔ physics wallah); TF-IDF co-occurrence finds words that appear <i>together</i> (josaa ↔ documents). This is why TF-IDF alone gives few synonyms.</td></tr><tr><td>Seed-based lexicon induction</td><td>Starting from a few hand-picked terms per category and growing the dictionary automatically from the data (weak supervision).</td></tr><tr><td>Intrinsic vs extrinsic evaluation</td><td>Intrinsic: are the dictionary entries correct? Extrinsic: does search get better with them? Both are reported below.</td></tr><tr><td>Tuning / test split</td><td>Settings are chosen on 24 tuning queries; results are reported on 56 unseen test queries, so they are not overfitted.</td></tr></tbody></table>
+
+<h3>2.6 All parameters</h3>
+<table class="tight"><thead><tr><th>Parameter</th><th>Value</th><th>Where / why</th></tr></thead><tbody><tr><td>Phrase min_count / threshold</td><td>10 / 15</td><td>gensim Phrases: a pair must occur ≥10 times and score >15</td></tr><tr><td>Word2Vec</td><td>skip-gram, 150-d, window 5, min_count 5, 10 epochs, negative 5, seed 42</td><td>word vectors</td></tr><tr><td>TF-IDF</td><td>min_df 5, sublinear tf, smoothed idf, L2 norm</td><td>salience ranks for every term</td></tr><tr><td>Neighbours per seed (TOPN)</td><td>15</td><td>candidate dictionary terms</td></tr><tr><td>MIN_SIM</td><td>0.55</td><td>minimum cosine to enter the dictionary</td></tr><tr><td>Neighbours used per hit (k)</td><td>3</td><td>how many neighbours a query word pulls in</td></tr><tr><td>MIN_WEIGHT</td><td>0.6</td><td>minimum (seed similarity × neighbour similarity) to be added</td></tr><tr><td>TFIDF_TOP</td><td>3,000</td><td>neighbour must be among the most salient terms (tuned on the tuning split)</td></tr><tr><td>TFIDF_CANDIDATES</td><td>0</td><td>TF-IDF-discovered terms added to the dictionary (off: no effect on tuning queries)</td></tr><tr><td>expansion_weight</td><td>0.5</td><td>added term's weight = 0.5 × similarity (ranker.py)</td></tr><tr><td>Expanded categories</td><td>admission, coaching, exam, resource, student</td><td>subject, topic and institute are not expanded</td></tr></tbody></table>
+</section>
+
+<section class="break">
+<h3>2.7 How it was evaluated</h3>
+<p>Three ways of building the dictionary were compared. All use the same seeds, categories and expansion rules:</p>
+<table class=""><thead><tr><th>Variant</th><th>How related terms are found</th></tr></thead><tbody><tr><td>TF-IDF only (co-occurrence)</td><td>Terms whose TF-IDF document vectors are most similar to the seed's (they occur in the same posts). Statistics only. Cosines are rescaled onto the same 0.6–1.0 weight range.</td></tr><tr><td>Embeddings only (Word2Vec)</td><td>Word2Vec nearest neighbours (the original dictionary).</td></tr><tr><td>Hybrid (Word2Vec + TF-IDF)</td><td>Word2Vec neighbours kept only if TF-IDF ranks them in the top 3,000 (the current dictionary).</td></tr></tbody></table>
+<ul>
+<li><b>Intrinsic:</b> every (seed → added term) pair a variant can put into a query was graded <i>same meaning</i> (synonym,
+abbreviation, spelling variant), <i>related</i> or <i>unrelated</i>, for 247 pairs
+across the variants (183 unique; <code>evaluation/dictionary_pairs.json</code>, graded by Claude).</li>
+<li><b>Extrinsic:</b> search quality on the 56 test queries with graded relevance judgments: NDCG@10, P@5,
+MAP, MRR and Success@5, plus a paired randomization test against no expansion. Settings (TF-IDF threshold
+0.1, salience cut-off 3,000) were tuned on the
+24 tuning queries only.</li>
+</ul>
+
+<h3>2.8 Results: dictionary accuracy</h3>
 <table class=""><thead><tr><th>Variant</th><th>Dictionary terms</th><th>Expansion pairs</th><th>Same meaning</th><th>Related or better</th><th>Unrelated (drift)</th></tr></thead><tbody><tr><td>TF-IDF only (co-occurrence)</td><td>262</td><td>79</td><td>1%</td><td>38%</td><td>62%</td></tr><tr><td>Embeddings only (Word2Vec)</td><td>815</td><td>110</td><td>34%</td><td>80%</td><td>20%</td></tr><tr><td>Hybrid (Word2Vec + TF-IDF)</td><td>815</td><td>58</td><td>57%</td><td>91%</td><td>9%</td></tr></tbody></table>
 <div class="stack">
 <figure><svg viewBox="0 0 600 86" width="100%" role="img" aria-label="Share of added terms with the same meaning (higher is better)"><text x="222" y="19" text-anchor="end" class="lab">TF-IDF only (co-occurrence)</text><rect x="230" y="8" width="3.9" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="8" width="3.9" height="14" fill="#a8a7a1"/><text x="239.9" y="19" class="val">1%</text><text x="222" y="45" text-anchor="end" class="lab">Embeddings only (Word2Vec)</text><rect x="230" y="34" width="100.8" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="34" width="4.0" height="14" fill="#a8a7a1"/><text x="336.8" y="45" class="val">34%</text><text x="222" y="71" text-anchor="end" class="lab hi">Hybrid (Word2Vec + TF-IDF)</text><rect x="230" y="60" width="170.7" height="14" rx="3" fill="#2a78d6"/><rect x="230" y="60" width="4.0" height="14" fill="#2a78d6"/><text x="406.7" y="71" class="val">57%</text><line x1="230" y1="2" x2="230" y2="84" class="axis"/></svg><figcaption>Share of added terms with the same meaning (higher is better)</figcaption></figure>
 <figure><svg viewBox="0 0 600 86" width="100%" role="img" aria-label="Share of added terms that are unrelated (lower is better)"><text x="222" y="19" text-anchor="end" class="lab">TF-IDF only (co-occurrence)</text><rect x="230" y="8" width="186.0" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="8" width="4.0" height="14" fill="#a8a7a1"/><text x="422.0" y="19" class="val">62%</text><text x="222" y="45" text-anchor="end" class="lab">Embeddings only (Word2Vec)</text><rect x="230" y="34" width="60.0" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="34" width="4.0" height="14" fill="#a8a7a1"/><text x="296.0" y="45" class="val">20%</text><text x="222" y="71" text-anchor="end" class="lab hi">Hybrid (Word2Vec + TF-IDF)</text><rect x="230" y="60" width="25.8" height="14" rx="3" fill="#2a78d6"/><rect x="230" y="60" width="4.0" height="14" fill="#2a78d6"/><text x="261.8" y="71" class="val">9%</text><line x1="230" y1="2" x2="230" y2="84" class="axis"/></svg><figcaption>Share of added terms that are unrelated (lower is better)</figcaption></figure>
 </div>
-<p>The hybrid is the most accurate dictionary. The TF-IDF filter removes rare neighbours (<i>hbcse</i>, <i>aptitude test</i>,
-<i>official answer</i>, <i>sankalp</i>), which were the main source of drift, and keeps salient ones (<i>physics wallah</i>,
-<i>admit card</i>, <i>cbse</i>). TF-IDF on its own finds words that appear <i>alongside</i> a seed (josaa → documents, round),
-not words that <i>mean</i> the same, so only 1% of its additions are synonyms.</p>
 
-<h3>2.2 Search quality with each dictionary</h3>
-<p>Each variant's setting was tuned on the 24 tuning queries only (TF-IDF threshold 0.1;
-hybrid salience cut-off 3,000). The numbers below are on the 56 held-out test queries.</p>
+<h3>2.9 Results: search quality (test split)</h3>
 <h4>BM25F + engagement + expansion (expansion's direct effect)</h4>
 <table class="tight"><thead><tr><th>Variant</th><th>NDCG@10</th><th>P@5</th><th>MAP</th><th>MRR</th><th>Success@5</th><th>Queries expanded</th><th>Helped / hurt</th><th>p vs none</th><th>Tune NDCG@10</th></tr></thead><tbody><tr><td>No expansion</td><td>0.517</td><td>0.564</td><td>0.352</td><td>0.728</td><td>0.893</td><td>0</td><td>– / –</td><td>–</td><td>0.634</td></tr><tr><td>TF-IDF only (co-occurrence)</td><td>0.520</td><td>0.579</td><td>0.360</td><td>0.737</td><td>0.893</td><td>35</td><td>13 / 7</td><td>0.657</td><td>0.636</td></tr><tr><td>Embeddings only (Word2Vec)</td><td>0.513</td><td>0.579</td><td>0.350</td><td>0.722</td><td>0.911</td><td>19</td><td>6 / 9</td><td>0.751</td><td>0.645</td></tr><tr><td><b>Hybrid (Word2Vec + TF-IDF)</b></td><td>0.523</td><td>0.579</td><td>0.356</td><td>0.723</td><td>0.911</td><td>17</td><td>6 / 6</td><td>0.485</td><td>0.647</td></tr></tbody></table>
 <h4>Deployed hybrid search (BM25F + semantic, RRF)</h4>
 <table class="tight"><thead><tr><th>Variant</th><th>NDCG@10</th><th>P@5</th><th>MAP</th><th>MRR</th><th>Success@5</th><th>Queries expanded</th><th>Helped / hurt</th><th>p vs none</th><th>Tune NDCG@10</th></tr></thead><tbody><tr><td>No expansion</td><td>0.522</td><td>0.586</td><td>0.370</td><td>0.737</td><td>0.893</td><td>0</td><td>– / –</td><td>–</td><td>0.644</td></tr><tr><td>TF-IDF only (co-occurrence)</td><td>0.532</td><td>0.589</td><td>0.380</td><td>0.743</td><td>0.893</td><td>35</td><td>12 / 8</td><td>0.231</td><td>0.649</td></tr><tr><td>Embeddings only (Word2Vec)</td><td>0.523</td><td>0.593</td><td>0.367</td><td>0.717</td><td>0.911</td><td>19</td><td>7 / 10</td><td>0.857</td><td>0.666</td></tr><tr><td><b>Hybrid (Word2Vec + TF-IDF)</b></td><td>0.525</td><td>0.596</td><td>0.370</td><td>0.720</td><td>0.911</td><td>17</td><td>6 / 8</td><td>0.550</td><td>0.662</td></tr></tbody></table>
 <figure><svg viewBox="0 0 600 112" width="100%" role="img" aria-label="NDCG@10, BM25F + expansion, test split (axis 0–0.6)"><text x="222" y="19" text-anchor="end" class="lab">No expansion</text><rect x="230" y="8" width="258.5" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="8" width="4.0" height="14" fill="#a8a7a1"/><text x="494.5" y="19" class="val">0.517</text><text x="222" y="45" text-anchor="end" class="lab">TF-IDF only (co-occurrence)</text><rect x="230" y="34" width="260.2" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="34" width="4.0" height="14" fill="#a8a7a1"/><text x="496.2" y="45" class="val">0.520</text><text x="222" y="71" text-anchor="end" class="lab">Embeddings only (Word2Vec)</text><rect x="230" y="60" width="256.8" height="14" rx="3" fill="#a8a7a1"/><rect x="230" y="60" width="4.0" height="14" fill="#a8a7a1"/><text x="492.8" y="71" class="val">0.513</text><text x="222" y="97" text-anchor="end" class="lab hi">Hybrid (Word2Vec + TF-IDF)</text><rect x="230" y="86" width="261.3" height="14" rx="3" fill="#2a78d6"/><rect x="230" y="86" width="4.0" height="14" fill="#2a78d6"/><text x="497.3" y="97" class="val">0.523</text><line x1="230" y1="2" x2="230" y2="110" class="axis"/></svg><figcaption>NDCG@10, BM25F + expansion, test split (axis 0–0.6)</figcaption></figure>
-<p><b>Reading the results honestly.</b> On search quality the four variants are within noise of each other and of no expansion:
-the differences are about ±0.01 NDCG@10, and no p-value comes near 0.05 (paired randomization test, 10,000 permutations).
-With BM25 the hybrid is best (0.523) and hurts the fewest queries
-(6 vs 9 for embeddings only). In the deployed system,
-TF-IDF only scores highest on the test split (0.532) despite its poor dictionary,
-because related words act as topical context. On the tuning split, however, embeddings only did best there. The hybrid's clear
-win is dictionary accuracy (fewer wrong expansions shown to users as "Also searched: …"), not ranking.</p>
+</section>
 
-<h3>2.3 Where the TF-IDF filter changed the query (embeddings only → hybrid)</h3>
-<table class="tight"><thead><tr><th>Query</th><th>Terms the filter removed</th><th>ΔNDCG embeddings only</th><th>ΔNDCG hybrid</th></tr></thead><tbody><tr><td>PW vs Unacademy</td><td>arjuna batch</td><td>+0.134</td><td>+0.134</td></tr><tr><td>PYQ practice for jee mains</td><td>disha, exemplar</td><td>-0.060</td><td>+0.000</td></tr><tr><td>KVPY preparation</td><td>aptitude test, hbcse</td><td>-0.130</td><td>+0.000</td></tr><tr><td>DPP solutions</td><td>topicwise</td><td>+0.000</td><td>+0.000</td></tr><tr><td>answer key challenge</td><td>official answer</td><td>-0.311</td><td>-0.191</td></tr><tr><td>seat allotment counselling</td><td>jac delhi</td><td>+0.000</td><td>+0.000</td></tr><tr><td>physcis wallah lectures</td><td>yt lectures</td><td>-0.010</td><td>-0.010</td></tr><tr><td>jee advanced 2022 cutoff</td><td>expected cutoff</td><td>-0.015</td><td>+0.000</td></tr><tr><td>neet 2021 cutoff general category</td><td>crl, expected cutoff, gen ews</td><td>-0.219</td><td>-0.034</td></tr></tbody></table>
-<p class="small">ΔNDCG is relative to no expansion (BM25F + engagement, test split).</p>
+<section class="break">
+<h3>2.10 How the hybrid improved on the original Word2Vec dictionary</h3>
+<table class=""><thead><tr><th>Measure</th><th>Word2Vec only (before)</th><th>Hybrid (now)</th></tr></thead><tbody><tr><td>Expansions with the same meaning</td><td>34%</td><td>57%</td></tr><tr><td>Unrelated expansions (drift)</td><td>20%</td><td>9%</td></tr><tr><td>Distinct expansion pairs</td><td>110</td><td>58</td></tr><tr><td>Test queries expanded</td><td>19</td><td>17</td></tr><tr><td>Queries helped / hurt (vs no expansion)</td><td>6 / 9</td><td>6 / 6</td></tr><tr><td>NDCG@10, BM25F + expansion</td><td>0.513</td><td>0.523</td></tr><tr><td>NDCG@10, deployed hybrid search</td><td>0.523</td><td>0.525</td></tr></tbody></table>
+<p>Queries where the TF-IDF filter changed what was added (ΔNDCG@10 relative to no expansion):</p>
+<table class="tight"><thead><tr><th>Query</th><th>Terms the filter removed</th><th>Word2Vec only</th><th>Hybrid</th></tr></thead><tbody><tr><td>PW vs Unacademy</td><td>arjuna batch</td><td>+0.134</td><td>+0.134</td></tr><tr><td>PYQ practice for jee mains</td><td>disha, exemplar</td><td>-0.060</td><td>+0.000</td></tr><tr><td>KVPY preparation</td><td>aptitude test, hbcse</td><td>-0.130</td><td>+0.000</td></tr><tr><td>DPP solutions</td><td>topicwise</td><td>+0.000</td><td>+0.000</td></tr><tr><td>answer key challenge</td><td>official answer</td><td>-0.311</td><td>-0.191</td></tr><tr><td>seat allotment counselling</td><td>jac delhi</td><td>+0.000</td><td>+0.000</td></tr><tr><td>physcis wallah lectures</td><td>yt lectures</td><td>-0.010</td><td>-0.010</td></tr><tr><td>jee advanced 2022 cutoff</td><td>expected cutoff</td><td>-0.015</td><td>+0.000</td></tr><tr><td>neet 2021 cutoff general category</td><td>crl, expected cutoff, gen ews</td><td>-0.219</td><td>-0.034</td></tr></tbody></table>
 
-<h3>2.4 Tuning runs</h3>
+<h3>2.11 What the numbers mean</h3>
+<ul>
+<li><b>The hybrid builds the most accurate dictionary.</b> 57% of its additions mean
+the same as the seed, against 34% for Word2Vec alone; unrelated additions fall from
+20% to 9%. Rare neighbours are where Word2Vec is
+least reliable (few training examples), and TF-IDF salience removes exactly those.</li>
+<li><b>Search quality differences are within noise.</b> All variants are within about ±0.01 NDCG@10 of each other and of no
+expansion, and no p-value is near 0.05. Expansion fires on only 17 of 56 test queries, and most of them already
+match their posts word for word. The hybrid is best with BM25 and hurts the fewest queries; in the deployed system TF-IDF only
+happens to score highest on the test split, while Word2Vec only scored highest on the tuning split.</li>
+<li><b>TF-IDF alone finds context, not synonyms.</b> Only 1% of its additions are
+synonyms, but topical neighbours (josaa → documents, round) still help some queries, like pseudo-relevance feedback.</li>
+<li><b>Where expansion helps:</b> abbreviations and brand names (PW → physics wallah), synonyms (hall ticket → admit card) and
+Hinglish questions with English posts (boards aur jee → board, cbse).</li>
+</ul>
+
+<h3>2.12 Tuning runs</h3>
 <table class="tight"><thead><tr><th>TF-IDF only: co-occurrence threshold</th><th>Tune NDCG@10</th></tr></thead><tbody><tr><td>0.1</td><td>0.649</td></tr><tr><td>0.15</td><td>0.640</td></tr><tr><td>0.2</td><td>0.646</td></tr><tr><td>0.3</td><td>0.644</td></tr></tbody></table>
 <table class="tight"><thead><tr><th>Hybrid: salience cut-off / TF-IDF candidate terms added</th><th>Tune NDCG@10</th></tr></thead><tbody><tr><td>top 1000 / 0</td><td>0.655</td></tr><tr><td>top 1000 / 1000</td><td>0.655</td></tr><tr><td>top 1000 / 2000</td><td>0.655</td></tr><tr><td>top 2000 / 0</td><td>0.659</td></tr><tr><td>top 2000 / 1000</td><td>0.659</td></tr><tr><td>top 2000 / 2000</td><td>0.659</td></tr><tr><td>top 3000 / 0</td><td>0.662</td></tr><tr><td>top 3000 / 1000</td><td>0.662</td></tr><tr><td>top 3000 / 2000</td><td>0.662</td></tr><tr><td>top 5000 / 0</td><td>0.662</td></tr><tr><td>top 5000 / 1000</td><td>0.662</td></tr><tr><td>top 5000 / 2000</td><td>0.662</td></tr></tbody></table>
-<p class="small">Adding TF-IDF-discovered candidate terms (e.g. <i>alakh pandey</i>, <i>mathongo</i>, <i>competishun</i>) to the
-dictionary changed no tuning query, so it is switched off (<code>TFIDF_CANDIDATES = 0</code>); the salience filter is what the
-hybrid uses.</p>
+<p class="small">Adding TF-IDF-discovered candidate terms (<i>alakh pandey</i>, <i>mathongo</i>, <i>competishun</i>) changed no tuning
+query, so it is off.</p>
+
+<h3>2.13 Limitations and next steps</h3>
+<ul>
+<li>The pair grades and relevance labels were made by Claude (an LLM); a human review of a sample would make them more reliable.</li>
+<li>Some kept expansions are still debatable: <i>ncert → hc verma, rd sharma</i> (other books), <i>percentile → score</i>.</li>
+<li>Expansion is query-independent: "boards" always adds "cbse", even when a student means a state board.</li>
+<li>Seeds are hand-picked; new slang (e.g. new coaching batches) needs a new seed or a retrain.</li>
+<li>The data ends in August 2022, so newer terms are missing until the corpus is updated.</li>
+<li>Next steps: per-category thresholds, judging more expansions by hand, and letting the semantic model veto expansions that move
+the query's sentence embedding too far.</li>
+</ul>
 </section>
 
 <section class="break">
