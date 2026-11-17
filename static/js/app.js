@@ -269,6 +269,20 @@ async function loadEvaluationData() {
 
         // 2. Per-Query breakdown (using the proposed model)
         const proposedModel = data.models_evaluated[data.models_evaluated.length - 1];
+
+        // Metric cards: proposed model, with change vs. the first (baseline) configuration
+        const baseline = data.models_evaluated[0];
+        const delta = key => {
+            const pct = baseline[key] ? (proposedModel[key] - baseline[key]) / baseline[key] * 100 : 0;
+            return `${pct >= 0 ? '+' : ''}${pct.toFixed(1)}% vs ${baseline.config_name}`;
+        };
+        document.getElementById('metric-mrr').innerText = proposedModel.mrr.toFixed(4);
+        document.getElementById('metric-map').innerText = proposedModel.map.toFixed(4);
+        document.getElementById('metric-ndcg').innerText = proposedModel['ndcg@10'].toFixed(4);
+        document.getElementById('metric-latency').innerText = `${proposedModel.avg_latency_ms} ms`;
+        document.getElementById('metric-mrr-desc').innerText = delta('mrr');
+        document.getElementById('metric-map-desc').innerText = delta('map');
+        document.getElementById('metric-ndcg-desc').innerText = delta('ndcg@10');
         const queriesTbody = document.getElementById('queries-table-body');
         queriesTbody.innerHTML = proposedModel.per_query.map(q => `
             <tr>

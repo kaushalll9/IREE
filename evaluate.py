@@ -11,6 +11,8 @@ from typing import Dict, List, Any
 from ranker import BM25SearchEngine
 
 # Standardized Information Needs and Ground Truth Relevance Judgments (Qrels)
+# Judged by pooling (python evaluate.py --pool): the union of every configuration's
+# top-10 per query was assessed against the stated intent from title + body.
 # Graded relevance: 2 = Highly Relevant, 1 = Partially Relevant, 0 = Irrelevant
 BENCHMARK_QUERIES = [
     {
@@ -18,12 +20,24 @@ BENCHMARK_QUERIES = [
         "query": "physics wallah vs unacademy",
         "intent": "Comparison between Physics Wallah and Unacademy platforms for JEE/NEET preparation",
         "qrels": {
+            "qttdqp": 2,  # need advice (phy wallah / unacademy)
+            "vcnzuw": 2,  # Urgent advice
             "u13nyh": 2,  # Physics Wallah vs ATP Star vs Unacademy vs Vedantu vs Allen digital
             "vcqn3x": 2,  # Physics Wallah or Unacademy ??
-            "qttdqp": 2,  # need advice (phy wallah / unacademy)
-            "u57f49": 1,  # Unacademy vs PW
-            "tye64g": 1,  # Physics Wallah test series
-            "q2311f": 1   # Online coaching recommendations
+            "vgcmru": 2,  # Allen / Unacademy / Reliable / Physics wallah which to choose?
+            "ueh9xe": 2,  # Which is better for 11th class student physics wallah vs un vs YouTube
+            "wdjrrg": 2,  # Unacademy Atoms or JEE Wallah
+            "u6enai": 1,  # Physics Wallah for Advanced?
+            "sepacn": 1,  # Physics Wallah or Physics Galaxy for Neet physics?
+            "uwttyl": 1,  # Physics Wallah final reply to Unacademy
+            "p6vuaf": 1,  # jee wallah vs physics galaxy checkilst
+            "wbyki5": 1,  # khan sir vs phyjics wallah
+            "ntfsp2": 1,  # Arjuna Batch -PW
+            "s4imhw": 0,  # Why is Physics Wallah hated?
+            "rj2dsg": 0,  # GOC Advice Please
+            "tq4ghv": 0,  # Are Pogi, Physics Wallah, Unacademy, Mohit Tyagi Memes actually funny?
+            "uytn1f": 0,  # Physics Wallah
+            "ujwu33": 0  # Mhmm Physics Wallah
         }
     },
     {
@@ -32,11 +46,19 @@ BENCHMARK_QUERIES = [
         "intent": "Recommendations for JEE/NEET organic chemistry theory and problem-solving books",
         "qrels": {
             "v37tm3": 2,  # best book for organic chemistry theory
-            "u7y6za": 2,  # Best objective book for Chemistry
+            "wdj4oc": 2,  # Organic Chemistry
+            "u7y6za": 2,  # Best objective book for Chemistry (Physical, Organic, Inorganic) to Cr
+            "m9nluq": 2,  # Book for Organic chemistry
+            "u8b099": 2,  # ORGANIC CHEMISTRY (JEE)
+            "w4jq5w": 2,  # Replica Blaci book for JEE or MS Chouhan Sir book for advance for orga
+            "t32r04": 2,  # SUGGEST ORGANIC CHEMISTRY THEORY BOOK
             "ufb2w3": 2,  # Which is the best reference book for organic chemistry neet?
-            "u40a8x": 1,  # MS Chouhan vs Himanshu Pandey
-            "t9p11z": 1,  # Chemistry book recommendations
-            "q02a9b": 1   # Books for JEE organic
+            "qieg1k": 2,  # Book recommendations for organic chemistry?
+            "w0g7ye": 1,  # Organic chemistry
+            "wai6fl": 1,  # Best Books for Neet+Boards
+            "qgaqen": 1,  # Best way to learn Organic chemistry from scratch?
+            "pz97fm": 0,  # Organic chemistry
+            "o7teuq": 0  # Best book for physical chemistry?
         }
     },
     {
@@ -46,10 +68,16 @@ BENCHMARK_QUERIES = [
         "qrels": {
             "wbr1xm": 2,  # Drop in Marks vs Percentile vs Rank
             "vl6p8q": 2,  # marks vs percentile
-            "vpm9c3": 2,  # jee mains 2022 percentile vs rank
-            "vew17q": 1,  # 24th shift 1 percentile batao
-            "w6x01a": 1,  # Percentile calculation
-            "uyy88v": 1   # Expected percentile at 150 marks
+            "ubhftk": 2,  # Those who know about percentile vs marks
+            "vwdiza": 2,  # marks vs percentile
+            "we9n1g": 2,  # session 1 marks vs percentile
+            "wcnjdd": 2,  # Tit le
+            "vw9vlu": 2,  # 28 S2 ka crazy Marks vs Percentile
+            "w177lb": 2,  # marks vs percentile
+            "v5dbyp": 2,  # What is going to be the expected marks vs percentile this year? {JEE M
+            "visyen": 2,  # Can someone give me a legit "marks vs percentile sheet" for JEE 2022?
+            "vpm9c3": 1,  # jee mains 2022 percentile vs rank
+            "vvzt4o": 1  # MARKS VS PERCENTILE batao
         }
     },
     {
@@ -58,10 +86,19 @@ BENCHMARK_QUERIES = [
         "intent": "Reviews, feedback, or difficulty comparison of Allen leader/major test series",
         "qrels": {
             "twr9n9": 2,  # How's Allen leader test series for class 12.
-            "sx1yuh": 2,  # Has anyone taken this allen leader test series or heard anything about it
-            "v8boga": 1,  # Mathongo Test Series Review for JEEM 2022
-            "uh721w": 1,  # Allen nurture test series difficulty
-            "t018aa": 1   # Test series comparison
+            "tpp7hw": 2,  # ALLEN TEST SERIES (JEE)
+            "ugt82d": 2,  # Allen Test Series NEET
+            "rxlwkp": 2,  # Wanted to ask about this allen online test series...
+            "sx1yuh": 2,  # Has anyone taken this allen leader test series or heard anything about
+            "vmahre": 1,  # ALLEN TEST SERIES
+            "sup6pu": 1,  # Allen
+            "w68d98": 1,  # How many ppl do u think is does Allen test series for adv?
+            "v8boga": 0,  # Mathongo Test Series Review for JEEM 2022
+            "sutrj1": 0,  # Allen 2023 test series
+            "svf1k6": 0,  # Test Series
+            "ur3o3j": 0,  # ALLEN TEST SERIES
+            "w3rf1t": 0,  # Allen Test Series
+            "tq8k0y": 0  # URGENT REVIEW BOIZZ......... Mathongo jee adv test series
         }
     },
     {
@@ -71,9 +108,20 @@ BENCHMARK_QUERIES = [
         "qrels": {
             "uvyblk": 2,  # DC Pandey VS HC VERMA
             "ur0zb7": 2,  # DC Pandey vs HC Verma for theory
+            "tyejuf": 2,  # Weak in physics. After doing hc Verma should I refer to other books li
+            "s6415s": 2,  # Hcv or dc pandey for neet
             "pf71kf": 1,  # Does HC Verma skip over a lot of theory?
-            "s111zb": 1,  # Physics problem books comparison
-            "rw02cc": 1   # Concepts of Physics HC Verma review
+            "vmr2cz": 1,  # Is HC Verma theory sufficient for 12th and JEE
+            "u3lz9l": 1,  # HC VERMA FOR NEET
+            "kfmr9h": 1,  # Do we need to solve HC Verma for NEET 2021 to get a 150+ score?
+            "olykg5": 1,  # Is hc verma enough for jee mains
+            "vf1n3t": 1,  # Should I solve HC Verma if I am preparing for NEET ?
+            "qoqeca": 1,  # Should I go for DC Pandey?
+            "rlfdby": 1,  # How is hc verma book
+            "tpghz8": 0,  # Are PG Books Enough for JEE Mains & Advanced level Physics?
+            "v3w8ib": 0,  # Study sequence for a chapter in physics
+            "qq2jx0": 0,  # Hc Verma win padmashree ,alakh pandey sir win ballon d'or
+            "sxpizw": 0  # Not Able to Solve HC Verma!
         }
     },
     {
@@ -81,11 +129,18 @@ BENCHMARK_QUERIES = [
         "query": "maths dropper strategy",
         "intent": "Advice and study schedules for droppers struggling with or targeting JEE Mathematics",
         "qrels": {
-            "ttksmg": 2,  # Make a Dropper strategy
-            "w4fu3t": 2,  # droppers strategy required
-            "vv012n": 2,  # Strategy for JEE Main maths
-            "u119ab": 1,  # Dropper syllabus completion
-            "rk001x": 1   # Maths priority chapters
+            "oobtq9": 2,  # Dropper jee 2022 not being able to do maths problems
+            "ttksmg": 1,  # Make a Dropper strategy
+            "ok16c4": 1,  # JEE 2022 droppers assemble.
+            "w4fu3t": 1,  # droppers strategy required
+            "wa4gol": 1,  # 2023
+            "vv012n": 1,  # Strategy for JEE Main maths
+            "vpsx4j": 1,  # Jee Main 2022 Maths
+            "vl4ikh": 1,  # JEE droppers for 23, what's your strategy/approach for the upcoming ye
+            "we11e9": 1,  # dropper maths frim baeics
+            "sbjuqc": 0,  # Block Strategy UwU
+            "t4tf1z": 0,  # Doubt regarding block strategy from Ashish sir
+            "w5rzwo": 0  # Not a Strategy Video 🗿🗿🗿
         }
     },
     {
@@ -93,11 +148,19 @@ BENCHMARK_QUERIES = [
         "query": "neet 600 marks government medical college",
         "intent": "Possibility and cutoffs for securing a government MBBS seat with 600 marks in NEET",
         "qrels": {
-            "ts2sbg": 2,  # NEET medical colleges cutoff
-            "u7vh7a": 2,  # How many seats in government medical colleges
-            "tyw36d": 2,  # How hard is it to get into a government medical college?
-            "vn100z": 1,  # NEET AIQ 600 marks college list
-            "sq90aa": 1   # State quota cutoffs 600
+            "u7vh7a": 2,  # How many seats in government medical colleges for general category stu
+            "sqp487": 2,  # Need NEET help please
+            "sd0clv": 2,  # Does anyone over here know how much one needs to generally score in NE
+            "w25s5m": 2,  # Neet 600+ marks pe kya milega
+            "w2wqqs": 2,  # How much marks & rank in NEET is required for any government college i
+            "w6sk91": 1,  # Kuchch ho sakta hai kya ?
+            "ts2sbg": 1,  # NEET medical colleges cutoff
+            "tyw36d": 1,  # How hard is it to get into a government medical college?
+            "vl3t50": 1,  # 600+ NEET (KMC MANIPAL)
+            "sgr73e": 0,  # Neet 2022 450 marks possible?
+            "rnnnmx": 0,  # AIIMS AND ALL MEDICAl KALEJ are FAKE!!!!!!!!!!!!!!!!!!!! (With Proof)
+            "w1tu9w": 0,  # private medical colleges
+            "v348x9": 0  # How was medical college entrance before NEET?
         }
     },
     {
@@ -106,10 +169,19 @@ BENCHMARK_QUERIES = [
         "intent": "Advice for students whose mock scores plateaued or are not improving",
         "qrels": {
             "sq2b10": 2,  # Mock test score is not improving
+            "ufe885": 2,  # Stuck at 150
             "uum5bu": 2,  # Jeetards scoring 150+ in mocks, how to improve?
-            "rrrfmi": 1,  # NTA Mock test scores
-            "t25ams": 1,  # how much are you guys scoring in your mock tests
-            "w991ab": 1   # Plateaud at 130 marks help
+            "vyvm0g": 1,  # how much are you guyz scoring in mocks for neet
+            "puep0g": 1,  # Mock test are messing me up!
+            "vdgih5": 1,  # For those who've taken ALLEN's BITSAT Mock test
+            "rrrfmi": 0,  # NTA Mock test scores
+            "u4yga7": 0,  # NTA MOCK TEST
+            "rrq1oq": 0,  # Mock Test Scores??
+            "v053zw": 0,  # Did anyone start giving mocks for Bitsat??
+            "qg6h6b": 0,  # What score are you getting in kvpy mock tests
+            "qg80uw": 0,  # What score are you getting in kvpy mock tests.
+            "syfic3": 0,  # JEE 22 Mock test scores
+            "vy24c2": 0  # Is 70 a good score by random marking in JEE mock tests?
         }
     },
     {
@@ -119,9 +191,18 @@ BENCHMARK_QUERIES = [
         "qrels": {
             "ifib7f": 2,  # How was your hostel food?
             "ifi9fm": 2,  # Rate your hostel food out of 10?
-            "rciayu": 2,  # Avg kota Hostel
-            "uk109x": 1,  # Kota mess food reality
-            "sm011z": 1   # Living in Kota survival guide
+            "rciayu": 2,  # Avg kota Hostel (I was not in the video)
+            "wed70a": 2,  # Hostel life day 2 Update
+            "wdayhx": 1,  # hostel guide..
+            "qye2ux": 1,  # Hostel Life
+            "w46rft": 1,  # Which is the best hostel in Kota?
+            "wcpa8f": 1,  # Hostel survival tips!!
+            "r8lz7r": 1,  # STUDY SPACE @KOTA HOSTEL
+            "vqanx6": 1,  # my Luxury Hostel back when I was in Kota 🥲
+            "vqao0c": 1,  # my Luxury Hostel back when I was in Kota 🥲
+            "vrvo4c": 0,  # Kota query?idk title
+            "sal2vv": 0,  # Hidden Kota hostel talent show
+            "qf94lr": 0  # Kota Hostels After yesterday's match :) (p.s. they are not celebrating
         }
     },
     {
@@ -129,11 +210,22 @@ BENCHMARK_QUERIES = [
         "query": "iit bombay cse cutoff rank",
         "intent": "Cutoff ranks, closing ranks, and percentiles required for Computer Science at IIT Bombay",
         "qrels": {
-            "vv4mil": 2,  # IIT BOMBAY CSE pakka ab 🗿
-            "n6u296": 1,  # IIT Bombay here I come
-            "qq1t2y": 1,  # IIT BOMBAY MOTIVASUN 🥵
-            "tl001a": 1,  # JEE Advanced closing rank IIT Bombay
-            "rk999c": 1   # Opening and closing ranks 2021
+            "s6xfhw": 2,  # How to know the rank required for IIT/NIT?
+            "prubmb": 2,  # IIT cutoff list?
+            "q9uwyt": 1,  # Ok gays I might have a chance of bombay cse
+            "vv4mil": 0,  # IIT BOMBAY CSE pakka ab 🗿
+            "w0m8bu": 0,  # BITS HYD CSE
+            "wco4b2": 0,  # MIT CUTOFF
+            "ir8efd": 0,  # siRiUs query about IIT bombay
+            "vvpy6m": 0,  # SRMJEEE best of all phases ?
+            "o93j5t": 0,  # How can I get into IIT Bombay in these last few months?
+            "q4cmmm": 0,  # If you got the chance i.e. All India Rank 2000. Would you choose IIT K
+            "tc5bf6": 0,  # Why??
+            "n6u296": 0,  # IIT Bombay here I come
+            "qq1t2v": 0,  # IIT BOMBAY MOTIVASUN 🥵
+            "qq1t2y": 0,  # IIT BOMBAY MOTIVASUN 🥵
+            "txrjzs": 0,  # IIT Bombay I'm cuming for u😈
+            "vpkafr": 0  # IIT Bombay Motivation
         }
     }
 ]
@@ -251,6 +343,73 @@ def evaluate_configuration(engine: BM25SearchEngine, config_name: str, config_kw
     }
     return summary
 
+# Define 4 configurations for ablation study:
+CONFIGURATIONS = [
+    {
+        "name": "Standard BM25 (Unfielded)",
+        "kwargs": {
+            "k1": 1.2,
+            "w_title": 1.0,
+            "w_body": 1.0,
+            "use_engagement_boost": False
+        }
+    },
+    {
+        "name": "BM25F (Field-Weighted: Title 2.5x)",
+        "kwargs": {
+            "k1": 1.2,
+            "w_title": 2.5,
+            "w_body": 1.0,
+            "use_engagement_boost": False
+        }
+    },
+    {
+        "name": "BM25F + Engagement Boosting",
+        "kwargs": {
+            "k1": 1.2,
+            "w_title": 2.5,
+            "w_body": 1.0,
+            "use_engagement_boost": True
+        }
+    },
+    {
+        "name": "BM25F + Engagement + Domain Expansion (Proposed Model)",
+        "kwargs": {
+            "k1": 1.2,
+            "w_title": 2.5,
+            "w_body": 1.0,
+            "use_engagement_boost": True,
+            "expand": True
+        }
+    }
+]
+
+
+
+def validate_qrels(engine: BM25SearchEngine):
+    """Every judged doc must exist in the index, or the metrics are silently wrong."""
+    known = {m["doc_id"] for m in engine.metadata}
+    missing = [(q["query_id"], d) for q in BENCHMARK_QUERIES for d in q["qrels"] if d not in known]
+    if missing:
+        raise ValueError(f"Qrels reference {len(missing)} doc_ids not in the corpus: {missing}")
+
+
+def print_pool(engine: BM25SearchEngine, depth: int = 10):
+    """
+    Pooling (TREC-style): union of the top-`depth` results of every configuration.
+    Prints each pooled doc with its current judgment ('?' = unjudged) so the
+    pool can be assessed and added to BENCHMARK_QUERIES.
+    """
+    for item in BENCHMARK_QUERIES:
+        pool = {}
+        for cfg in CONFIGURATIONS:
+            for doc in engine.search(query=item["query"], top_k=depth, **cfg["kwargs"])["results"]:
+                pool.setdefault(doc["doc_id"], doc)
+        print(f"\n## {item['query_id']} {item['query']!r} - {item['intent']}")
+        for did, doc in pool.items():
+            grade = item["qrels"].get(did, "?")
+            print(f"  {grade} {did} | {doc['title'][:90]} | {doc['snippet'][:120]}")
+
 def run_evaluation_suite(index_dir: str = "index", output_dir: str = "evaluation"):
     """Runs comparative evaluation across 4 ranking configurations and writes benchmark reports."""
     os.makedirs(output_dir, exist_ok=True)
@@ -262,49 +421,10 @@ def run_evaluation_suite(index_dir: str = "index", output_dir: str = "evaluation
     engine = BM25SearchEngine(index_dir=index_dir)
     engine.load_index()
     
-    # Define 4 configurations for ablation study:
-    configurations = [
-        {
-            "name": "Standard BM25 (Unfielded)",
-            "kwargs": {
-                "k1": 1.2,
-                "w_title": 1.0,
-                "w_body": 1.0,
-                "use_engagement_boost": False
-            }
-        },
-        {
-            "name": "BM25F (Field-Weighted: Title 2.5x)",
-            "kwargs": {
-                "k1": 1.2,
-                "w_title": 2.5,
-                "w_body": 1.0,
-                "use_engagement_boost": False
-            }
-        },
-        {
-            "name": "BM25F + Engagement Boosting",
-            "kwargs": {
-                "k1": 1.2,
-                "w_title": 2.5,
-                "w_body": 1.0,
-                "use_engagement_boost": True
-            }
-        },
-        {
-            "name": "BM25F + Engagement + Domain Expansion (Proposed Model)",
-            "kwargs": {
-                "k1": 1.2,
-                "w_title": 2.5,
-                "w_body": 1.0,
-                "use_engagement_boost": True,
-                "expand": True
-            }
-        }
-    ]
-    
+    validate_qrels(engine)
+
     results = []
-    for cfg in configurations:
+    for cfg in CONFIGURATIONS:
         print(f"\n[+] Evaluating Model: {cfg['name']}...")
         summary = evaluate_configuration(engine, cfg["name"], cfg["kwargs"])
         results.append(summary)
@@ -352,11 +472,12 @@ def generate_markdown_report(results: List[Dict[str, Any]], filepath: str):
     for r in results:
         lines.append(f"| **{r['config_name']}** | {r['mean_p@1']} | {r['mean_p@5']} | {r['mean_p@10']} | {r['mrr']} | {r['map']} | {r['ndcg@10']} | {r['avg_latency_ms']} ms |")
     
-    lines.append("\n### Key Observations & Insights:")
-    lines.append("1. **Field-Weighted BM25F vs Standard BM25**: Giving higher weight to the `title` field ($w_{\\text{title}}=2.5$) significantly improves early precision (P@1 and P@5) and NDCG@10, because Reddit post titles directly state the specific user question.")
-    lines.append("2. **Engagement Boosting**: Community upvotes and discussion activity act as an effective tiebreaker, lifting authoritative recommendations and comprehensive guides.")
-    lines.append("3. **Real-time Efficiency**: All models maintain sub-10ms query latencies across the entire corpus, meeting production search standards.")
-    
+    lines.append("\n### Key Observations (computed from this run):")
+    for label, key in [("MAP", "map"), ("NDCG@10", "ndcg@10"), ("P@1", "mean_p@1"), ("P@5", "mean_p@5")]:
+        best = max(results, key=lambda r: r[key])
+        lines.append(f"- **Best {label}**: {best['config_name']} ({best[key]})")
+    lines.append(f"- **Latency**: {min(r['avg_latency_ms'] for r in results)}-{max(r['avg_latency_ms'] for r in results)} ms per query across all configurations.")
+    lines.append("- With only 10 queries, differences of a few points are within noise; treat them as indicative, not significant.")
     lines.append("\n---\n")
     lines.append("## 2. Per-Query Breakdown (Proposed Model: BM25F + Engagement + Domain Expansion)\n")
     lines.append("| Query ID | Query | P@1 | P@5 | MRR | MAP | NDCG@10 | Latency |")
@@ -370,9 +491,19 @@ def generate_markdown_report(results: List[Dict[str, Any]], filepath: str):
     lines.append("- **Test Queries**: 10 hand-curated queries covering Coaching Comparisons, Book Suggestions, Score Cutoffs, Dropper Strategies, Test Series, and Mental Wellbeing.")
     lines.append("- **Metrics Defined**: Precision@K ($K=1, 3, 5, 10$), Mean Reciprocal Rank (MRR), Mean Average Precision (MAP), and Normalized Discounted Cumulative Gain (NDCG@10).")
     lines.append("- **Relevance Assessments (Qrels)**: Graded 0 (Irrelevant), 1 (Partially Relevant), 2 (Highly Relevant).")
+    lines.append("- **Pooling**: judgments cover the union of every configuration's top-10 per query (`python evaluate.py --pool`), so each evaluated ranking is fully judged in its top 10. Unjudged documents count as irrelevant.")
 
     with open(filepath, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
 
 if __name__ == "__main__":
-    run_evaluation_suite()
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--pool", action="store_true", help="print the judgment pool instead of evaluating")
+    args = ap.parse_args()
+    if args.pool:
+        e = BM25SearchEngine()
+        e.load_index()
+        print_pool(e)
+    else:
+        run_evaluation_suite()
