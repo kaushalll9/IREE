@@ -16,9 +16,9 @@ app = Flask(__name__)
 # Initialize search engine in memory
 engine = BM25SearchEngine(index_dir="index")
 engine.load_index()
-bot = Chatbot(engine=engine)
 semantic = SemanticSearchEngine(engine, index_dir="index")
 semantic.load()  # loads cached embeddings; rebuilds only if corpus or model changed
+bot = Chatbot(engine=engine, semantic=semantic)
 
 # Pre-extract available flairs for the filter dropdown
 FLAIR_COUNTS = {}
