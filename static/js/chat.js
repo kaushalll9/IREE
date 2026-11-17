@@ -94,7 +94,13 @@ async function askChat(preset) {
             ${expanded.length ? `<p class="expanded-note">Also searched: ${expanded.map(escapeHtml).join(', ')}</p>` : ''}
             ${(data.sources || []).length ? `
                 <div class="sources-title">Sources</div>
-                <ol class="chat-sources">${data.sources.map((s, i) => renderSource(s, i + 1, msgId)).join('')}</ol>` : ''}`;
+                <ol class="chat-sources">${data.sources.map((s, i) => renderSource(s, i + 1, msgId)).join('')}</ol>` : ''}
+            <div class="chat-feedback" id="fb-${msgId}">
+                <span>Did this answer your question?</span>
+                <button type="button" onclick="feedbackSolved(${msgId}, true)">Yes</button>
+                <button type="button" onclick="feedbackSolved(${msgId}, false)">No</button>
+            </div>`;
+        feedbackState[msgId] = { question, mode: data.mode, solved: null };
     } catch (err) {
         pending.classList.remove('pending');
         pending.classList.add('error');
@@ -102,5 +108,33 @@ async function askChat(preset) {
     } finally {
         input.disabled = btn.disabled = false;
         input.focus();
+    }
+}
+
+// Answer feedback feeds the HSES "user usefulness" score (POST /api/feedback, one record per answer).
+const feedbackState = {};
+
+function feedbackSolved(msgId, solved) {
+    feedbackState[msgId].solved = solved;
+    document.getElementById(`fb-${msgId}`).innerHTML = `
+        <span>Thanks! How useful was it?</span>
+        ${[1, 2, 3, 4, 5].map(r => `<button type="button" aria-label="Rate ${r} of 5" onclick="sendFeedback(${msgId}, ${r})">${r}</button>`).join('')}
+        <button type="button" onclick="sendFeedback(${msgId}, null)">Skip</button>`;
+}
+
+async function sendFeedback(msgId, rating) {
+    const st = feedbackState[msgId];
+    const box = document.getElementById(`fb-${msgId}`);
+    try {
+        const resp = await fetch('/api/feedback', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ question: st.question, mode: st.mode, solved: st.solved, rating }),
+        });
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        box.innerHTML = '<span>Feedback saved. Thank you!</span>';
+        evaluationDataLoaded = false;  // refresh the dashboard's usefulness numbers next time it opens
+    } catch (err) {
+        box.innerHTML = `<span>Couldn't save feedback (${escapeHtml(err.message)}).</span>`;
     }
 }

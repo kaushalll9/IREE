@@ -126,7 +126,7 @@ def build_index(corpus_path: str = "data/cleaned_corpus.jsonl", index_dir: str =
                 "num_comments": int(record.get("num_comments", 0)),
                 "flair": record.get("flair", "General"),
                 "date": record.get("date", ""),
-                "url": record.get("url", ""),
+                "url": record.get("permalink") or record.get("url", ""),  # thread link, not the linked image/video
                 "len_title": len_title,
                 "len_body": len_body,
                 "len_total": len_total

@@ -18,6 +18,7 @@ Usage:
 
 import os
 import re
+import html
 import json
 import math
 from concurrent.futures import ThreadPoolExecutor
@@ -72,6 +73,7 @@ def fetch_comments(post_id, timeout=10):
 MD_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 # Replies that aren't answers: counter-questions, thanks, "same here".
 # ponytail: keyword heuristic; a trained answer classifier would do better.
+MIN_REPLY_RELEVANCE = 0.20  # cosine floor: memes/polls scored <= 0.15, real answers >= 0.22 on sampled questions
 CHATTER_RE = re.compile(r"\?\s*$|^\s*(thanks|thank you|thx)\b|\bsame (case|here|problem)\b", re.I)
 
 
@@ -88,7 +90,7 @@ def best_replies(comments, n=2, max_chars=400, min_score=2, min_chars=30):
     good.sort(key=lambda c: c.get("score", 0), reverse=True)
     out = []
     for c in good[:n]:
-        body = " ".join(MD_LINK_RE.sub(r"\1", c["body"]).split())
+        body = " ".join(html.unescape(MD_LINK_RE.sub(r"\1", c["body"])).split())  # Reddit sends &gt; etc.
         out.append({"text": body[:max_chars] + ("..." if len(body) > max_chars else ""),
                     "score": c.get("score", 0), "author": c.get("author", "")})
     return out
@@ -235,10 +237,27 @@ class Chatbot:
         with_comments = [s for s in sources if s["comments"] > 0][:3]
         with ThreadPoolExecutor(max_workers=3) as pool:
             for s, comments in zip(with_comments, pool.map(fetch_comments, (s["doc_id"] for s in with_comments))):
-                s["replies"] = best_replies(comments)
+                s["replies"] = best_replies(comments, n=6)
+        self.rank_replies(question, sources)
         answer = self.extractive_answer(sources)
         return {"mode": "community", "answer": answer, "sources": sources,
                 "expanded_terms": res.get("expanded_terms", {}), "generator": "extractive"}
+
+    def rank_replies(self, question, sources, per_thread=2):
+        """Keep the replies that actually answer the question: cosine similarity to it with the
+        same multilingual model as search, so Hinglish replies to English questions still match."""
+        replies = [r for s in sources for r in s.get("replies", [])]
+        if not replies:
+            return
+        emb = self.semantic.model.encode([question] + [r["text"] for r in replies],
+                                         normalize_embeddings=True, convert_to_numpy=True)
+        for r, sim in zip(replies, emb[1:] @ emb[0]):
+            r["relevance"] = round(float(sim), 3)
+        for s in sources:
+            if "replies" in s:
+                # ponytail: fixed floor picked by inspecting ~30 replies; tune on judged replies if reply judgments are added
+                kept = [r for r in s["replies"] if r["relevance"] >= MIN_REPLY_RELEVANCE]
+                s["replies"] = sorted(kept, key=lambda r: r["relevance"], reverse=True)[:per_thread]
 
     @staticmethod
     def extractive_answer(sources):
@@ -252,8 +271,12 @@ class Chatbot:
         if not replies:
             return "Most relevant r/JEENEETards discussions:\n" + "\n".join(
                 f"- {s['title']} [{i}]" for i, s in enumerate(sources, start=1))
-        # Earlier (more relevant) threads first, then upvotes within the pool.
-        replies.sort(key=lambda x: (x[0] - 1) - math.log10(1 + max(x[1]["score"], 0)))
+        # Most on-topic replies first (semantic relevance to the question), upvotes as a small tie-breaker;
+        # without relevance scores fall back to thread rank + upvotes.
+        if all("relevance" in r for _, r in replies):
+            replies.sort(key=lambda x: -(x[1]["relevance"] + 0.05 * math.log10(1 + max(x[1]["score"], 0))))
+        else:
+            replies.sort(key=lambda x: (x[0] - 1) - math.log10(1 + max(x[1]["score"], 0)))
         n = len({i for i, _ in replies})
         lines = [f"Here's what r/JEENEETards says ({n} discussion{'s' if n > 1 else ''}):"]
         lines += [f"- \"{r['text']}\" ({r['score']} upvotes) [{i}]" for i, r in replies[:4]]

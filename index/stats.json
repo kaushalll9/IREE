@@ -5,7 +5,7 @@
   "avg_doc_len": 20.57,
   "avg_title_len": 5.54,
   "avg_body_len": 15.03,
-  "build_time_seconds": 11.17,
+  "build_time_seconds": 5.32,
   "postings_file": "index/postings.pkl.gz",
   "metadata_file": "index/metadata.json.gz"
 }

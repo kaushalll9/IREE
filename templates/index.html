@@ -187,118 +187,107 @@
             </section>
         </main>
 
-        <!-- TAB 2: Phase 4 IR Evaluation Dashboard -->
+        <!-- TAB 3: Evaluation dashboard (HSES) -->
         <main id="eval-view" class="view-panel">
             <section class="eval-hero">
-                <h2>Phase 4: Information Retrieval Evaluation & Benchmark Suite</h2>
-                <p class="eval-subtitle">
-                    Comprehensive comparative analysis of retrieval performance on the <code>r/JEENEETards</code> corpus across 10 standardized information needs with graded relevance assessments.
+                <h2>Hybrid Search Evaluation Score (HSES)</h2>
+                <p class="eval-subtitle" id="eval-subtitle">Loading evaluation results…</p>
+                <p class="eval-exports">
+                    Export:
+                    <a href="/api/evaluation/export/evaluation_results.json">JSON</a> ·
+                    <a href="/api/evaluation/export/model_comparison.csv">Model CSV</a> ·
+                    <a href="/api/evaluation/export/per_query.csv">Per-query CSV</a> ·
+                    <a href="/api/evaluation/export/evaluation_report.md">Markdown report</a>
                 </p>
             </section>
 
-            <!-- Key Metrics Cards -->
-            <section class="metrics-grid">
-                <div class="metric-card highlight">
-                    <span class="metric-title">Mean Reciprocal Rank (MRR)</span>
-                    <span class="metric-val" id="metric-mrr">–</span>
-                    <span class="metric-desc" id="metric-mrr-desc">Proposed model</span>
-                </div>
-                <div class="metric-card highlight">
-                    <span class="metric-title">Mean Average Precision (MAP)</span>
-                    <span class="metric-val" id="metric-map">–</span>
-                    <span class="metric-desc" id="metric-map-desc">Proposed model</span>
-                </div>
-                <div class="metric-card highlight">
-                    <span class="metric-title">NDCG @ 10</span>
-                    <span class="metric-val" id="metric-ndcg">–</span>
-                    <span class="metric-desc" id="metric-ndcg-desc">Proposed model</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-title">Avg Query Latency</span>
-                    <span class="metric-val" id="metric-latency">–</span>
-                    <span class="metric-desc">Per query, proposed model</span>
-                </div>
-            </section>
-
-            <!-- Model Comparison Table -->
-            <section class="eval-card">
-                <div class="card-header">
-                    <h3>🏆 Comparative Model Performance & Ablation Study</h3>
-                    <span class="card-tag">10 Queries • Graded Qrels</span>
+            <section class="eval-card hses-card">
+                <div class="hses-score-block">
+                    <span class="metric-title">HSES · deployed system</span>
+                    <span class="hses-score" id="hses-score">–</span>
+                    <span class="metric-desc" id="hses-status"></span>
                 </div>
                 <div class="table-responsive">
-                    <table class="eval-table" id="models-comparison-table">
-                        <thead>
-                            <tr>
-                                <th>Ranking Configuration</th>
-                                <th>P@1</th>
-                                <th>P@5</th>
-                                <th>P@10</th>
-                                <th>MRR</th>
-                                <th>MAP</th>
-                                <th>NDCG@10</th>
-                                <th>Avg Latency</th>
-                            </tr>
-                        </thead>
-                        <tbody id="models-table-body">
-                            <!-- Populated dynamically via JS -->
-                        </tbody>
+                    <table class="eval-table">
+                        <thead><tr><th>Component</th><th>Weight</th><th>Score (0–1)</th><th></th><th>Points</th></tr></thead>
+                        <tbody id="hses-components"></tbody>
                     </table>
                 </div>
             </section>
 
-            <!-- Per-Query Evaluation Breakdown -->
+            <section class="metrics-grid" id="eval-metric-cards"></section>
+
             <section class="eval-card">
                 <div class="card-header">
-                    <h3>📋 Per-Query Granular Breakdown (Proposed Model)</h3>
-                    <span class="card-tag">Detailed Diagnostics</span>
+                    <h3>Model comparison &amp; ablation</h3>
+                    <span class="card-tag" id="split-tag">Test split</span>
                 </div>
                 <div class="table-responsive">
-                    <table class="eval-table" id="queries-eval-table">
-                        <thead>
-                            <tr>
-                                <th>Query ID</th>
-                                <th>Query Text</th>
-                                <th>P@1</th>
-                                <th>P@5</th>
-                                <th>MRR</th>
-                                <th>MAP</th>
-                                <th>NDCG@10</th>
-                                <th>Latency</th>
-                            </tr>
-                        </thead>
-                        <tbody id="queries-table-body">
-                            <!-- Populated dynamically via JS -->
-                        </tbody>
+                    <table class="eval-table">
+                        <thead><tr><th>System</th><th>NDCG@10</th><th>P@5</th><th>MAP</th><th>MRR</th><th>Recall@10</th>
+                            <th>Success@5</th><th>Judged@10</th><th>P95 latency</th><th>ΔNDCG vs baseline (p)</th><th>Partial HSES</th></tr></thead>
+                        <tbody id="models-table-body"></tbody>
+                    </table>
+                </div>
+                <div class="bar-chart" id="ndcg-chart" aria-label="NDCG@10 by system"></div>
+                <p class="eval-note">p: paired randomization test on per-query NDCG@10. Unjudged documents are skipped rather than counted as irrelevant; Judged@10 shows how much of each top 10 was judged.</p>
+            </section>
+
+            <section class="eval-card">
+                <div class="card-header"><h3>Query robustness (Success@5 by category)</h3></div>
+                <div class="table-responsive">
+                    <table class="eval-table"><thead id="robust-head"></thead><tbody id="robust-body"></tbody></table>
+                </div>
+                <h4 class="sub-heading">Failed queries (deployed system, nothing relevant in top 5)</h4>
+                <ul class="failed-list" id="failed-queries"></ul>
+            </section>
+
+            <section class="eval-card">
+                <div class="card-header"><h3>Word2Vec query expansion</h3><span class="card-tag">System 3 vs 4</span></div>
+                <p class="eval-note" id="expansion-summary"></p>
+                <div class="table-responsive">
+                    <table class="eval-table">
+                        <thead><tr><th>Query</th><th>Added terms</th><th>ΔNDCG@10</th><th>New relevant</th><th>New irrelevant</th><th>Overlap@10</th></tr></thead>
+                        <tbody id="expansion-body"></tbody>
                     </table>
                 </div>
             </section>
 
-            <!-- Qualitative Analysis & Findings -->
             <section class="eval-card">
-                <div class="card-header">
-                    <h3>💡 Theoretical & Empirical Insights</h3>
+                <div class="card-header"><h3>Performance</h3><span class="card-tag" id="perf-device"></span></div>
+                <div class="table-responsive">
+                    <table class="eval-table">
+                        <thead><tr><th>System</th><th>Avg</th><th>P50</th><th>P95</th><th>P99</th></tr></thead>
+                        <tbody id="latency-body"></tbody>
+                    </table>
                 </div>
-                <div class="eval-insights">
-                    <div class="insight-box">
-                        <h4>1. Title Weighting (BM25F) Cuts Both Ways</h4>
-                        <p>
-                            Reddit titles often state the question (<em>"DC Pandey vs HC Verma"</em>), so weighting the title 2.5× improves the graded ordering of results (NDCG@10). But it also promotes bodiless meme posts whose title happens to match (<em>"IIT BOMBAY CSE pakka ab 🗿"</em>), which costs precision at rank 1 against plain BM25.
-                        </p>
-                    </div>
-                    <div class="insight-box">
-                        <h4>2. Role of the Engagement Boosting Factor</h4>
-                        <p>
-                            A subdued logarithmic upvote boost (score × (1 + 0.05·log₁₀(1 + upvotes))) breaks ties toward community-endorsed threads and recovers most of BM25F's MAP loss. Boosting by comment count instead was tested and lowered MAP, so it is not used.
-                        </p>
-                    </div>
-                    <div class="insight-box">
-                        <h4>3. Domain Expansion and Honest Judgments</h4>
-                        <p>
-                            Embedding-based query expansion adds synonyms and slang (<em>hall ticket → admit card</em>, <em>hcv → hc verma</em>). It is neutral on this benchmark, whose queries already match their posts word for word, and helps on vocabulary-mismatch queries. Relevance judgments come from pooling every configuration's top 10; with 10 queries, small differences are within noise.
-                        </p>
-                    </div>
+                <p class="eval-note" id="index-stats"></p>
+            </section>
+
+            <section class="eval-card">
+                <div class="card-header"><h3>Reliability checks</h3></div>
+                <div id="reliability"></div>
+            </section>
+
+            <section class="eval-card">
+                <div class="card-header"><h3>User feedback</h3><span class="card-tag">From the chat tab</span></div>
+                <p class="eval-note" id="usefulness-summary"></p>
+                <ul class="failed-list" id="unsolved-list"></ul>
+            </section>
+
+            <section class="eval-card">
+                <div class="card-header"><h3>Per-query results (deployed system)</h3><span class="card-tag">Error analysis</span></div>
+                <div class="table-responsive">
+                    <table class="eval-table">
+                        <thead><tr><th>ID</th><th>Query</th><th>Category</th><th>Split</th><th>NDCG@10</th><th>P@5</th><th>Success@5</th><th>Judged@10</th></tr></thead>
+                        <tbody id="queries-table-body"></tbody>
+                    </table>
                 </div>
+            </section>
+
+            <section class="eval-card">
+                <div class="card-header"><h3>Evaluation completeness</h3></div>
+                <p class="eval-note" id="completeness"></p>
             </section>
         </main>
 
