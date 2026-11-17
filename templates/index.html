@@ -95,6 +95,9 @@
                             <button id="model-pill-bm25f" class="pill" onclick="setModel('bm25f')">BM25F (Fielded)</button>
                             <button id="model-pill-bm25" class="pill" onclick="setModel('bm25')">Standard BM25</button>
                         </div>
+                        <label class="expand-toggle" title="Add related terms from the embedding-based domain dictionary">
+                            <input type="checkbox" id="expand-toggle" checked onchange="triggerSearch()"> Domain expansion
+                        </label>
                     </div>
 
                     <div class="control-filters">
@@ -136,6 +139,7 @@
                 <div class="status-right" id="query-stems-container">
                     <span class="stem-label">Stems:</span>
                     <span id="query-stems-list"></span>
+                    <span id="query-expanded-list"></span>
                 </div>
             </section>
 

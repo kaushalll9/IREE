@@ -252,7 +252,7 @@ def evaluate_configuration(engine: BM25SearchEngine, config_name: str, config_kw
     return summary
 
 def run_evaluation_suite(index_dir: str = "index", output_dir: str = "evaluation"):
-    """Runs comparative evaluation across 3 ranking models and writes benchmark reports."""
+    """Runs comparative evaluation across 4 ranking configurations and writes benchmark reports."""
     os.makedirs(output_dir, exist_ok=True)
     
     print("\n" + "=" * 75)
@@ -262,7 +262,7 @@ def run_evaluation_suite(index_dir: str = "index", output_dir: str = "evaluation
     engine = BM25SearchEngine(index_dir=index_dir)
     engine.load_index()
     
-    # Define 3 configurations for ablation study:
+    # Define 4 configurations for ablation study:
     configurations = [
         {
             "name": "Standard BM25 (Unfielded)",
@@ -283,12 +283,22 @@ def run_evaluation_suite(index_dir: str = "index", output_dir: str = "evaluation
             }
         },
         {
-            "name": "BM25F + Engagement Boosting (Proposed Model)",
+            "name": "BM25F + Engagement Boosting",
             "kwargs": {
                 "k1": 1.2,
                 "w_title": 2.5,
                 "w_body": 1.0,
                 "use_engagement_boost": True
+            }
+        },
+        {
+            "name": "BM25F + Engagement + Domain Expansion (Proposed Model)",
+            "kwargs": {
+                "k1": 1.2,
+                "w_title": 2.5,
+                "w_body": 1.0,
+                "use_engagement_boost": True,
+                "expand": True
             }
         }
     ]
@@ -348,7 +358,7 @@ def generate_markdown_report(results: List[Dict[str, Any]], filepath: str):
     lines.append("3. **Real-time Efficiency**: All models maintain sub-10ms query latencies across the entire corpus, meeting production search standards.")
     
     lines.append("\n---\n")
-    lines.append("## 2. Per-Query Breakdown (Proposed BM25F + Engagement Model)\n")
+    lines.append("## 2. Per-Query Breakdown (Proposed Model: BM25F + Engagement + Domain Expansion)\n")
     lines.append("| Query ID | Query | P@1 | P@5 | MRR | MAP | NDCG@10 | Latency |")
     lines.append("| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |")
     best_model = results[-1]

@@ -824,3 +824,18 @@ body {
         width: 100%;
     }
 }
+
+.stem-tag.expanded {
+    border-style: dashed;
+    color: var(--text-muted);
+}
+
+.expand-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    cursor: pointer;
+}

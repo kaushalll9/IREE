@@ -12,6 +12,7 @@ import time
 from collections import defaultdict
 from typing import List, Dict, Any, Optional
 from indexer import tokenize
+from domain_dictionary import load_dictionary, expand_query
 
 class BM25SearchEngine:
     def __init__(self, index_dir: str = "index"):
@@ -24,6 +25,7 @@ class BM25SearchEngine:
         self.avg_body_len = 0.0
         self.avg_doc_len = 0.0
         self.idf_cache = {}
+        self.domain_dict = None
         
     def load_index(self):
         """Loads inverted index, metadata, and stats into memory."""
@@ -53,6 +55,9 @@ class BM25SearchEngine:
             self.metadata = json.load(f)
             
         self.idf_cache.clear()
+        self.domain_dict = load_dictionary(os.path.join(self.index_dir, "domain_dictionary.json"))
+        if self.domain_dict is None:
+            print("[!] No domain dictionary found; query expansion disabled (run domain_dictionary.py).")
         print(f"[✓] Index loaded successfully in {time.time() - t0:.2f}s ({self.total_docs:,} docs, {len(self.postings):,} terms).")
 
     def get_idf(self, term: str) -> float:
@@ -86,7 +91,9 @@ class BM25SearchEngine:
         w_body: float = 1.0,
         use_engagement_boost: bool = True,
         filter_flair: Optional[str] = None,
-        min_score: Optional[int] = None
+        min_score: Optional[int] = None,
+        expand: bool = False,
+        expansion_weight: float = 0.5
     ) -> Dict[str, Any]:
         """
         Executes a BM25F search across Title and Body fields.
@@ -108,11 +115,21 @@ class BM25SearchEngine:
                 "results": []
             }
             
+        # 1b. Domain-dictionary query expansion: extra stems at reduced weight
+        #     (expansion_weight x embedding similarity), original stems keep 1.0.
+        term_weights = {stem: 1.0 for stem in query_stems}
+        expanded_terms = {}
+        if expand and self.domain_dict:
+            expanded_terms = expand_query(query, self.domain_dict)
+            for phrase, sim in expanded_terms.items():
+                for stem in tokenize(phrase):
+                    term_weights[stem] = max(term_weights.get(stem, 0.0), expansion_weight * sim)
+
         # 2. Accumulate BM25 scores for candidate documents
         doc_scores = {}
         matched_terms = defaultdict(set)
         
-        for stem in query_stems:
+        for stem, weight in term_weights.items():
             postings_list = self.postings.get(stem)
             if not postings_list:
                 continue
@@ -133,7 +150,7 @@ class BM25SearchEngine:
                 weighted_tf = (w_title * norm_tf_title) + (w_body * norm_tf_body)
                 
                 # Saturation component
-                term_score = idf * ((weighted_tf * (k1 + 1.0)) / (weighted_tf + k1))
+                term_score = weight * idf * ((weighted_tf * (k1 + 1.0)) / (weighted_tf + k1))
                 
                 doc_scores[doc_id] = doc_scores.get(doc_id, 0.0) + term_score
                 matched_terms[doc_id].add(stem)
@@ -142,6 +159,7 @@ class BM25SearchEngine:
             return {
                 "query": query,
                 "stems": query_stems,
+                "expanded_terms": expanded_terms,
                 "total_matches": 0,
                 "latency_ms": round((time.time() - start_time) * 1000, 2),
                 "results": []
@@ -196,6 +214,7 @@ class BM25SearchEngine:
         return {
             "query": query,
             "stems": query_stems,
+            "expanded_terms": expanded_terms,
             "total_matches": len(candidates),
             "latency_ms": latency_ms,
             "results": results
