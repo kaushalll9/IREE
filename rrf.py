@@ -1,0 +1,39 @@
+"""Reciprocal Rank Fusion: RRF(d) = sum_i 1 / (k + rank_i(d)), ranks one-based."""
+
+from typing import Dict, List
+
+
+def rrf_fuse(rankings: Dict[str, List[dict]], k: int = 60) -> List[dict]:
+    """
+    rankings: {method_name: results ordered best-first}, each result a dict with "doc_id".
+    Returns one dict per unique doc, sorted by RRF score desc, carrying the doc's original
+    metadata plus "score" (RRF), "<method>_rank" (None if absent) and "<method>_score".
+    """
+    fused: Dict[str, dict] = {}
+    for method, results in rankings.items():
+        for rank, res in enumerate(results, start=1):
+            doc = fused.get(res["doc_id"])
+            if doc is None:
+                doc = fused[res["doc_id"]] = {**res, "score": 0.0,
+                                              **{f"{m}_rank": None for m in rankings}}
+            doc["score"] += 1.0 / (k + rank)
+            doc[f"{method}_rank"] = rank
+            doc[f"{method}_score"] = res.get("score")
+    # Tie-break on best single rank so equal RRF scores order deterministically.
+    return sorted(fused.values(), key=lambda d: (-d["score"], min(
+        r for r in (d[f"{m}_rank"] for m in rankings) if r is not None)))
+
+
+if __name__ == "__main__":
+    bm25 = [{"doc_id": "a"}, {"doc_id": "b"}, {"doc_id": "c"}]
+    sem = [{"doc_id": "c"}, {"doc_id": "d"}, {"doc_id": "a"}]
+    out = rrf_fuse({"bm25": bm25, "semantic": sem}, k=60)
+    s = {d["doc_id"]: d["score"] for d in out}
+    assert abs(s["a"] - (1 / 61 + 1 / 63)) < 1e-12   # in both lists: both contributions
+    assert abs(s["c"] - (1 / 63 + 1 / 61)) < 1e-12
+    assert abs(s["b"] - 1 / 62) < 1e-12 and abs(s["d"] - 1 / 62) < 1e-12  # single-list docs
+    assert len(out) == len({d["doc_id"] for d in out}) == 4          # no duplicates
+    assert [d["doc_id"] for d in out][:2] == ["a", "c"]               # tie broken by best rank
+    assert out[0]["bm25_rank"] == 1 and out[0]["semantic_rank"] == 3
+    assert next(d for d in out if d["doc_id"] == "d")["bm25_rank"] is None
+    print("rrf ok:", [(d["doc_id"], round(d["score"], 5)) for d in out])

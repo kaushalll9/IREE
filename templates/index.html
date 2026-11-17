@@ -28,7 +28,7 @@
                 </div>
                 <div class="brand-text">
                     <h1>JEE/NEET Assistant</h1>
-                    <span class="badge-corpus" id="corpus-stats-badge">43,116 Docs • BM25F Engine</span>
+                    <span class="badge-corpus" id="corpus-stats-badge">43,116 Docs • BM25F + Semantic Hybrid</span>
                 </div>
             </div>
 
@@ -123,7 +123,9 @@
                     <div class="control-group">
                         <label class="control-label" for="ranking-model-select">Ranking Model:</label>
                         <div class="pill-group" id="ranking-model-pills">
-                            <button id="model-pill-boosted" class="pill active" onclick="setModel('boosted')">BM25F + Engagement (Recommended)</button>
+                            <button id="model-pill-hybrid" class="pill active" onclick="setModel('hybrid')" title="BM25F + Engagement and semantic ranks combined with Reciprocal Rank Fusion (k=60)">Hybrid (BM25 + Semantic, RRF)</button>
+                            <button id="model-pill-semantic" class="pill" onclick="setModel('semantic')" title="Multilingual Sentence Transformer; handles Hinglish / Romanized Hindi">Semantic</button>
+                            <button id="model-pill-boosted" class="pill" onclick="setModel('boosted')">BM25F + Engagement</button>
                             <button id="model-pill-bm25f" class="pill" onclick="setModel('bm25f')">BM25F (Fielded)</button>
                             <button id="model-pill-bm25" class="pill" onclick="setModel('bm25')">Standard BM25</button>
                         </div>
