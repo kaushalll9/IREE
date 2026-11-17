@@ -3,7 +3,7 @@
  * Manages search interactions, keyword highlighting, and evaluation dashboard rendering.
  */
 
-let currentModel = 'boosted';
+let currentModel = 'hybrid';
 let searchDebounceTimeout = null;
 let evaluationDataLoaded = false;
 
@@ -19,7 +19,7 @@ async function initApp() {
         populateFlairs(data.flairs);
         if (data.stats && data.stats.total_docs) {
             document.getElementById('corpus-stats-badge').innerText = 
-                `${data.stats.total_docs.toLocaleString()} Docs • BM25F Engine`;
+                `${data.stats.total_docs.toLocaleString()} Docs • BM25F + Semantic Hybrid`;
         }
     } catch (e) {
         console.error('Failed to load metadata:', e);
@@ -188,7 +188,8 @@ function renderResults(data) {
                 <div class="card-top">
                     <span class="rank-pill">#${item.rank}</span>
                     <span class="flair-pill">${escapeHtml(item.flair || 'General')}</span>
-                    <span class="score-badge">BM25 Score: ${item.score}</span>
+                    <span class="score-badge" title="${escapeHtml(scoreTooltip(item))}">${SCORE_LABELS[item.method] || 'BM25 Score'}: ${item.score}</span>
+                    ${item.method === 'hybrid' ? `<span class="flair-pill">BM25 ${item.bm25_rank ? '#' + item.bm25_rank : '–'} · Semantic ${item.semantic_rank ? '#' + item.semantic_rank : '–'}</span>` : ''}
                 </div>
                 <h2 class="result-title">
                     <a href="${item.url}" target="_blank" rel="noopener noreferrer">${titleHighlighted}</a>
@@ -206,6 +207,14 @@ function renderResults(data) {
             </article>
         `;
     }).join('');
+}
+
+const SCORE_LABELS = {hybrid: 'Hybrid RRF Score', semantic: 'Semantic Cosine'};
+
+function scoreTooltip(item) {
+    if (item.method !== 'hybrid') return `Method: ${item.method || 'bm25'}`;
+    const part = (name, r) => `${name} rank: ${r == null ? 'not in top results' : '#' + r}`;
+    return `Method: hybrid (RRF) | ${part('BM25', item.bm25_rank)} | ${part('Semantic', item.semantic_rank)}`;
 }
 
 function highlightQueryTerms(text, stems) {

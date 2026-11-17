@@ -46,13 +46,19 @@ python clean_dataset.py                     # -> data/cleaned_corpus.jsonl
 
 python indexer.py                           # -> index/postings.pkl.gz, metadata, stats
 python domain_dictionary.py                 # -> index/domain_dictionary.json  (~10 s)
+python semantic_search.py                   # -> index/doc_embeddings.npy (one-time; app also builds it if missing)
 python nta_crawler.py                       # -> data/nta_updates.json         (~1 min)
 
 python app.py                               # http://127.0.0.1:5001
 ```
 
 The web app has three tabs: **Ask Assistant** (the chatbot), **Search Engine**
-(raw ranked results) and **Evaluation** (benchmark results).
+(raw ranked results) and **Evaluation** (benchmark results). The search tab
+offers Hybrid (default), Semantic, and the three BM25 variants.
+
+The embedding cache is rebuilt automatically when `cleaned_corpus.jsonl` or the
+model changes. That takes a few minutes on a laptop CPU, and the Sentence
+Transformer uses the GPU (Apple MPS on M-series Macs) when it can.
 
 Optional: `export ANTHROPIC_API_KEY=...` before `python app.py` and Claude
 writes each answer from the retrieved sources instead of quoting them. Without
@@ -70,6 +76,8 @@ Command-line versions: `python chatbot.py "hcv or irodov"`,
 | 3 | `indexer.py` | Tokenises, removes stopwords, Porter-stems, and builds a map *term → list of (doc, title tf, body tf)* | Inverted index |
 | 4 | `ranker.py` | Scores docs with BM25F: rare terms count more (IDF), repeated terms saturate (k1), long posts are normalised (b), titles weigh 2.5×; plus a small upvote boost | Ranking |
 | 5 | `domain_dictionary.py` | Trains Word2Vec on the corpus and groups slang/abbreviations around seed terms (`hall ticket ≈ admit card`, `pw ≈ physics wallah`); search adds these at reduced weight | Embeddings, query expansion |
+| 5b | `semantic_search.py` | Encodes every post (title + body) with the multilingual `paraphrase-multilingual-MiniLM-L12-v2` Sentence Transformer, caches the normalised vectors, and ranks by cosine similarity, so Hinglish queries like "JEE ki preparation kaise karu?" match posts with different wording | Dense retrieval |
+| 5c | `rrf.py`, `hybrid_search.py` | Takes the top 100 from BM25F and from semantic search and fuses them with Reciprocal Rank Fusion, score = Σ 1/(60 + rank). This is the search tab's default mode | Rank fusion |
 | 6 | `nta_crawler.py` | Crawls nta.ac.in (robots.txt respected), classifies notices by exam/type, extracts publish dates and the date lines from PDFs | Web crawling, information extraction |
 | 7 | `chatbot.py` | Routes the question, retrieves, fetches top replies, builds a cited answer | Retrieval-augmented QA |
 | 8 | `evaluate.py` | P@k, MAP, MRR, NDCG@10 over 10 queries with pooled relevance judgments | Evaluation |
@@ -115,6 +123,10 @@ See `evaluation/evaluation_report.md`.
 app.py                 Flask web app: /api/chat, /api/search, /api/evaluation
 chatbot.py             question routing, reply fetching, answer generation
 ranker.py              BM25/BM25F scoring with query expansion
+semantic_search.py     Sentence Transformer embeddings (cached) + cosine retrieval
+rrf.py                 Reciprocal Rank Fusion
+hybrid_search.py       BM25 + semantic fused with RRF
+test_search_modes.py   checks BM25 / semantic / hybrid on English + Hinglish queries
 indexer.py             inverted index builder + shared tokenizer
 domain_dictionary.py   Word2Vec domain dictionary + expand_query()
 nta_crawler.py         NTA notice crawler and PDF date extraction

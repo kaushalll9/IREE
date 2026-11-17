@@ -17,3 +17,6 @@ index/*.gz
 
 # Trained embedding model
 index/word2vec.model*
+
+# Semantic search embedding cache (python semantic_search.py)
+index/doc_embeddings.*

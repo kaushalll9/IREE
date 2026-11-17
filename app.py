@@ -8,6 +8,8 @@ import json
 from flask import Flask, render_template, request, jsonify
 from ranker import BM25SearchEngine
 from chatbot import Chatbot
+from semantic_search import SemanticSearchEngine
+from hybrid_search import hybrid_search
 
 app = Flask(__name__)
 
@@ -15,6 +17,8 @@ app = Flask(__name__)
 engine = BM25SearchEngine(index_dir="index")
 engine.load_index()
 bot = Chatbot(engine=engine)
+semantic = SemanticSearchEngine(engine, index_dir="index")
+semantic.load()  # loads cached embeddings; rebuilds only if corpus or model changed
 
 # Pre-extract available flairs for the filter dropdown
 FLAIR_COUNTS = {}
@@ -31,7 +35,7 @@ def index():
 def api_search():
     query = request.args.get("q", "").strip()
     top_k = int(request.args.get("top_k", 10))
-    model = request.args.get("model", "boosted")
+    model = request.args.get("model", "hybrid")
     flair = request.args.get("flair", "").strip() or None
     min_score_str = request.args.get("min_score", "").strip()
     min_score = int(min_score_str) if min_score_str and min_score_str.isdigit() else None
@@ -48,7 +52,13 @@ def api_search():
         })
 
     # Model configuration switch
-    if model == "bm25":
+    if model == "semantic":
+        res = semantic.search(query, top_k=top_k, filter_flair=flair, min_score=min_score)
+    elif model == "hybrid":
+        # Default: existing BM25F + engagement config fused with semantic ranks via RRF
+        res = hybrid_search(engine, semantic, query, top_k=top_k, filter_flair=flair,
+                            min_score=min_score, expand=expand)
+    elif model == "bm25":
         # Standard unfielded BM25
         res = engine.search(
             query=query,
@@ -88,6 +98,8 @@ def api_search():
             expand=expand
         )
 
+    for r in res["results"]:
+        r.setdefault("method", model)
     res["active_model"] = model
     return jsonify(res)
 
