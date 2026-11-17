@@ -87,8 +87,9 @@ def build():
   <div class="kicker">IRE course project · numbers report</div>
   <h1>JEE/NEET assistant: the numbers</h1>
   <p class="lede">A chatbot that answers JEE/NEET students' questions by searching {meta['dataset']['docs']:,} r/JEENEETards
-  posts, plus a crawler for official NTA notices. This report gives the measured numbers for the
-  <b>web crawler</b> and the <b>domain dictionary</b> in detail, and an overview of the rest. Every number is read from the
+  posts, plus a crawler for official NTA notices. This report explains the
+  <b>domain dictionary</b> end to end (what it is, how it is built, where it is used, the concepts behind it and how it was
+  evaluated and improved), gives the measured numbers for the <b>web crawler</b>, and an overview of the rest. Every number is read from the
   evaluation outputs in <code>evaluation/</code>, except one figure: the before-fix official-answer score (18/20),
 recorded from the first evaluation run.</p>
   <p class="small">Generated {datetime.now().strftime('%d %b %Y, %H:%M')} · evaluation run {e(meta['generated_at'].replace('T', ' '))} · NTA crawl {e(st['crawled_at'][:10])}</p>
@@ -182,86 +183,17 @@ The 20/20 is therefore partly optimistic: the fixes were informed by this questi
 "my jee result was bad, what now?", is a limitation of keyword routing.</p>
 </section>""")
 
-    # ---------------------------------------------------------------- dictionary
-    tune = dd["tuning_ndcg@10"]
-    variants = ["none", "tfidf", "embedding", "hybrid"]
-    qual_rows = [[names[v], Q[v]['terms'], Q[v]['quality']['pairs'], pct(Q[v]['quality']['same_meaning'], 0),
-                  pct(Q[v]['quality']['related_or_better'], 0), pct(Q[v]['quality']['unrelated'], 0)] for v in variants[1:]]
-
-    def ret_rows(sysname):
-        out = []
-        for v in variants:
-            t = R[sysname][v]["test"]
-            out.append([("<b>" + names[v] + "</b>") if v == "hybrid" else names[v], f3(t["ndcg@10"]), f3(t["p@5"]), f3(t["map"]), f3(t["mrr"]),
-                        f3(t["success@5"]), t["queries_expanded"], f"{t.get('helped', '–')} / {t.get('hurt', '–')}",
-                        f3(t.get("p_vs_none")) if "p_vs_none" in t else "–", f3(R[sysname][v]["tune"]["ndcg@10"])])
-        return out
-
-    emb_ex = {x["query"]: x for x in R["bm25"]["embedding"]["examples"]}
-    hyb_ex = {x["query"]: x for x in R["bm25"]["hybrid"]["examples"]}
-    diff_rows = []
-    for q in emb_ex:
-        a, b = emb_ex[q], hyb_ex.get(q, {"added": [], "ndcg@10_delta": 0.0})
-        if a["added"] != b["added"]:
-            removed = sorted(set(a["added"]) - set(b["added"]))
-            diff_rows.append([e(q), e(", ".join(removed)), f"{a['ndcg@10_delta']:+.3f}", f"{b['ndcg@10_delta']:+.3f}"])
-    S.append(f"""
-<section class="break">
-<h2><span>2</span> Domain dictionary: TF-IDF + embeddings</h2>
-<p>Students write "pw", "hcv" and "hall ticket"; posts say "physics wallah", "hc verma" and "admit card". The dictionary
-adds such terms to the query at reduced weight (0.5 × similarity; the original words keep weight 1.0). Three ways of building it
-were compared, all with the same {Q['hybrid']['by_source'].get('seed', 0)} seed terms in 8 categories and the same expansion rules (only exam, coaching,
-resource, admission and student terms expand; sibling seeds and digit tokens are never added; at most 3 terms per seed).</p>
-{table(["Variant", "How related terms are found"], [
-    [names['tfidf'], "Terms whose TF-IDF document vectors are most similar to the seed's (they occur in the same posts). Statistics only, no embeddings."],
-    [names['embedding'], "Nearest neighbours of the seed in a Word2Vec model trained on the posts (skip-gram, 150-d, window 5), cosine ≥ 0.55."],
-    [names['hybrid'], f"Word2Vec neighbours, kept only if TF-IDF ranks them among the {dd['chosen']['hybrid_tfidf_top']:,} most salient terms in the corpus. Embeddings decide <i>what means the same</i>; TF-IDF decides <i>what matters</i>."]])}
-<p class="small">Pipeline: tokenise → detect phrases (gensim Phrases: "physics wallah" → <code>physics_wallah</code>) → TF-IDF over
-{meta['dataset']['docs']:,} posts ({dd['tfidf_vocab']:,} terms in ≥5 posts) and Word2Vec ({dd['word2vec_vocab']:,}-word vocabulary)
-→ dictionary of {Q['hybrid']['terms']} terms ({Q['hybrid']['by_source'].get('seed', 0)} seeds + {Q['hybrid']['by_source'].get('embedding', 0)} learned).</p>
-
-<h3>2.1 Dictionary accuracy: are the added terms right?</h3>
-<p>Every (seed → added term) pair that a variant can put into a query was graded: <b>same meaning</b> (synonym, abbreviation,
-spelling variant), <b>related</b>, or <b>unrelated</b>, for {len([k for k in load('evaluation/dictionary_pairs.json') if k != '_meta'])}
-unique pairs in total (<code>evaluation/dictionary_pairs.json</code>, graded by Claude).</p>
-{table(["Variant", "Dictionary terms", "Expansion pairs", "Same meaning", "Related or better", "Unrelated (drift)"], qual_rows)}
-<div class="stack">
-{hbar([(names[v], Q[v]['quality']['same_meaning'], v == 'hybrid') for v in variants[1:]], vmax=1, fmt=lambda v: pct(v, 0), title="Share of added terms with the same meaning (higher is better)")}
-{hbar([(names[v], Q[v]['quality']['unrelated'], v == 'hybrid') for v in variants[1:]], vmax=1, fmt=lambda v: pct(v, 0), title="Share of added terms that are unrelated (lower is better)")}
-</div>
-<p>The hybrid is the most accurate dictionary. The TF-IDF filter removes rare neighbours (<i>hbcse</i>, <i>aptitude test</i>,
-<i>official answer</i>, <i>sankalp</i>), which were the main source of drift, and keeps salient ones (<i>physics wallah</i>,
-<i>admit card</i>, <i>cbse</i>). TF-IDF on its own finds words that appear <i>alongside</i> a seed (josaa → documents, round),
-not words that <i>mean</i> the same, so only 1% of its additions are synonyms.</p>
-
-<h3>2.2 Search quality with each dictionary</h3>
-<p>Each variant's setting was tuned on the {meta['queries']['tune']} tuning queries only (TF-IDF threshold {dd['chosen']['tfidf_threshold']};
-hybrid salience cut-off {dd['chosen']['hybrid_tfidf_top']:,}). The numbers below are on the {meta['queries']['test']} held-out test queries.</p>
-<h4>BM25F + engagement + expansion (expansion's direct effect)</h4>
-{table(["Variant", "NDCG@10", "P@5", "MAP", "MRR", "Success@5", "Queries expanded", "Helped / hurt", "p vs none", "Tune NDCG@10"], ret_rows("bm25"), cls="tight")}
-<h4>Deployed hybrid search (BM25F + semantic, RRF)</h4>
-{table(["Variant", "NDCG@10", "P@5", "MAP", "MRR", "Success@5", "Queries expanded", "Helped / hurt", "p vs none", "Tune NDCG@10"], ret_rows("deployed"), cls="tight")}
-{hbar([(names[v], R['bm25'][v]['test']['ndcg@10'], v == 'hybrid') for v in variants], vmax=0.6, title="NDCG@10, BM25F + expansion, test split (axis 0–0.6)")}
-<p><b>Reading the results honestly.</b> On search quality the four variants are within noise of each other and of no expansion:
-the differences are about ±0.01 NDCG@10, and no p-value comes near 0.05 (paired randomization test, 10,000 permutations).
-With BM25 the hybrid is best ({f3(R['bm25']['hybrid']['test']['ndcg@10'])}) and hurts the fewest queries
-({R['bm25']['hybrid']['test']['hurt']} vs {R['bm25']['embedding']['test']['hurt']} for embeddings only). In the deployed system,
-TF-IDF only scores highest on the test split ({f3(R['deployed']['tfidf']['test']['ndcg@10'])}) despite its poor dictionary,
-because related words act as topical context. On the tuning split, however, embeddings only did best there. The hybrid's clear
-win is dictionary accuracy (fewer wrong expansions shown to users as "Also searched: …"), not ranking.</p>
-
-<h3>2.3 Where the TF-IDF filter changed the query (embeddings only → hybrid)</h3>
-{table(["Query", "Terms the filter removed", "ΔNDCG embeddings only", "ΔNDCG hybrid"], diff_rows, cls="tight")}
-<p class="small">ΔNDCG is relative to no expansion (BM25F + engagement, test split).</p>
-
-<h3>2.4 Tuning runs</h3>
-{table(["TF-IDF only: co-occurrence threshold", "Tune NDCG@10"], [[k, f3(v)] for k, v in tune['tfidf'].items()], cls="tight")}
-{table(["Hybrid: salience cut-off / TF-IDF candidate terms added", "Tune NDCG@10"],
-       [[k.replace('top', 'top ').replace('_cand', ' / '), f3(v)] for k, v in tune['hybrid'].items()], cls="tight")}
-<p class="small">Adding TF-IDF-discovered candidate terms (e.g. <i>alakh pandey</i>, <i>mathongo</i>, <i>competishun</i>) to the
-dictionary changed no tuning query, so it is switched off (<code>TFIDF_CANDIDATES = 0</code>); the salience filter is what the
-hybrid uses.</p>
-</section>""")
+    # ---------------------------------------------------------------- dictionary (report_dictionary.py)
+    import io, contextlib
+    import report_dictionary
+    import evaluate
+    from ranker import BM25SearchEngine
+    engine = BM25SearchEngine(index_dir="index")
+    with contextlib.redirect_stdout(io.StringIO()):
+        engine.load_index()
+    S.append(report_dictionary.section(
+        {"table": table, "hbar": hbar, "tiles": tiles, "e": e, "pct": pct, "f3": f3},
+        {"dd": dd, "meta": meta, "engine": engine, "qrels": evaluate.load_qrels(), "queries": evaluate.load_queries()}))
 
     # ---------------------------------------------------------------- overview
     ids = list(rk["systems"])
@@ -366,7 +298,19 @@ svg text.lab { font-size: 11px; fill: var(--ink2); }
 svg text.lab.hi { fill: var(--ink); font-weight: 700; }
 svg text.val { font-size: 11px; fill: var(--ink); font-variant-numeric: tabular-nums; }
 svg .axis { stroke: var(--ink2); stroke-width: 1; }
-ul { padding-left: 5mm; } li { margin-bottom: 1.5mm; }
+ul, ol { padding-left: 5mm; } li { margin-bottom: 1.5mm; }
+.flow { display: flex; align-items: stretch; gap: 1.5mm; margin: 3mm 0 4mm; break-inside: avoid; }
+.flow .box { flex: 1; border: 1px solid var(--ink2); border-radius: 5px; padding: 2mm; font-size: 8.5pt; text-align: center; line-height: 1.3; }
+.flow .box small { color: var(--ink2); font-size: 7.5pt; }
+.flow .box.hi { border: 2px solid var(--blue); }
+.flow .arr { align-self: center; color: var(--ink2); font-size: 12pt; }
+.small-flow .box { font-size: 8pt; }
+.formula { background: var(--tint); border-left: 3px solid var(--blue); padding: 2mm 3mm; margin: 2mm 0 3mm; font-size: 9.5pt; break-inside: avoid; }
+.formula small { color: var(--ink2); font-size: 8pt; }
+.worked { border: 1px solid var(--rule); border-radius: 6px; padding: 1mm 3mm; margin: 3mm 0; break-inside: avoid; }
+.ok { color: #1a7f37; font-weight: 600; }
+.bad { color: var(--ink2); }
+.g { color: var(--ink2); font-size: 7.5pt; }
 """
 
 
